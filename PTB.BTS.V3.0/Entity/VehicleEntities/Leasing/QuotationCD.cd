@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.VehicleEntities.VehicleInfo">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQhAAEAIAABAAAWAAAAgAAwAIAAAgAUAAIAAAA0AQI=</HashCode>
+      <FileName>VehicleEntities\VehicleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.VehicleEntities.Leasing.VehicleCost">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABAAYAAAACQAQBAEAgAQAAIAAAAAAAAAAAAAAAAQAEA=</HashCode>
+      <FileName>VehicleEntities\Leasing\VehicleCost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.VehicleEntities.Leasing.Quotation">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAkDCBABAQBAUAAIMFIAARBCEEAAALCAABIBgAESAhA=</HashCode>
+      <FileName>VehicleEntities\Leasing\Quotation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AnewVehicle" />
+      <Property Name="LeasingCalculation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.Leasing.LeasingCalculation">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABACAAEAAgAIgAAAAKBAICAgAIAAAAAAAAAQACAUAIA=</HashCode>
+      <FileName>VehicleEntities\Leasing\LeasingCalculation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.VehicleEntities.Leasing.AnewVehicle">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>VehicleEntities\Leasing\AnewVehicle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleInfo" />
+      <Property Name="VehicleCost" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.VehicleEntities.Leasing.VehiclePrice" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAQBAAAAAQAAAAAAAAEAACABBAAAAAQAA=</HashCode>
+      <FileName>VehicleEntities\Leasing\VehiclePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

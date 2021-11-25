@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ictus.SystemConnection.BizPac.Core.BizPacConnectBase">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\BizPacConnectBase.cs</FileName>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.BizPacConnect">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BizPacConnect.cs</FileName>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAACAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="bizPacConnect" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.Core.BizPacCSVConnect">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\BizPacCSVConnect.cs</FileName>
+      <HashCode>BAAAAAAAAAAAAAAAAABAAIAAAAQAABAAAAAIAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.BizPacMappingBase">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BizPacMappingBase.cs</FileName>
+      <HashCode>AAEAAAAAACAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.ObjectCreater">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ObjectCreater.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

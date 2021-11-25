@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36120445-9D1D-44DD-B617-BE97EEEB9636}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PTB.BTS.BTS2SAP</RootNamespace>
+    <AssemblyName>PTB.BTS.BTS2SAP</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BTS2SAPConstances.cs" />
+    <Compile Include="Enitity\BTS2SAPModel.cs" />
+    <Compile Include="BTS2SAPTransferTypeEnums.cs" />
+    <Compile Include="ConnectCompulsory2SAP.cs" />
+    <Compile Include="ConnectInsuranceTypeOne2SAP.cs" />
+    <Compile Include="ConnectVehicelContractCharge2SAP.cs" />
+    <Compile Include="ConnectDriverContractCharge2SAP.cs" />
+    <Compile Include="ConnectVehicleExcess2SAP.cs" />
+    <Compile Include="ConnectVehicleRepairing2SAP.cs" />
+    <Compile Include="Enitity\BTS2SAPDateFormat.cs" />
+    <Compile Include="ExcelUtil.cs" />
+    <Compile Include="SAPConnectionBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\ictus.Framework.ASC.AppConfig.csproj">
+      <Project>{8512A259-00C9-41DF-9E6A-0F8076B67750}</Project>
+      <Name>ictus.Framework.ASC.AppConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\ictus.Framework.ASC.Entity.csproj">
+      <Project>{BE5B81FD-19B6-4F49-B460-9C3932169912}</Project>
+      <Name>ictus.Framework.ASC.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ictus.SystemConnection\ictus.SystemConnection.BizPac\ictus.SystemConnection.BizPac.csproj">
+      <Project>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</Project>
+      <Name>ictus.SystemConnection.BizPac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\PTB.BTS.DataAccess.csproj">
+      <Project>{C1DCA0E3-86C8-47ED-8936-8CE9C9F7AD3A}</Project>
+      <Name>PTB.BTS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Name>PTB.BTS.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

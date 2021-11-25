@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="VDNCreater0 for Other&#xD;&#xA;VDNCreater1 for TIS&#xD;&#xA;VDNCreater2 for TAS&#xD;&#xA;VDNCreater3 for IMCT&#xD;&#xA;VDNCreater4 for BSTL">
+    <Position X="2.885" Y="2.458" Height="0.833" Width="1.492" />
+  </Comment>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.BTS2BizPacList">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreaterBase.cs</FileName>
+      <HashCode>AAIABIAAAgAAAAAAAAAAAAAAAAAAAAQEAAAAAAACAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterManager">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreaterManager.cs</FileName>
+      <HashCode>BAIAAAQAAAAAAgRAAAQAAEAAAAIAAAAAAJACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreater0" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater0.cs</FileName>
+      <HashCode>AAAAAAAAAgIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="0.812" />
+        <Point X="6.25" Y="0.812" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreater1" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater1.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.062" />
+        <Point X="6.5" Y="1.062" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreater2" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater2.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.298" />
+        <Point X="6.75" Y="1.298" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreater3" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater3.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.548" />
+        <Point X="7" Y="1.548" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreater4" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater4.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="PTB.BTS.BTS2BizPacFlow.VehicleDebitNoteCreateFlow.VDNCreaterBase" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.798" />
+        <Point X="7.25" Y="1.798" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleContractChargeFlow.VehicleContractChargeBPFlow" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleContractChargeBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAhAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PTB.BTS.BTS2BizPacFlow.AttachGroupStruct">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\AttachGroupStruct.cs</FileName>
+      <HashCode>AAAAAKAAAACgAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="PTB.BTS.BTS2BizPacEntity.IBTS2BizPacHeader" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+</ClassDiagram>

@@ -1,0 +1,4353 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18B72C17-75F7-4AD7-90D1-457BE8C329E0}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>The Internet.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.Presentation</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Presentation</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>Presentation.CommonGUI.frmLogIn</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ManifestCertificateThumbprint>2BDD6DD9F8514E66F2989F4B91E253AE45A0F176</ManifestCertificateThumbprint>
+    <ManifestKeyFile>PTB.BTS.Presentation_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <PublishUrl>D:\Publish\BTS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrl>
+    <UpdateUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile\</UpdateUrl>
+    <ProductName>Business Transaction Service ver3.0</ProductName>
+    <PublisherName>Ictus Co., Ltd.</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>168</ApplicationRevision>
+    <ApplicationVersion>3.9.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASC.Control, Version=1.0.2386.16823, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\ictdev01\sourcesafe_asc\DLL.ASC\PTB.BTS.BK\ASC.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=11.5.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=11.5.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=2.0.0.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Input, Version=1.0.6.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread, Version=2.0.0.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="Flow, Version=1.0.2867.18753, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.AppConfig, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\bin\Debug\ictus.Framework.ASC.AppConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\bin\Debug\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ExceptionManagement">
+      <Name>ictus.Framework.ExceptionManagement</Name>
+      <HintPath>..\SystemFramework\AppException\ictus.Framework.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Flow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.IntefaceFlow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.IntefaceFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.Welfare.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.Welfare.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.Welfare.Flow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.Welfare.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\ReferenceDLL\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\ictus.SystemConnection\ictus.SystemConnection.BizPac\ictus.SystemConnection.BizPac.csproj">
+      <Project>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</Project>
+      <Name>ictus.SystemConnection.BizPac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Name>PTB.BTS.Entity</Name>
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Facade\PTB.BTS.Facade.csproj">
+      <Name>PTB.BTS.Facade</Name>
+      <Project>{F6EF3579-74BA-4A46-A846-90EF3F23B5AA}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\PresentationBase\PTB.BTS.PresentationBase.csproj">
+      <Project>{CC9E5AA4-73EA-453D-865A-81F89246B824}</Project>
+      <Name>PTB.BTS.PresentationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PTB.PIS.Welfare.BBL\PTB.PIS.Welfare.BBL.csproj">
+      <Project>{CE3A6CC8-B18B-4FB8-B49A-403752A4A2CD}</Project>
+      <Name>PTB.PIS.Welfare.BBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PTB.PIS.Welfare.BizPac\PTB.PIS.Welfare.BizPac.csproj">
+      <Project>{9F4890CE-FA90-4771-9B03-7EEECE476F12}</Project>
+      <Name>PTB.PIS.Welfare.BizPac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Report\PTB.BTS.Report.csproj">
+      <Project>{836D468A-FA60-4C00-8139-6C52F2D8CD59}</Project>
+      <Name>PTB.BTS.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\PTB.BTS.SystemFramework.csproj">
+      <Name>PTB.BTS.SystemFramework</Name>
+      <Project>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AttendanceGUI\frmGenerateMealBenefitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmGenerateMealBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmAttendanceHeadBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmDisease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmDiseaseEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeAnnualLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeAnnualLeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeAttendanceBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeBenefitAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeBenefitAdjustmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeExtraAGTBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeExtraBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeExtraBenefitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeFoodBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeFoodBenefitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeMiscBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeMiscBenfitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeMiscDeduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeMiscDeductionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeePrivateLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeePrivateLeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeSickLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeSickLeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeSpecialLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeSpecialLeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeTelephoneBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeTelephoneBenefitEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeWorkAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmEmployeeWorkAttendanceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmGenEmployeeTimeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmGenEmployeeWorkSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmGenEmployeeWorkSchedule.Designer.cs">
+      <DependentUpon>FrmGenEmployeeWorkSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmGenEmpScheduleBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmGenEmpScheduleBase.Designer.cs">
+      <DependentUpon>FrmGenEmpScheduleBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmGenerateAnnualLeaveDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmGenerateOtherBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmGenerateOtherBenefitDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmHolidayCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmHolidayConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmHolidayConditionSpecific.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmHolidayConditionSpecificEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmLeaveReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmLeaveReasonEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofAnnualLeaveSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofDriverExcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofDriverExcessDeductionByMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofEmployeeBenefitAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListOfEmployeeBenefitforTimeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListOfFamilyCarDriverReward.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListOfMonthlyLeaveSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofNewAnnualLeaveDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmListofTimeRecordOfDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOtherBenefitRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPatternEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPatternGeneralCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPatternGeneralConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPatternSpecificCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTPatternSpecificConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTVariant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmOTVariantEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptEmployeeAnnualLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmrptEmployeeLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmrptEmployeeLeave.Designer.cs">
+      <DependentUpon>FrmrptEmployeeLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptEmployeePrivateLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptEmployeeReceiveGold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptEmployeeReceiveGold.Designer.cs">
+      <DependentUpon>frmrptEmployeeReceiveGold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptEmployeeSickLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmrptEmployeeSpecialLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\FrmrptEmployeeSpecialLeave.Designer.cs">
+      <DependentUpon>FrmrptEmployeeSpecialLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptNonPayrollBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmrptPayrollBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmExportEmpData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmExportEmpData.Designer.cs">
+      <DependentUpon>frmExportEmpData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBaseNew.Designer.cs">
+      <DependentUpon>FrmBizPacChargeConnectBaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmContributionBizPacNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmContributionBizPacNew.Designer.cs">
+      <DependentUpon>FrmContributionBizPacNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\frmWelfareBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\frmWelfareBenefit.Designer.cs">
+      <DependentUpon>frmWelfareBenefit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonGUI\CommonCombo.cs" />
+    <Compile Include="CommonGUI\DBCommon.cs" />
+    <Compile Include="CommonGUI\EntitiesProvider.cs" />
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContract.Designer.cs">
+      <DependentUpon>FrmChargeRateByContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContractEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContractEntry.Designer.cs">
+      <DependentUpon>FrmChargeRateByContractEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffType.Designer.cs">
+      <DependentUpon>FrmChargeRateByServiceStaffType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffTypeEntry.Designer.cs">
+      <DependentUpon>FrmChargeRateByServiceStaffTypeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjust.Designer.cs">
+      <DependentUpon>FrmCustomerChargeAdjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjustEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjustEntry.Designer.cs">
+      <DependentUpon>FrmCustomerChargeAdjustEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeCondition.Designer.cs">
+      <DependentUpon>FrmCustomerSpecialChargeCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeConditionEntry.Designer.cs">
+      <DependentUpon>FrmCustomerSpecialChargeConditionEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTCharge.Designer.cs">
+      <DependentUpon>FrmMinimumOTCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTChargeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTChargeEntry.Designer.cs">
+      <DependentUpon>FrmMinimumOTChargeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmContractBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmContractBase.Designer.cs">
+      <DependentUpon>FrmContractBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmContractCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmContractCharge.Designer.cs">
+      <DependentUpon>FrmContractCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmDepartmentAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmDepartmentAssignment.Designer.cs">
+      <DependentUpon>FrmDepartmentAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmDriverContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmDriverContract.Designer.cs">
+      <DependentUpon>FrmDriverContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmOtherSSContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmOtherSSContract.Designer.cs">
+      <DependentUpon>FrmOtherSSContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmVehicleContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\ContractVDOGUI\FrmVehicleContract.Designer.cs">
+      <DependentUpon>FrmVehicleContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmCompensateRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmCompensateRate.Designer.cs">
+      <DependentUpon>FrmCompensateRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofServiceStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofServiceStaff.Designer.cs">
+      <DependentUpon>frmListofServiceStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmRenewalNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmRenewalNotice.Designer.cs">
+      <DependentUpon>FrmRenewalNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmReportCarAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmReportCarAgreement.Designer.cs">
+      <DependentUpon>FrmReportCarAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmReportDriverAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmReportDriverAgreement.Designer.cs">
+      <DependentUpon>FrmReportDriverAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PiGUI\FrmImportEmployeeSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\FrmImportEmployeeSalary.Designer.cs">
+      <DependentUpon>FrmImportEmployeeSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PiGUI\FrmSpecialAllowance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\FrmSpecialAllowance.Designer.cs">
+      <DependentUpon>FrmSpecialAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PiGUI\FrmSpecialAllowanceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\FrmSpecialAllowanceEntry.Designer.cs">
+      <DependentUpon>FrmSpecialAllowanceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PiGUI\FrmSSHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\FrmSSHospitalEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehiclePOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehiclePOList.designer.cs">
+      <DependentUpon>FrmVehiclePOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptListofMainVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptListofMainVehicle.Designer.cs">
+      <DependentUpon>frmrptListofMainVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptVehicleChargeDiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptVehicleChargeDiff.Designer.cs">
+      <DependentUpon>FrmrptVehicleChargeDiff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptCustomerChargeAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptCustomerChargeAdjustment.Designer.cs">
+      <DependentUpon>frmrptCustomerChargeAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptCustomerChargeAdjustmentOtherSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptCustomerChargeAdjustmentOtherSS.Designer.cs">
+      <DependentUpon>FrmrptCustomerChargeAdjustmentOtherSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmListofCustomerSpecialCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmListofCustomerSpecialCharge.Designer.cs">
+      <DependentUpon>FrmListofCustomerSpecialCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmServiceStaffAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmServiceStaffAssignment.Designer.cs">
+      <DependentUpon>FrmServiceStaffAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleAssignment.Designer.cs">
+      <DependentUpon>FrmVehicleAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmBizPacCanCelBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmBizPacCanCelBase.Designer.cs">
+      <DependentUpon>FrmBizPacCanCelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmCompulsoryInsuranceCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmCompulsoryInsuranceCancelBP.Designer.cs">
+      <DependentUpon>FrmCompulsoryInsuranceCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmDriverContractChargeCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmDriverContractChargeCancelBP.Designer.cs">
+      <DependentUpon>FrmDriverContractChargeCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmInsuranceTypeOneCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmInsuranceTypeOneCancelBP.Designer.cs">
+      <DependentUpon>FrmInsuranceTypeOneCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmServiceStaffContractChargeCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmServiceStaffContractChargeCancelBP.Designer.cs">
+      <DependentUpon>FrmServiceStaffContractChargeCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleContractChargeCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleContractChargeCancelBP.Designer.cs">
+      <DependentUpon>FrmVehicleContractChargeCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleExcessCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleExcessCancelBP.Designer.cs">
+      <DependentUpon>FrmVehicleExcessCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleRepairingHistoryCancelBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmVehicleRepairingHistoryCancelBP.Designer.cs">
+      <DependentUpon>FrmVehicleRepairingHistoryCancelBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmCompulsoryInsuranceBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmCompulsoryInsuranceBP.Designer.cs">
+      <DependentUpon>FrmCompulsoryInsuranceBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmCompulsoryInsuranceTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmCompulsoryInsuranceTR.Designer.cs">
+      <DependentUpon>FrmCompulsoryInsuranceTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverSummaryIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverSummaryIncome.Designer.cs">
+      <DependentUpon>FrmDriverSummaryIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBase.Designer.cs">
+      <DependentUpon>FrmBizPacChargeConnectBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverContractChargeBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverContractChargeBP.Designer.cs">
+      <DependentUpon>FrmDriverContractChargeBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverContractChargeTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmDriverContractChargeTR.Designer.cs">
+      <DependentUpon>FrmDriverContractChargeTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmrptDrivingService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmrptDrivingService.Designer.cs">
+      <DependentUpon>FrmrptDrivingService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSSummaryIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSSummaryIncome.Designer.cs">
+      <DependentUpon>FrmOtherSSSummaryIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmrptOtherServiceStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmrptOtherServiceStaff.Designer.cs">
+      <DependentUpon>FrmrptOtherServiceStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmrptVehicleCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmrptVehicleCharge.Designer.cs">
+      <DependentUpon>FrmrptVehicleCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSContractChargeTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSContractChargeTR.Designer.cs">
+      <DependentUpon>FrmOtherSSContractChargeTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmSummaryIncomeBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmSummaryIncomeBase.Designer.cs">
+      <DependentUpon>FrmSummaryIncomeBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleContractChargeTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleContractChargeTR.Designer.cs">
+      <DependentUpon>FrmVehicleContractChargeTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleSummaryIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleSummaryIncome.Designer.cs">
+      <DependentUpon>FrmVehicleSummaryIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmInsuranceTypeOneBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmInsuranceTypeOneBP.Designer.cs">
+      <DependentUpon>FrmInsuranceTypeOneBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSContractChargeBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmOtherSSContractChargeBP.Designer.cs">
+      <DependentUpon>FrmOtherSSContractChargeBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleContractChargeBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmVehicleContractChargeBP.Designer.cs">
+      <DependentUpon>FrmVehicleContractChargeBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmrptExcessExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmrptExcessExpense.Designer.cs">
+      <DependentUpon>FrmrptExcessExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmVehicleExcessBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmVehicleExcessBP.Designer.cs">
+      <DependentUpon>FrmVehicleExcessBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmrptCompulsoryExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmrptCompulsoryExpense.Designer.cs">
+      <DependentUpon>FrmrptCompulsoryExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmInsuranceTypeOneTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmInsuranceTypeOneTR.Designer.cs">
+      <DependentUpon>FrmInsuranceTypeOneTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmrptInsuranceExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmrptInsuranceExpense.Designer.cs">
+      <DependentUpon>FrmrptInsuranceExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmVehicleExcessTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmVehicleExcessTR.Designer.cs">
+      <DependentUpon>FrmVehicleExcessTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmBizPacRepairingConnectBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmBizPacRepairingConnectBase.Designer.cs">
+      <DependentUpon>FrmBizPacRepairingConnectBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmrptVehicleRepairingExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmrptVehicleRepairingExpense.Designer.cs">
+      <DependentUpon>FrmrptVehicleRepairingExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmVehicleRepairingHistoryTR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmVehicleRepairingHistoryTR.Designer.cs">
+      <DependentUpon>FrmVehicleRepairingHistoryTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempGUI\LeasingTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempGUI\LeasingTemp.Designer.cs">
+      <DependentUpon>LeasingTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempGUI\TempUCT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TempGUI\TempUCT.Designer.cs">
+      <DependentUpon>TempUCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmBidder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmBidder.Designer.cs">
+      <DependentUpon>FrmBidder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmBidderEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmBidderEntry.Designer.cs">
+      <DependentUpon>FrmBidderEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmModel.Designer.cs">
+      <DependentUpon>FrmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmModelEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmModelEntry.Designer.cs">
+      <DependentUpon>FrmModelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptNoVehicleAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptNoVehicleAssign.Designer.cs">
+      <DependentUpon>frmrptNoVehicleAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptVehicleAccidentExcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptVehicleAccidentExcess.Designer.cs">
+      <DependentUpon>frmrptVehicleAccidentExcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmSaleAnnualLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmSpecialLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmSpecialLeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTaxiCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTaxiConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTelephoneCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTelephoneConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTimeCardForCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTimeCardForPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTraditionalHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTraditionalHolidayEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTraditionalHolidayPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmTraditionalHolidayPatternEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeConditionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeConditionSpecific.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeConditionSpecificEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\frmWorkingTimeTableEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\UCTAnnualLeaveHead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\UCTLeavePeriod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AttendanceGUI\UCTSummaryLeaveDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\ChildFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\ChildFormBase.Designer.cs">
+      <DependentUpon>ChildFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonGUI\Common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\DualFieldGUIEntryBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\DualFieldGUIMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\EntryFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\EntryFormBase.Designer.cs">
+      <DependentUpon>EntryFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonGUI\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonGUI\frmApplicationModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmApplicationUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmApplicationUserProfileEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmDistrictEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmFacultyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmInstituteEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofApplicationFunctionPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofFaculty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofStreet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmListofSubDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmMajorEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmPrefix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmPrefixEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmProvinceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmReportTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmStreet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmStreetEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmSubDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\frmSubDistrictEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\FrmTestReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\FrmTestReport.Designer.cs">
+      <DependentUpon>FrmTestReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonGUI\IDeleteMDIChildForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\IMDIChildForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\ISaveForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\MenuContain.cs" />
+    <Compile Include="CommonGUI\SingleFieldGUIEntryBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGUI\SingleFieldGUIMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmContract.cs">
+    </Compile>
+    <Compile Include="ContractGUI\frmContractApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractCancelReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractCancelReasonEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmContractDriver.cs">
+    </Compile>
+    <Compile Include="ContractGUI\FrmContractDriverList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmContractDriverList.Designer.cs">
+      <DependentUpon>FrmContractDriverList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmContractList.cs">
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmContractOtherServiceStaff.cs">
+    </Compile>
+    <Compile Include="ContractGUI\frmContractStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmContractVDOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmContractVehicle.cs">
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerContractGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerContractGroupEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerDeptEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmCustomerGroupEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmKindOfContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmKindOfContractEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListForNoAccidentReward.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofCurrentDriverWithLongTermContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofCustomerDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofDriverMatchWithVehicleCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListOfDriverWithLongTermContractByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofExpiredVehicleContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofInCompleteServiceStaffAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofLeasingHistoryOfActiveVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListOfServiceStaffReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListOfSprerDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofVehicleMatchWithDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmListofVehicleMatchWithDriverCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptAssignmentHistorybyDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptExpiredDriverContractWithVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptExpiredVehicleContractWithDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptListOfContractMatchWithDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmrptVehicleAssignmentbyPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffAssignmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffMatchToContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffMatchToContractDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffMatchToContractEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmServiceStaffTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmVDContractMatching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmVDContractMatchingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\TempContractGUI\TMPfrmVehicleAssignment.cs">
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleAssignmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleAssignmentEntry.Designer.cs">
+      <DependentUpon>FrmVehicleAssignmentEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\frmVehicleSpareAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\frmVehicleSpareAssignmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\UCTContractCharge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\DualFieldCompanyGUIEntryBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\DualFieldCompanyGUIMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmBankEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmBloodGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmBloodGroupEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmCompanyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmDepartmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmEducationLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmEducationLevelEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmEmplist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmFormerEmpList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmFormerPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmKindOfStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmKindOfStaffEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofEducationLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofNationality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofNonEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofOccupation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofPIAllData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\FrmListOfPictureEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofPIData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofReligion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmListofSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmMaritalStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmMaritalStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmMilitaryStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmMilitaryStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmMovetoFormerPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmNationality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmNationalityEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmOccupation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmOccupationEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPositionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPositionGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPositionGroupEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmPrintPersonalData.cs" />
+    <Compile Include="PiGUI\frmRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmRaceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmRelationship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmRelationshipEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmReligion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmReligionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmrptListOfRetireStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmrptPersonnalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmSectionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmTitleEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmWorkingStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\frmWorkingStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiGUI\UserControl\UCTAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PiGUI\UserControl\UCTAge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PiGUI\UserControl\UCTParent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PiGUI\UserControl\UCTPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\FrmBizPacConnectBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\FrmBizPacConnectBase.Designer.cs">
+      <DependentUpon>FrmBizPacConnectBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmVehicleRepairingHistoryBP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmVehicleRepairingHistoryBP.Designer.cs">
+      <DependentUpon>FrmVehicleRepairingHistoryBP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempGUI\FrmTest01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempGUI\FrmTest01.Designer.cs">
+      <DependentUpon>FrmTest01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ExcessInsurance\FrmExcessInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ExcessInsurance\FrmExcessInsurance.Designer.cs">
+      <DependentUpon>FrmExcessInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ExcessInsurance\FrmExcessInsuranceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ExcessInsurance\FrmExcessInsuranceEntry.Designer.cs">
+      <DependentUpon>FrmExcessInsuranceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\frmBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmBrandEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmColorEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmCompulsoryInsuranceByMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmCompulsoryInsuranceByPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmCompulsoryInsuranceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehicleMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehicleMaintenance.Designer.cs">
+      <DependentUpon>FrmVehicleMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlan.Designer.cs">
+      <DependentUpon>FrmVehicleSellingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlanEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlanEntry.Designer.cs">
+      <DependentUpon>FrmVehicleSellingPlanEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\frmCreateInsuranceTypeOne.cs">
+    </Compile>
+    <Compile Include="VehicleGUI\frmDailyProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmGarageEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmGassolineType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmGassolineTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmInsuranceCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmInsuranceCompanyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\frmInsuranceTypeOneEntry.cs">
+    </Compile>
+    <Compile Include="VehicleGUI\frmInsuranceTypeOnePolicyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmKindOfVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmKindOfVehicleEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofAccident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListOfAccidentByEmpNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListOfAccidentByPlateNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofCompulsoryInsurancebyPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofModelType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairedVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairedVehicleByFinishDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairingHistoryByCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairingHistoryByModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairingHistoryByPlateNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairingHistoryBySpareParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofRepairingHistorybyVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofSpareParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofSpareVehicleCurrently.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofVehicleCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmListofVehicleMaintenanceByGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\frmMaintainInsuranceTypeOne.cs">
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\FrmVehicleList.Designer.cs">
+      <DependentUpon>FrmVehicleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmInterestCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmInterestCost.Designer.cs">
+      <DependentUpon>FrmInterestCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmLeasingEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmLeasingEntry.Designer.cs">
+      <DependentUpon>FrmLeasingEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmrptLeasingPurchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmrptLeasingPurchasing.Designer.cs">
+      <DependentUpon>FrmrptLeasingPurchasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmrptLeasingQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmrptLeasingQuotation.Designer.cs">
+      <DependentUpon>FrmrptLeasingQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitCalculationGUI\FrmProfitCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitCalculationGUI\FrmProfitCalculation.Designer.cs">
+      <DependentUpon>FrmProfitCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitCalculationGUI\FrmrptCostAndProfit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitCalculationGUI\FrmrptCostAndProfit.Designer.cs">
+      <DependentUpon>FrmrptCostAndProfit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmCostAndProfit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmCostAndProfit.Designer.cs">
+      <DependentUpon>FrmCostAndProfit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmProfitLost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmProfitLost.Designer.cs">
+      <DependentUpon>FrmProfitLost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmProfitLostEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmProfitLostEntry.Designer.cs">
+      <DependentUpon>FrmProfitLostEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmQuotationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmQuotationList.Designer.cs">
+      <DependentUpon>FrmQuotationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmrptProfitLost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\ProfitLostGUI\FrmrptProfitLost.Designer.cs">
+      <DependentUpon>FrmrptProfitLost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\TMPfrmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\TMPfrmModelEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmModelType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmModelTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPaymentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPaymentTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPlaceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPoliceStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPoliceStationEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmPrintRepairingExpenseByGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmrptTotalAmountMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmSpareParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmSparePartsEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleAccident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleAccidentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\TMPfrmVehicleList.cs">
+    </Compile>
+    <Compile Include="VehicleGUI\TempVehilceGUI\TMPfrmVehicleMaintenance.cs">
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleMaintenanceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleRepairingBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleRepairingEntryBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleTaxByMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleTaxByPlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleTaxEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleVatStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVehicleVatStatusEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\frmVendorEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOne.Designer.cs">
+      <DependentUpon>FrmCreateInsuranceTypeOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOneEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOneEntry.Designer.cs">
+      <DependentUpon>FrmCreateInsuranceTypeOneEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOne.Designer.cs">
+      <DependentUpon>FrmVehicleInsuranceTypeOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOneEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOneEntry.Designer.cs">
+      <DependentUpon>FrmVehicleInsuranceTypeOneEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\Leasing\FrmLeasing.Designer.cs">
+      <DependentUpon>FrmLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\rpttestExpired.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptPurchaseOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptPurchaseOrderReport.Designer.cs">
+      <DependentUpon>FrmrptPurchaseOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPOSearchQuotationt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPOSearchQuotationt.designer.cs">
+      <DependentUpon>FrmPOSearchQuotationt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderEntry.designer.cs">
+      <DependentUpon>FrmPurchaseOrderEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderList.designer.cs">
+      <DependentUpon>FrmPurchaseOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchCalculation.designer.cs">
+      <DependentUpon>FrmQuotationSearchCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationEntry.designer.cs">
+      <DependentUpon>FrmCalculationEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationSearch.designer.cs">
+      <DependentUpon>FrmCalculationSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationEntry.designer.cs">
+      <DependentUpon>FrmQuotationEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationList.designer.cs">
+      <DependentUpon>FrmQuotationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptCalculationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptCalculationReport.Designer.cs">
+      <DependentUpon>FrmrptCalculationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptQuotationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmrptQuotationReport.Designer.cs">
+      <DependentUpon>FrmrptQuotationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchVehicle.designer.cs">
+      <DependentUpon>FrmQuotationSearchVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlan.Designer.cs">
+      <DependentUpon>FrmSellingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanEntry.Designer.cs">
+      <DependentUpon>FrmSellingPlanEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanReport.Designer.cs">
+      <DependentUpon>FrmSellingPlanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationQuotationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationQuotationList.designer.cs">
+      <DependentUpon>FrmCalculationQuotationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizBase.Designer.cs">
+      <DependentUpon>FrmCancelBizBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizContribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizContribution.Designer.cs">
+      <DependentUpon>FrmCancelBizContribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizLoan.Designer.cs">
+      <DependentUpon>FrmCancelBizLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizMedicalAid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmCancelBizMedicalAid.Designer.cs">
+      <DependentUpon>FrmCancelBizMedicalAid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmConnectBizBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmConnectBizBase.Designer.cs">
+      <DependentUpon>FrmConnectBizBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmContributionBizPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmContributionBizPac.Designer.cs">
+      <DependentUpon>FrmContributionBizPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmLoanBizPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmLoanBizPac.Designer.cs">
+      <DependentUpon>FrmLoanBizPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmMedicalAidAttBizPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmMedicalAidAttBizPac.Designer.cs">
+      <DependentUpon>FrmMedicalAidAttBizPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmMedicalAidNoAttBizPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\FrmMedicalAidNoAttBizPac.Designer.cs">
+      <DependentUpon>FrmMedicalAidNoAttBizPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\BizPacGUI\IBizPacFrm.cs" />
+    <Compile Include="WelfareGUI\CommonGUI\Common.cs" />
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContribution.Designer.cs">
+      <DependentUpon>FrmContribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionApplicationEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionApplicationEnt.Designer.cs">
+      <DependentUpon>FrmContributionApplicationEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionEmpLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionEmpLst.Designer.cs">
+      <DependentUpon>FrmContributionEmpLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\ContributionGUI\FrmContributionEnt.Designer.cs">
+      <DependentUpon>FrmContributionEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\FrmWelfareHeaderBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\FrmWelfareHeaderBase.Designer.cs">
+      <DependentUpon>FrmWelfareHeaderBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanApplicationEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanApplicationEnt.Designer.cs">
+      <DependentUpon>FrmLoanApplicationEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanApplicationLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanApplicationLst.Designer.cs">
+      <DependentUpon>FrmLoanApplicationLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanResonEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanResonEnt.Designer.cs">
+      <DependentUpon>FrmLoanResonEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanResonLst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\LoanGUI\FrmLoanResonLst.Designer.cs">
+      <DependentUpon>FrmLoanResonLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmHospital.Designer.cs">
+      <DependentUpon>FrmHospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmHospitalEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmHospitalEnt.Designer.cs">
+      <DependentUpon>FrmHospitalEnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEditRefDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEditRefDoc.Designer.cs">
+      <DependentUpon>FrmMedicalAidEditRefDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByEmp.Designer.cs">
+      <DependentUpon>FrmMedicalAidEntByEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByHospital.Designer.cs">
+      <DependentUpon>FrmMedicalAidEntByHospital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByEmp.Designer.cs">
+      <DependentUpon>FrmMedicalAidLstByEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByHospital.Designer.cs">
+      <DependentUpon>FrmMedicalAidLstByHospital.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AttendanceGUI\frmGenerateMealBenefitEntry.resx">
+      <DependentUpon>frmGenerateMealBenefitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmGenerateMealBenefit.resx">
+      <DependentUpon>frmGenerateMealBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmAttendanceHeadBase.resx">
+      <DependentUpon>frmAttendanceHeadBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmDisease.resx">
+      <DependentUpon>frmDisease.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmDiseaseEntry.resx">
+      <DependentUpon>frmDiseaseEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeAnnualLeave.resx">
+      <DependentUpon>frmEmployeeAnnualLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeAnnualLeaveEntry.resx">
+      <DependentUpon>frmEmployeeAnnualLeaveEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeAttendanceBase.resx">
+      <DependentUpon>frmEmployeeAttendanceBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeBenefit.resx">
+      <DependentUpon>frmEmployeeBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeBenefitAdjustment.resx">
+      <DependentUpon>frmEmployeeBenefitAdjustment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeBenefitAdjustmentEntry.resx">
+      <DependentUpon>frmEmployeeBenefitAdjustmentEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeExtraAGTBenefit.resx">
+      <DependentUpon>frmEmployeeExtraAGTBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeExtraBenefit.resx">
+      <DependentUpon>frmEmployeeExtraBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeExtraBenefitEntry.resx">
+      <DependentUpon>frmEmployeeExtraBenefitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeFoodBenefit.resx">
+      <DependentUpon>frmEmployeeFoodBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeFoodBenefitEntry.resx">
+      <DependentUpon>frmEmployeeFoodBenefitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeMiscBenefit.resx">
+      <DependentUpon>frmEmployeeMiscBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeMiscBenfitEntry.resx">
+      <DependentUpon>frmEmployeeMiscBenfitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeePrivateLeave.resx">
+      <DependentUpon>frmEmployeePrivateLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeePrivateLeaveEntry.resx">
+      <DependentUpon>frmEmployeePrivateLeaveEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeSickLeave.resx">
+      <DependentUpon>frmEmployeeSickLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeSickLeaveEntry.resx">
+      <DependentUpon>frmEmployeeSickLeaveEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeSpecialLeave.resx">
+      <DependentUpon>frmEmployeeSpecialLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeSpecialLeaveEntry.resx">
+      <DependentUpon>frmEmployeeSpecialLeaveEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeTelephoneBenefit.resx">
+      <DependentUpon>frmEmployeeTelephoneBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeTelephoneBenefitEntry.resx">
+      <DependentUpon>frmEmployeeTelephoneBenefitEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeWorkAttendance.resx">
+      <DependentUpon>frmEmployeeWorkAttendance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmEmployeeWorkAttendanceEntry.resx">
+      <DependentUpon>frmEmployeeWorkAttendanceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmGenEmployeeTimeCard.resx">
+      <DependentUpon>frmGenEmployeeTimeCard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\FrmGenEmployeeWorkSchedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmGenEmployeeWorkSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\FrmGenEmpScheduleBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmGenEmpScheduleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmGenerateAnnualLeaveDay.resx">
+      <DependentUpon>frmGenerateAnnualLeaveDay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmGenerateOtherBenefit.resx">
+      <DependentUpon>frmGenerateOtherBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmGenerateOtherBenefitDetail.resx">
+      <DependentUpon>frmGenerateOtherBenefitDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmHolidayCondition.resx">
+      <DependentUpon>frmHolidayCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmHolidayConditionEntry.resx">
+      <DependentUpon>frmHolidayConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmHolidayConditionSpecific.resx">
+      <DependentUpon>frmHolidayConditionSpecific.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmHolidayConditionSpecificEntry.resx">
+      <DependentUpon>frmHolidayConditionSpecificEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmLeaveReason.resx">
+      <DependentUpon>frmLeaveReason.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmLeaveReasonEntry.resx">
+      <DependentUpon>frmLeaveReasonEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofAnnualLeaveSale.resx">
+      <DependentUpon>frmListofAnnualLeaveSale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofDriverExcess.resx">
+      <DependentUpon>frmListofDriverExcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofDriverExcessDeductionByMonth.resx">
+      <DependentUpon>frmListofDriverExcessDeductionByMonth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofEmployeeBenefitAdjustment.resx">
+      <DependentUpon>frmListofEmployeeBenefitAdjustment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListOfEmployeeBenefitforTimeCard.resx">
+      <DependentUpon>frmListOfEmployeeBenefitforTimeCard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListOfFamilyCarDriverReward.resx">
+      <DependentUpon>frmListOfFamilyCarDriverReward.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListOfMonthlyLeaveSummary.resx">
+      <DependentUpon>frmListOfMonthlyLeaveSummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofNewAnnualLeaveDay.resx">
+      <DependentUpon>frmListofNewAnnualLeaveDay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmListofTimeRecordOfDriver.resx">
+      <DependentUpon>frmListofTimeRecordOfDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOtherBenefitRate.resx">
+      <DependentUpon>frmOtherBenefitRate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPattern.resx">
+      <DependentUpon>frmOTPattern.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPatternEntry.resx">
+      <DependentUpon>frmOTPatternEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPatternGeneralCondition.resx">
+      <DependentUpon>frmOTPatternGeneralCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPatternGeneralConditionEntry.resx">
+      <DependentUpon>frmOTPatternGeneralConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPatternSpecificCondition.resx">
+      <DependentUpon>frmOTPatternSpecificCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTPatternSpecificConditionEntry.resx">
+      <DependentUpon>frmOTPatternSpecificConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTVariant.resx">
+      <DependentUpon>frmOTVariant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmOTVariantEntry.resx">
+      <DependentUpon>frmOTVariantEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptEmployeeAnnualLeave.resx">
+      <DependentUpon>frmrptEmployeeAnnualLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\FrmrptEmployeeLeave.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptEmployeeLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptEmployeePrivateLeave.resx">
+      <DependentUpon>frmrptEmployeePrivateLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptEmployeeReceiveGold.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmrptEmployeeReceiveGold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptEmployeeSickLeave.resx">
+      <DependentUpon>frmrptEmployeeSickLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\FrmrptEmployeeSpecialLeave.resx">
+      <DependentUpon>FrmrptEmployeeSpecialLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptNonPayrollBenefit.resx">
+      <DependentUpon>frmrptNonPayrollBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmrptPayrollBenefit.resx">
+      <DependentUpon>frmrptPayrollBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmExportEmpData.resx">
+      <DependentUpon>frmExportEmpData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBaseNew.resx">
+      <DependentUpon>FrmBizPacChargeConnectBaseNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmContributionBizPacNew.resx">
+      <DependentUpon>FrmContributionBizPacNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\frmWelfareBenefit.resx">
+      <DependentUpon>frmWelfareBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContract.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmChargeRateByContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByContractEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmChargeRateByContractEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmChargeRateByServiceStaffType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmChargeRateByServiceStaffTypeEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmChargeRateByServiceStaffTypeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjust.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerChargeAdjust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmCustomerChargeAdjustEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerChargeAdjustEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeCondition.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerSpecialChargeCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmCustomerSpecialChargeConditionEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCustomerSpecialChargeConditionEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMinimumOTCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractChargeRateGUI\FrmMinimumOTChargeEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMinimumOTChargeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmContractBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmContractBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmContractCharge.resx">
+      <DependentUpon>FrmContractCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmDepartmentAssignment.resx">
+      <DependentUpon>FrmDepartmentAssignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmDriverContract.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDriverContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmOtherSSContract.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmOtherSSContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\ContractVDOGUI\FrmVehicleContract.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmCompensateRate.resx">
+      <DependentUpon>FrmCompensateRate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofServiceStaff.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmListofServiceStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmRenewalNotice.resx">
+      <DependentUpon>FrmRenewalNotice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmReportCarAgreement.resx">
+      <DependentUpon>FrmReportCarAgreement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmReportDriverAgreement.resx">
+      <DependentUpon>FrmReportDriverAgreement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\FrmImportEmployeeSalary.resx">
+      <DependentUpon>FrmImportEmployeeSalary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\FrmSpecialAllowance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSpecialAllowance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\FrmSpecialAllowanceEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSpecialAllowanceEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmVehiclePOList.resx">
+      <DependentUpon>FrmVehiclePOList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmrptListofMainVehicle.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmrptListofMainVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmrptVehicleChargeDiff.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptVehicleChargeDiff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptCustomerChargeAdjustment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmrptCustomerChargeAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmrptCustomerChargeAdjustmentOtherSS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptCustomerChargeAdjustmentOtherSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmListofCustomerSpecialCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmListofCustomerSpecialCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmServiceStaffAssignment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmServiceStaffAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmVehicleAssignment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\CancelBizPac\FrmBizPacCanCelBase.resx">
+      <DependentUpon>FrmBizPacCanCelBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\CompulsoryBPGUI\FrmrptCompulsoryExpense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptCompulsoryExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBizPacChargeConnectBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\DriverBPGUI\FrmrptDrivingService.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptDrivingService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmSummaryIncomeBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSummaryIncomeBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\OtherSSBPGUI\FrmrptOtherServiceStaff.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptOtherServiceStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\VehicleBPGUI\FrmrptVehicleCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptVehicleCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\InsuranceBPGUI\FrmrptInsuranceExpense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptInsuranceExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleExcessGUI\FrmrptExcessExpense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptExcessExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmBizPacRepairingConnectBase.resx">
+      <DependentUpon>FrmBizPacRepairingConnectBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\VehicleRepairingGUI\FrmrptVehicleRepairingExpense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptVehicleRepairingExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempGUI\LeasingTemp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LeasingTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempGUI\TempUCT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TempUCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmBidder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBidder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmBidderEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBidderEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmModelEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmModelEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmrptNoVehicleAssign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmrptNoVehicleAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmrptVehicleAccidentExcess.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmrptVehicleAccidentExcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmSaleAnnualLeave.resx">
+      <DependentUpon>frmSaleAnnualLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmSpecialLeave.resx">
+      <DependentUpon>frmSpecialLeave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmSpecialLeaveEntry.resx">
+      <DependentUpon>frmSpecialLeaveEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTaxiCondition.resx">
+      <DependentUpon>frmTaxiCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTaxiConditionEntry.resx">
+      <DependentUpon>frmTaxiConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTelephoneCondition.resx">
+      <DependentUpon>frmTelephoneCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTelephoneConditionEntry.resx">
+      <DependentUpon>frmTelephoneConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTimeCardForCharge.resx">
+      <DependentUpon>frmTimeCardForCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTimeCardForPayment.resx">
+      <DependentUpon>frmTimeCardForPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTraditionalHoliday.resx">
+      <DependentUpon>frmTraditionalHoliday.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmTraditionalHolidayEntry.resx">
+      <DependentUpon>frmTraditionalHolidayEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeCondition.resx">
+      <DependentUpon>frmWorkingTimeCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeConditionEntry.resx">
+      <DependentUpon>frmWorkingTimeConditionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeConditionSpecific.resx">
+      <DependentUpon>frmWorkingTimeConditionSpecific.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeConditionSpecificEntry.resx">
+      <DependentUpon>frmWorkingTimeConditionSpecificEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeTable.resx">
+      <DependentUpon>frmWorkingTimeTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\frmWorkingTimeTableEntry.resx">
+      <DependentUpon>frmWorkingTimeTableEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\UCTAnnualLeaveHead.resx">
+      <DependentUpon>UCTAnnualLeaveHead.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\UCTLeavePeriod.resx">
+      <DependentUpon>UCTLeavePeriod.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceGUI\UCTSummaryLeaveDays.resx">
+      <DependentUpon>UCTSummaryLeaveDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\ChildFormBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChildFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\DualFieldGUIEntryBase.resx">
+      <DependentUpon>DualFieldGUIEntryBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\DualFieldGUIMainBase.resx">
+      <DependentUpon>DualFieldGUIMainBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\EntryFormBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntryFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmApplicationModule.resx">
+      <DependentUpon>frmApplicationModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmApplicationUserProfile.resx">
+      <DependentUpon>frmApplicationUserProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmApplicationUserProfileEntry.resx">
+      <DependentUpon>frmApplicationUserProfileEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmDistrict.resx">
+      <DependentUpon>frmDistrict.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmDistrictEntry.resx">
+      <DependentUpon>frmDistrictEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmFaculty.resx">
+      <DependentUpon>frmFaculty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmInstitute.resx">
+      <DependentUpon>frmInstitute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofApplicationFunctionPermission.resx">
+      <DependentUpon>frmListofApplicationFunctionPermission.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofDistrict.resx">
+      <DependentUpon>frmListofDistrict.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofFaculty.resx">
+      <DependentUpon>frmListofFaculty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofInstitute.resx">
+      <DependentUpon>frmListofInstitute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofMajor.resx">
+      <DependentUpon>frmListofMajor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofProvince.resx">
+      <DependentUpon>frmListofProvince.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofStreet.resx">
+      <DependentUpon>frmListofStreet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmListofSubDistrict.resx">
+      <DependentUpon>frmListofSubDistrict.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmMajor.resx">
+      <DependentUpon>frmMajor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmPermission.resx">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\frmReportTest.resx">
+      <DependentUpon>frmReportTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\FrmTestReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTestReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\SingleFieldGUIEntryBase.resx">
+      <DependentUpon>SingleFieldGUIEntryBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonGUI\SingleFieldGUIMainBase.resx">
+      <DependentUpon>SingleFieldGUIMainBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmContract.resx">
+      <DependentUpon>TMPfrmContract.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmContractApprove.resx">
+      <DependentUpon>frmContractApprove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmContractCancel.resx">
+      <DependentUpon>frmContractCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmContractDriver.resx">
+      <DependentUpon>TMPfrmContractDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmContractDriverList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmContractDriverList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmContractList.resx">
+      <DependentUpon>TMPfrmContractList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmContractOtherServiceStaff.resx">
+      <DependentUpon>TMPfrmContractOtherServiceStaff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmContractType.resx">
+      <DependentUpon>frmContractType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmContractVDOList.resx">
+      <DependentUpon>frmContractVDOList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmContractVehicle.resx">
+      <DependentUpon>TMPfrmContractVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmCustomerDept.resx">
+      <DependentUpon>frmCustomerDept.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmCustomerDeptEntry.resx">
+      <DependentUpon>frmCustomerDeptEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmCustomerEntry.resx">
+      <DependentUpon>frmCustomerEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListForNoAccidentReward.resx">
+      <DependentUpon>frmListForNoAccidentReward.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofCurrentDriverWithLongTermContract.resx">
+      <DependentUpon>frmListofCurrentDriverWithLongTermContract.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofCustomer.resx">
+      <DependentUpon>frmListofCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofCustomerDepartment.resx">
+      <DependentUpon>frmListofCustomerDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofCustomerGroup.resx">
+      <DependentUpon>frmListofCustomerGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofDriverMatchWithVehicleCheckList.resx">
+      <DependentUpon>frmListofDriverMatchWithVehicleCheckList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListOfDriverWithLongTermContractByDate.resx">
+      <DependentUpon>frmListOfDriverWithLongTermContractByDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofExpiredVehicleContract.resx">
+      <DependentUpon>frmListofExpiredVehicleContract.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofInCompleteServiceStaffAssign.resx">
+      <DependentUpon>frmListofInCompleteServiceStaffAssign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofLeasingHistoryOfActiveVehicle.resx">
+      <DependentUpon>frmListofLeasingHistoryOfActiveVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListOfServiceStaffReport.resx">
+      <DependentUpon>frmListOfServiceStaffReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListOfSprerDriver.resx">
+      <DependentUpon>frmListOfSprerDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofVehicleMatchWithDriver.resx">
+      <DependentUpon>frmListofVehicleMatchWithDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmListofVehicleMatchWithDriverCheckList.resx">
+      <DependentUpon>frmListofVehicleMatchWithDriverCheckList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptAssignmentHistorybyDriver.resx">
+      <DependentUpon>frmrptAssignmentHistorybyDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptExpiredDriverContractWithVehicle.resx">
+      <DependentUpon>frmrptExpiredDriverContractWithVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptExpiredVehicleContractWithDriver.resx">
+      <DependentUpon>frmrptExpiredVehicleContractWithDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptListOfContractMatchWithDriver.resx">
+      <DependentUpon>frmrptListOfContractMatchWithDriver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmrptVehicleAssignmentbyPlate.resx">
+      <DependentUpon>frmrptVehicleAssignmentbyPlate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffAssignmentEntry.resx">
+      <DependentUpon>frmServiceStaffAssignmentEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffBase.resx">
+      <DependentUpon>frmServiceStaffBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffList.resx">
+      <DependentUpon>frmServiceStaffList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffMatchToContract.resx">
+      <DependentUpon>frmServiceStaffMatchToContract.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffMatchToContractDetail.resx">
+      <DependentUpon>frmServiceStaffMatchToContractDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffMatchToContractEntry.resx">
+      <DependentUpon>frmServiceStaffMatchToContractEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffType.resx">
+      <DependentUpon>frmServiceStaffType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmServiceStaffTypeEntry.resx">
+      <DependentUpon>frmServiceStaffTypeEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmVDContractMatching.resx">
+      <DependentUpon>frmVDContractMatching.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmVDContractMatchingEntry.resx">
+      <DependentUpon>frmVDContractMatchingEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\TempContractGUI\TMPfrmVehicleAssignment.resx">
+      <DependentUpon>TMPfrmVehicleAssignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmVehicleAssignmentEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleAssignmentEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmVehicleSpareAssignment.resx">
+      <DependentUpon>frmVehicleSpareAssignment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\frmVehicleSpareAssignmentEntry.resx">
+      <DependentUpon>frmVehicleSpareAssignmentEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\UCTContractCharge.resx">
+      <DependentUpon>UCTContractCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="PiGUI\DualFieldCompanyGUIEntryBase.resx">
+      <DependentUpon>DualFieldCompanyGUIEntryBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\DualFieldCompanyGUIMainBase.resx">
+      <DependentUpon>DualFieldCompanyGUIMainBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmBank.resx">
+      <DependentUpon>frmBank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmBankEntry.resx">
+      <DependentUpon>frmBankEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmBloodGroup.resx">
+      <DependentUpon>frmBloodGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmBloodGroupEntry.resx">
+      <DependentUpon>frmBloodGroupEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmCompanyEntry.resx">
+      <DependentUpon>frmCompanyEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmDepartmentEntry.resx">
+      <DependentUpon>frmDepartmentEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmEducationLevel.resx">
+      <DependentUpon>frmEducationLevel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmEmplist.resx">
+      <DependentUpon>frmEmplist.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmFormerEmpList.resx">
+      <DependentUpon>frmFormerEmpList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmFormerPI.resx">
+      <DependentUpon>frmFormerPI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmKindOfStaff.resx">
+      <DependentUpon>frmKindOfStaff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofBank.resx">
+      <DependentUpon>frmListofBank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofDepartment.resx">
+      <DependentUpon>frmListofDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofEducationLevel.resx">
+      <DependentUpon>frmListofEducationLevel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofEmployee.resx">
+      <DependentUpon>frmListofEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofNationality.resx">
+      <DependentUpon>frmListofNationality.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofNonEmployee.resx">
+      <DependentUpon>frmListofNonEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofOccupation.resx">
+      <DependentUpon>frmListofOccupation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofPIAllData.resx">
+      <DependentUpon>frmListofPIAllData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\FrmListOfPictureEmployee.resx">
+      <DependentUpon>FrmListOfPictureEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofPIData.resx">
+      <DependentUpon>frmListofPIData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofPosition.resx">
+      <DependentUpon>frmListofPosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofRace.resx">
+      <DependentUpon>frmListofRace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofReligion.resx">
+      <DependentUpon>frmListofReligion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmListofSection.resx">
+      <DependentUpon>frmListofSection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmMaritalStatus.resx">
+      <DependentUpon>frmMaritalStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmMovetoFormerPI.resx">
+      <DependentUpon>frmMovetoFormerPI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmNationalityEntry.resx">
+      <DependentUpon>frmNationalityEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmOccupationEntry.resx">
+      <DependentUpon>frmOccupationEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmPI.resx">
+      <DependentUpon>frmPI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmPosition.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmPositionEntry.resx">
+      <DependentUpon>frmPositionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmPrintPersonalData.resx">
+      <DependentUpon>frmPrintPersonalData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmRace.resx">
+      <DependentUpon>frmRace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmRaceEntry.resx">
+      <DependentUpon>frmRaceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmRelationshipEntry.resx">
+      <DependentUpon>frmRelationshipEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmReligionEntry.resx">
+      <DependentUpon>frmReligionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmrptListOfRetireStaff.resx">
+      <DependentUpon>frmrptListOfRetireStaff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmrptPersonnalData.resx">
+      <DependentUpon>frmrptPersonnalData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmSection.resx">
+      <DependentUpon>frmSection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmSectionEntry.resx">
+      <DependentUpon>frmSectionEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmTitle.resx">
+      <DependentUpon>frmTitle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\frmTitleEntry.resx">
+      <DependentUpon>frmTitleEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\UserControl\UCTAddress.resx">
+      <DependentUpon>UCTAddress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\UserControl\UCTAge.resx">
+      <DependentUpon>UCTAge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\UserControl\UCTParent.resx">
+      <DependentUpon>UCTParent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiGUI\UserControl\UCTPerson.resx">
+      <DependentUpon>UCTPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\FrmBizPacConnectBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBizPacConnectBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempGUI\FrmTest01.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTest01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ExcessInsurance\FrmExcessInsurance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmExcessInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ExcessInsurance\FrmExcessInsuranceEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmExcessInsuranceEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmBrand.resx">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmColor.resx">
+      <DependentUpon>frmColor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmCompulsoryInsuranceByMonth.resx">
+      <DependentUpon>frmCompulsoryInsuranceByMonth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmCompulsoryInsuranceByPlate.resx">
+      <DependentUpon>frmCompulsoryInsuranceByPlate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmCompulsoryInsuranceEntry.resx">
+      <DependentUpon>frmCompulsoryInsuranceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmVehicleMaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleSellingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmVehicleSellingPlanEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleSellingPlanEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\frmCreateInsuranceTypeOne.resx">
+      <DependentUpon>frmCreateInsuranceTypeOne.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmDailyProcess.resx">
+      <DependentUpon>frmDailyProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmGarage.resx">
+      <DependentUpon>frmGarage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmGarageEntry.resx">
+      <DependentUpon>frmGarageEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmGassolineType.resx">
+      <DependentUpon>frmGassolineType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmInsuranceCompany.resx">
+      <DependentUpon>frmInsuranceCompany.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmInsuranceCompanyEntry.resx">
+      <DependentUpon>frmInsuranceCompanyEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\frmInsuranceTypeOneEntry.resx">
+      <DependentUpon>frmInsuranceTypeOneEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmInsuranceTypeOnePolicyList.resx">
+      <DependentUpon>frmInsuranceTypeOnePolicyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmKindOfVehicle.resx">
+      <DependentUpon>frmKindOfVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofAccident.resx">
+      <DependentUpon>frmListofAccident.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListOfAccidentByEmpNo.resx">
+      <DependentUpon>frmListOfAccidentByEmpNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListOfAccidentByPlateNo.resx">
+      <DependentUpon>frmListOfAccidentByPlateNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofBrand.resx">
+      <DependentUpon>frmListofBrand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofColor.resx">
+      <DependentUpon>frmListofColor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofCompulsoryInsurancebyPlate.resx">
+      <DependentUpon>frmListofCompulsoryInsurancebyPlate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofGarage.resx">
+      <DependentUpon>frmListofGarage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofModelType.resx">
+      <DependentUpon>frmListofModelType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairedVehicle.resx">
+      <DependentUpon>frmListofRepairedVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairedVehicleByFinishDate.resx">
+      <DependentUpon>frmListofRepairedVehicleByFinishDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairingHistoryByCustomer.resx">
+      <DependentUpon>frmListofRepairingHistoryByCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairingHistoryByModel.resx">
+      <DependentUpon>frmListofRepairingHistoryByModel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairingHistoryByPlateNo.resx">
+      <DependentUpon>frmListofRepairingHistoryByPlateNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairingHistoryBySpareParts.resx">
+      <DependentUpon>frmListofRepairingHistoryBySpareParts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofRepairingHistorybyVehicle.resx">
+      <DependentUpon>frmListofRepairingHistorybyVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofSpareParts.resx">
+      <DependentUpon>frmListofSpareParts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofSpareVehicleCurrently.resx">
+      <DependentUpon>frmListofSpareVehicleCurrently.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofVehicleCharge.resx">
+      <DependentUpon>frmListofVehicleCharge.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmListofVehicleMaintenanceByGarage.resx">
+      <DependentUpon>frmListofVehicleMaintenanceByGarage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\frmMaintainInsuranceTypeOne.resx">
+      <DependentUpon>frmMaintainInsuranceTypeOne.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\Leasing\FrmInterestCost.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmInterestCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitCalculationGUI\FrmProfitCalculation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmProfitCalculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitCalculationGUI\FrmrptCostAndProfit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptCostAndProfit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmCostAndProfit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCostAndProfit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmProfitLost.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmProfitLost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmProfitLostEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmProfitLostEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\ProfitLostGUI\FrmQuotationList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmQuotationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\frmModel.resx">
+      <DependentUpon>TMPfrmModel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\FrmVehicleList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\Leasing\FrmLeasingEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLeasingEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\Leasing\FrmrptLeasingPurchasing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptLeasingPurchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\Leasing\FrmrptLeasingQuotation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmrptLeasingQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\TMPfrmModelEntry.resx">
+      <DependentUpon>TMPfrmModelEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmPrintRepairingExpenseByGarage.resx">
+      <DependentUpon>frmPrintRepairingExpenseByGarage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmrptTotalAmountMaintenance.resx">
+      <DependentUpon>frmrptTotalAmountMaintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicle.resx">
+      <DependentUpon>frmVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleAccident.resx">
+      <DependentUpon>frmVehicleAccident.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleAccidentEntry.resx">
+      <DependentUpon>frmVehicleAccidentEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\TMPfrmVehicleList.resx">
+      <DependentUpon>TMPfrmVehicleList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\TempVehilceGUI\TMPfrmVehicleMaintenance.resx">
+      <DependentUpon>TMPfrmVehicleMaintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleMaintenanceEntry.resx">
+      <DependentUpon>frmVehicleMaintenanceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleRepairingBase.resx">
+      <DependentUpon>frmVehicleRepairingBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleRepairingEntryBase.resx">
+      <DependentUpon>frmVehicleRepairingEntryBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleStatus.resx">
+      <DependentUpon>frmVehicleStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleTaxByMonth.resx">
+      <DependentUpon>frmVehicleTaxByMonth.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleTaxByPlate.resx">
+      <DependentUpon>frmVehicleTaxByPlate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVehicleTaxEntry.resx">
+      <DependentUpon>frmVehicleTaxEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVendor.resx">
+      <DependentUpon>frmVendor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\frmVendorEntry.resx">
+      <DependentUpon>frmVendorEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOne.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCreateInsuranceTypeOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\InsuranceTypeOneGUI\FrmCreateInsuranceTypeOneEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCreateInsuranceTypeOneEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOne.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleInsuranceTypeOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\InsuranceTypeOneGUI\FrmVehicleInsuranceTypeOneEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVehicleInsuranceTypeOneEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\Leasing\FrmLeasing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\rpttestExpired.resx">
+      <DependentUpon>rpttestExpired.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmrptPurchaseOrderReport.resx">
+      <DependentUpon>FrmrptPurchaseOrderReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmPOSearchQuotationt.resx">
+      <DependentUpon>FrmPOSearchQuotationt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderEntry.resx">
+      <DependentUpon>FrmPurchaseOrderEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmPurchaseOrderList.resx">
+      <DependentUpon>FrmPurchaseOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchCalculation.resx">
+      <DependentUpon>FrmQuotationSearchCalculation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationEntry.resx">
+      <DependentUpon>FrmCalculationEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationSearch.resx">
+      <DependentUpon>FrmCalculationSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationEntry.resx">
+      <DependentUpon>FrmQuotationEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationList.resx">
+      <DependentUpon>FrmQuotationList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmrptCalculationReport.resx">
+      <DependentUpon>FrmrptCalculationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmrptQuotationReport.resx">
+      <DependentUpon>FrmrptQuotationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmQuotationSearchVehicle.resx">
+      <DependentUpon>FrmQuotationSearchVehicle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlan.resx">
+      <DependentUpon>FrmSellingPlan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanEntry.resx">
+      <DependentUpon>FrmSellingPlanEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmSellingPlanReport.resx">
+      <DependentUpon>FrmSellingPlanReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleGUI\VehicleLeasingGUI\FrmCalculationQuotationList.resx">
+      <DependentUpon>FrmCalculationQuotationList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmCancelBizBase.resx">
+      <DependentUpon>FrmCancelBizBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmConnectBizBase.resx">
+      <DependentUpon>FrmConnectBizBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmContributionBizPac.resx">
+      <DependentUpon>FrmContributionBizPac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmLoanBizPac.resx">
+      <DependentUpon>FrmLoanBizPac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmMedicalAidAttBizPac.resx">
+      <DependentUpon>FrmMedicalAidAttBizPac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmMedicalAidNoAttBizPac.resx">
+      <DependentUpon>FrmMedicalAidNoAttBizPac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\ContributionGUI\FrmContribution.resx">
+      <DependentUpon>FrmContribution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\ContributionGUI\FrmContributionApplicationEnt.resx">
+      <DependentUpon>FrmContributionApplicationEnt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\ContributionGUI\FrmContributionEmpLst.resx">
+      <DependentUpon>FrmContributionEmpLst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\ContributionGUI\FrmContributionEnt.resx">
+      <DependentUpon>FrmContributionEnt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\FrmWelfareHeaderBase.resx">
+      <DependentUpon>FrmWelfareHeaderBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\LoanGUI\FrmLoanApplicationEnt.resx">
+      <DependentUpon>FrmLoanApplicationEnt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\LoanGUI\FrmLoanApplicationLst.resx">
+      <DependentUpon>FrmLoanApplicationLst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\LoanGUI\FrmLoanResonEnt.resx">
+      <DependentUpon>FrmLoanResonEnt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\LoanGUI\FrmLoanResonLst.resx">
+      <DependentUpon>FrmLoanResonLst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmHospital.resx">
+      <DependentUpon>FrmHospital.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmHospitalEnt.resx">
+      <DependentUpon>FrmHospitalEnt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEditRefDoc.resx">
+      <DependentUpon>FrmMedicalAidEditRefDoc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByEmp.resx">
+      <DependentUpon>FrmMedicalAidEntByEmp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidEntByHospital.resx">
+      <DependentUpon>FrmMedicalAidEntByHospital.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByEmp.resx">
+      <DependentUpon>FrmMedicalAidLstByEmp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelfareGUI\MedicalAidGUI\FrmMedicalAidLstByHospital.resx">
+      <DependentUpon>FrmMedicalAidLstByHospital.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="icons\Add.ico" />
+    <Content Include="icons\Add01.ico" />
+    <Content Include="icons\Cancel01.ico" />
+    <Content Include="icons\Copy.ico" />
+    <Content Include="icons\Cut.ico" />
+    <Content Include="icons\Delete.ico" />
+    <Content Include="icons\Delete01.ico" />
+    <Content Include="icons\Downicon.gif" />
+    <Content Include="icons\Edit01.ico" />
+    <Content Include="icons\Exit.ico" />
+    <Content Include="icons\Exit2.ico" />
+    <Content Include="icons\INDoc.gif" />
+    <Content Include="icons\LeftMenuLogo.bmp" />
+    <Content Include="icons\Next.ico" />
+    <Content Include="icons\Paste.ico" />
+    <Content Include="icons\Previous.ico" />
+    <Content Include="icons\Print.ico" />
+    <Content Include="icons\Refresh.ico" />
+    <Content Include="icons\Save01.ico" />
+    <Content Include="icons\search.ico" />
+    <Content Include="icons\Upicon.gif" />
+    <Content Include="ReferencesDLL\ASC.Control.dll" />
+    <None Include="Resources\Promotion01.ico" />
+    <Content Include="The Internet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="PTB.BTS.BTS2BizPacPresentation\PTB.BTS.BTS2BizPacPresentationCD.cd" />
+    <None Include="PTB.BTS.Presentation_TemporaryKey.pfx" />
+    <Content Include="Template\SAP_Interface_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ADODB">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.InfoStore">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="en\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="en\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="en\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="en\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.CalcEngine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Excel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.PluginCalendar.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win.Input">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win.Spread">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Flow">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="sv\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="sv\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="sv\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="sv\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Template\SAP_Interface_Template.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-chs\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-chs\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-chs\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-chs\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-cht\CrystalDecisions.CrystalReports.Engine.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-cht\CrystalDecisions.ReportSource.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-cht\CrystalDecisions.Shared.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-cht\CrystalDecisions.Windows.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

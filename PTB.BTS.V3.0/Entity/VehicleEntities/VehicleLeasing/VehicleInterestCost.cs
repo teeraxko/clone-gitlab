@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ictus.Framework.ASC.Entity.DNF20;
+
+namespace Entity.VehicleEntities.VehicleLeasing
+{
+    public class VehicleInterestCost : EntityBase
+    {
+        private int year;
+        public int Year
+        {
+            get { return year; }
+            set { year = value; }
+        }
+
+        private int month;
+        public int Month
+        {
+            get { return month; }
+            set { month = value; }
+        }
+
+        private decimal payment;
+        public decimal Payment
+        {
+            get { return payment; }
+            set { payment = value; }
+        }
+
+        private decimal interest;
+        public decimal Interest
+        {
+            get { return Math.Round(interest, 2); }
+            set { interest = value; }
+        }
+
+        public decimal Cost
+        {
+            get { return decimal.Subtract(payment, interest); }
+        }
+
+        private decimal carryingValue;
+        public decimal CarryingValue
+        {
+            get { return carryingValue; }
+            set { carryingValue = value; }
+        }
+
+        public override string EntityKey
+        {
+            get { return string.Concat(year.ToString(), month.ToString()); }
+        }
+    }
+}

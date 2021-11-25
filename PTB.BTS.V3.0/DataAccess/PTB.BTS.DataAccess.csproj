@@ -1,0 +1,740 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1DCA0E3-86C8-47ED-8936-8CE9C9F7AD3A}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.DataAccess</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DataAccess</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/PTB.BTS.DataAccess/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\bin\Debug\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.SystemConnection.BizPac, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Debug\ictus.SystemConnection.BizPac.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Name>PTB.BTS.Entity</Name>
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\PTB.BTS.SystemFramework.csproj">
+      <Name>PTB.BTS.SystemFramework</Name>
+      <Project>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\AnnualLeaveControlDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\AttendanceStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\GenerateMealBenefitDB.cs" />
+    <Compile Include="AttendanceDB\DiseaseDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeAnnualLeaveDetailDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeAnnualLeaveHeadDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeBenefitAdjustmentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeExtraAGTBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeExtraAGTBenefitDeductionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeExtraBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeExtraBenefitExcludeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeFoodBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeMiscBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeMiscDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeMiscDeductionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeOneDayTripBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeOvernightTripBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeOvertimeAmountDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeOvertimeHourDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeePrivateLeaveDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeSickLeaveDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeSpecialLeaveDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeTaxiBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeTelephoneBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeTimeCardDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\EmployeeWorkScheduleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\HireDateValueDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\HolidayConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\HolidayConditionSpecificDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\LeaveReasonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\LeaveSummaryDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\MiscBenefitDescriptionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\NonPayrollPaymentControlDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\OtherBenefitGeneralConditionDB.cs" />
+    <Compile Include="AttendanceDB\OtherBenefitRateDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\OtherBenefitSpecificConditionDB.cs" />
+    <Compile Include="AttendanceDB\OTPatternDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\OTPatternGeneralConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\OTPatternSpecificConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\OvertimeVariantTableDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\PayrollPaymentControlDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\SpecialLeaveDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TaxiFamilyCarConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TaxiPositionCarConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TelephoneConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TraditionalHolidayDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TraditionalHolidayPatternDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrAnnualLeaveSaleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrAnnualLeaveSummaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TripLocationDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrLateSummaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrNewAnnualLeaveDaysDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrPayrollBenefitDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrPrivateLeaveSummaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\TrSickLeaveSummaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\WorkingTimeConditionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\WorkingTimeConditionSpecificDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\WorkingTimeTableDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceDB\WorkScheduleConfigDB.cs" />
+    <Compile Include="CommonDB\FisCalYearDB.cs" />
+    <Compile Include="CommonDB\PISDataAccessBase.cs" />
+    <Compile Include="Constants\ContractDepartmentAssignmentTable.cs" />
+    <Compile Include="Constants\CustomerDepartmentTable.cs" />
+    <Compile Include="ContractDB\CompensateRateDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\ChargeRateByContractDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\ChargeRateByServiceStaffTypeDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\CustomerChargeAdjustmentDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\MinimumOTChargeDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\CustomerSpecialChargeConditionDB.cs" />
+    <Compile Include="ContractDB\ContractChargeRateDB\CustomerSpecialChargeDB.cs" />
+    <Compile Include="ContractDB\ContractDepartmentAssignmentDB.cs" />
+    <Compile Include="ContractDB\TrVehicleChargeDifferenceDB.cs" />
+    <Compile Include="PiDB\SSHospitalDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrExcessExpenseDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrRepairingExpenseDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrServiceStaffDNAttachDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrVehicleDNAttachDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BTS2BizPacTableDB.cs" />
+    <Compile Include="CommonDB\ApplicationFunctionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\ApplicationFunctionPermissionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\ApplicationModuleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\ApplicationModulePermissionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\ApplicationUserProfileDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\CommonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\CTFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\DataAccessBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\DistrictDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\DualFieldDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\FacultyDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\InstituteDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\MajorDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\MTBDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\PrefixDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\ProvinceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\SingleFieldDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\SqlFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\StreetDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\SubDistrictDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\TableAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonDB\VATRateDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\CompulsoryInsuranceBPDB.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\InsuranceTypeOneBPDB.cs" />
+    <Compile Include="CommonDB\ITableName.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\ContractChargeDetailBPDB.cs" />
+    <Compile Include="ContractDB\ContractCancelReasonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ContractChargeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ContractChargeDetailDB.cs" />
+    <Compile Include="ContractDB\ContractDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ContractStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ContractTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\CustomerContractGroupDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\CustomerDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\CustomerDepartmentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\CustomerGroupDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\DocumentNoDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\KindOfContractDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\QuotationDB.cs" />
+    <Compile Include="ContractDB\ServiceStaffAssignmentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ServiceStaffContractDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ServiceStaffDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\ServiceStaffTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\SpareVehicleInternalUsageReasonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\SpareVehicleReplacementReasonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\VDContractMatchDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\VehicleAssignmentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractDB\VehicleContractDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\IBTS2BizPacDB.cs" />
+    <Compile Include="PiDB\BankDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\BloodGroupDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\CompanyDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\DepartmentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\DualFieldCompanyDBBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EducationLevelDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeAddressDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeChildrenDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeEducationDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeGuarantorDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeParentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeReferencePersonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeSalaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeSpecialAllowanceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeSpouseDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\EmployeeWorkBackgroundDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeAddressDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeChildrenDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeEducationDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeGuarantorDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeParentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeReferencePersonDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeSalaryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeSpecialAllowanceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeSpouseDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerEmployeeWorkBackgroundDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\FormerTransactionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\KindOfStaffDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\MaritalStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\MilitaryStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\NationalityDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\OccupationDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\PITransactionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\PiTransactionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\PositionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\PositionGroupDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\PositionTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\RaceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\RelationshipDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\ReligionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\SectionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\SpecialAllowanceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\TitleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiDB\WorkingStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\VehicleExcessBPDB.cs" />
+    <Compile Include="VehicleDB\BidderDB.cs" />
+    <Compile Include="VehicleDB\BrandDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\ColorDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\CompulsoryInsuranceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\DailyProcessControlDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\DriverExcessDeductionDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\GarageDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\GasolineTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\InsuranceCompanyDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\InsuranceTypeOneDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\InsuranceTypeOneDetailDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\KindOfVehicleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\ModelDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\ModelTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\PaymentTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\PlaceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\PoliceStationDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\TrProfitAndLostDB.cs" />
+    <Compile Include="VehicleDB\SparePartsDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrCompulsoryExpenseDB.cs" />
+    <Compile Include="VehicleDB\TrExpiredCompulsoryInsuranceDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\TrExpiredVehicleTaxDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacReportDB\TrInsuranceExpenseDB.cs" />
+    <Compile Include="VehicleDB\TrInterestCostDetailDB.cs" />
+    <Compile Include="VehicleDB\TrInterestCostHeadDB.cs" />
+    <Compile Include="VehicleDB\TrProfitCalculationDetailDB.cs" />
+    <Compile Include="VehicleDB\TrProfitCalculationHeaderDB.cs" />
+    <Compile Include="VehicleDB\VehicleAccidentDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleLeasingCalDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehiclePurchaseContractDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleTrInterestCostDetailDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleTrInterestCostHeadDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleTrProfitAndLostDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleTrProfitCalculationDetailDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleTrProfitCalculationHeadDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleCalculationDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehiclePurchaseDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleQuotationDB.cs" />
+    <Compile Include="VehicleDB\VehicleLeasingDB\VehicleSellingPlanDB.cs" />
+    <Compile Include="VehicleDB\VehiclePurchasingDB.cs" />
+    <Compile Include="VehicleDB\VehicleRepairingDetailDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleRepairingHistoryDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleSellingPlanDB.cs" />
+    <Compile Include="VehicleDB\VehicleStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleTaxDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleTaxDiscountRatioDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VehicleVatStatusDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleDB\VendorDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\VehicleRepairingHistoryBPDB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PTB.BTS.BTS2BizPacDB\PTB.BTS.BTS2BizPacCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacDB\BizPacImplementDB\PTB.BTS.BizPacConnect.IBizPacImplementCD.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

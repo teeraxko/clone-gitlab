@@ -1,0 +1,680 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{836D468A-FA60-4C00-8139-6C52F2D8CD59}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Report</RootNamespace>
+    <AssemblyName>PTB.BTS.Report</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/PTB.BTS.Report/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=11.5.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=11.5.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\CrystalReport11\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BLL\CustomerCombo.cs" />
+    <Compile Include="BLL\DBCommon.cs" />
+    <Compile Include="BLL\EntitiesProvider.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Contract\FrmListNoAccidentReward.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\FrmListNoAccidentReward.Designer.cs">
+      <DependentUpon>FrmListNoAccidentReward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportBase.Designer.cs">
+      <DependentUpon>FrmReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Attendance\FrmReportEmployeeOverNightTripBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Attendance\FrmReportEmployeeOverNightTripBenefit.Designer.cs">
+      <DependentUpon>FrmReportEmployeeOverNightTripBenefit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Attendance\FrmReportGenWorkSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Attendance\FrmReportGenWorkSchedule.Designer.cs">
+      <DependentUpon>FrmReportGenWorkSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportRenewalNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportRenewalNotice.Designer.cs">
+      <DependentUpon>FrmReportRenewalNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportPersonnalDataWelfare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportPersonnalDataWelfare.Designer.cs">
+      <DependentUpon>FrmReportPersonnalDataWelfare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportProvidentFund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportProvidentFund.Designer.cs">
+      <DependentUpon>FrmReportProvidentFund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportResignProvidentFund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportResignProvidentFund.Designer.cs">
+      <DependentUpon>FrmReportResignProvidentFund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportApplicationSelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportApplicationSelling.Designer.cs">
+      <DependentUpon>FrmReportApplicationSelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportComparisonMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportComparisonMaintenance.Designer.cs">
+      <DependentUpon>FrmReportComparisonMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportDiscountCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportDiscountCar.Designer.cs">
+      <DependentUpon>FrmReportDiscountCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportLeasingCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportLeasingCar.Designer.cs">
+      <DependentUpon>FrmReportLeasingCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportVehicleSelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportVehicleSelling.Designer.cs">
+      <DependentUpon>FrmReportVehicleSelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmRptVehicleRepairingNoneTaxInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmRptVehicleRepairingNoneTaxInvoice.Designer.cs">
+      <DependentUpon>FrmRptVehicleRepairingNoneTaxInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\ConnectBBLGUI\FrmReportBBLBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\ConnectBBLGUI\FrmReportBBLBase.Designer.cs">
+      <DependentUpon>FrmReportBBLBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\ConnectBBLGUI\FrmReportBBLLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\ConnectBizPacGUI\FrmConnectBizPac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\ConnectBizPacGUI\FrmConnectBizPac.Designer.cs">
+      <DependentUpon>FrmConnectBizPac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmContractServiceAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmContractServiceAgreement.Designer.cs">
+      <DependentUpon>FrmContractServiceAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportChargeRateByContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportChargeRateByContract.Designer.cs">
+      <DependentUpon>FrmReportChargeRateByContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportContractCarLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportContractCarLeasing.Designer.cs">
+      <DependentUpon>FrmReportContractCarLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportContractDriverLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportContractDriverLeasing.Designer.cs">
+      <DependentUpon>FrmReportContractDriverLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportPenaltyCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Contract\FrmReportPenaltyCharge.Designer.cs">
+      <DependentUpon>FrmReportPenaltyCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\ContributionGUI\FrmReportContributionApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\ContributionGUI\FrmReportContributionApp.Designer.cs">
+      <DependentUpon>FrmReportContributionApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmNoneSpecify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmNoneSpecify.Designer.cs">
+      <DependentUpon>FrmNoneSpecify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmReportBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmReportBase.Designer.cs">
+      <DependentUpon>FrmReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmSpecifyMonthBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmSpecifyMonthBase.Designer.cs">
+      <DependentUpon>FrmSpecifyMonthBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanApp.Designer.cs">
+      <DependentUpon>FrmReportLoanApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanConnect.Designer.cs">
+      <DependentUpon>FrmReportLoanConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanNewApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanNewApp.Designer.cs">
+      <DependentUpon>FrmReportLoanNewApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanOffset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\LoanGUI\FrmReportLoanOffset.Designer.cs">
+      <DependentUpon>FrmReportLoanOffset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\MasterDataGUI\FrmReportMasterContribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MasterDataGUI\FrmReportMasterData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MasterDataGUI\FrmReportMasterData.Designer.cs">
+      <DependentUpon>FrmReportMasterData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\MasterDataGUI\FrmReportMasterHospital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MasterDataGUI\FrmReportMasterLoanReson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAid.Designer.cs">
+      <DependentUpon>FrmReportMedicalAid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidAtt.Designer.cs">
+      <DependentUpon>FrmReportMedicalAidAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidInsurancePaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidInsurancePaid.Designer.cs">
+      <DependentUpon>FrmReportMedicalAidInsurancePaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidNoAtt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidNoAtt.Designer.cs">
+      <DependentUpon>FrmReportMedicalAidNoAtt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportEmployeeRegist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportEmployeeRegist.Designer.cs">
+      <DependentUpon>FrmReportEmployeeRegist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportEmployeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportEmployeeSearch.Designer.cs">
+      <DependentUpon>FrmReportEmployeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportExpiredDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportExpiredDrivingLicense.Designer.cs">
+      <DependentUpon>FrmReportExpiredDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportExpiredIDCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportExpiredIDCard.Designer.cs">
+      <DependentUpon>FrmReportExpiredIDCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportHireDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportHireDate.Designer.cs">
+      <DependentUpon>FrmReportHireDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportProbationEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportProbationEmployee.Designer.cs">
+      <DependentUpon>FrmReportProbationEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportRetiredEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportRetiredEmployee.Designer.cs">
+      <DependentUpon>FrmReportRetiredEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportSalaryEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PI\FrmReportSalaryEmployee.Designer.cs">
+      <DependentUpon>FrmReportSalaryEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportAvgMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportAvgMaintenance.Designer.cs">
+      <DependentUpon>FrmReportAvgMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportAvgMaintenanceCust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportAvgMaintenanceCust.Designer.cs">
+      <DependentUpon>FrmReportAvgMaintenanceCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportVehicleSellingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Vehicle\FrmReportVehicleSellingPlan.Designer.cs">
+      <DependentUpon>FrmReportVehicleSellingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Attendance\ReportEmployeeOverNightTripBenefit.cs" />
+    <Compile Include="Reports\Attendance\ReportGenWorkSchedule.cs" />
+    <Compile Include="Reports\Contract\ReportCarAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportCarLeasingAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportChargeRateByContract.cs" />
+    <Compile Include="Reports\Contract\ReportDriverAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportDriverAgreementJICA.cs" />
+    <Compile Include="Reports\Contract\ReportDriverLeasingAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportPenaltyCharge.cs" />
+    <Compile Include="Reports\Contract\ReportServiceAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportTISDriverAgreement.cs" />
+    <Compile Include="Reports\PI\ReportEmployeeRegist.cs" />
+    <Compile Include="Reports\PI\ReportExpiredDrivingLicense.cs" />
+    <Compile Include="Reports\PI\ReportExpiredIDCard.cs" />
+    <Compile Include="Reports\PI\ReportFormerEmployeeRegister.cs">
+    </Compile>
+    <Compile Include="Reports\PI\ReportHireDate.cs" />
+    <Compile Include="Reports\PI\ReportPersonnalDataWelfare.cs">
+    </Compile>
+    <Compile Include="Reports\PI\ReportProbationEmployee.cs" />
+    <Compile Include="Reports\PI\ReportProvidentFund.cs">
+    </Compile>
+    <Compile Include="Reports\PI\ReportResignProvidentFund.cs" />
+    <Compile Include="Reports\PI\ReportRetiredEmployee.cs" />
+    <Compile Include="Reports\PI\ReportSalaryEmployee.cs" />
+    <Compile Include="Reports\ReportBase.cs" />
+    <Compile Include="Reports\ReportSpecifyMonthBase.cs" />
+    <Compile Include="Reports\Vehicle\ReportComparisonMaintenance4Year.cs" />
+    <Compile Include="Reports\Vehicle\ReportApplicationSelling.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenance3years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenance4years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenance5years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenanceBase.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenanceCust3years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenanceCust4years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenanceCust5years.cs" />
+    <Compile Include="Reports\Vehicle\ReportAvgMaintenanceCustBase.cs" />
+    <Compile Include="Reports\Vehicle\ReportComparisonMaintenance.cs" />
+    <Compile Include="Reports\Vehicle\ReportDiscountCar.cs" />
+    <Compile Include="Reports\Contract\ReportRenewalNotice.cs" />
+    <Compile Include="Reports\Vehicle\ReportLeasingCar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reports\Vehicle\ReportSellingQuotation.cs" />
+    <Compile Include="Reports\Vehicle\ReportVehicleRepairingNoneTaxInvoice.cs" />
+    <Compile Include="Reports\Vehicle\ReportVehicleSelling.cs" />
+    <Compile Include="Reports\Vehicle\ReportVehicleSellingDepreciation.cs" />
+    <Compile Include="Reports\Vehicle\ReportVehicleSellingPlan.cs" />
+    <Compile Include="Reports\Welfare\ReportConnectBBL\ReportConnectBBLBase.cs" />
+    <Compile Include="Reports\Welfare\ReportConnectBBL\ReportConnectBBLLoan.cs" />
+    <Compile Include="Reports\Welfare\ReportsConnectBizPac\ReportConnectBizPac.cs" />
+    <Compile Include="Reports\Welfare\ReportsContribution\ReportContributionApp.cs" />
+    <Compile Include="Reports\Welfare\ReportsLoan\ReportLoanApp.cs" />
+    <Compile Include="Reports\Welfare\ReportsLoan\ReportLoanAppGroupByReson.cs" />
+    <Compile Include="Reports\Welfare\ReportsLoan\ReportLoanNewApp.cs" />
+    <Compile Include="Reports\Welfare\ReportsLoan\ReportLoanOffset.cs" />
+    <Compile Include="Reports\Welfare\ReportsMasterData\ReportContribution.cs" />
+    <Compile Include="Reports\Welfare\ReportsMasterData\ReportHospital.cs" />
+    <Compile Include="Reports\Welfare\ReportsMasterData\ReportLoanReason.cs" />
+    <Compile Include="Reports\Welfare\ReportsMasterData\ReportMasterDataBase.cs" />
+    <Compile Include="Reports\Welfare\ReportsMedicalAid\ReportMedicalAid.cs" />
+    <Compile Include="Reports\Welfare\ReportsMedicalAid\ReportMedicalAidAtt.cs" />
+    <Compile Include="Reports\Welfare\ReportsMedicalAid\ReportMedicalAidInsurancePaid.cs" />
+    <Compile Include="Reports\Welfare\ReportsMedicalAid\ReportMedicalAidNoAtt.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Contract\FrmListNoAccidentReward.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmListNoAccidentReward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contract\FrmReportRenewalNotice.resx">
+      <DependentUpon>FrmReportRenewalNotice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportPersonnalDataWelfare.resx">
+      <DependentUpon>FrmReportPersonnalDataWelfare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportProvidentFund.resx">
+      <DependentUpon>FrmReportProvidentFund.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportResignProvidentFund.resx">
+      <DependentUpon>FrmReportResignProvidentFund.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportApplicationSelling.resx">
+      <DependentUpon>FrmReportApplicationSelling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportComparisonMaintenance.resx">
+      <DependentUpon>FrmReportComparisonMaintenance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportDiscountCar.resx">
+      <DependentUpon>FrmReportDiscountCar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportLeasingCar.resx">
+      <DependentUpon>FrmReportLeasingCar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportVehicleSelling.resx">
+      <DependentUpon>FrmReportVehicleSelling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmRptVehicleRepairingNoneTaxInvoice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmRptVehicleRepairingNoneTaxInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\ConnectBBLGUI\FrmReportBBLBase.resx">
+      <DependentUpon>FrmReportBBLBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\ConnectBizPacGUI\FrmConnectBizPac.resx">
+      <DependentUpon>FrmConnectBizPac.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contract\FrmContractServiceAgreement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmContractServiceAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contract\FrmReportContractCarLeasing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportContractCarLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contract\FrmReportContractDriverLeasing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportContractDriverLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contract\FrmReportPenaltyCharge.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportPenaltyCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\ContributionGUI\FrmReportContributionApp.resx">
+      <DependentUpon>FrmReportContributionApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmNoneSpecify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmNoneSpecify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmReportBase.resx">
+      <DependentUpon>FrmReportBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmSpecifyMonthBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSpecifyMonthBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\LoanGUI\FrmReportLoanApp.resx">
+      <DependentUpon>FrmReportLoanApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\LoanGUI\FrmReportLoanConnect.resx">
+      <DependentUpon>FrmReportLoanConnect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\LoanGUI\FrmReportLoanNewApp.resx">
+      <DependentUpon>FrmReportLoanNewApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\LoanGUI\FrmReportLoanOffset.resx">
+      <DependentUpon>FrmReportLoanOffset.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\MasterDataGUI\FrmReportMasterData.resx">
+      <DependentUpon>FrmReportMasterData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAid.resx">
+      <DependentUpon>FrmReportMedicalAid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidAtt.resx">
+      <DependentUpon>FrmReportMedicalAidAtt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidInsurancePaid.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportMedicalAidInsurancePaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welfare\MedicalAidGUI\FrmReportMedicalAidNoAtt.resx">
+      <DependentUpon>FrmReportMedicalAidNoAtt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportEmployeeRegist.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportEmployeeRegist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportEmployeeSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportEmployeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportExpiredDrivingLicense.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportExpiredDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportExpiredIDCard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportExpiredIDCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportHireDate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportHireDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportRetiredEmployee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportRetiredEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PI\FrmReportSalaryEmployee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportSalaryEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportAvgMaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportAvgMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportAvgMaintenanceCust.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportAvgMaintenanceCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Vehicle\FrmReportVehicleSellingPlan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportVehicleSellingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\ictus.Framework.ASC.Entity.csproj">
+      <Project>{BE5B81FD-19B6-4F49-B460-9C3932169912}</Project>
+      <Name>ictus.Framework.ASC.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Name>PTB.BTS.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Flow\PTB.BTS.Flow.csproj">
+      <Project>{BD3D2B8D-9EEE-4381-B942-6FAD96F41F23}</Project>
+      <Name>PTB.BTS.Flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PresentationBase\PTB.BTS.PresentationBase.csproj">
+      <Project>{CC9E5AA4-73EA-453D-865A-81F89246B824}</Project>
+      <Name>PTB.BTS.PresentationBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\PTB.BTS.SystemFramework.csproj">
+      <Project>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</Project>
+      <Name>PTB.BTS.SystemFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

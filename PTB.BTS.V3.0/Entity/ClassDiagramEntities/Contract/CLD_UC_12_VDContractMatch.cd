@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.ContractEntities.VehicleContract">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAABAAAEAQAAAAAAAAAAAACAgAAAIqAACA=</HashCode>
+      <FileName>ContractEntities\VehicleContract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ADriverContract" />
+      <Property Name="KindOfRental" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQo=</HashCode>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.DriverContract">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ContractEntities\DriverContract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AVehicleContract" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffContract">
+    <Position X="9.25" Y="1.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAACAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Entity.CommonEntity.KIND_OF_RENTAL_TYPE">
+    <Position X="6.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAgA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,84 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ictus.SystemConnection.BizPac</RootNamespace>
+    <AssemblyName>ictus.SystemConnection.BizPac</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\ictdev01\SourceSafe_ASC\DLL.ASC\ictus.Common\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.AppConfig, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\Ictdev01\SourceSafe_ASC\DLL.ASC\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\Ictdev01\SourceSafe_ASC\DLL.ASC\ictus.Framework.ASC\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AP\APMapping.cs" />
+    <Compile Include="AP\IAPDetail.cs" />
+    <Compile Include="AP\IAPHeader.cs" />
+    <Compile Include="AR\ARMapping.cs" />
+    <Compile Include="AR\IARDetail.cs" />
+    <Compile Include="AR\IARHeader.cs" />
+    <Compile Include="BizPacConnect.cs" />
+    <Compile Include="BizPacConnectType.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Core\BizPacConnectBase.cs" />
+    <Compile Include="Core\BizPacStringBuilder.cs" />
+    <Compile Include="BizPacMappingBase.cs" />
+    <Compile Include="Core\BizPacCSVConnect.cs" />
+    <Compile Include="Core\IAccountDetail.cs" />
+    <Compile Include="Core\IAccountHeader.cs" />
+    <Compile Include="FixAsset\BizPacMoveFile.cs" />
+    <Compile Include="Ftp.cs" />
+    <Compile Include="ObjectCreater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\ictus.SystemConnection.BizPac.InterfaceCD.cd" />
+    <None Include="ictus.SystemConnection.BizPacCD.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

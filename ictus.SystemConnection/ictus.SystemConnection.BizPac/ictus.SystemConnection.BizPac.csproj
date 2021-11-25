@@ -1,0 +1,95 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ictus.SystemConnection.BizPac</RootNamespace>
+    <AssemblyName>ictus.SystemConnection.BizPac</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PTB.BTS.V3.0\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AP\APMapping.cs" />
+    <Compile Include="AP\IAPDetail.cs" />
+    <Compile Include="AP\IAPHeader.cs" />
+    <Compile Include="AR\ARMapping.cs" />
+    <Compile Include="AR\IARDetail.cs" />
+    <Compile Include="AR\IARHeader.cs" />
+    <Compile Include="BizPacConnect.cs" />
+    <Compile Include="BizPacConnectType.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Core\BizPacConnectBase.cs" />
+    <Compile Include="Core\BizPacStringBuilder.cs" />
+    <Compile Include="BizPacMappingBase.cs" />
+    <Compile Include="Core\BizPacCSVConnect.cs" />
+    <Compile Include="Core\IAccountDetail.cs" />
+    <Compile Include="Core\IAccountHeader.cs" />
+    <Compile Include="FixAsset\BizPacMoveFile.cs" />
+    <Compile Include="Ftp.cs" />
+    <Compile Include="ObjectCreater.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\ictus.SystemConnection.BizPac.InterfaceCD.cd" />
+    <None Include="ictus.SystemConnection.BizPacCD.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\ictus.Framework.ASC.AppConfig.csproj">
+      <Project>{8512A259-00C9-41DF-9E6A-0F8076B67750}</Project>
+      <Name>ictus.Framework.ASC.AppConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\ictus.Framework.ASC.Entity.csproj">
+      <Project>{BE5B81FD-19B6-4F49-B460-9C3932169912}</Project>
+      <Name>ictus.Framework.ASC.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

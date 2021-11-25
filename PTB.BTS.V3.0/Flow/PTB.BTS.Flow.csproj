@@ -1,0 +1,764 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD3D2B8D-9EEE-4381-B942-6FAD96F41F23}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.Flow</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Flow</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/PTB.BTS.Flow/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\bin\Debug\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.VBFuntion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\bin\Debug\ictus.Framework.ASC.VBFuntion.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\ictus.SystemConnection\ictus.SystemConnection.BizPac\ictus.SystemConnection.BizPac.csproj">
+      <Project>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</Project>
+      <Name>ictus.SystemConnection.BizPac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\PTB.BTS.DataAccess.csproj">
+      <Name>PTB.BTS.DataAccess</Name>
+      <Project>{C1DCA0E3-86C8-47ED-8936-8CE9C9F7AD3A}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Name>PTB.BTS.Entity</Name>
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\PTB.BTS.BTS2SAP\PTB.BTS.BTS2SAP.csproj">
+      <Project>{36120445-9D1D-44DD-B617-BE97EEEB9636}</Project>
+      <Name>PTB.BTS.BTS2SAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\PTB.BTS.SystemFramework.csproj">
+      <Name>PTB.BTS.SystemFramework</Name>
+      <Project>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\DeductChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\DriverCustomerAdjustmentChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\DriverOTChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\SpecialChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\SpecialChargeSummaryFlow.cs" />
+    <Compile Include="AttendanceFlow\CommonBenefitFlow\CommonAttendanceFlow.cs" />
+    <Compile Include="AttendanceFlow\GenerateMealBenefitFlow.cs" />
+    <Compile Include="Comparer\ContractDepartmentAssignmentComparer.cs" />
+    <Compile Include="ContractFlow\CompensateRateFlow.cs" />
+    <Compile Include="ContractFlow\ContractChargeDetailFlow.cs" />
+    <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerChargeFlowBase.cs" />
+    <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerSpecialChargeConditionFlow.cs" />
+    <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerSpecialChargeFlow.cs" />
+    <Compile Include="ContractFlow\ContractDepartmentAssignmentFlow.cs" />
+    <Compile Include="ContractFlow\VehicleChargeDiffFlow.cs" />
+    <Compile Include="ContractFlow\VehicleContractFlow.cs" />
+    <Compile Include="PiFlow\EmployeeSalaryFlow.cs" />
+    <Compile Include="PiFlow\SSHospitalFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater5.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater5.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\CostAndProfitFlow.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\InterestCostFlow.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\LeasingCalculationFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater4.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\AttachGroupStruct.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\AssignmentChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\AnnualLeaveControlFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\AttendanceComboboxFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\AttendanceCommonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\AttendanceStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\CalOTByPatternFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\CalOTByVarientFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\CalOTByVarientForChargeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\CalOTFlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\EmployeeBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\FoodBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\OneDayTripBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\OTBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\OvernightTripBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\TaxiBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\TaxiBenefitFlowEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitFlow\WorkInfoFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\DiseaseFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeAnnualLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeBenefitAdjustmentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeExtraAGTBenefitDeductionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeExtraAGTBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeExtraBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeFoodBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeMiscBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeMiscDeductionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeOTWorkScheduleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeePrivateLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeSickLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeSpecialLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeTelephoneBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeTimeCardFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeWorkAttedanceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\EmployeeWorkScheduleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateAnnualLeaveDayFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateEmployeeTimeCardFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateEmployeeWorkScheduleAndTimcardFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateEmployeeWorkScheduleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateOtherBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\GenerateWorkScheduleFlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\HolidayConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\HolidayConditionSpecificFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\LeaveReasonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitFlow\ExtraAGTBenefitDeductionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitFlow\ExtraAGTBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitFlow\ExtraBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitFlow\OtherBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitFlow\TelephoneBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitGeneralConditionFlow.cs" />
+    <Compile Include="AttendanceFlow\OtherBenefitRateFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OtherBenefitSpecificConditionFlow.cs" />
+    <Compile Include="AttendanceFlow\OTPatternFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OTPatternGeneralConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OTPatternSpecificConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\OTVariantFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\PayrollPaymentControlFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\SaleAnnualLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\SpecialLeaveFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TaxiFamilyCarConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TaxiPositioncarConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TelephoneConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TraditionalHolidayFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TraditionalHolidayPatternFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\TripLocationFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\WorkingTimeConditionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\WorkingTimeConditionSpecificFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\WorkingTimeTableFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\BenefitChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ServiceStaffChargeBase.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\BenefitChargeBase.cs" />
+    <Compile Include="CommonFlow\AgeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\ApplicationUserProfileFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\CommonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\DistrictFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\FacultyFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\FlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\InstituteFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\LogInFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\MaintainUserFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\MajorFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\MTBFlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\PermissionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\PrefixFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\ProvinceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\StreetFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFlow\SubDistrictFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\CustomerAdjustmentChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\OneDayTripChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\OTChargeFlow.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\OverNightTripChargeFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeTRFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverSummaryIncomeFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\InsuranceTypeOneFlow\InsuranceTypeOneTRFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\CompulsoryFlow\CompulsoryInsuranceTRFlow.cs" />
+    <Compile Include="ContractFlow\CalculationOfLeasingFlow.cs" />
+    <Compile Include="ContractFlow\ContractCancelReasonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ContractChargeRateFlow\ChargeRateByContractFlow.cs" />
+    <Compile Include="ContractFlow\ContractChargeRateFlow\ChargeRateByServiceStaffTypeFlow.cs" />
+    <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerChargeAdjustmentFlow.cs" />
+    <Compile Include="ContractFlow\ContractFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ContractStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ContractTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\CustomerContractGroupFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\CustomerDepartmentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\CustomerFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\CustomerGroupFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\DocumentNoFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\KindOfContractFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ContractChargeRateFlow\MinimumOTChargeFlow.cs" />
+    <Compile Include="ContractFlow\ServiceStaffAssignmentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ServiceStaffContractFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ServiceStaffFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\ServiceStaffTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\SpareVehicleInternalUsageReasonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\SpareVehicleReplacementReasonFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\VDContractMatchingFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFlow\VehicleAssignmentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater0.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater1.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater2.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater3.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreaterBase.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreaterManager.cs" />
+    <Compile Include="PiFlow\BankFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\BloodGroupFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\CompanyFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\DepartmentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\EducationFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\EducationLevelFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\EmployeeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\FormerEmployeeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\FormerFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\FormerFlowBK.cs" />
+    <Compile Include="PiFlow\KindOfStaffFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\MaritalStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\MilitaryStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\MovetoFormerPIFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\MTBCompanyFlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\NationalityFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\OccupationFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\PIFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\PositionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\PositionGroupFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\PositionTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\RaceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\RelationshipFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\ReligionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\SectionFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\SpecialAllowanceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\TitleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFlow\WorkingStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\CompulsoryFlow\CompulsoryInsuranceBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\InsuranceTypeOneFlow\InsuranceTypeOneBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffContractChargeBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffContractChargeTRFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleContractChargeBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleContractChargeTRFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleExcessFlow\VehicleExcessBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleExcessFlow\VehicleExcessTRFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleRepairingFlow\VehicleRepairingBPFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\BTS2BizPacConnectFlow.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\ProfitAndLostFlow.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\PurchasingFlow.cs" />
+    <Compile Include="VehicleFlow\LeasingFlow\QuotationFlow.cs" />
+    <Compile Include="ReportFlow\ListOfMonthlyLeaveSummaryFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\NoAccidentRewardFlow.cs" />
+    <Compile Include="ReportFlow\TimeCardForChargeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TimeCardForPaymentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrAnnualLeaveSaleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrCompulsoryExpenseFlow.cs" />
+    <Compile Include="ReportFlow\TrExpiredCompulsoryInsuranceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrExpiredVehicleTaxFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrInsuranceExpenseFlow.cs" />
+    <Compile Include="ReportFlow\TrNewAnnualLeaveDaysFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrNonPayrollBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportFlow\TrPayrollBenefitFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater0.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater1.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater2.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater3.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreater4.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreaterBase.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VDNCreaterManager.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffDebitNoteCreateFlow\SDNCreaterManager.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffDebitNoteCreateFlow\SDNCreaterBase.cs" />
+    <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\TaxiChargeFlow.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffDebitNoteCreateFlow\SDNCreater0.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffDebitNoteCreateFlow\SDNCreater1.cs" />
+    <Compile Include="VehicleFlow\BidderFlow.cs" />
+    <Compile Include="VehicleFlow\BrandFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\ColorFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\CompulsoryInsuranceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\DailyProcessControlFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\DailyProcessFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\GarageFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\GasolineTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\InsuranceCompanyFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\InsuranceTypeOneFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\KindOfVehicleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\LeasingFlow\VehicleSellingPlanFlow.cs" />
+    <Compile Include="VehicleFlow\ModelFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\ModelTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\PaymentTypeFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\PlaceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\PoliceStationFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\ProfitCalculation\ProfitCalculationFlow.cs" />
+    <Compile Include="VehicleFlow\SparePartsFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleAccidentFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleInsuranceTypeOneFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleLeasingFlow\VehicleCalculationFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleLeasingFlow\VehiclePurchasingContractFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleLeasingFlow\VehiclePurchasingFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleLeasingFlow\VehicleQuotationFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleLeasingFlow\VehicleSellingPlanFlow.cs" />
+    <Compile Include="VehicleFlow\VehicleMaintenanceFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleRepairingFlowBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleTaxDiscountRatioFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleTaxFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VehicleVatStatusFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFlow\VendorFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacFlow\VehicleRepairingFlow\VehicleRepairingTRFlow.cs" />
+    <Compile Include="WelfareFlow\TrWelfareBenefitFlow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AttendanceFlow\BenefitChargeFlow\BenefitChargeFlowCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeFlowCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DriverDebitNoteCreateCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacFlow\PTB.BTS.BTS2BizPacCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacFlow\ServiceStaffContractChargeFlow\ServiceStaffDebitNoteCreateFlow\ServiceStaffDebitNoteCreateCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleDebitNoteCreateFlow\VehicleDebitNoteCreateCD.cd" />
+    <None Include="VehicleFlow\LeasingFlow\LeasingFlowCD.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleCalculation">
+    <Position X="0.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EQEAAAEAAAAAQFAEAMAAABQAAAkMAABAAAgUgAgCCMg=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleCalculation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeasingCalculation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleLeasingCalculation">
+    <Position X="4" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAEAAAAJgBAAAMAQIABAAIEBAAKBAQASAAAQAMA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleLeasingCalculation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entity.VehicleEntities.VehicleLeasing.IVehicleProfitCalHead">
+    <Position X="6.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EQEAAAEAAAAAABAEAMAAAAAAAAEMAABAAAgUgAgACMA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\IVehicleProfitCalHead.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

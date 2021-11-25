@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehiclePurchasing" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehiclePurchasing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleCalculation" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQEAAAEAAAAAQFAEAMAAABQAAAkMAABAAAgUgAgCCMg=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleCalculation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeasingCalculation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleQuotation" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAABAAQgAAAAEAAKAAAAAAIAAAIBAAAgIoIAABAA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleQuotation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehicleCalculation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleLeasingCalculation">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAEAAAAJgBAAAMAQIABAAIEBAAKBAQASAAAQAMA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleLeasingCalculation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entity.VehicleEntities.VehicleLeasing.IVehiclePurchasing" Collapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAABAAAgAAAAEAAAAAAAAAAAAAABAAAgIoAAABAA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\IVehiclePurchasing.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entity.VehicleEntities.VehicleLeasing.IVehicleProfitCalHead" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQEAAAEAAAAAABAEAMAAAAAAAAEMAABAAAgUgAgACMA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\IVehicleProfitCalHead.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeFlow">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\BenefitChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAABAAgAAAAAAAAQAAAAAAAAAAAAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.ServiceStaffChargeBase">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ServiceStaffChargeBase.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.AssignmentChargeFlow">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\AssignmentChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAgAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\BenefitChargeBase.cs</FileName>
+      <HashCode>gAAAAAAAACAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceStaffCharge" />
+    </ShowAsAssociation>
+    <AssociationLine Name="ServiceStaffCharge" Type="PTB.BTS.Attendance.BenefitChargeFlow.ServiceStaffChargeBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="3.658" />
+        <Point X="5.375" Y="3.658" />
+        <Point X="5.375" Y="1.032" />
+        <Point X="4" Y="1.032" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.OTChargeFlow" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\OTChargeFlow.cs</FileName>
+      <HashCode>AAAARAAAAAAAAABASACAACIAAAAAAAAAAhAAAAIAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.TaxiChargeFlow" Collapsed="true">
+    <Position X="3.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\TaxiChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.083" />
+        <Point X="4.5" Y="5.083" />
+        <Point X="4.5" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.OneDayTripChargeFlow" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\OneDayTripChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQACA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.13" />
+        <Point X="4.75" Y="5.13" />
+        <Point X="4.75" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.OverNightTripChargeFlow" Collapsed="true">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\OverNightTripChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.102" />
+        <Point X="5" Y="5.102" />
+        <Point X="5" Y="6" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.FoodChargeFlow" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\FoodChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.125" />
+        <Point X="5.25" Y="5.125" />
+        <Point X="5.25" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.CustomerAdjustmentChargeFlow" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\CustomerAdjustmentChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.094" />
+        <Point X="5.5" Y="5.094" />
+        <Point X="5.5" Y="6.5" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.SpecialChargeFlow" Collapsed="true">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\SpecialChargeFlow.cs</FileName>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="PTB.BTS.Attendance.BenefitChargeFlow.BenefitChargeBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="4.779" />
+        <Point X="4.25" Y="5.104" />
+        <Point X="5.75" Y="5.104" />
+        <Point X="5.75" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="PTB.BTS.Attendance.BenefitChargeFlow.DriverOTChargeFlow" Collapsed="true">
+    <Position X="6.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceFlow\BenefitChargeFlow\ImplementCharge\DriverOTChargeFlow.cs</FileName>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

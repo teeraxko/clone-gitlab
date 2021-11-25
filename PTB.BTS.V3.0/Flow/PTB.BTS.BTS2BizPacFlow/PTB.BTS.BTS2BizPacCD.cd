@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PTB.BTS.BTS2BizPacFlow.BTS2BizPacConnectFlow" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\BTS2BizPacConnectFlow.cs</FileName>
+      <HashCode>BAAAAABAQAFICAAACAAAAIAAAQAAAAQggAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleRepairingFlow.VehicleRepairingTRFlow">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleRepairingFlow\VehicleRepairingTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.CompulsoryFlow.CompulsoryInsuranceTRFlow">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\CompulsoryFlow\CompulsoryInsuranceTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.BizPacImplementFlow.InsuranceTypeOneBPFlow" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\InsuranceTypeOneFlow\InsuranceTypeOneBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.BizPacImplementFlow.InsuranceTypeOneTRFlow">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\InsuranceTypeOneFlow\InsuranceTypeOneTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleRepairingFlow.VehicleRepairingBPFlow" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleRepairingFlow\VehicleRepairingBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAACAAEAIAAAAAAAQAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.CompulsoryFlow.CompulsoryInsuranceBPFlow" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\CompulsoryFlow\CompulsoryInsuranceBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAgAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleExcessFlow.VehicleExcessBPFlow" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleExcessFlow\VehicleExcessBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAEAAAAAAABCAAAAAAAQAAAAggABIAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleExcessFlow.VehicleExcessTRFlow">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleExcessFlow\VehicleExcessTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleContractChargeFlow.VehicleContractChargeBPFlow" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleContractChargeBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAhAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.VehicleContractChargeFlow.VehicleContractChargeTRFlow">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\VehicleContractChargeFlow\VehicleContractChargeTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverContractChargeFlow.DriverContractChargeBPFlow" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAQAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverContractChargeFlow.DriverContractChargeTRFlow">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeTRFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

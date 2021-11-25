@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.AttendanceEntities.EmployeeWorkSchedule">
+    <Position X="7.25" Y="7" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ictus.PIS.PI.Entity.EmployeeStuffBase" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="6.33" />
+        <Point X="8" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAACAAAAAAGBAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AttendanceEntities\EmployeeWorkSchedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="this[System.Int32]" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ictus.PIS.PI.Entity.EmployeeStuffBase">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Employee" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.AttendanceEntities.WorkSchedule">
+    <Position X="9" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAACAEAABAAAAAQAgAACQAAAAEAAAAAA=</HashCode>
+      <FileName>AttendanceEntities\WorkSchedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DayType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ictus.PIS.PI.Entity.Employee">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaff">
+    <Position X="4.75" Y="4.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="ictus.PIS.PI.Entity.Employee" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="3.888" />
+        <Point X="6.188" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAABAAAAEAAAAAAAAAABAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ContractEntities\ServiceStaff.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AServiceStaffType" />
+      <Property Name="ACurrentContract" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffAssignment">
+    <Position X="4.5" Y="7.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="AMainServiceStaff" Type="Entity.ContractEntities.ServiceStaff">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.325" Y="0.131" Height="0.16" Width="1.241" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAEAAAAgAgAAKAIAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffAssignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AAssignedServiceStaff" />
+      <Property Name="AMainServiceStaff" />
+      <Property Name="AssignmentRole" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffContract">
+    <Position X="3.25" Y="1.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAACAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase" Collapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQo=</HashCode>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffType">
+    <Position X="1.75" Y="4" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAKAAAAAAAAAAEEBAAAAABAAABAQAAIQAAEAAAACA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Entity.CommonEntity.WORKINGDAY_TYPE">
+    <Position X="8.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAIAAAAAAAAAAQAA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Entity.CommonEntity.ASSIGNMENT_ROLE_TYPE">
+    <Position X="4.75" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAEAA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

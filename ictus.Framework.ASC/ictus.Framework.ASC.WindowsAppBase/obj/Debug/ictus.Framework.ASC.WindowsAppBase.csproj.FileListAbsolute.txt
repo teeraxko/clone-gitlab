@@ -1,0 +1,7 @@
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\bin\Debug\ictus.Framework.ASC.WindowsAppBase.exe
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\bin\Debug\ictus.Framework.ASC.WindowsAppBase.pdb
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\obj\Debug\ResolveAssemblyReference.cache
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\obj\Debug\ictus.Framework.ASC.WindowsAppBase.Properties.Resources.resources
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\obj\Debug\ictus.Framework.ASC.WindowsAppBase.csproj.GenerateResource.Cache
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\obj\Debug\ictus.Framework.ASC.WindowsAppBase.exe
+D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.WindowsAppBase\obj\Debug\ictus.Framework.ASC.WindowsAppBase.pdb

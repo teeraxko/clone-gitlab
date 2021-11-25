@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.WindowsAppBase", "ictus.Framework.ASC.WindowsAppBase\ictus.Framework.ASC.WindowsAppBase.csproj", "{9615BDD7-27AA-49E8-B661-ECF5391A8943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.Entity", "ictus.Framework.ASC.Entity\ictus.Framework.ASC.Entity.csproj", "{BE5B81FD-19B6-4F49-B460-9C3932169912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.Flow", "ictus.Framework.ASC.Flow\ictus.Framework.ASC.Flow.csproj", "{21FE9BA5-3725-447B-B93A-2E439EA6653C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.Facade", "ictus.Framework.ASC.Facade\ictus.Framework.ASC.Facade.csproj", "{AC7D2066-EF60-49FA-A863-00D5FAD3E6E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.DataAccess", "ictus.Framework.ASC.DataAccess\ictus.Framework.ASC.DataAccess.csproj", "{1A46319C-3FD2-4451-BF7E-DC53EB677A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.AppConfig", "ictus.Framework.ASC.AppConfig\ictus.Framework.ASC.AppConfig.csproj", "{8512A259-00C9-41DF-9E6A-0F8076B67750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ictus.Framework.ASC.ExceptionManagement", "ictus.Framework.ASC.ExceptionManagement\ictus.Framework.ASC.ExceptionManagement.csproj", "{8C552ADB-2E29-4BA1-9E4C-4A22A892B882}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ictus.Framework.ASC.VBFuntion", "ictus.Framework.ASC.VBFuntion\ictus.Framework.ASC.VBFuntion.vbproj", "{3EDCEE2C-6D66-4DDA-BCA1-809394999677}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 9
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ictus.Framework.ASC.AppConfig\\ictus.Framework.ASC.AppConfig.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ictus.Framework.ASC.AppConfig\\
+		SccProjectUniqueName2 = ictus.Framework.ASC.DataAccess\\ictus.Framework.ASC.DataAccess.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = ictus.Framework.ASC.DataAccess\\
+		SccProjectUniqueName3 = ictus.Framework.ASC.Entity\\ictus.Framework.ASC.Entity.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = ictus.Framework.ASC.Entity\\
+		SccProjectUniqueName4 = ictus.Framework.ASC.Facade\\ictus.Framework.ASC.Facade.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = ictus.Framework.ASC.Facade\\
+		SccProjectUniqueName5 = ictus.Framework.ASC.Flow\\ictus.Framework.ASC.Flow.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = ictus.Framework.ASC.Flow\\
+		SccProjectUniqueName6 = ictus.Framework.ASC.WindowsAppBase\\ictus.Framework.ASC.WindowsAppBase.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = ictus.Framework.ASC.WindowsAppBase\\
+		SccProjectUniqueName7 = ictus.Framework.ASC.ExceptionManagement\\ictus.Framework.ASC.ExceptionManagement.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = ictus.Framework.ASC.ExceptionManagement\\
+		SccProjectUniqueName8 = ictus.Framework.ASC.VBFuntion\\ictus.Framework.ASC.VBFuntion.vbproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = ictus.Framework.ASC.VBFuntion\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9615BDD7-27AA-49E8-B661-ECF5391A8943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9615BDD7-27AA-49E8-B661-ECF5391A8943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9615BDD7-27AA-49E8-B661-ECF5391A8943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9615BDD7-27AA-49E8-B661-ECF5391A8943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE5B81FD-19B6-4F49-B460-9C3932169912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5B81FD-19B6-4F49-B460-9C3932169912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5B81FD-19B6-4F49-B460-9C3932169912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5B81FD-19B6-4F49-B460-9C3932169912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FE9BA5-3725-447B-B93A-2E439EA6653C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FE9BA5-3725-447B-B93A-2E439EA6653C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FE9BA5-3725-447B-B93A-2E439EA6653C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FE9BA5-3725-447B-B93A-2E439EA6653C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7D2066-EF60-49FA-A863-00D5FAD3E6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7D2066-EF60-49FA-A863-00D5FAD3E6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7D2066-EF60-49FA-A863-00D5FAD3E6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7D2066-EF60-49FA-A863-00D5FAD3E6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A46319C-3FD2-4451-BF7E-DC53EB677A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A46319C-3FD2-4451-BF7E-DC53EB677A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A46319C-3FD2-4451-BF7E-DC53EB677A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A46319C-3FD2-4451-BF7E-DC53EB677A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8512A259-00C9-41DF-9E6A-0F8076B67750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8512A259-00C9-41DF-9E6A-0F8076B67750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8512A259-00C9-41DF-9E6A-0F8076B67750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8512A259-00C9-41DF-9E6A-0F8076B67750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C552ADB-2E29-4BA1-9E4C-4A22A892B882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C552ADB-2E29-4BA1-9E4C-4A22A892B882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C552ADB-2E29-4BA1-9E4C-4A22A892B882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C552ADB-2E29-4BA1-9E4C-4A22A892B882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EDCEE2C-6D66-4DDA-BCA1-809394999677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDCEE2C-6D66-4DDA-BCA1-809394999677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDCEE2C-6D66-4DDA-BCA1-809394999677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDCEE2C-6D66-4DDA-BCA1-809394999677}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

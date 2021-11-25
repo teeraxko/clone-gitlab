@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.ContractEntities.VehicleAssignment">
+    <Position X="3.5" Y="6.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAAAAAAQEAAAAgAAAAIAAAAAEACAAAAAIAA=</HashCode>
+      <FileName>ContractEntities\VehicleAssignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AAssignedVehicle" />
+      <Property Name="AMainVehicle" />
+      <Property Name="AssignmentRole" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.VehicleContract">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAABAAAEAQAAAAAAAAAAAACAgAAAIqAACA=</HashCode>
+      <FileName>ContractEntities\VehicleContract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="KindOfRental" />
+      <Property Name="ADriverContract" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.VehicleEntities.Vehicle">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAEAIAQEACAEJGAIEAAgAAEAAQADIAAAAoQAAASFAAg=</HashCode>
+      <FileName>VehicleEntities\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.AssignmentBase">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <AssociationLine Name="AContract" Type="Entity.ContractEntities.ContractBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.5" />
+        <Point X="4.75" Y="2.565" />
+        <Point X="6.25" Y="2.565" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAEAAAAFAAAAAAAAAABAAAAAQAAAAQAAAA=</HashCode>
+      <FileName>ContractEntities\AssignmentBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AContract" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase" Collapsed="true">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQo=</HashCode>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.DriverContract">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ContractEntities\DriverContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Entity.CommonEntity.ASSIGNMENT_ROLE_TYPE">
+    <Position X="4" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAEAA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Entity.CommonEntity.KIND_OF_RENTAL_TYPE">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAgA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

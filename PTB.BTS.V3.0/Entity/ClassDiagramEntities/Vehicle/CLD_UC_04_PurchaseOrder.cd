@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehiclePurchasing">
+    <Position X="5.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAgAAAEEAAAAACAAAAAAABAAAgAoAAAAQA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehiclePurchasing.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+      <Property Name="Vendor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.ContractEntities.Contract">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\Contract.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.Model">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAADICAAAyAgMEAAgCAAAIgEAACAAAAAAAAAAAgE=</HashCode>
+      <FileName>VehicleEntities\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.Vehicle">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAEAIAQEACAEJGAIEAAgAAEAAQADIAAAAoQAAASFAAg=</HashCode>
+      <FileName>VehicleEntities\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.Vendor">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEEAAgAAABMAAAAZAAAACAAAAAAAA=</HashCode>
+      <FileName>VehicleEntities\Vendor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehiclePurchasingContract">
+    <Position X="5.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehiclePurchasingContract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VehiclePurchasing" />
+      <Property Name="Contract" />
+      <Property Name="Vehicle" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

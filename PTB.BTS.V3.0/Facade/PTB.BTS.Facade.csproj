@@ -1,0 +1,661 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6EF3579-74BA-4A46-A846-90EF3F23B5AA}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.Facade</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Facade</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/PTB.BTS.Facade/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=2.0.0.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread, Version=2.0.0.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\bin\Debug\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.Welfare.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.Welfare.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.Welfare.Flow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.Welfare.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Entity\PTB.BTS.Entity.csproj">
+      <Name>PTB.BTS.Entity</Name>
+      <Project>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Flow\PTB.BTS.Flow.csproj">
+      <Name>PTB.BTS.Flow</Name>
+      <Project>{BD3D2B8D-9EEE-4381-B942-6FAD96F41F23}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemFramework\PTB.BTS.SystemFramework.csproj">
+      <Name>PTB.BTS.SystemFramework</Name>
+      <Project>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\AnnualLeaveControlFacade.cs" />
+    <Compile Include="AttendanceFacade\AttendanceCommonFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\AttendanceStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\GenerateMealBenefitFacade.cs" />
+    <Compile Include="AttendanceFacade\DiseaseFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeAnnualLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeAttendanceFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeBenefitAdjustmentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeExtraAGTBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeExtraBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeFoodBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeHeadFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeMiscBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeMiscDeductionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeePrivateLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeSickLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeSpecialLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeTelephoneBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeTimeCardFacade.cs" />
+    <Compile Include="AttendanceFacade\EmployeeTripFacade.cs" />
+    <Compile Include="AttendanceFacade\EmployeeWorkAttendanceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\EmployeeWorkScheduleFacade.cs" />
+    <Compile Include="AttendanceFacade\GenEmpScheduleFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\GenerateAnnualLeaveDayFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\GenerateEmployeeTimeCardFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\GenerateEmployeeWorkScheduleFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\GenerateOtherBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\HolidayConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\HolidayConditionSpecificFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\LeaveReasonFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\ListOfMonthlyLeaveSummaryFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\NonPayrollBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\OtherBenefitRateFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\OTPatternFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\OTPatternGeneralConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\OTPatternSpecificConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\OTVariantFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\PayrollBenefitFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\SaleAnnualLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\SpecialLeaveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TaxiConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TelephoneConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TimeCardForChargeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TimeCardForPaymentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TraditionalHolidayFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\TraditionalHolidayPatternFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\WorkingTimeConditionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\WorkingTimeConditionSpecificFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceFacade\WorkingTimeTableFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\ApplicationUserProfileFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\CommonFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\CTFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\DistrictFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\FacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\FacultyFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\GUIFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\InstituteFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\LogInFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\MajorFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\MTBFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\PermissionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\PrefixFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\ProvinceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\StreetFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonFacade\SubDistrictFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\CompensateRateFacade.cs" />
+    <Compile Include="ContractFacade\ContractAgreementFacade.cs" />
+    <Compile Include="ContractFacade\ContractApproveFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractCancelFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractCancelReasonFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractChargeRateFacade\ChargeRateByContractFacade.cs" />
+    <Compile Include="ContractFacade\ContractChargeRateFacade\ChargeRateByServiceStaffTypeFacade.cs" />
+    <Compile Include="ContractFacade\ContractChargeRateFacade\CustomerChargeAdjustmentFacade.cs" />
+    <Compile Include="ContractFacade\ContractChargeRateFacade\CustomerSpecialChargeConditionFacade.cs" />
+    <Compile Include="ContractFacade\ContractDepartmentAssignmentFacade.cs" />
+    <Compile Include="ContractFacade\RenewalNoticeFacade.cs" />
+    <Compile Include="PiFacade\EmployeeSalaryFacade.cs" />
+    <Compile Include="PiFacade\SSHospitalFacade.cs" />
+    <Compile Include="TempFacade\ContractFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractFacadeBase.cs" />
+    <Compile Include="ContractFacade\ContractListFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractTypeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\CustomerContractGroupFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\CustomerDeptFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\CustomerFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\CustomerGroupFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\KindOfContractFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ContractChargeRateFacade\MinimumOTChargeFacade.cs" />
+    <Compile Include="ContractFacade\RptAssignmentHistorybyDriverFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\RptVehicleAssignmentbyPlateFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ServiceStaffAssignmentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ServiceStaffListFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ServiceStaffMatchToContractFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\ServiceStaffTypeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\VDContractMatchFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\VehicleAssignmentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractFacade\VehicleChargeDiffFacade.cs" />
+    <Compile Include="ContractFacade\VehicleSpareAssignmentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\BankFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\BloodGroupFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\CommonPIFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\CompanyFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\DepartmentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\EducationFacade.cs" />
+    <Compile Include="PiFacade\EducationLevelFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\EmpListPIFacadecs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\EmployeeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\EmployeeListFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\FormerEmployeeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\FormerFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\KindOfStaffFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\MaritalStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\MilitaryStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\MovetoFormerPIFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\MTBCompanyFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\NationalityFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\OccupationFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\PIFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\PositionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\PositionGroupFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\PrintPersonalDataFacade.cs" />
+    <Compile Include="PiFacade\RaceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\RelationshipFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\ReligionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\SectionFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\SpecialAllowanceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\TitleFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PiFacade\WorkingStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\CompulsoryBPFacade\CompulsoryInsuranceBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\DriverBPFacade\DriverContractChargeBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\DriverBPFacade\DriverContractChargeTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\DriverBPFacade\DriverSummaryIncomeFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\OtherSSBPFacade\OtherSSContractChargeTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\OtherSSBPFacade\OtherSSSummaryIncomeFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\VehicleBPFacade\VehicleContractChargeTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\VehicleBPFacade\VehicleSummaryIncomeFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ExcessBPFacade\VehicleExcessTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\InsuranceBPFacade\InsuranceTypeOneBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\OtherSSBPFacade\OtherSSContractChargeBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ContractBPFacade\VehicleBPFacade\VehicleContractChargeBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\ExcessBPFacade\VehicleExcessBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\BTS2BizPacConnectFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\RepairingBPFacade\VehicleRepairingBPFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\CompulsoryBPFacade\CompulsoryInsuranceTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\InsuranceBPFacade\InsuranceTypeOneTRFacade.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacFacade\RepairingBPFacade\VehicleRepairingTRFacade.cs" />
+    <Compile Include="TempFacade\Test01Facade.cs" />
+    <Compile Include="TempFacade\VehicleRepairingFacadeBase.cs" />
+    <Compile Include="VehicleFacade\BidderFacade.cs" />
+    <Compile Include="VehicleFacade\BrandFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\ColorFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\CompulsoryInsuranceByMonthFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\CompulsoryInsuranceByPlateFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\CreateInsuranceTypeOneFacade.cs" />
+    <Compile Include="VehicleFacade\DailyProcessFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\ExcessInsuranceFacade.cs" />
+    <Compile Include="VehicleFacade\GarageFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\GasolineTypeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\InsuranceCompany.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\InsuranceTypeOneFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\InsuranceTypeOnePolicyListFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\KindOfVehicleFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\LeasingFacade\CostAndProfitFacade.cs" />
+    <Compile Include="VehicleFacade\LeasingFacade\InterestCostFacade.cs" />
+    <Compile Include="VehicleFacade\LeasingFacade\QuotationFacade.cs" />
+    <Compile Include="VehicleFacade\LeasingFacade\QuotationListFacade.cs" />
+    <Compile Include="VehicleFacade\LeasingFacade\VehicleSellingPlanFacade.cs" />
+    <Compile Include="VehicleFacade\ListofRepairingHistorybyVehicleFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\ModelFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\ModelTypeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\PaymentTypeFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\PlaceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\PoliceStationFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\LeasingFacade\ProfitAndLostFacade.cs" />
+    <Compile Include="VehicleFacade\ProfitCalculation\ProfitCalculationFacade.cs" />
+    <Compile Include="VehicleFacade\SparePartsFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleAccidentFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleInsuranceTypeOneFacade.cs" />
+    <Compile Include="VehicleFacade\VehicleLeasingFacade\VehicleCalculationFacade.cs" />
+    <Compile Include="VehicleFacade\VehicleLeasingFacade\VehiclePurchasingFacade.cs" />
+    <Compile Include="VehicleFacade\VehicleLeasingFacade\VehicleQuotationFacade.cs" />
+    <Compile Include="VehicleFacade\VehicleLeasingFacade\VehicleSellingPlanFacade.cs" />
+    <Compile Include="VehicleFacade\VehicleListFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleMaintenanceFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleRepairingFacadeBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleTaxByMonthFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleTaxByPlateFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VehicleVatStatusFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleFacade\VendorFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WelfareFacade\ContributionFacade.cs" />
+    <Compile Include="WelfareFacade\EmployeeFacade.cs" />
+    <Compile Include="WelfareFacade\FacadeBase.cs" />
+    <Compile Include="WelfareFacade\LoanFacade.cs" />
+    <Compile Include="WelfareFacade\MedicalAidFacade.cs" />
+    <Compile Include="WelfareFacade\WelfareBenefitFacade.cs" />
+    <EmbeddedResource Include="AttendanceFacade\EmployeeHeadFacadeBase.resx">
+      <DependentUpon>EmployeeHeadFacadeBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Entity.VehicleEntities.RepairingBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleEntities\RepairingBase.cs</FileName>
+      <HashCode>BAAVAwEADAIRIAAAECBRQQIgiAAUIIAAEABAQAIABAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.RepairingBP" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\RepairingBP.cs</FileName>
+      <HashCode>hGIHgACAHgASAiAgkEIACAAAIAAAAAAQAkBAAQDCBBE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.Accident" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleEntities\Accident.cs</FileName>
+      <HashCode>ggFAIQKRGiCCQBIQhlRQMgAACACIQRkBFHQIIFBwAiU=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.ExcessBP" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\ExcessBP.cs</FileName>
+      <HashCode>hGAHgAAAHgATAiAgkQIQAAAAMAAAAAAQAEBAAQDCBBE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.InsuranceTypeOne" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleEntities\InsuranceTypeOne\InsuranceTypeOne.cs</FileName>
+      <HashCode>gAAAAgAAAAACAAAgAAAAIAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.InsuranceTypeOneBP" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\InsuranceTypeOneBP.cs</FileName>
+      <HashCode>jGAHgAgAHgATAiggkQIIACAAIAAgAAAQEEBAARBCBBE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.CompulsoryInsurance" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleEntities\Compulsory\CompulsoryInsurance.cs</FileName>
+      <HashCode>AAAACAAAAAAAAAAAEAAAAAAAAAAAAABAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.CompulsoryInsuranceBP" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\CompulsoryInsuranceBP.cs</FileName>
+      <HashCode>hGAHgEAAHgBTAiAgkQIABAAAoIQAAICQAEBAAQBCBBE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.VehicleContract" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\VehicleContract.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAACAgAAAIIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.ContractEntities.VehicleContractCharge" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\ContractCharge\VehicleContractCharge.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAgAAAIAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffContract" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\ServiceStaffContract.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAEAACAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.ServiceStaffContractChargeBP">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\ServiceStaffContractChargeBP.cs</FileName>
+      <HashCode>hesP4j2EXsQ7omKoywYBTEiOecBBXVkhyNh4AU3TBGE=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Enum Name="PTB.BTS.BTS2BizPacEntity.ServiceStaffContractChargeBP.ServiceType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\ServiceStaffContractChargeBP.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffContractCharge" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\ContractCharge\ServiceStaffContractCharge.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAgAAAIAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.DriverContract" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\DriverContract.cs</FileName>
+      <HashCode>AAAAAIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.ContractEntities.DriverContractCharge" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractEntities\ContractCharge\DriverContractCharge.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAgAAAIAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.DriverContractChargeBP">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\DriverContractChargeBP.cs</FileName>
+      <HashCode>hesP4z2EXsQ7omaoywYBTEiOecBBXVkhyNh4AU3TBGE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.VehicleContractChargeBP">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\VehicleContractChargeBP.cs</FileName>
+      <HashCode>gGAHhCAAHgASAiAggAIBAAAAYAAAAAAAgEBAAQBCBAU=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.BizPacReference">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\BizPacReference.cs</FileName>
+      <HashCode>AEACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PTB.BTS.Attendance.BenefitChargeEntities.IBenefitCharge">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AttendanceEntities\BenefitChargeEntities\IBenefitCharge.cs</FileName>
+      <HashCode>BAEAAgUARgAIIAAISwAAAAiECMBAQVEBQJAoAEGDASE=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

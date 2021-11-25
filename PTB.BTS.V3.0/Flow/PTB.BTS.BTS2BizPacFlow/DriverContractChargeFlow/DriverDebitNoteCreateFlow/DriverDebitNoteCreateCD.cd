@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="DDNCreater0 for Other&#xD;&#xA;DDNCreater1 for TIS&#xD;&#xA;DDNCreater2 for ThaiMC&#xD;&#xA;DDNCreater3 for IMCT">
+    <Position X="2.917" Y="2.468" Height="0.833" Width="1.492" />
+  </Comment>
+  <Class Name="PTB.BTS.BTS2BizPacEntity.BTS2BizPacList">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.ServiceStaffDebitNoteCreateFlow.DDNCreaterManager">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreaterManager.cs</FileName>
+      <HashCode>AAIAFAAAAAAACIBAAAAAAAMAAAAAAAIAAAASAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreaterBase">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreaterBase.cs</FileName>
+      <HashCode>AAIABIAAAgAAAAAAAAAAAAAAAAAAAAQEAAAAAAACAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreater0" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater0.cs</FileName>
+      <HashCode>AAAAAAAAAgIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreater1" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater1.cs</FileName>
+      <HashCode>AAAAEAAAAgAAAAAAAAAAAAAAAAAAAAACoAAEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreater2" Collapsed="true">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater2.cs</FileName>
+      <HashCode>AAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreater3" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater3.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverContractChargeFlow.DriverContractChargeBPFlow" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverContractChargeBPFlow.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAACACAAAAQAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacFlow.DriverDebitNoteCreateFlow.DDNCreater4" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\DriverContractChargeFlow\DriverDebitNoteCreateFlow\DDNCreater4.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PTB.BTS.BTS2BizPacFlow.AttachGroupStruct">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacFlow\AttachGroupStruct.cs</FileName>
+      <HashCode>AAAAAKAAAACgAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="PTB.BTS.BTS2BizPacEntity.IBTS2BizPacHeader" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+</ClassDiagram>

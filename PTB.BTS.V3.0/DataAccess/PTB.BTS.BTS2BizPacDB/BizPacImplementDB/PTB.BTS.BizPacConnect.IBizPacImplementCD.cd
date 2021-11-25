@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="DataAccess.ContractDB.ContractChargeDetailDB" Collapsed="true">
+    <Position X="2.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ContractDB\ContractChargeDetailDB.cs</FileName>
+      <HashCode>QEIAAEABAGBAAAMACAAOCAAABAAAAAAFBAgAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataAccess.VehicleDB.VehicleRepairingHistoryDB" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleDB\VehicleRepairingHistoryDB.cs</FileName>
+      <HashCode>BASUQFCAgABUAalBSAAFCEACFEgmhAACJCOALwBgADA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataAccess.VehicleDB.CompulsoryInsuranceDB" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleDB\CompulsoryInsuranceDB.cs</FileName>
+      <HashCode>AAISAgAAEDBMEQEBCAAGBABAAAACBQACBCAAIQCgiDA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataAccess.VehicleDB.InsuranceTypeOneDB" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleDB\InsuranceTypeOneDB.cs</FileName>
+      <HashCode>AQICAgDIACBAAQGFCBAGBAAQCAEEAAADBAAAIRABAKA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataAccess.VehicleDB.VehicleAccidentDB" Collapsed="true">
+    <Position X="4.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>VehicleDB\VehicleAccidentDB.cs</FileName>
+      <HashCode>AACAAQAAAFBACCkQCEQGAYAiDAAQBTUAJAAAATAIBBA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PTB.BTS.BTS2BizPacDB.BizPacImplementDB.VehicleRepairingHistoryBPDB">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacDB\BizPacImplementDB\VehicleRepairingHistoryBPDB.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQABAEAAACAAAAAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DataAccess.CommonDB.ITableName">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CommonDB\ITableName.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PTB.BTS.BTS2BizPacDB.IBizPacConnectDB">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PTB.BTS.BTS2BizPacDB\IBTS2BizPacDB.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQABAAAAACAAAAAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

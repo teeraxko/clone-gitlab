@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleCalculation">
+    <Position X="4.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EwEAAAEAAAAgQFAEAMAAABQAAA0MAABAAAiVgAgCCEg=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleCalculation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LeasingCalculation" />
+      <Property Name="VehicleInterestCostList" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleLeasingCalculation">
+    <Position X="8" Y="1" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAQAEAAAAJgBAAAMCRIABAAIEAAAKBAICTAAAQAEA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleLeasingCalculation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.VehicleEntities.VehicleLeasing.VehicleInterestCostList">
+    <Position X="1" Y="2" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QQCAAEAAAAAAAAABEMAAAQBAAAACAAAAAACAAABABAA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\VehicleInterestCostList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entity.VehicleEntities.VehicleLeasing.IVehicleProfitCalHead">
+    <Position X="11" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EQEAAAEAAAAAABAEAMAAAAAAAAEMAABAAAiVgAgACEA=</HashCode>
+      <FileName>VehicleEntities\VehicleLeasing\IVehicleProfitCalHead.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

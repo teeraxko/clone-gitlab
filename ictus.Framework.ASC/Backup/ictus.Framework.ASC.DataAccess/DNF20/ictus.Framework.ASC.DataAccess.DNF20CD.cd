@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ictus.Framework.ASC.DataAccess.DNF20.DataAccessBase&lt;E, C&gt;">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\DataAccessBase.cs</FileName>
+      <HashCode>AAQAAEAAAABAAAEACAAEAAABAAEAGQAABAgAQBAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.Framework.ASC.DataAccess.DNF20.TableAccess">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\TableAccess.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.Framework.ASC.DataAccess.DNF20.TableExecute">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\TableExecute.cs</FileName>
+      <HashCode>AAAAAEAAAAAAIAACAAABAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.Framework.ASC.DataAccess.DNF20.CriteriaBase">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\CriteriaBase.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.Framework.ASC.DataAccess.DNF20.ASCDataReader">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\ASCDataReader.cs</FileName>
+      <HashCode>gAIgIAABAAAAhAgAAEBBSBAAAgAAAgwACIQBAAAEAFU=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ictus.Framework.ASC.DataAccess.ConfigAccess">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DNF20\ConfigAccess.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAABAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.ContractEntities.ContractCharge">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAMEABABBAAAEAAAAAAAAAAAAACAAAAAEAQAAAA=</HashCode>
+      <FileName>ContractEntities\ContractCharge.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractChargeDetail">
+    <Position X="6.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAgAAAIAAAACAA=</HashCode>
+      <FileName>ContractEntities\ContractChargeDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase">
+    <Position X="9.25" Y="0.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQo=</HashCode>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AContractChargeList" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractChargeList">
+    <Position X="12.75" Y="0.75" Width="1.75" />
+    <AssociationLine Name="this[System.String]" Type="Entity.ContractEntities.ContractCharge" FixedFromPoint="true">
+      <Path>
+        <Point X="14.062" Y="2.944" />
+        <Point X="14.062" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAABAAAAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ContractChargeList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="this[System.String]" />
+      <Property Name="AContract" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractChargeDetailList">
+    <Position X="6.25" Y="0.75" Width="2" />
+    <AssociationLine Name="this[System.String]" Type="Entity.ContractEntities.ContractChargeDetail" FixedFromPoint="true">
+      <Path>
+        <Point X="8" Y="2.944" />
+        <Point X="8" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAABAAAAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ContractChargeDetailList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="this[System.String]" />
+      <Property Name="AContract" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

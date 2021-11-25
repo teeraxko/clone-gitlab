@@ -1,0 +1,1020 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AD71C7D-3E2D-45B6-BAF2-928C4B2A5F88}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.Entity</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Entity</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/PTB.BTS.Entity/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ictus.Common.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.Common.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.Entity\bin\Debug\ictus.Framework.ASC.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.Framework.ASC.VBFuntion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\bin\Debug\ictus.Framework.ASC.VBFuntion.dll</HintPath>
+    </Reference>
+    <Reference Include="ictus.PIS.PI.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferenceDLL\ictus.PIS.PI.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttendanceEntities\EmployeeMealAllowance.cs" />
+    <Compile Include="Constants\CustomerCodeValue.cs" />
+    <Compile Include="Constants\CustomerDepartmentCodeValue.cs" />
+    <Compile Include="Constants\EntityState.cs" />
+    <Compile Include="Constants\EntryMode.cs" />
+    <Compile Include="Constants\PositionCodeValue.cs" />
+    <Compile Include="Constants\PositionTypeCodeValue.cs" />
+    <Compile Include="ContractEntities\Compensate.cs" />
+    <Compile Include="ContractEntities\ContractAgreementBase.cs" />
+    <Compile Include="ContractEntities\ContractDepartmentAssignment.cs" />
+    <Compile Include="ContractEntities\DriverAgreement.cs" />
+    <Compile Include="ContractEntities\DriverDeductCharge.cs" />
+    <Compile Include="ContractEntities\OfficeStaff.cs" />
+    <Compile Include="ContractEntities\OfficeStaffList.cs" />
+    <Compile Include="ContractEntities\VehicleAgreement.cs" />
+    <Compile Include="ContractEntities\VehicleChargeDiff.cs" />
+    <Compile Include="ContractEntities\VehicleChargeDiffList.cs" />
+    <Compile Include="VehicleEntities\Leasing\VehicleSellingPlan.cs" />
+    <Compile Include="VehicleEntities\Leasing\VehicleSellingPlanList.cs" />
+    <Compile Include="VehicleEntities\ProfitCalculation\IProfitCalHeader.cs" />
+    <Compile Include="VehicleEntities\ProfitCalculation\ProfitCalculation.cs" />
+    <Compile Include="VehicleEntities\Leasing\IProfitAndLost.cs" />
+    <Compile Include="VehicleEntities\Leasing\ProfitAndLost.cs" />
+    <Compile Include="VehicleEntities\Leasing\InterestCost.cs" />
+    <Compile Include="VehicleEntities\Leasing\InterestCostList.cs" />
+    <Compile Include="VehicleEntities\Leasing\IPurchasing.cs" />
+    <Compile Include="VehicleEntities\Leasing\ProfitAndLostList.cs" />
+    <Compile Include="VehicleEntities\Leasing\Purchasing.cs" />
+    <Compile Include="VehicleEntities\Leasing\AnewVehicle.cs" />
+    <Compile Include="VehicleEntities\Leasing\LeasingCalculation.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\BizPacReference.cs" />
+    <Compile Include="CommonEntity\Age.cs" />
+    <Compile Include="ContractEntities\AssignmentList.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\ChargeRateByContract.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\ChargeRateByContractList.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\ChargeRateByServiceStaffType.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\ChargeRate.cs" />
+    <Compile Include="CommonEntity\FiscalYear.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\ChargeRateByServiceStaffTypeList.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\CustomerSpecialChargeConditionList.cs" />
+    <Compile Include="ContractEntities\ContractCharge\DriverContractCharge.cs" />
+    <Compile Include="ContractEntities\ContractCharge\ServiceStaffContractCharge.cs" />
+    <Compile Include="ContractEntities\ContractCharge\VehicleContractCharge.cs" />
+    <Compile Include="ContractEntities\ContractCharge\ContractChargeForMonthList.cs" />
+    <Compile Include="ContractEntities\ContractCharge\IContractChargeDetail.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\MinimumOTCharge.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\MinimumOTChargeList.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\CustomerChargeAdjustment.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\CustomerChargeAdjustmentList.cs" />
+    <Compile Include="AttendanceEntities\BenefitChargeEntities\IBenefitCharge.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\CustomerSpecialCharge.cs" />
+    <Compile Include="ContractEntities\ContractChargeRate\CustomerSpecialChargeCondition.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\DriverContractChargeBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\ServiceStaffContractChargeBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\VehicleContractChargeBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\CompulsoryInsuranceBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacReportEntity\IStaffDNAttach.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacReportEntity\VehicleDNAttach.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacDetail.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacDetailList.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacCommon.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\InsuranceTypeOneBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\ExcessBP.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveDay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveDayList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveDualHead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveDualHeadList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveHead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveHeadList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveSale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveSaleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveSummaryList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AnnualLeave\AnnualLeaveYear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AttendanceStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\AttendanceStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitAdjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitContributionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitFood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitFoodList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitListBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitOTHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitOTHourList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitOvernightTrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitOvernightTripForMonth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitOvernightTripList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitTaxi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\BenefitTaxiList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\EmployeeBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\WorkInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitEntities\WorkInfoList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\BenefitPayment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\Disease.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\DiseaseList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeBenefitAdjustment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeBenefitBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeExtraAGTBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeExtraAGTBenefitDeduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeExtraBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeExtraBenefitList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeFoodBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeMiscBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOneDayTrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOneDayTripBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOvernightTrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOvernightTripBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOvernightTripBenefitList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOvertimeAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeOvertimeHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeePrivateLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeSickLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeSpecialLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeTaxiBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeTelephoneBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeTimeCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeTimeCardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeTripBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeWorkSchedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\EmployeeWorkScheduleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\ExtraAGTBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\ExtraAGTBenefitDeduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\ExtraBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\FoodBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\HireDateConst.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\HolidayCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\HolidayConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\HolidayConditionSpecific.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\HolidayConditionSpecificList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\KindOfSpecialLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\KindOfSpecialLeaveList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LateSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LateSummaryList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LeaveBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LeaveReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LeaveReasonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LeaveSummaryBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\LeaveSummaryListBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\MiscBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\MiscBenefitDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\MiscBenefitDescriptionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\NonPayrollPaymentControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\NonPayrollPaymentControlList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OneDayTrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OneDayTripBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OtherBenefitConditionBase.cs" />
+    <Compile Include="AttendanceEntities\OtherBenefitGeneralCondition.cs" />
+    <Compile Include="AttendanceEntities\OtherBenefitGeneralConditionList.cs" />
+    <Compile Include="AttendanceEntities\OtherBenefitRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OtherBenefitSpecificCondition.cs" />
+    <Compile Include="AttendanceEntities\OtherBenefitSpecificConditionList.cs" />
+    <Compile Include="AttendanceEntities\OTPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTPatternConditionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTPatternConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTPatternGeneralCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTPatternList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTPatternSpecificCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTVariant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OTVariantList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvernightTrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvernightTripBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvertimeAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvertimeAmountList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvertimeHour.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\OvertimeHourList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\PayrollPaymentControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\PayrollPaymentControlList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\PrivateLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\PrivateLeaveSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\PrivateLeaveSummaryList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\SickLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\SickLeaveSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\SickLeaveSummaryList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\SpecialLeave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiFamilyCarCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiFamilyCarConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiPositionCarCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiPositionCarConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TaxiTimeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TelephoneBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TelephoneCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TelephoneConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TimeCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TimeCardList.cs" />
+    <Compile Include="AttendanceEntities\TimePeriod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TraditionalHoliday.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TraditionalHolidayList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TraditionalHolidayPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TraditionalHolidayPatternList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TripBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TripBenefitBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TripLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TripLocationList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TrPayrollBenefit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\TrPayrollBenefitList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeConditionSpecific.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeConditionSpecificList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkingTimeTableList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceEntities\WorkSchedule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacFixData.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacDetailAP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacDetailAR.cs" />
+    <Compile Include="CommonEntity\CommonType.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BTS2BizPacList.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\IBTS2BizPacHeader.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\RepairingBP.cs" />
+    <Compile Include="PTB.BTS.BTS2BizPacEntity\BizPacReportEntity\CompulsoryExpense.cs" />
+    <Compile Include="VehicleEntities\Leasing\Quotation.cs" />
+    <Compile Include="VehicleEntities\Leasing\QuotationList.cs" />
+    <Compile Include="VehicleEntities\Leasing\VehicleCost.cs" />
+    <Compile Include="VehicleEntities\Bidder.cs" />
+    <Compile Include="VehicleEntities\BidderList.cs" />
+    <Compile Include="VehicleEntities\ProfitCalculation\ProfitCalDetail.cs" />
+    <Compile Include="VehicleEntities\ProfitCalculation\ProfitCalDetailList.cs" />
+    <Compile Include="VehicleEntities\RepairingBase.cs" />
+    <Compile Include="VehicleEntities\Compulsory\CompulsoryFragment.cs" />
+    <Compile Include="VehicleEntities\Compulsory\CompulsoryInsurance.cs" />
+    <Compile Include="VehicleEntities\Compulsory\CompulsoryInsuranceList.cs" />
+    <Compile Include="VehicleEntities\Compulsory\SMCompulsoryDocNo.cs" />
+    <Compile Include="VehicleEntities\Compulsory\ObjectCreater.cs" />
+    <Compile Include="VehicleEntities\Compulsory\CompulsoryDocNoBase.cs" />
+    <Compile Include="ContractEntities\ContractChargeDetail.cs" />
+    <Compile Include="ContractEntities\ContractChargeDetailList.cs" />
+    <Compile Include="ContractEntities\AssignmentBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\AssignmentReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\AssignmentReasonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\Contract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractCancelReason.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractCancelReasonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractCharge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractChargeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractConditionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ContractTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\Customer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerContractGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerContractGroupList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerDepartment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerDepartmentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerGroupList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\CustomerList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\DocumentNo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\Driver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\DriverContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\DriverList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\Hirer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\KindOfContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\KindOfContractList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffAssignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffAssignmentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffContractAssignmentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffRoleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\ServiceStaffTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleAssignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleAssignmentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleContractAssignmentList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContractEntities\VehicleRoleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Accident.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Brand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\BrandList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Color.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\ColorList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\DailyProcessControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\DailyProcessControlList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\DriverExcessDeduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\ExcessDeduction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Garage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\GarageList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\GasolineType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\GasolineTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceCompany.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceCompanyList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceDocumentBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceTypeOne\InsuranceTypeOne.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceTypeOne\InsuranceTypeOneList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\KindOfVehicle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\KindOfVehicleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Maintenance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Model.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\ModelList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\ModelType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\ModelTypeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Place.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\PlaceList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\PoliceStation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\PoliceStationList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\RepairingInfoBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\RepairingSpareParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\RepairingSparePartsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\SpareParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\SparePartsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Vehicle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleAccident.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceTypeOne\VehicleInsuranceList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\InsuranceTypeOne\VehicleInsuranceTypeOne.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleLeasing\IVehicleProfitCalHead.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\IVehiclePurchasing.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleCalculation.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleInterestCost.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleInterestCostList.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleLeasingCalculation.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleProfitAndLost.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleProfitCalDetail.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehiclePurchasing.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehiclePurchasingContract.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleQuotation.cs" />
+    <Compile Include="VehicleEntities\VehicleLeasing\VehicleSelling.cs" />
+    <Compile Include="VehicleEntities\VehicleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleMaintenance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleRepairingBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleTax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleTaxDiscountRatio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleTaxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleVatStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VehicleVatStatusList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Vendor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\VendorList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehicleEntities\Leasing\VehiclePrice.cs" />
+    <Compile Include="WelfareEntities\ContractHospital.cs" />
+    <Compile Include="WelfareEntities\Disaese.cs" />
+    <Compile Include="WelfareEntities\IHospital.cs" />
+    <Compile Include="WelfareEntities\MedicalAid.cs" />
+    <EmbeddedResource Include="AttendanceEntities\ExtraAGTBenefitDeduction.resx">
+      <DependentUpon>ExtraAGTBenefitDeduction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagramEntities\Attendance\CLD_UC_13_MechanicDriver.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_05_VehicleContract.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_10_AdvanceAssignVehicle.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_11_AdvanceAssignStaff.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_12_VDContractMatch.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_14_CustomerContractAssign.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_15_ContractCharge.cd" />
+    <None Include="ClassDiagramEntities\Contract\CLD_UC_17_ContractAgreement.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_06_Vehicle.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_08_DailyProcess.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_09_ReportLeasingCar.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_18_VehicleSelling.cd" />
+    <None Include="ContractEntities\ContractChargeRate\ContractChargeRateCD.cd" />
+    <None Include="ContractEntities\ContractCharge\ContractChargeCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacEntity\BizPacImplementEntity\BizPacImplementEntityCD.cd" />
+    <None Include="PTB.BTS.BTS2BizPacEntity\PTB.BTS.BTS2BizPacEntityCD.cd" />
+    <None Include="VehicleEntities\Compulsory\CompulsoryCD.cd" />
+    <None Include="VehicleEntities\InsuranceTypeOne\InsuranceTypeOneCD.cd" />
+    <None Include="VehicleEntities\Leasing\InterestCostCD.cd" />
+    <None Include="VehicleEntities\Leasing\ProfitAndLostCD.cd" />
+    <None Include="VehicleEntities\Leasing\PurchasingCD.cd" />
+    <None Include="VehicleEntities\Leasing\QuotationCD.cd" />
+    <None Include="VehicleEntities\ProfitCalculation\ProfitCalculationCD.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_01_Calculation.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_03_Quatation.cd" />
+    <None Include="ClassDiagramEntities\Vehicle\CLD_UC_04_PurchaseOrder.cd" />
+    <None Include="VehicleEntities\VehicleRepairingCD.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ictus.SystemConnection\ictus.SystemConnection.BizPac\ictus.SystemConnection.BizPac.csproj">
+      <Project>{B20D7E6B-FE01-4F12-A9D0-E48F9070B889}</Project>
+      <Name>ictus.SystemConnection.BizPac</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

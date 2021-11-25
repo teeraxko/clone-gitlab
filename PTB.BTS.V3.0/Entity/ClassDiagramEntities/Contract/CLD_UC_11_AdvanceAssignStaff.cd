@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entity.ContractEntities.ServiceStaffAssignment">
+    <Position X="5.5" Y="3.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACAAAAAAAEAAAAgAgAAKAIAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffAssignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AAssignedServiceStaff" />
+      <Property Name="AMainServiceStaff" />
+      <Property Name="AssignmentRole" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.AssignmentBase">
+    <Position X="6" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAEAAAAFAAAAAAAAAABAAAAAQAAAAQAAAA=</HashCode>
+      <FileName>ContractEntities\AssignmentBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AContract" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaff">
+    <Position X="9.75" Y="4.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAABAAAAEAAAAAAAAAABAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ContractEntities\ServiceStaff.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ACurrentContract" />
+      <Property Name="AServiceStaffType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffContract">
+    <Position X="9.5" Y="2" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAACAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity.ContractEntities.ContractBase" Collapsed="true">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FBABABAQAAAAACAAFiAAAAggAAAYAAIEEgkCBgQBAQo=</HashCode>
+      <FileName>ContractEntities\ContractBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entity.ContractEntities.ServiceStaffType">
+    <Position X="8.25" Y="6.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAAAKAAAAAAAAAAEEBAAAAABAAABAQAAIQAAEAAAACA=</HashCode>
+      <FileName>ContractEntities\ServiceStaffType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="Entity.CommonEntity.ASSIGNMENT_ROLE_TYPE">
+    <Position X="5.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAEAA=</HashCode>
+      <FileName>CommonEntity\CommonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

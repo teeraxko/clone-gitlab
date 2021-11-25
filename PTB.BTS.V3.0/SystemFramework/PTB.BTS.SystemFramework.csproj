@@ -1,0 +1,244 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA6D7313-5E7C-4529-A7C1-B88C1E0AF93E}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PTB.BTS.SystemFramework</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SystemFramework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/PTB.BTS.SystemFramework/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfig\ApplicationBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationListBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationModuleList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationUserPermission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationUserPermissionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationUserProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationUserProfileList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ApplicationVersion.cs" />
+    <Compile Include="AppConfig\Function.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\FunctionPermission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\Module.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\ModulePermission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppConfig\UserProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\AppExceptionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\DataInvalidException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\DuplicateException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\EmpNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\ExceptionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\NotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\PositionNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\ServiceStaffNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppException\TransactionException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppMessage\EngCommonMessages.cs" />
+    <Compile Include="AppMessage\MessageList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AppMessage\MessageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppMessage\ThaiCommonMessages.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="AppException\ictus.Framework.ExceptionManagement.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppMessage\MessageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\ictus.Framework.ASC.AppConfig.csproj">
+      <Project>{8512A259-00C9-41DF-9E6A-0F8076B67750}</Project>
+      <Name>ictus.Framework.ASC.AppConfig</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

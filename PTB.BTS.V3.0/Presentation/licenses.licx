@@ -1,0 +1,4 @@
+FarPoint.Win.Spread.FpSpread, FarPoint.Win.Spread, Version=2.0.0.0, Culture=neutral, PublicKeyToken=327c3516b1b18457
+FarPoint.Win.Input.FpDouble, FarPoint.Win.Input, Version=1.0.6.0, Culture=neutral, PublicKeyToken=327c3516b1b18457
+FarPoint.Win.Input.FpInteger, FarPoint.Win.Input, Version=1.0.6.0, Culture=neutral, PublicKeyToken=327c3516b1b18457
+FarPoint.Win.Input.FpDateTime, FarPoint.Win.Input, Version=1.0.6.0, Culture=neutral, PublicKeyToken=327c3516b1b18457

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ictus.SystemConnection.BizPac.BizPacMappingBase">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BizPacMappingBase.cs</FileName>
+      <HashCode>AAEAAAAAACAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.AP.APMapping">
+    <Position X="2.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AP\APMapping.cs</FileName>
+      <HashCode>AAAAAAQAACAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.AR.ARMapping">
+    <Position X="4.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AR\ARMapping.cs</FileName>
+      <HashCode>AAAAAAQAACAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.Core.BizPacStringBuilder">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\BizPacStringBuilder.cs</FileName>
+      <HashCode>AAAAAAACAAAAAAAEAAAAAAAAAAQAAQAAAAEAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ictus.SystemConnection.BizPac.Common">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ictus.SystemConnection.BizPac.Core.IAccountHeader">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\IAccountHeader.cs</FileName>
+      <HashCode>ACABAAAAHAAAAiAggAIBAAIAIAAAAAAAAABAAQAABAE=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ictus.SystemConnection.BizPac.Core.IAccountDetail">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Core\IAccountDetail.cs</FileName>
+      <HashCode>CAAAAAAAAQAAAAAAAAAAAACAAAACAAAAAAAAggAAACA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ictus.SystemConnection.BizPac.AP.IAPHeader">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AP\IAPHeader.cs</FileName>
+      <HashCode>BAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ictus.SystemConnection.BizPac.AR.IARHeader">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AR\IARHeader.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ictus.SystemConnection.BizPac.AP.IAPDetail">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AP\IAPDetail.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ictus.SystemConnection.BizPac.AR.IARDetail">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AR\IARDetail.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ictus.SystemConnection.BizPac.BizPacConnectType">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>BizPacConnectType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAgAAAAAgAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>
