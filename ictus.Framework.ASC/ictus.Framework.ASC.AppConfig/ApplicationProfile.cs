@@ -30,11 +30,11 @@ namespace ictus.Framework.ASC.AppConfig
 
         /************* Dev Config ***************/
         public static string SERVER_NAME = "172.30.2.207"; //PDBAPP01-TEST
-        public static string DB_NAME = "BTSDB_DEV";
+        public static string DB_NAME = "BTSDB_DEV_D21018";
         public static string DB_USER_NAME = "sa";
         public static string DB_USER_PASSWORD = "pdbdevadmin";
-        public static string REPORT_PATH = @"\\172.30.2.206\BTSReport\";
-        public static string PHOTO_PATH = @"\\172.30.2.206\BTS\Photo\";
+        public static string REPORT_PATH = @"\\Pdbdb01-test\BTS\BTSReport\";
+        public static string PHOTO_PATH = @"\\Pdbdb01-test\BTS\BTSPhoto\";
         public static string FTP_URL = @"ftp://bizpacftp:password@172.30.2.164:21/PTB/TestImport/";
 
         /************* End Dev. Config ***************/

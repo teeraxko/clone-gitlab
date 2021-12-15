@@ -389,6 +389,8 @@ namespace Presentation
         private MenuItem miPO;
         private MenuItem miVehicleLeasingCar;
         private MenuItem miContractDocumentCarAgreement;
+        //D21018-BTS Modification
+        private MenuItem miContractDocumentCompanyAgreement;
         private MenuItem miSellingPlan;
         private MenuItem miVehicleVehicleSetting;
         private MenuItem miVehicleSellingPlanSellingPlan;
@@ -602,6 +604,7 @@ namespace Presentation
             this.miContractDocumentRenewalNotice = new System.Windows.Forms.MenuItem();
             this.miContractDocumentDriverAgreement = new System.Windows.Forms.MenuItem();
             this.miContractDocumentCarAgreement = new System.Windows.Forms.MenuItem();
+            this.miContractDocumentCompanyAgreement = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistory = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistoryVehicelAssignment = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistoryServiceStaffAssignment = new System.Windows.Forms.MenuItem();
@@ -2041,7 +2044,8 @@ namespace Presentation
             this.menuItem22,
             this.miContractDocumentRenewalNotice,
             this.miContractDocumentDriverAgreement,
-            this.miContractDocumentCarAgreement});
+            this.miContractDocumentCarAgreement,
+            this.miContractDocumentCompanyAgreement});
             this.miContractDocument.Text = "เอกสารสัญญา";
             // 
             // miContractVehicle
@@ -2221,6 +2225,13 @@ namespace Presentation
             this.miContractDocumentCarAgreement.Text = "ออกสัญญารถเช่า";
             this.miContractDocumentCarAgreement.Visible = false;
             this.miContractDocumentCarAgreement.Click += new System.EventHandler(this.miContractDocumentCarAgreement_Click);
+            // 
+            // miContractDocumentCompanyAgreement
+            // 
+            this.miContractDocumentCompanyAgreement.Index = 26;
+            this.miContractDocumentCompanyAgreement.Text = "ออกสัญญารถเช่า (บริษัท)";
+            this.miContractDocumentCompanyAgreement.Visible = false;
+            this.miContractDocumentCompanyAgreement.Click += new System.EventHandler(this.miContractDocumentCompanyAgreement_Click);
             // 
             // miContractAssignmentHistory
             // 
@@ -3697,6 +3708,8 @@ namespace Presentation
             miContractDocumentRenewalNotice.Visible = visible;
             miContractDocumentDriverAgreement.Visible = visible;
             miContractDocumentCarAgreement.Visible = visible;
+            //D21018-BTS Modification
+            miContractDocumentCompanyAgreement.Visible = visible;
         }
 
         private void visibleAttendance(bool visible)
@@ -4638,6 +4651,12 @@ namespace Presentation
                     case "miContractDocumentCarAgreement":
                         {
                             setPermission(value["miContractDocumentCarAgreement"], miContractDocumentCarAgreement);
+                            break;
+                        }
+                    //D21018-BTS Modification
+                    case "miContractDocumentCompanyAgreement":
+                        {
+                            setPermission(value["miContractDocumentCompanyAgreement"], miContractDocumentCompanyAgreement);
                             break;
                         }
                 }
@@ -6511,6 +6530,14 @@ namespace Presentation
             objfrm.Show();
         }
 
+        //D21018-BTS Modification
+        private void miContractDocumentCompanyAgreement_Click(object sender, EventArgs e)
+        {
+            FrmReportCarCompanyAgreement objFrm = new FrmReportCarCompanyAgreement();
+            objFrm.MdiParent = this;
+            objFrm.Show();
+        }
+
         #endregion
 
         #region - miAttendance -
@@ -7459,6 +7486,8 @@ namespace Presentation
             objfrm.MdiParent = this;
             objfrm.Show();
         }
-        #endregion
+        #endregion       
+
+        
     }
 }

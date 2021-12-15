@@ -398,6 +398,7 @@
     <Compile Include="Reports\Attendance\ReportEmployeeOverNightTripBenefit.cs" />
     <Compile Include="Reports\Attendance\ReportGenWorkSchedule.cs" />
     <Compile Include="Reports\Contract\ReportCarAgreement.cs" />
+    <Compile Include="Reports\Contract\ReportCarCompanyAgreement.cs" />
     <Compile Include="Reports\Contract\ReportCarLeasingAgreement.cs" />
     <Compile Include="Reports\Contract\ReportChargeRateByContract.cs" />
     <Compile Include="Reports\Contract\ReportDriverAgreement.cs" />
