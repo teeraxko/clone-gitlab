@@ -9,6 +9,7 @@ namespace Entity.ContractEntities
 {
 	public class DocumentNo : EntityBase, IKey
 	{
+
 //		============================== Property ==============================
 		private string no = NullConstant.STRING;
 		public string No
@@ -55,16 +56,14 @@ namespace Entity.ContractEntities
             get { return getLeasing; }
             set { getLeasing = value; }
         }
-
-
-
-
+        
         private string recipient;
         public string Recipient
         {
             get { return recipient; }
             set { recipient = value; }
-        }
+        }      
+
 
 //		============================== Constructor ==============================
 		public DocumentNo(string value) : base()
@@ -155,6 +154,11 @@ namespace Entity.ContractEntities
         private const string QUOTATIONVEHICLE = "Q";
         private const string LEASINGVEHICLE = "L";
         private const string PURCHASINGVEHICLE = "P";
+        
+        //D21018-BTS Contract Modification
+        private const string VEHICLE_RENEWAL = "R";
+        private const string VEHICLE_TEMPORARY = "T";
+        private const string DRIVER = "D";
 
 		private DOCUMENT_TYPE GetDocumentType(string value)
 		{
@@ -177,8 +181,17 @@ namespace Entity.ContractEntities
                     return DOCUMENT_TYPE.QUOTATION_VEHICLE;
                 case PURCHASINGVEHICLE:
                     return DOCUMENT_TYPE.PURCHASING_VEHICLE;
-				default : 
-					return DOCUMENT_TYPE.NULL;
+
+                //D21018-BTS Contract Modification
+                case VEHICLE_RENEWAL:
+                    return DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                case VEHICLE_TEMPORARY:
+                    return DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                case DRIVER:
+                    return DOCUMENT_TYPE.CONTRACT_DRIVER;
+                default:
+                    return DOCUMENT_TYPE.NULL;
+
 			}			
 		}
 
@@ -196,12 +209,22 @@ namespace Entity.ContractEntities
                     return BIZPACREFNO;
                 case DOCUMENT_TYPE.QUOTATION_VEHICLE:
                     return QUOTATIONVEHICLE;
+
                 //Todsporn Modified 25/2/2020 PO. Discount
                 case DOCUMENT_TYPE.LEASING_VEHICLE:
                     return QUOTATIONVEHICLE;
 
                 case DOCUMENT_TYPE.PURCHASING_VEHICLE:
                     return PURCHASINGVEHICLE;
+
+                //D21018-BTS Contract Modification
+                case DOCUMENT_TYPE.CONTRACT_RENEWAL:
+                    return VEHICLE_RENEWAL;
+                case DOCUMENT_TYPE.CONTRACT_TEMPORARY:
+                    return VEHICLE_TEMPORARY;
+                case DOCUMENT_TYPE.CONTRACT_DRIVER:
+                    return DRIVER;
+
 				default : 
 					return NullConstant.STRING;
 			}

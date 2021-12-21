@@ -45,6 +45,10 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             InitializeComponent();
             isReadonly = UserProfile.IsReadOnly("miContract", "miContractDriver");
             this.title = UserProfile.GetFormName("miContract", "miContractDriver");
+
+            //D21018 Assign DocumentType
+            base.DocumentType = DOCUMENT_TYPE.CONTRACT_DRIVER;
+
         }
 
         public override string FormID()
@@ -259,7 +263,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         #endregion
 
         protected override void setContractBase(ContractBase driverContract)
-        {
+        {  
             base.setContractBase(driverContract);
             flagDateForm = driverContract.AContractChargeList[0].APeriod.From;
             flagDateTo = driverContract.AContractChargeList[driverContract.AContractChargeList.Count - 1].APeriod.To;

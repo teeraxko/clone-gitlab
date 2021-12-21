@@ -62,6 +62,13 @@ namespace Facade.ContractFacade
             return flowContract.FillContract(ref objContractList, conditionContract, yy, mm, xxx);
         }
 
+        //D21018-BTS Contract Modification
+        public bool DisplayContract(DOCUMENT_TYPE documentType)
+        {
+            objContractList = new ContractList(GetCompany());
+            return flowContract.FillContract(ref objContractList, conditionContract, yy, mm, xxx, documentType);
+        }
+        
         public bool DisplayVehicleContract()
         {
             conditionContract.ContractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, yy, mm, xxx);

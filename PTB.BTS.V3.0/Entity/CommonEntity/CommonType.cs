@@ -108,6 +108,12 @@ namespace Entity.CommonEntity
         //Todsporn Modified 25/2/2020 PO. Discount
         LEASING_VEHICLE,
         PURCHASING_VEHICLE,
+
+        //Add new type for D21018
+        CONTRACT_RENEWAL,
+        CONTRACT_TEMPORARY,
+        CONTRACT_DRIVER
+
 	}
 
 	public enum EXPENSE_STATUS_TYPE
@@ -260,5 +266,5 @@ namespace Entity.CommonEntity
         YES,
         NO,
         NULL
-    }
+    }   
 }

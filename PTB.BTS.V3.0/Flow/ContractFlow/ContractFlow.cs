@@ -1277,6 +1277,12 @@ namespace PTB.BTS.Contract.Flow
 			return new DocumentNo(DOCUMENT_TYPE.CONTRACT, yy, mm, xxx);
 		}
 
+        //D21018-BTS Contract Modification
+        public DocumentNo GetContractNo(string yy, string mm, string xxx, DOCUMENT_TYPE documentType)
+        {
+            return new DocumentNo(documentType, yy, mm, xxx);
+        }
+
 		public ContractBase RetriveContract(DocumentNo value, Company aCompany)
 		{
 			return dbContract.GetContract(value, aCompany);
@@ -1286,6 +1292,13 @@ namespace PTB.BTS.Contract.Flow
 		{
 			return dbContract.FillContractList(ref value);
 		}
+
+        //D21018-BTS Contract Modification
+        public bool FillContract(ref ContractList value, ContractBase condition, string yy, string mm, string xxx, DOCUMENT_TYPE documentType)
+        {
+            condition.ContractNo = GetContractNo(yy, mm, xxx, documentType);
+            return dbContract.FillContractList(ref value, condition);
+        }
 
 		public bool FillContractList(ref ContractList value, ContractBase condition)
 		{

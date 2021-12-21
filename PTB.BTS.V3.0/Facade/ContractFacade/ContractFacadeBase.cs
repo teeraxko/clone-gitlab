@@ -114,6 +114,7 @@ namespace Facade.ContractFacade
                 return ctFunction.KindOfRentalArray;
             }
         }
+
         #endregion
 
         #region DataSource FarPoint
@@ -181,10 +182,16 @@ namespace Facade.ContractFacade
             return flowContract.RetriveContract(value, GetCompany());
         }
 
-        public DocumentNo RetriveContractRunningNo()
+        //public DocumentNo RetriveContractRunningNo()
+        //{
+        //    return flowContractRunningNo.GetContractRunningNo(DOCUMENT_TYPE.CONTRACT, GetCompany());
+        //}
+
+        public DocumentNo RetriveContractRunningNo(DOCUMENT_TYPE documentType)
         {
-            return flowContractRunningNo.GetContractRunningNo(DOCUMENT_TYPE.CONTRACT, GetCompany());
+            return flowContractRunningNo.GetContractRunningNo(documentType, GetCompany());
         }
+
 
         public Vehicle GetVehicleGeneral(int vehicleNo)
         {

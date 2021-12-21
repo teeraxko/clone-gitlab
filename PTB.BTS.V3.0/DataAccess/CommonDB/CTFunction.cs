@@ -685,6 +685,11 @@ namespace DataAccess.CommonDB
         private const string LEASING_VEHICLE = "L";
         private const string PURCHASING_VEHICLE = "P";
 
+        //D21018-BTS Contract Modification
+        private const string CONTRACT_RENEWAL = "R";
+        private const string CONTRACT_TEMPORARY = "T";
+        private const string CONTRACT_DRIVER = "D";
+
         public static DOCUMENT_TYPE GetDocumentType(string value)
         {
             switch (value.ToUpper().Trim())
@@ -704,6 +709,15 @@ namespace DataAccess.CommonDB
                     return DOCUMENT_TYPE.QUOTATION_VEHICLE;
                 case PURCHASING_VEHICLE:
                     return DOCUMENT_TYPE.PURCHASING_VEHICLE;
+
+                //D21018-BTS Contract Modification
+                case CONTRACT_RENEWAL:
+                    return DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                case CONTRACT_TEMPORARY:
+                    return DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                case CONTRACT_DRIVER:
+                    return DOCUMENT_TYPE.CONTRACT_DRIVER;
+                    
                 default:
                     return DOCUMENT_TYPE.NULL;
             }
@@ -732,6 +746,15 @@ namespace DataAccess.CommonDB
                     return QUOTATION_VEHICLE;
                 case DOCUMENT_TYPE.PURCHASING_VEHICLE:
                     return PURCHASING_VEHICLE;
+
+                //D21018-BTS Contract Modification
+                case DOCUMENT_TYPE.CONTRACT_RENEWAL:
+                    return CONTRACT_RENEWAL;
+                case DOCUMENT_TYPE.CONTRACT_TEMPORARY:
+                    return CONTRACT_TEMPORARY;
+                case DOCUMENT_TYPE.CONTRACT_DRIVER:
+                    return CONTRACT_DRIVER;
+
                 default:
                     return NullConstant.STRING;
             }

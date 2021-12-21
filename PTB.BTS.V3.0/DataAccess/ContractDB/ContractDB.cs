@@ -250,9 +250,23 @@ namespace DataAccess.ContractDB
             {
                 if (IsNotNULL(value.Year) && IsNotNULL(value.Month) && IsNotNULL(value.No))
                 {
-                    stringBuilder.Append(" AND (Contract_No = ");
-                    stringBuilder.Append(GetDB(value.ToString()));
-                    stringBuilder.Append(")");
+                    //D21018-BTS Contract Modification
+                    string type = (value.ToString()).Substring(4,1);
+                    string no = (value.ToString()).Substring(6, 7);
+                    if (type == "D")
+                    {
+                        stringBuilder.Append(" AND (Contract_No = ");
+                        stringBuilder.Append(GetDB(value.ToString()));
+                        stringBuilder.Append(" OR Contract_No = ");
+                        stringBuilder.Append(string.Format("'PTB-C-{0}'",no));
+                        stringBuilder.Append(")");
+                    }
+                    else 
+                    {
+                        stringBuilder.Append(" AND (Contract_No = ");
+                        stringBuilder.Append(GetDB(value.ToString()));
+                        stringBuilder.Append(")");
+                    }                    
                 }
                 else
                 {

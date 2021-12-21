@@ -55,6 +55,8 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             this.cmdDelete = new System.Windows.Forms.Button();
             this.cmdAdd = new System.Windows.Forms.Button();
             this.gpbContractInfo = new System.Windows.Forms.GroupBox();
+            this.cboVehicleKindContract = new System.Windows.Forms.ComboBox();
+            this.lblContractPrefix = new System.Windows.Forms.Label();
             this.cboContractStatus = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.cboContractType = new System.Windows.Forms.ComboBox();
@@ -110,7 +112,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(626, 64);
+            this.label15.Location = new System.Drawing.Point(650, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(28, 13);
             this.label15.TabIndex = 17;
@@ -120,7 +122,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(596, 64);
+            this.label22.Location = new System.Drawing.Point(620, 64);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(25, 13);
             this.label22.TabIndex = 16;
@@ -129,9 +131,9 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // cmdCreateContract
             // 
             this.cmdCreateContract.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdCreateContract.Location = new System.Drawing.Point(680, 56);
+            this.cmdCreateContract.Location = new System.Drawing.Point(686, 58);
             this.cmdCreateContract.Name = "cmdCreateContract";
-            this.cmdCreateContract.Size = new System.Drawing.Size(88, 24);
+            this.cmdCreateContract.Size = new System.Drawing.Size(89, 24);
             this.cmdCreateContract.TabIndex = 14;
             this.cmdCreateContract.Text = "สร้างสัญญาใหม่";
             this.cmdCreateContract.Click += new System.EventHandler(this.cmdCreateContract_Click);
@@ -139,7 +141,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // txtContractNoXXX
             // 
             this.txtContractNoXXX.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoXXX.Location = new System.Drawing.Point(624, 40);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(648, 40);
             this.txtContractNoXXX.MaxLength = 3;
             this.txtContractNoXXX.Name = "txtContractNoXXX";
             this.txtContractNoXXX.Size = new System.Drawing.Size(32, 20);
@@ -152,7 +154,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // txtContractNoMM
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoMM.Location = new System.Drawing.Point(592, 40);
+            this.txtContractNoMM.Location = new System.Drawing.Point(616, 40);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -163,7 +165,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // txtContractNoYY
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoYY.Location = new System.Drawing.Point(560, 40);
+            this.txtContractNoYY.Location = new System.Drawing.Point(584, 40);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -175,12 +177,12 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label25.Location = new System.Drawing.Point(496, 44);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(64, 16);
+            this.label25.Size = new System.Drawing.Size(54, 13);
             this.label25.TabIndex = 8;
-            this.label25.Text = "PTB  - C -";
+            this.label25.Text = "PTB  - D -";
             // 
             // gpbDeleteContract
             // 
@@ -357,6 +359,8 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // gpbContractInfo
             // 
             this.gpbContractInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gpbContractInfo.Controls.Add(this.cboVehicleKindContract);
+            this.gpbContractInfo.Controls.Add(this.lblContractPrefix);
             this.gpbContractInfo.Controls.Add(this.label15);
             this.gpbContractInfo.Controls.Add(this.label22);
             this.gpbContractInfo.Controls.Add(this.cmdCreateContract);
@@ -372,12 +376,35 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             this.gpbContractInfo.Controls.Add(this.cboCustomerTHName);
             this.gpbContractInfo.Controls.Add(this.label29);
             this.gpbContractInfo.Controls.Add(this.label23);
-            this.gpbContractInfo.Location = new System.Drawing.Point(25, 0);
+            this.gpbContractInfo.Location = new System.Drawing.Point(24, 0);
             this.gpbContractInfo.Name = "gpbContractInfo";
-            this.gpbContractInfo.Size = new System.Drawing.Size(776, 88);
+            this.gpbContractInfo.Size = new System.Drawing.Size(777, 88);
             this.gpbContractInfo.TabIndex = 83;
             this.gpbContractInfo.TabStop = false;
             this.gpbContractInfo.Text = "ข้อมูลสัญญา";
+            // 
+            // cboVehicleKindContract
+            // 
+            this.cboVehicleKindContract.DropDownHeight = 105;
+            this.cboVehicleKindContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cboVehicleKindContract.FormattingEnabled = true;
+            this.cboVehicleKindContract.IntegralHeight = false;
+            this.cboVehicleKindContract.Location = new System.Drawing.Point(533, 41);
+            this.cboVehicleKindContract.Name = "cboVehicleKindContract";
+            this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
+            this.cboVehicleKindContract.TabIndex = 19;
+            this.cboVehicleKindContract.Text = "C";
+            // 
+            // lblContractPrefix
+            // 
+            this.lblContractPrefix.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContractPrefix.AutoSize = true;
+            this.lblContractPrefix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblContractPrefix.Location = new System.Drawing.Point(493, 44);
+            this.lblContractPrefix.Name = "lblContractPrefix";
+            this.lblContractPrefix.Size = new System.Drawing.Size(85, 13);
+            this.lblContractPrefix.TabIndex = 18;
+            this.lblContractPrefix.Text = "PTB  -               -";
             // 
             // cboContractStatus
             // 
@@ -408,6 +435,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             this.cboContractType.Name = "cboContractType";
             this.cboContractType.Size = new System.Drawing.Size(240, 21);
             this.cboContractType.TabIndex = 4;
+            this.cboContractType.SelectedIndexChanged += new System.EventHandler(this.cboContractType_SelectedIndexChanged);
             // 
             // label27
             // 
@@ -453,7 +481,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(566, 64);
+            this.label23.Location = new System.Drawing.Point(590, 64);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(21, 13);
             this.label23.TabIndex = 15;
@@ -902,5 +930,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         private System.Windows.Forms.ToolTip ttpToolTip;
         private System.Windows.Forms.Label lblPONo;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblContractPrefix;
+        private System.Windows.Forms.ComboBox cboVehicleKindContract;
     }
 }
