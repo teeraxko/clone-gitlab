@@ -15,12 +15,34 @@ namespace Entity.ContractEntities
     {
         
         #region Property
-
+                
         protected DocumentNo contractNo;
         public DocumentNo ContractNo
         {
             get { return contractNo; }
-            set { contractNo = value; }
+            set 
+            { 
+                contractNo = value;
+                //D21018 set abbreviation from Document No
+                if (value != null && !String.IsNullOrEmpty(value.ToString()) && value.Recipient == "PTB")
+                {
+                    AContractTypeAbbreviation = value.ToString().Substring(4, 1);
+                }
+            }
+        }
+
+        //D21018 กำหนด อักษรย่อของสัญญา(C, R, T, D) เพื่อใช้ในการ สร้าง Script ในการ Search        
+        protected string aContractTypeAbbreviation = String.Empty;
+        public string AContractTypeAbbreviation
+        {
+            get
+            {
+                return aContractTypeAbbreviation;
+            }
+            set
+            {
+                aContractTypeAbbreviation = value;
+            }
         }
 
         protected Customer aCustomer;
@@ -127,7 +149,8 @@ namespace Entity.ContractEntities
         {
             get;
             set;
-        }
+        }       
+
         #endregion
 
         #region Constructor

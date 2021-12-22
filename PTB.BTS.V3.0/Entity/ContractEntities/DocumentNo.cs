@@ -145,6 +145,32 @@ namespace Entity.ContractEntities
             }
 		}
 
+        //D21018-BTS Contract Modification
+        public DocumentNo(string documentType, string syear, string smonth, string runningNo) : base() 
+        {
+            DOCUMENT_TYPE docuType = GetDocumentType(documentType);
+            FormatContractNo(docuType, syear, smonth, runningNo);
+        }
+
+        public void FormatContractNo(DOCUMENT_TYPE documentType, string syear, string smonth, string runningNo)
+        {
+            if (documentType == DOCUMENT_TYPE.BIZPAC_REF_NO)
+            {
+                recipient = "CNT";
+                year = string.Format("{0:D2}", syear);
+                month = string.Format("{0:D2}", smonth);
+                no = string.Format("{0:D4}", runningNo);
+            }
+            else
+            {
+                recipient = "PTB";
+                year = string.Format("{0:D2}", syear);
+                month = string.Format("{0:D2}", smonth);
+                no = string.Format("{0:D3}", runningNo);
+            }
+            this.documentType = documentType;
+        }
+
 		#region - Enum Function -
 
 		private const string ACCIDENT = "A";

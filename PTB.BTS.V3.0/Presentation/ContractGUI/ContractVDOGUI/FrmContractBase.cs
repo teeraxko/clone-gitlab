@@ -76,9 +76,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private DocumentNo getContractNo()
         {
-            return getContractNo(DOCUMENT_TYPE.CONTRACT);
-            //contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
-            //return contractNo;
+            return getContractNo(DOCUMENT_TYPE.CONTRACT);           
         }
 
         private DocumentNo getContractNo(DOCUMENT_TYPE documentType)
@@ -124,7 +122,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private VehicleContract getNewVehicleContract()
         {
-            objVehicleContract.ContractNo = getContractNo();
+            objVehicleContract.ContractNo = getContractNo(documentType);
             objVehicleContract.AContractType = (ContractType)cboContractType.SelectedItem;
             objVehicleContract.AContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
             objVehicleContract.AKindOfContract = (KindOfContract)cboKindOfContract.SelectedItem;
@@ -167,8 +165,8 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private VehicleContract getVehicleContract()
         {
-            objVehicleContract = (VehicleContract)facadeContract.RetriveContract(getContractNo());
-            objVehicleContract.ContractNo = getContractNo();
+            objVehicleContract = (VehicleContract)facadeContract.RetriveContract(getContractNo(documentType));
+            objVehicleContract.ContractNo = getContractNo(documentType);
             objVehicleContract.AContractType = (ContractType)cboContractType.SelectedItem;
             objVehicleContract.AContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
             objVehicleContract.AKindOfContract = (KindOfContract)cboKindOfContract.SelectedItem;
@@ -304,6 +302,67 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         #endregion
 
         #region Private Method
+        //private void formContractList()
+        //{
+        //    ContractType contractType = (ContractType)cboContractType.SelectedItem;
+
+        //    if (contractType.Code.Equals(ContractType.CONTRACT_TYPE_DRIVER))
+        //    {
+        //        FrmContractDriverList dialogContractList = new FrmContractDriverList();
+
+        //        if (cboCustomerTHName.Text != "")
+        //            dialogContractList.ConditionCustomer = (Customer)cboCustomerTHName.SelectedItem;
+
+        //        dialogContractList.ConditionCONTRACT_TYPE = contractType;
+        //        dialogContractList.IsContractDriverList = true;
+
+        //        if (cboContractStatus.Text != "")
+        //            dialogContractList.ConditionContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
+        //        if (txtContractNoYY.Text != "")
+        //            dialogContractList.ConditionYY = txtContractNoYY.Text;
+        //        if (txtContractNoMM.Text != "")
+        //            dialogContractList.ConditionMM = txtContractNoMM.Text;
+        //        if (txtContractNoXXX.Text != "")
+        //            dialogContractList.ConditionXXX = txtContractNoXXX.Text;
+        //        dialogContractList.ShowDialog();
+        //        if (dialogContractList.Selected)
+        //            retriveContract(dialogContractList.SelectedContract);
+
+        //        dialogContractList = null;
+        //    }
+        //    else
+        //    {
+        //        frmContractVDOList dialogContractList = new frmContractVDOList();
+        //        dialogContractList.ConditionCONTRACT_TYPE = contractType;
+        //        if (cboCustomerTHName.Text != "")
+        //            dialogContractList.ConditionCustomer = (Customer)cboCustomerTHName.SelectedItem;
+        //        if (cboContractType.Text != "")
+        //        {
+        //            switch (contractType.Code)
+        //            {
+        //                case ContractType.CONTRACT_TYPE_VEHICLE:
+        //                    dialogContractList.IsContractVehicleList = true;
+        //                    break;
+        //                case ContractType.CONTRACT_TYPE_OTHER:
+        //                    dialogContractList.IsContractServiceStaffList = true;
+        //                    break;
+        //            }
+        //        }
+        //        if (cboContractStatus.Text != "")
+        //            dialogContractList.ConditionContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
+        //        if (txtContractNoYY.Text != "")
+        //            dialogContractList.ConditionYY = txtContractNoYY.Text;
+        //        if (txtContractNoMM.Text != "")
+        //            dialogContractList.ConditionMM = txtContractNoMM.Text;
+        //        if (txtContractNoXXX.Text != "")
+        //            dialogContractList.ConditionXXX = txtContractNoXXX.Text;
+        //        dialogContractList.ShowDialog();
+        //        if (dialogContractList.Selected)
+        //            retriveContract(dialogContractList.SelectedContract);
+
+        //        dialogContractList = null;
+        //    }
+        //}
         private void formContractList()
         {
             ContractType contractType = (ContractType)cboContractType.SelectedItem;
@@ -334,7 +393,10 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             }
             else
             {
+
                 frmContractVDOList dialogContractList = new frmContractVDOList();
+                this.contractNo = new DocumentNo(cboVehicleKindContract.Text, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+                dialogContractList.ContractNo = this.contractNo;
                 dialogContractList.ConditionCONTRACT_TYPE = contractType;
                 if (cboCustomerTHName.Text != "")
                     dialogContractList.ConditionCustomer = (Customer)cboCustomerTHName.SelectedItem;
@@ -365,7 +427,6 @@ namespace Presentation.ContractGUI.ContractVDOGUI
                 dialogContractList = null;
             }
         }
-
         private void bindVehicleContract(VehicleContract value)
         {
             dtgVehicleContract.RowCount = 0;
@@ -415,29 +476,24 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             {
                 dtgVehicleContract[4, row].Value = GUIFunction.GetString(value.AVehicle.AKindOfVehicle);
             }
-        }
-
-        //private void retriveRunningNo()
-        //{
-        //    isTextChange = false;
-        //    contractNo = facadeContract.RetriveContractRunningNo();
-        //    txtContractNoYY.Text = contractNo.Year;
-        //    txtContractNoMM.Text = contractNo.Month;
-        //    txtContractNoXXX.Text = contractNo.No;
-        //    cboContractStatus.Text = CTFunction.GetString("1");
-        //    isTextChange = true;
-        //}
+        }       
 
         private void retriveRunningNo(DOCUMENT_TYPE documentType)
         {
-            isTextChange = false;
-            //contractNo = facadeContract.RetriveContractRunningNo();
+            isTextChange = false;            
             contractNo = facadeContract.RetriveContractRunningNo(documentType);
             txtContractNoYY.Text = contractNo.Year;
             txtContractNoMM.Text = contractNo.Month;
             txtContractNoXXX.Text = contractNo.No;
             cboContractStatus.Text = CTFunction.GetString("1");
             isTextChange = true;
+
+            //D21018-BTS Contract Modification
+            if (this.DocumentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY)
+            {
+                cboVehicleKindContract.SelectedIndex = 2; //set selected item to "T"
+            }
+
         }
 
         private void retriveContract(ContractBase contract)
@@ -690,11 +746,51 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             {
                 label25.Text = "PTB  - C -"; //Other    
                 label25.Visible = true;
-                lblContractPrefix.Visible = true;
+                lblContractPrefix.Visible = false;
                 cboVehicleKindContract.Text = "C";
-                cboVehicleKindContract.Visible = false;
+                cboVehicleKindContract.Visible = false;                
             }
 
+        }
+
+        //D21018-BTS Contract Modification
+        /// <summary>
+        /// Set type of form from Abbreviation of contract no 
+        /// C = Vehicle New Contract
+        /// R = Vehicle Renewal Contract
+        /// T = Vehicle Temporary Contract
+        /// D = Driver Contract
+        /// </summary>
+        /// <param name="value"></param>
+        protected void SetDocumentTypeFromAbbreviation(ContractBase value)
+        {
+            SetDocumentTypeFromAbbreviation(value.AContractTypeAbbreviation);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        private void SetDocumentTypeFromAbbreviation(string value)
+        {
+            switch (value)
+            {
+                case "C":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+                case "R":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                    break;
+                case "T":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                    break;
+                case "D":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
+                    break;
+                default:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+            }
         }
 
         #endregion
@@ -1102,7 +1198,14 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 			objVehicleContract = new VehicleContract(facadeContract.GetCompany());
 			cboCustomerTHName.DataSource  = facadeContract.DataSourceCustomerName;
 			cboContractStatus.DataSource  = facadeContract.DataSourceContractStatus;
-			cboKindOfContract.DataSource = facadeContract.DataSourceKindOfContract;				
+			cboKindOfContract.DataSource = facadeContract.DataSourceKindOfContract;
+
+            //D21018-BTS Contract Modification
+            if (documentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY) 
+            {
+                List<string> kindContract = new List<string>() { "C", "R", "T" };
+                cboVehicleKindContract.DataSource = kindContract;                
+            }
 
 			if (cboContractStatus.Items.Count>0)
 			{
@@ -1894,8 +1997,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private void cmdCreateContract_Click(object sender, System.EventArgs e)
         {             
-            addCase();
-            //retriveRunningNo();
+            addCase();            
             retriveRunningNo(DocumentType);
             fpiUnitHire.BackColor = System.Drawing.Color.White;
         }
@@ -2338,6 +2440,6 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         }
 
         #endregion
-
+       
     }
 }

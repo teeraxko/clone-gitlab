@@ -386,6 +386,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             // cboVehicleKindContract
             // 
             this.cboVehicleKindContract.DropDownHeight = 105;
+            this.cboVehicleKindContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVehicleKindContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cboVehicleKindContract.FormattingEnabled = true;
             this.cboVehicleKindContract.IntegralHeight = false;
@@ -393,7 +394,6 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             this.cboVehicleKindContract.Name = "cboVehicleKindContract";
             this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
             this.cboVehicleKindContract.TabIndex = 19;
-            this.cboVehicleKindContract.Text = "C";
             // 
             // lblContractPrefix
             // 

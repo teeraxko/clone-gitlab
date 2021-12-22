@@ -76,6 +76,13 @@ namespace Facade.ContractFacade
             return flowContract.FillVehicleContractList(ref objContractList, conditionContract);
         }
 
+        public bool DisplayVehicleContract(DOCUMENT_TYPE documentType)
+        {
+            conditionContract.ContractNo = new DocumentNo(documentType, yy, mm, xxx);
+            objContractList = new ContractList(GetCompany());
+            return flowContract.FillVehicleContractList(ref objContractList, conditionContract);
+        }
+
         public bool DisplayDriverOtherContract()
         {
             bool result;

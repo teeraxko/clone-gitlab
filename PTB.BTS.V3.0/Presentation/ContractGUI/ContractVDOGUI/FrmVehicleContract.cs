@@ -12,6 +12,7 @@ using Facade.CommonFacade;
 using Entity.VehicleEntities;
 using Report.GUI.Contract;
 using Report;
+using Entity.CommonEntity;
 
 namespace Presentation.ContractGUI.ContractVDOGUI
 {
@@ -26,6 +27,9 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             visibleChild(false);
             isReadonly = UserProfile.IsReadOnly("miContract", "miContractVehicle");
             this.title = UserProfile.GetFormName("miContract", "miContractVehicle");
+
+            //D21018 Assign DocumentType 
+            base.DocumentType = DOCUMENT_TYPE.CONTRACT_TEMPORARY;
         }
 
         public override string FormID()
@@ -151,6 +155,9 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         protected override void setContractBase(ContractBase value)
         {
+            //D21018 Set DocumentType from Abbreviation of DocumentNo
+            SetDocumentTypeFromAbbreviation(value);
+
             base.setContractBase(value);
             bindContractCharge(uctContractCharge1, value.AContractChargeList[0]);
         }
@@ -246,7 +253,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             InitForm();
             initCombo();
             cboKindRental.DataSource = facadeContract.DatasourceKindOfRentalType;
-            selectContract("V");
+            selectContract(ContractType.CONTRACT_TYPE_VEHICLE);
         }
 
         private void btnCal_Click(object sender, EventArgs e)

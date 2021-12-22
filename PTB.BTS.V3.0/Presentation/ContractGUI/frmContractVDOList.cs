@@ -273,6 +273,20 @@ namespace Presentation.ContractGUI
             set { facadeListContract.XXX = value; }
         }
 
+        //D21018-BTS Contract Modification
+        private DocumentNo contractNo;
+        public DocumentNo ContractNo
+        {
+            set { contractNo = value; }
+        }
+
+        //D21018-BTS Contract Modification
+        private DOCUMENT_TYPE documentType;
+        public DOCUMENT_TYPE DocumentType
+        {
+            get { return documentType; }
+            set { documentType = value; }
+        }
 
         public bool IsVehicleContract
         {
@@ -358,7 +372,8 @@ namespace Presentation.ContractGUI
             : base()
         {
             InitializeComponent();
-            facadeListContract = new ContractListFacade();
+            facadeListContract = new ContractListFacade();          
+           
         } 
         #endregion
 
@@ -594,20 +609,65 @@ namespace Presentation.ContractGUI
 						}
 						break;
 					}
-					case ContractListType.CONTRACT_VEHICLE :
-					{
-						this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
-						if (facadeListContract.DisplayContract())
-						{
-							bindForm();
-						}
-						else
-						{
-							selected = false;
-							clearForm();
-						}
-						break;
-					}
+                    //case ContractListType.CONTRACT_VEHICLE :
+                    //{
+                    //    this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                    //    if (facadeListContract.DisplayContract())
+                    //    {
+                    //        bindForm();
+                    //    }
+                    //    else
+                    //    {
+                    //        selected = false;
+                    //        clearForm();
+                    //    } 
+                    //    break;
+                    //}
+
+                    case ContractListType.CONTRACT_VEHICLE:
+                    {
+                        //D21018
+                        if (this.contractNo.DocumentType == DOCUMENT_TYPE.CONTRACT_RENEWAL)
+                        {
+                            this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                            if (facadeListContract.DisplayVehicleContract(DOCUMENT_TYPE.CONTRACT_RENEWAL))
+                            {
+                                bindForm();
+                            }
+                            else
+                            {
+                                selected = false;
+                                clearForm();
+                            }
+                        }
+                        else if (this.contractNo.DocumentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY)
+                        {
+                            this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                            if (facadeListContract.DisplayVehicleContract(DOCUMENT_TYPE.CONTRACT_TEMPORARY))
+                            {
+                                bindForm();
+                            }
+                            else
+                            {
+                                selected = false;
+                                clearForm();
+                            }
+                        }
+                        else
+                        {
+                            this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                            if (facadeListContract.DisplayContract())
+                            {
+                                bindForm();
+                            }
+                            else
+                            {
+                                selected = false;
+                                clearForm();
+                            }
+                        }
+                        break;
+                    }
 					case ContractListType.CONTRACT_DRIVER :
 					{
                         this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 3).Text = "ประเภท";
@@ -656,18 +716,18 @@ namespace Presentation.ContractGUI
                         break;
                     }
 					default :
-					{						
-						this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "พนักงาน/ทะเบียนรถ";
-						if (facadeListContract.DisplayContract())
-						{
-							bindData();
-						}
-						else
-						{
-							selected = false;
-							clearForm();
-						}
-						break;
+					{
+                        this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "พนักงาน/ทะเบียนรถ";
+                        if (facadeListContract.DisplayContract())
+                        {
+                            bindData();
+                        }
+                        else
+                        {
+                            selected = false;
+                            clearForm();
+                        }
+                        break; 
 					}
 				}
 			}
