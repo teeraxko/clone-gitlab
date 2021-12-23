@@ -1696,6 +1696,12 @@ namespace PTB.BTS.Contract.Flow
          /// <returns>Contract No.</returns>
         public string IssueContractByQuotation(VehicleCalculation calculation, Company company, TableAccess tableAccess)
         {
+            return IssueContractByQuotation(calculation, company, tableAccess, DOCUMENT_TYPE.CONTRACT);
+        }
+
+        //D21018-BTS Contract Modification
+        public string IssueContractByQuotation(VehicleCalculation calculation, Company company, TableAccess tableAccess, DOCUMENT_TYPE documentType) 
+        {
             ContractDB dbContract = new ContractDB();
             VehicleContractDB dbVehicleContract = new VehicleContractDB();
             VehicleDB dbVehicle = new VehicleDB();
@@ -1703,7 +1709,8 @@ namespace PTB.BTS.Contract.Flow
             DocumentNo contractNo = null;
             using (DocumentNoFlow flow = new DocumentNoFlow())
             {
-                contractNo = flow.GetContractRunningNo(DOCUMENT_TYPE.CONTRACT, company);
+                //D21018 passing document type as parameter
+                contractNo = flow.GetContractRunningNo(documentType, company);
             }
             bool result = true;
             try
@@ -1749,8 +1756,8 @@ namespace PTB.BTS.Contract.Flow
                 {
                     vehicleContract.KindOfRental = KIND_OF_RENTAL_TYPE.RENEWAL;
                 }
-                else if(calculation.Quotation.QuotationStatus == QUOTATION_STATUS_TYPE.USEDQ)
-                { 
+                else if (calculation.Quotation.QuotationStatus == QUOTATION_STATUS_TYPE.USEDQ)
+                {
                     vehicleContract.KindOfRental = KIND_OF_RENTAL_TYPE.USEDCAR;
                 }
 
@@ -1760,7 +1767,7 @@ namespace PTB.BTS.Contract.Flow
                 }
                 else
                 {
-                    vehicleContract.ContinuousStatus = false;                
+                    vehicleContract.ContinuousStatus = false;
                 }
 
                 vehicleContract.LeaseTermMonth = calculation.LeaseTerm;

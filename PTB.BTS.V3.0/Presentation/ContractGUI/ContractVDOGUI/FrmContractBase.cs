@@ -2308,7 +2308,8 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
             if (this.updateMode)
             {
-                this.objContractBase.ContractNo = this.getContractNo();
+                //D21018-BTS Contract Modification
+                this.objContractBase.ContractNo = this.getContractNo(this.documentType);
             }
         }
 

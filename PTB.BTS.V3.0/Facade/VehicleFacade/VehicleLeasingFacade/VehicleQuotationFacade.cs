@@ -20,6 +20,7 @@ using Entity.ContractEntities;
 using Facade.PiFacade;
 using Facade.CommonFacade;
 using Facade.VehicleFacade.LeasingFacade;
+using Entity.CommonEntity;
 
 namespace Facade.VehicleFacade.VehicleLeasingFacade
 {
@@ -60,10 +61,6 @@ namespace Facade.VehicleFacade.VehicleLeasingFacade
         {
             get { return objVehicleList; }
         }
-
-      
-
-
         #endregion
 
         #region Constructor
@@ -186,36 +183,24 @@ namespace Facade.VehicleFacade.VehicleLeasingFacade
             }
         }
 
-
-   
-
-
-
-
-        //public VehicleCalculation GetVehicleCalculationByPlateNo(string plateNoPrefix, string plateNoRunning)
-        //{
-        //    using (VehicleCalculationFlow flow = new VehicleCalculationFlow())
-        //    {
-        //        return flow.GetVehicleCalculationByPlateNo(plateNoPrefix, plateNoRunning, GetCompany());
-        //    }
-        //}
-
-        //public VehicleInfo GetVehicleInfo(int vehicleNo)
-        //{
-        //    using (VehicleFlow flowVehicle = new VehicleFlow())
-        //    {
-        //        return flowVehicle.GetVehicleInfo(vehicleNo, GetCompany());
-        //    }
-
-        //}
-
         public bool InsertVehicleQuotation(VehicleCalculation vehicleCalculation)
+        {
+            //using (VehicleQuotationFlow flow = new VehicleQuotationFlow())
+            //{
+            //    return flow.InsertVehicleQuotation(vehicleCalculation, GetCompany());
+            //}
+            return InsertVehicleQuotation(vehicleCalculation, DOCUMENT_TYPE.CONTRACT);
+        }
+
+        //overload method ที่รองรับการส่ง Document type
+        public bool InsertVehicleQuotation(VehicleCalculation vehicleCalculation, DOCUMENT_TYPE documentType)
         {
             using (VehicleQuotationFlow flow = new VehicleQuotationFlow())
             {
-                return flow.InsertVehicleQuotation(vehicleCalculation, GetCompany());
+                return flow.InsertVehicleQuotation(vehicleCalculation, GetCompany(), documentType);
             }
-        }
+        }   
+
 
         public bool UpdateVehicleQuotation(VehicleQuotation vehicleQuotation)
         {

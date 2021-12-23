@@ -18,6 +18,7 @@ using ictus.PIS.PI.Entity;
 using ictus.Common.Entity;
 
 using PTB.BTS.Common.Flow;
+using Entity.CommonEntity;
 
 
 namespace Flow.VehicleFlow.VehicleLeasingFlow
@@ -114,11 +115,7 @@ namespace Flow.VehicleFlow.VehicleLeasingFlow
 
             return result;
         }
-
-
-
-
-
+        
         /// <summary>
         /// Method      : Issue Contract
         ///             : Insert VehicleQuotation
@@ -132,10 +129,16 @@ namespace Flow.VehicleFlow.VehicleLeasingFlow
         /// <returns>true if peocess success</returns>
         public bool InsertVehicleQuotation(VehicleCalculation vehicleCalculation, Company aCompany)
         {
+            return InsertVehicleQuotation(vehicleCalculation, aCompany, DOCUMENT_TYPE.CONTRACT); 
+        }
+
+        //D21018-BTS Contract Modification
+        public bool InsertVehicleQuotation(VehicleCalculation vehicleCalculation, Company aCompany, DOCUMENT_TYPE documentType)
+        {
             bool result = true;
             string contractNo = "";
             TableAccess tableAccess = new TableAccess();
-            try
+            try 
             {
                 tableAccess.OpenTransaction();
                 dbVehicleQuotation.TableAccess = tableAccess;
@@ -144,14 +147,14 @@ namespace Flow.VehicleFlow.VehicleLeasingFlow
                 {
                     using (PTB.BTS.Contract.Flow.ContractFlow flow = new PTB.BTS.Contract.Flow.ContractFlow())
                     {
-                        contractNo = flow.IssueContractByQuotation(vehicleCalculation, aCompany, tableAccess);
+                        contractNo = flow.IssueContractByQuotation(vehicleCalculation, aCompany, tableAccess, documentType);
 
                     }
                     vehicleCalculation.Quotation.VehicleContract.ContractNo = new DocumentNo(contractNo);
                 }
-                
+
                 result &= dbVehicleQuotation.InsertVehicleQuotation(vehicleCalculation.Quotation, aCompany);
-                
+
                 if (vehicleCalculation.Quotation.QuotationStatus != Entity.CommonEntity.QUOTATION_STATUS_TYPE.NEWQ)
                 {
                     result &= dbVehicleCalculation.InsertVehicleCalculationByQuotation(vehicleCalculation, aCompany);
@@ -185,8 +188,8 @@ namespace Flow.VehicleFlow.VehicleLeasingFlow
             }
 
             return result;
-
         }
+
 
         public bool UpdateVehicleQuotation(VehicleQuotation vehicleQuotation)
         {

@@ -78,14 +78,6 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
           
             calculation.Quotation.QuotationNo = facadeVehicleQuotation.RetriveRunningNo(DOCUMENT_TYPE.QUOTATION_VEHICLE);
             calculation.LeasingNo = calculation.Quotation.QuotationNo.ToString().Replace("PTB", "LC"); 
-                   
-
-
-        
-                
-                
-                
-
 
             calculation.Quotation.Purchasing = new VehiclePurchasing();
             calculation.Quotation.VehicleContract = new VehicleContract();
@@ -388,8 +380,10 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
 
                         if (isInsertMode)
                         {
-                            facadeVehicleQuotation.InsertVehicleQuotation(calculation);
-
+                            //facadeVehicleQuotation.InsertVehicleQuotation(calculation);
+                            //D21018 - passing document type as a parameter to support generate document no according to leasing type
+                            facadeVehicleQuotation.InsertVehicleQuotation(calculation, GetDocumentType());
+                            
                             if (!isPrint)
                             {
                                 Message(MessageList.Information.I0001);
@@ -595,15 +589,6 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
 
         
                 calculation.LeasingNo= calculation.Quotation.QuotationNo.ToString().Replace("PTB","LC");
-          
-
-
-                
-       
-              
-
-
-
             }
             else
             {
@@ -619,10 +604,6 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
                 calculation.Quotation.QuotationNo = facadeVehicleQuotation.RetriveRunningNo(DOCUMENT_TYPE.QUOTATION_VEHICLE);
 
                 calculation.LeasingNo = calculation.Quotation.QuotationNo.ToString().Replace("PTB", "LC");
-     
-            
-                    
-
 
                 calculation.Quotation.Purchasing = new VehiclePurchasing();
                 calculation.Quotation.VehicleContract = new VehicleContract();
@@ -764,9 +745,6 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
            
             calculation.LeasingCalculation.DiscountAmount = Convert.ToDecimal(txtDiscountAmount.Value);
             calculation.LeasingCalculation.DiscountTotal = Convert.ToDecimal(txtDiscountTotal.Value);
-
-
-
         }
 
         private void searchVehicle(string prefix, string num)
@@ -880,6 +858,27 @@ namespace Presentation.VehicleGUI.VehicleLeasingGUI
         {
             txtPlateNoRunning.Clear();
             txtPlateNoPrefix.Clear();
+        }
+
+        //D21018-BTS Contract Modification
+        private DOCUMENT_TYPE GetDocumentType()
+        {
+            if (rdbNewType.Checked)
+            {
+                return DOCUMENT_TYPE.CONTRACT;
+            }
+
+            if (rdbRenewType.Checked)
+            {
+                return DOCUMENT_TYPE.CONTRACT_RENEWAL;
+            }
+
+            if (rdbUsedType.Checked)
+            {
+                return DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+            }
+
+            return DOCUMENT_TYPE.CONTRACT;
         }
         #endregion
 
