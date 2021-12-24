@@ -280,7 +280,7 @@ namespace Presentation.ContractGUI
 			this.txtContractPrefix.Size = new System.Drawing.Size(24, 20);
 			this.txtContractPrefix.TabIndex = 0;
 			this.txtContractPrefix.TabStop = false;
-			this.txtContractPrefix.Text = "C";
+			this.txtContractPrefix.Text = "C";            
 			this.txtContractPrefix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label15
@@ -533,6 +533,7 @@ namespace Presentation.ContractGUI
 				txtContractNoXXX.Text = value.ContractNo.No.ToString();
 				txtContractStatus.Text = value.AContractStatus.AName.Thai;
 				txtContractType.Text = value.AContractType.AName.Thai;
+                txtContractPrefix.Text = value.AContractTypeAbbreviation;
 				txtCustomerTHName.Text = value.ACustomerDepartment.ACustomer.AName.English;
 				txtUnitHire.Text = Convert.ToString(value.UnitHire);
 				dtpStartDate.Value = value.APeriod.From.Date;
@@ -693,6 +694,11 @@ namespace Presentation.ContractGUI
 			mniEdit.Enabled = enable;
 			mniDelete.Enabled = enable;
 		}
+
+        private void ControlPrefix(ContractType contractType)
+        {
+            txtContractPrefix.Text = contractType.Prefix;
+        }
 
 //		============================== Public Method =================================
 		public void InitServiceStaffContract(ContractBase value)

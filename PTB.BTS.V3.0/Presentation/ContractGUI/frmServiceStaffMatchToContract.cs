@@ -220,6 +220,7 @@ namespace Presentation.ContractGUI
 			this.cboContractType.Name = "cboContractType";
 			this.cboContractType.Size = new System.Drawing.Size(240, 21);
 			this.cboContractType.TabIndex = 2;
+            this.cboContractType.SelectedIndexChanged += new System.EventHandler(this.cboContractType_SelectedIndexChanged);
 			// 
 			// label27
 			// 
@@ -416,7 +417,7 @@ namespace Presentation.ContractGUI
 		private frmServiceStaffMatchToContractDetail frmDetail;
 		private ServiceStaffMatchToContractFacade facadeServiceStaffMatchToContract;
 
-		private int SelectedRow
+        private int SelectedRow
 		{
 			get{return fpsContractList_Sheet1.ActiveRowIndex;}
 		}
@@ -444,18 +445,44 @@ namespace Presentation.ContractGUI
 
             if (cboContractStatus.Items.Count > 0)
                 cboContractStatus.SelectedIndex = -1;
+            //D21018-BTS Contract Modification : set ค่าเริ่มต้นคือ สัญญาเช่าพนักงานขับรถ
             if (cboContractType.Items.Count > 0)
-                cboContractType.SelectedIndex = -1;
+                cboContractType.SelectedIndex = 0;
 
 			hideControl(false);
 			enableControl(false);
 		}
 
+        //D21018-BTS Contract Modification : fixed to display form ID
+        public override string FormID()
+        {
+            return UserProfile.GetFormID("miContract", "miContractDocumentServiceStaffMatchToContract");
+        }
+
 //		============================== Property ==============================
+        //D21018-BTS Contract Modification
+        private DOCUMENT_TYPE _documentType = DOCUMENT_TYPE.CONTRACT;
+        private DOCUMENT_TYPE DocumentType
+        {
+            get
+            {
+                return this._documentType;
+            }
+            set
+            {
+                this._documentType = value;
+            }
+        }
+
 		private DocumentNo getContractNo()
 		{
-			contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);			
-			return contractNo;
+            //contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);			
+            //return contractNo;
+
+            //D21018-BTS Contract Modification
+            DocumentNo contractNo = new DocumentNo(_documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            return contractNo;
+
 		}	
 	
 		public ServiceStaffMatchToContractFacade FacadeServiceStaffMatchToContract
@@ -755,6 +782,21 @@ namespace Presentation.ContractGUI
             //cboContractType.SelectedIndex = -1;	
 		}
 
+        //D21018 change prefix according to contract type                    
+        private void ControlPrefix(ContractType contractType)
+        {
+            txtContractPrefix.Text = contractType.Prefix;
+            switch (contractType.Code)
+            {
+                case ContractType.CONTRACT_TYPE_DRIVER:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
+                    break;
+                default:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+            }
+        }
+
 //		============================== Base Event ==============================
 		public void InitForm()
 		{
@@ -880,5 +922,16 @@ namespace Presentation.ContractGUI
 		{
 		
 		}
+
+        //D21018-BTS Contract Modification : กำหนดการแสดง Prefix เมื่อมีการเปลี่ยนสัญญา
+        private void cboContractType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboContractType.SelectedIndex > -1)
+            {
+                ContractType contractType = (ContractType)cboContractType.SelectedItem;
+                ControlPrefix(contractType);
+            }
+
+        }
 	}
 }
