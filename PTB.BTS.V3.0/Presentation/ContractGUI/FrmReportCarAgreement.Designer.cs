@@ -52,6 +52,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.crvReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.cboVehicleKindContract = new System.Windows.Forms.ComboBox();
             this.gpbOtherDetail.SuspendLayout();
             this.gpbContractDetail.SuspendLayout();
             this.gpbSearchDetail.SuspendLayout();
@@ -195,6 +196,7 @@
             // gpbSearchDetail
             // 
             this.gpbSearchDetail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gpbSearchDetail.Controls.Add(this.cboVehicleKindContract);
             this.gpbSearchDetail.Controls.Add(this.txtContractNoXXX);
             this.gpbSearchDetail.Controls.Add(this.txtContractNoMM);
             this.gpbSearchDetail.Controls.Add(this.txtContractNoYY);
@@ -213,7 +215,7 @@
             // txtContractNoXXX
             // 
             this.txtContractNoXXX.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoXXX.Location = new System.Drawing.Point(496, 16);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(524, 17);
             this.txtContractNoXXX.MaxLength = 3;
             this.txtContractNoXXX.Name = "txtContractNoXXX";
             this.txtContractNoXXX.Size = new System.Drawing.Size(38, 20);
@@ -225,7 +227,7 @@
             // txtContractNoMM
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoMM.Location = new System.Drawing.Point(464, 16);
+            this.txtContractNoMM.Location = new System.Drawing.Point(492, 17);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -236,7 +238,7 @@
             // txtContractNoYY
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoYY.Location = new System.Drawing.Point(432, 16);
+            this.txtContractNoYY.Location = new System.Drawing.Point(460, 17);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -265,7 +267,7 @@
             // btnPrint
             // 
             this.btnPrint.ForeColor = System.Drawing.Color.Blue;
-            this.btnPrint.Location = new System.Drawing.Point(632, 15);
+            this.btnPrint.Location = new System.Drawing.Point(654, 15);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(72, 23);
             this.btnPrint.TabIndex = 142;
@@ -276,7 +278,7 @@
             // btnSearch
             // 
             this.btnSearch.ForeColor = System.Drawing.Color.Blue;
-            this.btnSearch.Location = new System.Drawing.Point(552, 15);
+            this.btnSearch.Location = new System.Drawing.Point(574, 15);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(72, 23);
             this.btnSearch.TabIndex = 140;
@@ -289,9 +291,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(328, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.Size = new System.Drawing.Size(129, 13);
             this.label10.TabIndex = 136;
-            this.label10.Text = "Contract # PTB-C-";
+            this.label10.Text = "Contract # PTB-              -";
             // 
             // crvReport
             // 
@@ -307,6 +309,19 @@
             this.crvReport.ShowRefreshButton = false;
             this.crvReport.Size = new System.Drawing.Size(801, 336);
             this.crvReport.TabIndex = 145;
+            // 
+            // cboVehicleKindContract
+            // 
+            this.cboVehicleKindContract.DropDownHeight = 105;
+            this.cboVehicleKindContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVehicleKindContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cboVehicleKindContract.FormattingEnabled = true;
+            this.cboVehicleKindContract.IntegralHeight = false;
+            this.cboVehicleKindContract.Location = new System.Drawing.Point(411, 17);
+            this.cboVehicleKindContract.Name = "cboVehicleKindContract";
+            this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
+            this.cboVehicleKindContract.TabIndex = 156;
+            this.cboVehicleKindContract.SelectedIndexChanged += new System.EventHandler(this.cboVehicleKindContract_SelectedIndexChanged);
             // 
             // FrmReportCarAgreement
             // 
@@ -355,5 +370,6 @@
         protected internal System.Windows.Forms.TextBox txtContractNoYY;
         private System.Windows.Forms.TextBox txtAccessory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboVehicleKindContract;
     }
 }

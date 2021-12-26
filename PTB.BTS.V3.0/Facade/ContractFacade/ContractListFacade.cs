@@ -121,6 +121,8 @@ namespace Facade.ContractFacade
         public bool DisplayContractVehiclePurchasing()
         {
             objContractList = new ContractList(GetCompany());
+            //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า -> ข้อมูลออกเฉพาะสัญญารถใหม่ และที่มีใบสั่งซื้อเท่านั้น กำหนด Abbreviation เป็น C เพื่อกรองอีกชั้น
+            conditionContract.AContractTypeAbbreviation = "C";
             return flowContract.FillContractVehiclePurchasing(objContractList, conditionContract);
         }
 

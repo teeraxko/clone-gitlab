@@ -69,7 +69,8 @@ namespace Presentation.ContractGUI
         /// <returns>object contract</returns>
         private DocumentNo getContractNo()
         {
-            contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            //D21018  ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า - เปลี่ยน document type เป็น Contract Driver 
+            contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT_DRIVER, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
             return contractNo;
         }
 

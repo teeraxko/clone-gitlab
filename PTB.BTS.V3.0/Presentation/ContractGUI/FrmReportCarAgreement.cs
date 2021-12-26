@@ -39,13 +39,29 @@ namespace Presentation.ContractGUI
         #endregion
 
         #region Private Method
+
+        //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า
+        private DOCUMENT_TYPE _documentType;
+        private DOCUMENT_TYPE DocumentType
+        {
+            get
+            {
+                return this._documentType;
+            }
+            set
+            {
+                this._documentType = value;
+            }
+        }
+
         /// <summary>
         /// Get ContractNo from DocumentNo 
         /// </summary>
         /// <returns></returns>
         private DocumentNo getContractNo()
         {
-            contract = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า
+            contract = new DocumentNo(this._documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
             return contract;
         }
 
@@ -55,6 +71,9 @@ namespace Presentation.ContractGUI
         private void clearscreen()
         {
             initComboCustomer();
+
+            //D21018-BTS Contract Modification
+            initComboVehicleType();
 
             txtContractNoYY.Text = string.Empty;
             txtContractNoMM.Text = string.Empty;
@@ -80,6 +99,12 @@ namespace Presentation.ContractGUI
             cmbCustomerName.DataSource = facadeContract.DataSourceCustomerName;
         }
 
+        //D21018-BTS Contract Modification
+        private void initComboVehicleType()
+        {
+            List<string> kindContract = new List<string>() { "C", "R", "T" };
+            cboVehicleKindContract.DataSource = kindContract;             
+        }
         /// <summary>
         /// Pop up Contract List by condition from first screen
         /// </summary>
@@ -96,6 +121,9 @@ namespace Presentation.ContractGUI
             {
                 dialogContractList.ConditionCustomer = (Customer)cmbCustomerName.SelectedItem;
             }
+
+            //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า
+            dialogContractList.DocumentType = this.DocumentType;            
 
             dialogContractList.ConditionCONTRACT_TYPE = contractType;
             dialogContractList.IsVehclePurchaing = true;
@@ -265,7 +293,46 @@ namespace Presentation.ContractGUI
             }
 
             return true;
-        } 
+        }
+
+        private void SetDocumentTypeFromAbbreviation(string value)
+        {
+            switch (value)
+            {
+                case "C":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+                case "R":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                    break;
+                case "T":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                    break;
+                default:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+            }
+        }
+
+        private void SetDocumentType()
+        {
+            switch (cboVehicleKindContract.Text)
+            {
+                case "C":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+                case "R":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                    break;
+                case "T":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                    break;
+                default:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+            }
+        }
+
         #endregion
 
         #endregion 
@@ -285,6 +352,10 @@ namespace Presentation.ContractGUI
             mdiParent.EnablePrintCommand(false);
 
             clearscreen();
+
+            //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า
+            cboVehicleKindContract.SelectedIndex = 0;
+            cboVehicleKindContract.Enabled = false;
         }
 
         public void RefreshForm()
@@ -347,5 +418,10 @@ namespace Presentation.ContractGUI
             formContractList();
         }
         #endregion
+
+        private void cboVehicleKindContract_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetDocumentType();
+        }
     }
 }
