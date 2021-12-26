@@ -626,7 +626,7 @@ namespace Presentation.ContractGUI
 
                     case ContractListType.CONTRACT_VEHICLE:
                     {
-                        //D21018
+                        //D21018-BTS Contract Modification
                         if (this.contractNo.DocumentType == DOCUMENT_TYPE.CONTRACT_RENEWAL)
                         {
                             this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
@@ -717,8 +717,32 @@ namespace Presentation.ContractGUI
                     }
 					default :
 					{
+                        //this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "พนักงาน/ทะเบียนรถ";
+                        //if (facadeListContract.DisplayContract())
+                        //{
+                        //    bindData();
+                        //}
+                        //else
+                        //{
+                        //    selected = false;
+                        //    clearForm();
+                        //}
+                        //break;    
+                        //D21018-BTS Contract Modification
                         this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "พนักงาน/ทะเบียนรถ";
-                        if (facadeListContract.DisplayContract())
+                        if (this.DocumentType == DOCUMENT_TYPE.CONTRACT_RENEWAL || this.DocumentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY || this.DocumentType == DOCUMENT_TYPE.CONTRACT_DRIVER)
+                        {
+                            if (facadeListContract.DisplayContract(this.DocumentType))
+                            {
+                                bindData();
+                            }
+                            else
+                            {
+                                selected = false;
+                                clearForm();
+                            }
+                        }
+                        else if (facadeListContract.DisplayContract())
                         {
                             bindData();
                         }
@@ -727,7 +751,7 @@ namespace Presentation.ContractGUI
                             selected = false;
                             clearForm();
                         }
-                        break; 
+                        break;						
 					}
 				}
 			}

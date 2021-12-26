@@ -20,6 +20,7 @@ using Facade.PiFacade;
 using Presentation.CommonGUI;
 
 using ictus.Common.Entity.Time;
+using System.Collections.Generic;
 
 namespace Presentation.ContractGUI
 {	
@@ -133,6 +134,7 @@ namespace Presentation.ContractGUI
 		private System.Windows.Forms.TextBox txtLeasingMonth;
 		private System.Windows.Forms.TextBox txtLeasingYear;
 		private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cboVehicleKindContract;
 
 		private System.ComponentModel.Container components = null;
 
@@ -170,6 +172,7 @@ namespace Presentation.ContractGUI
 			this.cboCancelReason = new System.Windows.Forms.ComboBox();
 			this.gpbContractCancel = new System.Windows.Forms.GroupBox();
 			this.gpbContractInfo = new System.Windows.Forms.GroupBox();
+            this.cboVehicleKindContract = new System.Windows.Forms.ComboBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label22 = new System.Windows.Forms.Label();
 			this.label23 = new System.Windows.Forms.Label();
@@ -530,6 +533,7 @@ namespace Presentation.ContractGUI
 			// gpbContractInfo
 			// 
 			this.gpbContractInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gpbContractInfo.Controls.Add(this.cboVehicleKindContract);
 			this.gpbContractInfo.Controls.Add(this.label13);
 			this.gpbContractInfo.Controls.Add(this.label22);
 			this.gpbContractInfo.Controls.Add(this.label23);
@@ -552,10 +556,23 @@ namespace Presentation.ContractGUI
 			this.gpbContractInfo.TabIndex = 0;
 			this.gpbContractInfo.TabStop = false;
 			this.gpbContractInfo.Text = "เรียกดูสัญญาตามเงื่อนไข";
+            // 
+            // cboVehicleKindContract
+            // 
+            this.cboVehicleKindContract.DropDownHeight = 105;
+            this.cboVehicleKindContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVehicleKindContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cboVehicleKindContract.FormattingEnabled = true;
+            this.cboVehicleKindContract.IntegralHeight = false;
+            this.cboVehicleKindContract.Location = new System.Drawing.Point(534, 39);
+            this.cboVehicleKindContract.Name = "cboVehicleKindContract";
+            this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
+            this.cboVehicleKindContract.TabIndex = 52;
+            this.cboVehicleKindContract.SelectedIndexChanged += new System.EventHandler(this.cboVehicleKindContract_SelectedIndexChanged);
 			// 
 			// label13
 			// 
-			this.label13.Location = new System.Drawing.Point(640, 64);
+            this.label13.Location = new System.Drawing.Point(648, 64);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(32, 16);
 			this.label13.TabIndex = 60;
@@ -563,7 +580,7 @@ namespace Presentation.ContractGUI
 			// 
 			// label22
 			// 
-			this.label22.Location = new System.Drawing.Point(608, 64);
+            this.label22.Location = new System.Drawing.Point(613, 64);
 			this.label22.Name = "label22";
 			this.label22.Size = new System.Drawing.Size(24, 16);
 			this.label22.TabIndex = 59;
@@ -571,7 +588,7 @@ namespace Presentation.ContractGUI
 			// 
 			// label23
 			// 
-			this.label23.Location = new System.Drawing.Point(576, 64);
+            this.label23.Location = new System.Drawing.Point(584, 64);
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(24, 16);
 			this.label23.TabIndex = 58;
@@ -579,7 +596,7 @@ namespace Presentation.ContractGUI
 			// 
 			// txtContractNoXXX
 			// 
-			this.txtContractNoXXX.Location = new System.Drawing.Point(632, 40);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(640, 40);
 			this.txtContractNoXXX.MaxLength = 3;
 			this.txtContractNoXXX.Name = "txtContractNoXXX";
 			this.txtContractNoXXX.Size = new System.Drawing.Size(32, 20);
@@ -592,7 +609,7 @@ namespace Presentation.ContractGUI
 			// 
 			// txtContractNoMM
 			// 
-			this.txtContractNoMM.Location = new System.Drawing.Point(600, 40);
+            this.txtContractNoMM.Location = new System.Drawing.Point(608, 40);
 			this.txtContractNoMM.MaxLength = 2;
 			this.txtContractNoMM.Name = "txtContractNoMM";
 			this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -603,7 +620,7 @@ namespace Presentation.ContractGUI
 			// 
 			// txtContractNoYY
 			// 
-			this.txtContractNoYY.Location = new System.Drawing.Point(568, 40);
+            this.txtContractNoYY.Location = new System.Drawing.Point(576, 40);
 			this.txtContractNoYY.MaxLength = 2;
 			this.txtContractNoYY.Name = "txtContractNoYY";
 			this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -664,6 +681,7 @@ namespace Presentation.ContractGUI
 			this.cboContractType.Name = "cboContractType";
 			this.cboContractType.Size = new System.Drawing.Size(264, 21);
 			this.cboContractType.TabIndex = 2;
+            this.cboContractType.SelectedIndexChanged += new System.EventHandler(this.cboContractType_SelectedIndexChanged);
 			// 
 			// label18
 			// 
@@ -1479,6 +1497,17 @@ namespace Presentation.ContractGUI
 		private VehicleContract objVehicleContract;
 		private VehicleAssignment objVehicleAssignment;
 		private ContractCancelFacade facadeContractCancel;
+
+        //D21018-BTS Contract Modification
+        private DOCUMENT_TYPE _documentType = DOCUMENT_TYPE.CONTRACT;
+        private DOCUMENT_TYPE DocumentType
+        {
+            set
+            {
+                _documentType = value;
+            }
+        }
+
 		# endregion - Private -
 
         #region Constructor
@@ -1666,8 +1695,12 @@ namespace Presentation.ContractGUI
 
         private DocumentNo getContractNo()
         {
-            DocumentNo contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            //DocumentNo contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            //return contractNo;
+            //D21018 ส่ง document type ตาม dropdown ที่เลือก
+            DocumentNo contractNo = new DocumentNo(_documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
             return contractNo;
+
         }
 
         private void setContractBase(ContractBase value)
@@ -1744,6 +1777,34 @@ namespace Presentation.ContractGUI
 
             if (cboContractType.Text != "")
             { dialogContractList.ConditionCONTRACT_TYPE = (ContractType)cboContractType.SelectedItem; }
+
+            //D21018 Support set contract type from dropdown
+            if (((ContractType)cboContractType.SelectedItem).Code == ContractType.CONTRACT_TYPE_DRIVER)
+            {
+                dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
+                this.DocumentType = dialogContractList.DocumentType;
+            }
+
+            if (cboVehicleKindContract.Visible)
+            {
+                switch (cboVehicleKindContract.Text)
+                {
+                    case "C":
+                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                        break;
+                    case "R":
+                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                        break;
+                    case "T":
+                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                        break;
+                    default:
+                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                        break;
+                }
+                this.DocumentType = dialogContractList.DocumentType;
+            }
+
 
             if (cboContractStatus.Text != "")
             { dialogContractList.ConditionContractStatus = (ContractStatus)cboContractStatus.SelectedItem; }
@@ -2013,6 +2074,39 @@ namespace Presentation.ContractGUI
                 setUCT(index + 1, value);
             }
         }
+
+        private void ControlPrefix(ContractType contractType)
+        {
+            if (contractType.Code == ContractType.CONTRACT_TYPE_VEHICLE)
+            {
+                txtContractPrefix.Text = "C"; //Vehicle
+                txtContractPrefix.Visible = false;
+                label25.Visible = true;
+                cboVehicleKindContract.Text = "C";
+                List<string> kindContract = new List<string>() { "C", "R", "T" };
+                cboVehicleKindContract.DataSource = kindContract;
+                cboVehicleKindContract.Visible = true;
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT;
+            }
+            else if (contractType.Code == ContractType.CONTRACT_TYPE_DRIVER)
+            {
+                txtContractPrefix.Text = "D"; //Driver
+                txtContractPrefix.Visible = true;
+                label25.Visible = true;
+                cboVehicleKindContract.Visible = false;
+                cboVehicleKindContract.Text = "C";
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT_DRIVER;
+            }
+            else
+            {
+                txtContractPrefix.Text = "C"; //Other    
+                txtContractPrefix.Visible = true;
+                label25.Visible = true;
+                cboVehicleKindContract.Text = "C";
+                cboVehicleKindContract.Visible = false;
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT;
+            }
+        }
         #endregion
 
         #region - ClearForm -
@@ -2236,7 +2330,22 @@ namespace Presentation.ContractGUI
             {
                 clearLeasingPeriod();
             }
-        } 
+        }
+
+        private void cboVehicleKindContract_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboContractType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboContractType.SelectedIndex != -1)
+            {
+                ContractType contractType = (ContractType)cboContractType.SelectedItem;
+                ControlPrefix(contractType);
+            }
+        }
+
         #endregion
 	}
 }

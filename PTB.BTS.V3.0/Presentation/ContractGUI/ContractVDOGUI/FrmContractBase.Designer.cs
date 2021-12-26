@@ -393,7 +393,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             this.cboVehicleKindContract.Location = new System.Drawing.Point(533, 41);
             this.cboVehicleKindContract.Name = "cboVehicleKindContract";
             this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
-            this.cboVehicleKindContract.TabIndex = 19;
+            this.cboVehicleKindContract.TabIndex = 19;            
             // 
             // lblContractPrefix
             // 
