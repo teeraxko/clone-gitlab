@@ -19,6 +19,7 @@ using Facade.ContractFacade;
 using Presentation.CommonGUI;
 
 using ictus.Common.Entity.General;
+using System.Collections.Generic;
 
 namespace Presentation.ContractGUI
 {
@@ -63,6 +64,7 @@ namespace Presentation.ContractGUI
 		private System.Windows.Forms.TextBox txtContractNoMM;
 		private System.Windows.Forms.TextBox txtContractNoYY;
 		private System.Windows.Forms.ComboBox cboContractStatus;
+        private System.Windows.Forms.ComboBox cboVehicleKindContract;
 		private System.ComponentModel.Container components = null;
 		private void InitializeComponent()
 		{
@@ -80,6 +82,7 @@ namespace Presentation.ContractGUI
 			this.cmdEdit = new System.Windows.Forms.Button();
 			this.cmdDelete = new System.Windows.Forms.Button();
 			this.gpbRetriveContract = new System.Windows.Forms.GroupBox();
+            this.cboVehicleKindContract = new System.Windows.Forms.ComboBox();
 			this.txtContractNoXXX = new System.Windows.Forms.TextBox();
 			this.txtContractNoMM = new System.Windows.Forms.TextBox();
 			this.txtContractNoYY = new System.Windows.Forms.TextBox();
@@ -215,6 +218,7 @@ namespace Presentation.ContractGUI
 			// gpbRetriveContract
 			// 
 			this.gpbRetriveContract.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gpbRetriveContract.Controls.Add(this.cboVehicleKindContract);
 			this.gpbRetriveContract.Controls.Add(this.txtContractNoXXX);
 			this.gpbRetriveContract.Controls.Add(this.txtContractNoMM);
 			this.gpbRetriveContract.Controls.Add(this.txtContractNoYY);
@@ -237,10 +241,23 @@ namespace Presentation.ContractGUI
 			this.gpbRetriveContract.TabIndex = 88;
 			this.gpbRetriveContract.TabStop = false;
 			this.gpbRetriveContract.Text = "เรียกดูสัญญาตามเงื่อนไข";
+            // 
+            // cboVehicleKindContract
+            // 
+            this.cboVehicleKindContract.DropDownHeight = 105;
+            this.cboVehicleKindContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboVehicleKindContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cboVehicleKindContract.FormattingEnabled = true;
+            this.cboVehicleKindContract.IntegralHeight = false;
+            this.cboVehicleKindContract.Location = new System.Drawing.Point(544, 54);
+            this.cboVehicleKindContract.Name = "cboVehicleKindContract";
+            this.cboVehicleKindContract.Size = new System.Drawing.Size(34, 21);
+            this.cboVehicleKindContract.TabIndex = 89;
+            this.cboVehicleKindContract.SelectedIndexChanged += new System.EventHandler(this.cboVehicleKindContract_SelectedIndexChanged);
 			// 
 			// txtContractNoXXX
 			// 
-			this.txtContractNoXXX.Location = new System.Drawing.Point(640, 56);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(662, 54);
 			this.txtContractNoXXX.MaxLength = 3;
 			this.txtContractNoXXX.Name = "txtContractNoXXX";
 			this.txtContractNoXXX.Size = new System.Drawing.Size(40, 20);
@@ -253,7 +270,7 @@ namespace Presentation.ContractGUI
 			// 
 			// txtContractNoMM
 			// 
-			this.txtContractNoMM.Location = new System.Drawing.Point(608, 56);
+            this.txtContractNoMM.Location = new System.Drawing.Point(630, 54);
 			this.txtContractNoMM.MaxLength = 2;
 			this.txtContractNoMM.Name = "txtContractNoMM";
 			this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -264,7 +281,7 @@ namespace Presentation.ContractGUI
 			// 
 			// txtContractNoYY
 			// 
-			this.txtContractNoYY.Location = new System.Drawing.Point(576, 56);
+            this.txtContractNoYY.Location = new System.Drawing.Point(598, 54);
 			this.txtContractNoYY.MaxLength = 2;
 			this.txtContractNoYY.Name = "txtContractNoYY";
 			this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -288,17 +305,17 @@ namespace Presentation.ContractGUI
 			// label12
 			// 
 			this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(222)));
-			this.label12.Location = new System.Drawing.Point(568, 56);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(222)));
+            this.label12.Location = new System.Drawing.Point(577, 56);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(8, 23);
+			this.label12.Size = new System.Drawing.Size(14, 23);
 			this.label12.TabIndex = 103;
 			this.label12.Text = "-";
 			// 
 			// label15
 			// 
 			this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label15.Location = new System.Drawing.Point(656, 80);
+            this.label15.Location = new System.Drawing.Point(678, 76);
 			this.label15.Name = "label15";
 			this.label15.Size = new System.Drawing.Size(32, 16);
 			this.label15.TabIndex = 102;
@@ -307,7 +324,7 @@ namespace Presentation.ContractGUI
 			// label22
 			// 
 			this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label22.Location = new System.Drawing.Point(616, 80);
+            this.label22.Location = new System.Drawing.Point(638, 76);
 			this.label22.Name = "label22";
 			this.label22.Size = new System.Drawing.Size(24, 16);
 			this.label22.TabIndex = 101;
@@ -316,7 +333,7 @@ namespace Presentation.ContractGUI
 			// label23
 			// 
 			this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label23.Location = new System.Drawing.Point(584, 80);
+            this.label23.Location = new System.Drawing.Point(606, 76);
 			this.label23.Name = "label23";
 			this.label23.Size = new System.Drawing.Size(24, 16);
 			this.label23.TabIndex = 100;
@@ -325,12 +342,12 @@ namespace Presentation.ContractGUI
 			// label25
 			// 
 			this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(222)));
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(222)));
 			this.label25.Location = new System.Drawing.Point(504, 56);
 			this.label25.Name = "label25";
 			this.label25.Size = new System.Drawing.Size(40, 23);
 			this.label25.TabIndex = 99;
-			this.label25.Text = "PTB -";
+            this.label25.Text = "PTB  - "; 
 			// 
 			// cboContractStatus
 			// 
@@ -351,13 +368,13 @@ namespace Presentation.ContractGUI
 			this.label26.Text = "เลขที่สัญญาสำหรับรถ";
 			// 
 			// cboContractType
-			// 
-			this.cboContractType.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			// 			
 			this.cboContractType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboContractType.Location = new System.Drawing.Point(504, 24);
 			this.cboContractType.Name = "cboContractType";
 			this.cboContractType.Size = new System.Drawing.Size(240, 21);
 			this.cboContractType.TabIndex = 89;
+            this.cboContractType.SelectedIndexChanged += new System.EventHandler(this.cboContractType_SelectedIndexChanged);
 			// 
 			// label27
 			// 
@@ -459,9 +476,25 @@ namespace Presentation.ContractGUI
 			get{return facadeVDContractMatch;}
 		}
 
-		private DocumentNo getContractNo()
+        //D21018-BTS Contract Modification
+        private DOCUMENT_TYPE _documentType = DOCUMENT_TYPE.CONTRACT;
+        private DOCUMENT_TYPE DocumentType
+        {
+            get
+            {
+                return this._documentType;
+            }
+            set
+            {
+                this._documentType = value;
+            }
+        }
+
+        private DocumentNo getContractNo()
 		{
-			return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ
+            DocumentNo contractNo = new DocumentNo(_documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            return contractNo;
 		}
 
 		private void setContractBase(ContractBase value)
@@ -488,7 +521,8 @@ namespace Presentation.ContractGUI
 			{					
 				cboCustomerTHName.DataSource = facadeVDContractMatch.DataSourceCustomer;
 				cboContractStatus.DataSource = facadeVDContractMatch.DataSourceContractAvailableStatus;
-				cboContractType.DataSource = facadeVDContractMatch.DataSourceContractTypeAvailable;
+				//cboContractType.DataSource = facadeVDContractMatch.DataSourceContractTypeAvailable;
+                cboContractType.DataSource = facadeVDContractMatch.DataSourceContractType;
 			}
 			catch(AppExceptionBase ex)
 			{Message(ex);}
@@ -504,11 +538,14 @@ namespace Presentation.ContractGUI
 
 //		============================== Private Method ==============================
 		private void newObject()
-		{
-			facadeVDContractMatch = new VDContractMatchFacade();
-			frmEntry = new frmVDContractMatchingEntry(this);
-			objVehicleContract = new VehicleContract(facadeVDContractMatch.GetCompany());
-			objDocumentNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, NullConstant.STRING, NullConstant.STRING, NullConstant.STRING);
+		{			
+            //D21018 - ส่ง document type ไปยัง facade
+            //facadeVDContractMatch = new VDContractMatchFacade();
+            facadeVDContractMatch = new VDContractMatchFacade(this.DocumentType);
+            frmEntry = new frmVDContractMatchingEntry(this);
+            objVehicleContract = new VehicleContract(facadeVDContractMatch.GetCompany());
+            //objDocumentNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, NullConstant.STRING, NullConstant.STRING, NullConstant.STRING);
+            objDocumentNo = new DocumentNo(this.DocumentType, NullConstant.STRING, NullConstant.STRING, NullConstant.STRING);
 		}
 
 		private void bindVDContractMatch(int row, VehicleContract value)
@@ -810,6 +847,40 @@ namespace Presentation.ContractGUI
 			}
 		}
 
+        private void ControlPrefix(ContractType contractType)
+        {
+            if (contractType.Code == ContractType.CONTRACT_TYPE_VEHICLE)
+            {
+                txtDocumentType.Text = "C"; //Vehicle
+                txtDocumentType.Visible = false;
+                label25.Visible = true;
+                cboVehicleKindContract.Text = "C";
+                List<string> kindContract = new List<string>() { "C", "R", "T" };
+                cboVehicleKindContract.DataSource = kindContract;
+                cboVehicleKindContract.Visible = true;
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT;
+            }
+            else if (contractType.Code == ContractType.CONTRACT_TYPE_DRIVER)
+            {
+                txtDocumentType.Text = "D"; //Driver
+                txtDocumentType.Visible = true;
+                label25.Visible = true;
+                cboVehicleKindContract.Visible = false;
+                cboVehicleKindContract.Text = "C";
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT_DRIVER;
+            }
+            else
+            {
+                txtDocumentType.Text = "C"; //Other    
+                txtDocumentType.Visible = true;
+                label25.Visible = true;
+                cboVehicleKindContract.Text = "C";
+                cboVehicleKindContract.Visible = false;
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT;
+            }
+        }
+
+
 //		============================== public method ==============================
 		public bool AddRow(VehicleContract value)
 		{
@@ -1075,6 +1146,35 @@ namespace Presentation.ContractGUI
 
             setPermission();
 		}
+
+        private void cboVehicleKindContract_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cboVehicleKindContract.Text)
+            {
+                case "C":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+                case "R":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                    break;
+                case "T":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                    break;
+                default:
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                    break;
+            }
+
+        }
+
+        private void cboContractType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboContractType.SelectedIndex != -1)
+            {
+                ContractType contractType = (ContractType)cboContractType.SelectedItem;
+                ControlPrefix(contractType);
+            }
+        }
 	}
 }
 

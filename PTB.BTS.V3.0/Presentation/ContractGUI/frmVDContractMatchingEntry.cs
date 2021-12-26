@@ -184,7 +184,7 @@ namespace Presentation.ContractGUI
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(24, 20);
 			this.textBox1.TabIndex = 110;
-			this.textBox1.Text = "C";
+			this.textBox1.Text = "D";
 			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label3
@@ -353,14 +353,18 @@ namespace Presentation.ContractGUI
 		#endregion
 
 //		============================== Property ==============================
-		private DocumentNo getVehicleContractNo()
+        //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ ส่ง document type ตามประเภทสัญญา
+        private DocumentNo getVehicleContractNo()
 		{
-			return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtVehicleYY.Text, txtVehicleMM.Text, txtVehicleXXX.Text);
+			//return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtVehicleYY.Text, txtVehicleMM.Text, txtVehicleXXX.Text);
+            return new DocumentNo(objVehicleContract.ContractNo.DocumentType, txtVehicleYY.Text, txtVehicleMM.Text, txtVehicleXXX.Text);            
 		}
 
+        //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ เปลี่ยน document type จาก contract เป็น contract driver
 		private DocumentNo getDriverContractNo()
 		{
-			return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtDriverYY.Text, txtDriverMM.Text, txtDriverXXX.Text);
+			//return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtDriverYY.Text, txtDriverMM.Text, txtDriverXXX.Text);
+            return new DocumentNo(DOCUMENT_TYPE.CONTRACT_DRIVER, txtDriverYY.Text, txtDriverMM.Text, txtDriverXXX.Text);
 		}
 
 //		============================== Constructor ==============================
@@ -443,7 +447,11 @@ namespace Presentation.ContractGUI
 
 			txtVehicleYY.Text = value.ContractNo.Year.ToString();
 			txtVehicleMM.Text = value.ContractNo.Month.ToString();
-			txtVehicleXXX.Text = value.ContractNo.No.ToString(); 
+			txtVehicleXXX.Text = value.ContractNo.No.ToString();
+
+            //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ - Set prefix
+            txtDocumentType.Text = value.AContractTypeAbbreviation;
+
 		}
 
 		private void InitServiceStaffContract(DriverContract value)
@@ -809,6 +817,9 @@ namespace Presentation.ContractGUI
 
 			contractType.Code = "D";
 			dialogContractList.ConditionCONTRACT_TYPE = contractType;
+
+            //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ - กำหนด Document Type ของ FORM เป็น Driver
+            dialogContractList.DocumentType = DOCUMENT_TYPE.CONTRACT_DRIVER; 
 
 			contractStatus.Code = "2";
 			dialogContractList.ConditionContractStatus = contractStatus;

@@ -1328,12 +1328,23 @@ namespace PTB.BTS.Contract.Flow
 
 			return result;
 		}
+		
+        //D21018 modify to support new contract format
+        public bool FillAvailableContractList(ref ContractList value, ContractBase condition, string yy, string mm, string xxx)
+        {
+            //condition.ContractNo = GetContractNo(yy, mm, xxx);
+            //return dbContract.FillAvailableContractList(ref value, condition);
+            //แก้ไขให้ไปเรียก overload method 
+            return FillAvailableContractList(ref value, condition, yy, mm, xxx, DOCUMENT_TYPE.CONTRACT);
+        }
 
-		public bool FillAvailableContractList(ref ContractList value, ContractBase condition, string yy, string mm, string xxx)
-		{
-			condition.ContractNo = GetContractNo(yy, mm, xxx);
-			return dbContract.FillAvailableContractList(ref value, condition);
-		}
+        //D21018 จับคู่สัญญารถยนต์กับพนักงานขับรถ
+        //สร้าง overload method เพื่อรับ document type
+        public bool FillAvailableContractList(ref ContractList value, ContractBase condition, string yy, string mm, string xxx, DOCUMENT_TYPE documentType)
+        {
+            condition.ContractNo = GetContractNo(yy, mm, xxx, DOCUMENT_TYPE.CONTRACT_DRIVER);
+            return dbContract.FillAvailableContractList(ref value, condition);
+        }
 
         public ContractBase GetCurrentVehicleContract(Entity.VehicleEntities.Vehicle aVehicle, Company aCompany)
 		{

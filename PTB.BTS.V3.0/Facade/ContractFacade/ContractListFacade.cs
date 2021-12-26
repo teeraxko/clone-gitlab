@@ -108,12 +108,14 @@ namespace Facade.ContractFacade
                 result = flowContract.FillContractList(ref objContractList, conditionContract);
                 return result;
             }
-        }
+        }        
 
         public bool DisplayAvailableContract()
         {
             objContractList = new ContractList(GetCompany());
-            return flowContract.FillAvailableContractList(ref objContractList, conditionContract, yy, mm, xxx);
+            //D21018 ส่ง Document Type เป็น Driver
+            return flowContract.FillAvailableContractList(ref objContractList, conditionContract, yy, mm, xxx, DOCUMENT_TYPE.CONTRACT_DRIVER);
+            //return flowContract.FillAvailableContractList(ref objContractList, conditionContract, yy, mm, xxx);
         }
 
         public bool DisplayContractVehiclePurchasing()

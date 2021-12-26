@@ -122,6 +122,20 @@ namespace Facade.ContractFacade
 			}
 		}
 
+        public ArrayList DataSourceContractType
+        {
+            get
+            {
+                ContractTypeFlow flowContractType = new ContractTypeFlow();
+                ContractTypeList contractTypeList = new ContractTypeList(GetCompany());
+                flowContractType.FillMTBList(contractTypeList);
+                flowContractType = null;
+                contractTypeList.Remove("D");
+                contractTypeList.Remove("O");
+                return contractTypeList.GetArrayList();                
+            }
+        }
+
 		public ComboBoxCellType DataSourceEmployeeList(VehicleContract value)
 		{
 			EmployeeList listEmployee = new EmployeeList(GetCompany());
@@ -162,8 +176,19 @@ namespace Facade.ContractFacade
 		#endregion
 
         #region Constructor
-        public VDContractMatchFacade()
+        public VDContractMatchFacade() : base()
+        {
+            InitialFacade(DOCUMENT_TYPE.CONTRACT);
+        }
+
+        //D21018 Add support passing documenttype as parameter to support C,R,T
+        public VDContractMatchFacade(DOCUMENT_TYPE documentType)
             : base()
+        {
+            InitialFacade(documentType);
+        }
+
+        private void InitialFacade(DOCUMENT_TYPE documentType)
         {
             flowContract = new ContractFlow();
             flowServiceStaff = new ServiceStaffFlow();
@@ -174,11 +199,12 @@ namespace Facade.ContractFacade
             objServiceStaffContract = new ServiceStaffContract(GetCompany());
 
             condition = new VehicleContract(GetCompany());
-            contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, NullConstant.STRING, NullConstant.STRING, NullConstant.STRING);
+            contractNo = new DocumentNo(documentType, NullConstant.STRING, NullConstant.STRING, NullConstant.STRING);
 
             objContractList = new ContractList(GetCompany());
             condition.ContractNo = contractNo;
-        } 
+        }
+
         #endregion
 
         #region Public Method

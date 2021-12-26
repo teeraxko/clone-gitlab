@@ -567,17 +567,41 @@ namespace Presentation.ContractGUI
 				{
 					case ContractListType.VEHICLE :
 					{
-						this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
-						if (facadeListContract.DisplayVehicleContract())
-						{
-							bindForm();
-						}
-						else
-						{
-							selected = false;
-							clearForm();
-						}
-						break;
+                        //this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                        //if (facadeListContract.DisplayVehicleContract())
+                        //{
+                        //    bindForm();
+                        //}
+                        //else
+                        //{
+                        //    selected = false;
+                        //    clearForm();
+                        //}
+                        //break;
+                        this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                        //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ แก้ไขให้รองรับ Renewal & Temporary
+                        if (this.DocumentType == DOCUMENT_TYPE.CONTRACT_RENEWAL || this.DocumentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY)
+                        {
+                            if (facadeListContract.DisplayContract(this.DocumentType))
+                            {
+                                bindData();
+                            }
+                            else
+                            {
+                                selected = false;
+                                clearForm();
+                            }
+                        }
+                        else if (facadeListContract.DisplayContract())
+                        {
+                            bindData();
+                        }
+                        else
+                        {
+                            selected = false;
+                            clearForm();
+                        }
+                        break; 
 					}
 					case ContractListType.DRIVER_OTHER :
 					{
