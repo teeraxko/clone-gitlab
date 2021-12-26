@@ -88,6 +88,9 @@ namespace Presentation.ContractGUI
                     txtContractNoXXX.Text = contractBase.ContractNo.No;
                     txtCurrentCustomer.Text = contractBase.ACustomerDepartment.ACustomer.ShortName;
                     txtCurrentDep.Text = contractBase.ACustomerDepartment.ShortName;
+
+                    //D21018 การจ่ายงานให้รถยนต์ + การจ่ายงานให้พนักงานบริการ
+                    txtContractPrefix.Text = contractBase.AContractTypeAbbreviation;                    
                 }
 
                 aVehicle = value;

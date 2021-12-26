@@ -55,6 +55,7 @@ namespace Presentation.ContractGUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblContractDetail = new System.Windows.Forms.GroupBox();
+            this.txtContractPrefix = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtDeptName = new System.Windows.Forms.TextBox();
             this.txtCutsName = new System.Windows.Forms.TextBox();
@@ -347,6 +348,7 @@ namespace Presentation.ContractGUI
             // 
             // lblContractDetail
             // 
+            this.lblContractDetail.Controls.Add(this.txtContractPrefix);
             this.lblContractDetail.Controls.Add(this.label16);
             this.lblContractDetail.Controls.Add(this.txtDeptName);
             this.lblContractDetail.Controls.Add(this.txtCutsName);
@@ -363,15 +365,25 @@ namespace Presentation.ContractGUI
             this.lblContractDetail.TabStop = false;
             this.lblContractDetail.Text = "รายละเอียดในสัญญา";
             // 
+            // txtContractPrefix
+            // 
+            this.txtContractPrefix.Enabled = false;
+            this.txtContractPrefix.Location = new System.Drawing.Point(162, 22);
+            this.txtContractPrefix.Name = "txtContractPrefix";
+            this.txtContractPrefix.Size = new System.Drawing.Size(27, 20);
+            this.txtContractPrefix.TabIndex = 156;
+            this.txtContractPrefix.Text = "C";
+            this.txtContractPrefix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label16.Location = new System.Drawing.Point(128, 24);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 17);
+            this.label16.Size = new System.Drawing.Size(73, 13);
             this.label16.TabIndex = 155;
-            this.label16.Text = "PTB - C -";
+            this.label16.Text = "PTB -            -";
             // 
             // txtDeptName
             // 
@@ -393,7 +405,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoXXX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoXXX.Enabled = false;
-            this.txtContractNoXXX.Location = new System.Drawing.Point(271, 22);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(282, 22);
             this.txtContractNoXXX.MaxLength = 3;
             this.txtContractNoXXX.Name = "txtContractNoXXX";
             this.txtContractNoXXX.Size = new System.Drawing.Size(32, 20);
@@ -404,7 +416,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoMM.Enabled = false;
-            this.txtContractNoMM.Location = new System.Drawing.Point(234, 22);
+            this.txtContractNoMM.Location = new System.Drawing.Point(245, 22);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -415,7 +427,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoYY.Enabled = false;
-            this.txtContractNoYY.Location = new System.Drawing.Point(197, 22);
+            this.txtContractNoYY.Location = new System.Drawing.Point(208, 22);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -537,5 +549,6 @@ namespace Presentation.ContractGUI
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtDriverName;
         private System.Windows.Forms.TextBox txtDriverNo;
+        private System.Windows.Forms.TextBox txtContractPrefix;
     }
 }

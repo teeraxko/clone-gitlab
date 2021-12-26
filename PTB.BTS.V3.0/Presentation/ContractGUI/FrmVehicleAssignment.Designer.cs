@@ -30,16 +30,17 @@ namespace Presentation.ContractGUI
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gpbVehicle = new System.Windows.Forms.GroupBox();
+            this.txtContractPrefix = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtCurrentDep = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -88,6 +89,15 @@ namespace Presentation.ContractGUI
             this.tabVehicleContract = new System.Windows.Forms.TabControl();
             this.tabAssignVehicle = new System.Windows.Forms.TabPage();
             this.dtgVehicleAssign = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabMainVehicle = new System.Windows.Forms.TabPage();
             this.dtgVehicleMain = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,15 +109,6 @@ namespace Presentation.ContractGUI
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbVehicle.SuspendLayout();
             this.ctmMenu.SuspendLayout();
             this.tabVehicleContract.SuspendLayout();
@@ -120,6 +121,7 @@ namespace Presentation.ContractGUI
             // gpbVehicle
             // 
             this.gpbVehicle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gpbVehicle.Controls.Add(this.txtContractPrefix);
             this.gpbVehicle.Controls.Add(this.label18);
             this.gpbVehicle.Controls.Add(this.txtCurrentDep);
             this.gpbVehicle.Controls.Add(this.label17);
@@ -165,16 +167,26 @@ namespace Presentation.ContractGUI
             this.gpbVehicle.TabStop = false;
             this.gpbVehicle.Text = "ทะเบียนรถ";
             // 
+            // txtContractPrefix
+            // 
+            this.txtContractPrefix.Enabled = false;
+            this.txtContractPrefix.Location = new System.Drawing.Point(154, 142);
+            this.txtContractPrefix.Name = "txtContractPrefix";
+            this.txtContractPrefix.Size = new System.Drawing.Size(27, 20);
+            this.txtContractPrefix.TabIndex = 17;
+            this.txtContractPrefix.Text = "C";
+            this.txtContractPrefix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label18.Location = new System.Drawing.Point(120, 144);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label18.Location = new System.Drawing.Point(116, 146);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(66, 17);
+            this.label18.Size = new System.Drawing.Size(79, 13);
             this.label18.TabIndex = 157;
-            this.label18.Text = "PTB - C -";
+            this.label18.Text = "PTB -              -";
             // 
             // txtCurrentDep
             // 
@@ -214,7 +226,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoXXX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoXXX.Enabled = false;
-            this.txtContractNoXXX.Location = new System.Drawing.Point(258, 142);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(267, 142);
             this.txtContractNoXXX.MaxLength = 3;
             this.txtContractNoXXX.Name = "txtContractNoXXX";
             this.txtContractNoXXX.Size = new System.Drawing.Size(32, 20);
@@ -225,7 +237,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoMM.Enabled = false;
-            this.txtContractNoMM.Location = new System.Drawing.Point(226, 142);
+            this.txtContractNoMM.Location = new System.Drawing.Point(235, 142);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -236,7 +248,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoYY.Enabled = false;
-            this.txtContractNoYY.Location = new System.Drawing.Point(194, 142);
+            this.txtContractNoYY.Location = new System.Drawing.Point(203, 142);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -603,26 +615,26 @@ namespace Presentation.ContractGUI
             this.mniDelete});
             this.ctmMenu.Name = "ctmMenu";
             this.ctmMenu.ShowImageMargin = false;
-            this.ctmMenu.Size = new System.Drawing.Size(77, 70);
+            this.ctmMenu.Size = new System.Drawing.Size(75, 70);
             // 
             // mniAdd
             // 
             this.mniAdd.Name = "mniAdd";
-            this.mniAdd.Size = new System.Drawing.Size(76, 22);
+            this.mniAdd.Size = new System.Drawing.Size(74, 22);
             this.mniAdd.Text = "เพิ่ม";
             this.mniAdd.Click += new System.EventHandler(this.mniAdd_Click);
             // 
             // mniUpdate
             // 
             this.mniUpdate.Name = "mniUpdate";
-            this.mniUpdate.Size = new System.Drawing.Size(76, 22);
+            this.mniUpdate.Size = new System.Drawing.Size(74, 22);
             this.mniUpdate.Text = "แก้ไข";
             this.mniUpdate.Click += new System.EventHandler(this.mniUpdate_Click);
             // 
             // mniDelete
             // 
             this.mniDelete.Name = "mniDelete";
-            this.mniDelete.Size = new System.Drawing.Size(76, 22);
+            this.mniDelete.Size = new System.Drawing.Size(74, 22);
             this.mniDelete.Text = "ลบ";
             this.mniDelete.Click += new System.EventHandler(this.mniDelete_Click);
             // 
@@ -688,6 +700,80 @@ namespace Presentation.ContractGUI
             this.dtgVehicleAssign.Size = new System.Drawing.Size(888, 240);
             this.dtgVehicleAssign.TabIndex = 16;
             this.dtgVehicleAssign.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehicleAssign_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "EntityKey";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.HeaderText = "วันที่เริ่มต้น";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.HeaderText = "วันที่สิ้นสุด";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.HeaderText = "แทนรถทะเบียน";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 90;
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column7.HeaderText = "เลขที่สัญญา";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "ชื่อลูกค้า";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 90;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "ฝ่ายลูกค้า";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 80;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "ชื่อนายจ้าง";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 160;
+            // 
+            // Reason
+            // 
+            this.Reason.HeaderText = "เหตุผลในการจ่ายงาน";
+            this.Reason.Name = "Reason";
+            this.Reason.ReadOnly = true;
+            this.Reason.Width = 160;
             // 
             // tabMainVehicle
             // 
@@ -808,80 +894,6 @@ namespace Presentation.ContractGUI
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 160;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "EntityKey";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.HeaderText = "วันที่เริ่มต้น";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 90;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column3.HeaderText = "วันที่สิ้นสุด";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 90;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.HeaderText = "แทนรถทะเบียน";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 90;
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column7.HeaderText = "เลขที่สัญญา";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ชื่อลูกค้า";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 90;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "ฝ่ายลูกค้า";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 80;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "ชื่อนายจ้าง";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 160;
-            // 
-            // Reason
-            // 
-            this.Reason.HeaderText = "เหตุผลในการจ่ายงาน";
-            this.Reason.Name = "Reason";
-            this.Reason.ReadOnly = true;
-            this.Reason.Width = 160;
-            // 
             // FrmVehicleAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -976,5 +988,6 @@ namespace Presentation.ContractGUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reason;
+        private System.Windows.Forms.TextBox txtContractPrefix;
     }
 }

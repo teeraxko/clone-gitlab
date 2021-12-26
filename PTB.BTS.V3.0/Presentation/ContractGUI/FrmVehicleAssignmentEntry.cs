@@ -314,6 +314,9 @@ namespace Presentation.ContractGUI
                 txtCutsName.Text = value.AContract.ACustomerDepartment.ACustomer.ShortName;
                 txtDeptName.Text = value.AContract.ACustomerDepartment.ShortName;
 
+                //D21018 การจ่ายงานให้รถยนต์ + การจ่ายงานให้พนักงานบริการ
+                txtContractPrefix.Text = value.AContract.AContractTypeAbbreviation;
+
                 setDriverName(value.AContract.ContractNo, value.AMainVehicle.VehicleNo);
             }
             isTextChange = true;
@@ -394,6 +397,9 @@ namespace Presentation.ContractGUI
                     txtDeptName.Text = vehicleAssignment.AContract.ACustomerDepartment.ShortName;
 
                     setDriverName(vehicleAssignment.AContract.ContractNo, vehicleNo);
+
+                    //D21018 การจ่ายงานให้รถยนต์ + การจ่ายงานให้พนักงานบริการ
+                    txtContractPrefix.Text = vehicleAssignment.AContract.AContractTypeAbbreviation;                    
                 }
             }
             else
