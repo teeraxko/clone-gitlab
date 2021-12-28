@@ -1,5 +1,0 @@
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.Facade\bin\Debug\ictus.Framework.ASC.Facade.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.Facade\bin\Debug\ictus.Framework.ASC.Facade.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.Facade\obj\Debug\ResolveAssemblyReference.cache
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.Facade\obj\Debug\ictus.Framework.ASC.Facade.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.Facade\obj\Debug\ictus.Framework.ASC.Facade.pdb

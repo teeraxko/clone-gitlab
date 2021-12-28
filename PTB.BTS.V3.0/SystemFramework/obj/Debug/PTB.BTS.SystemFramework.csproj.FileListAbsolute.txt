@@ -1,9 +1,0 @@
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\bin\Debug\PTB.BTS.SystemFramework.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\bin\Debug\PTB.BTS.SystemFramework.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\bin\Debug\ictus.Framework.ASC.AppConfig.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\bin\Debug\ictus.Framework.ASC.AppConfig.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\obj\Debug\ResolveAssemblyReference.cache
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\obj\Debug\SystemFramework.AppMessage.MessageResource.resources
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\obj\Debug\PTB.BTS.SystemFramework.csproj.GenerateResource.Cache
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\obj\Debug\PTB.BTS.SystemFramework.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\PTB.BTS.V3.0\SystemFramework\obj\Debug\PTB.BTS.SystemFramework.pdb
