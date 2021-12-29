@@ -680,6 +680,7 @@ namespace Presentation.ContractGUI
                         else
                         {
                             this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
+                            facadeListContract.ConditionContract.AContractTypeAbbreviation = "C";
                             if (facadeListContract.DisplayContract())
                             {
                                 bindForm();

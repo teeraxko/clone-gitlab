@@ -343,6 +343,15 @@ namespace DataAccess.ContractDB
                 stringBuilder.Append(GetDB(value.AContractStatus));
                 stringBuilder.Append(")");
             }
+
+            //D21018
+            if (value.AContractTypeAbbreviation != null && IsNotNULL(value.AContractTypeAbbreviation))
+            {
+                stringBuilder.Append(" AND (SUBSTRING(Contract_No, 5, 1) = ");
+                stringBuilder.Append(GetDB(value.AContractTypeAbbreviation));
+                stringBuilder.Append(")");
+            }
+
             return stringBuilder.ToString();
         }
 
