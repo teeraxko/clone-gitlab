@@ -28,9 +28,6 @@ namespace Presentation.ContractGUI
         #region Private Variable
         ReportContractList reportContractList = new ReportContractList();
         ReportExpectedIncome reportExptedIncome = new ReportExpectedIncome();
-        private ContractFacadeBase facadeContract = new ContractFacadeBase();
-        private string companyCode;
-        private DocumentNo contract;
         private frmMain mdiParent;
         #endregion
 
@@ -46,6 +43,10 @@ namespace Presentation.ContractGUI
         #region Private Method
 
 
+        /// <summary>
+        /// Set Form ID to display on the parent form at the bottom left.
+        /// </summary>
+        /// <returns></returns>
         public override string FormID()
         {
             return UserProfile.GetFormID("miContract", "miContractListExpectedIncomeReport");
@@ -54,13 +55,13 @@ namespace Presentation.ContractGUI
         /// <summary>
         /// Clear screen when retreive screen
         /// </summary>
-        private void clearscreen()
+        private void Clearscreen()
         {
             dtpFromDate.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dtpToDate.Value = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddMonths(1).AddDays(-1);
-            initComboContractType();
+            InitComboContractType();
 
-            visibleForm(false);
+            VisibleForm(false);
 
             crvReport.Visible = false;
         }
@@ -68,16 +69,16 @@ namespace Presentation.ContractGUI
         /// <summary>
         /// Set datasource to Contract Type Combo box
         /// </summary>
-        private void initComboContractType()
+        private void InitComboContractType()
         {
 
             cboContractType.DataSource = ContractTypeComboDataSource();
         }
        
-        private void setForm(ContractBase contract)
+        private void SetForm(ContractBase contract)
         {
 
-            visibleForm(true);
+            VisibleForm(true);
 
             MainMenuPrintStatus = true;
             mdiParent.EnablePrintCommand(true);
@@ -85,17 +86,20 @@ namespace Presentation.ContractGUI
             mdiParent.EnableNewCommand(true);
         }
 
-        private void visibleForm(bool visible)
+        private void VisibleForm(bool visible)
         {
            
         }
 
-        private void createReport()
+        /// <summary>
+        /// Show report
+        /// </summary>
+        private void CreateReport()
         {
             this.Cursor = Cursors.WaitCursor;
             try
             {
-                Company company = facadeContract.GetCompany();
+                Company company = (new ContractFacadeBase()).GetCompany();
                 this.Cursor = Cursors.WaitCursor;
                 if (!chkExpectedIncome.Checked){
                     ReportContractList rptContract = new ReportContractList();
@@ -141,19 +145,26 @@ namespace Presentation.ContractGUI
             mdiParent.EnableRefreshCommand(false);
             mdiParent.EnablePrintCommand(false);
 
-            clearscreen();
+            Clearscreen();
 
         }
 
+        /// <summary>
+        /// Refresh form.
+        /// </summary>
         public void RefreshForm()
         {
         }
 
+        //Show the report.
         public void PrintForm()
         {
-            createReport();
+            CreateReport();
         }
 
+        /// <summary>
+        /// Close form.
+        /// </summary>
         public void ExitForm()
         {
             this.Close();
@@ -165,7 +176,7 @@ namespace Presentation.ContractGUI
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            createReport();
+            CreateReport();
         }
 
         private void FrmContractListExpectedIncomeReport_Load(object sender, EventArgs e)
@@ -176,6 +187,10 @@ namespace Presentation.ContractGUI
         
         #endregion
 
+        /// <summary>
+        /// Datasource of contract type combo.
+        /// </summary>
+        /// <returns></returns>
         private List<KeyValuePair<string, string>> ContractTypeComboDataSource()
         {
             List<KeyValuePair<string, string>> dataSource = new List<KeyValuePair<string, string>>();
@@ -192,6 +207,10 @@ namespace Presentation.ContractGUI
             EnableSearchCondition(!chkExpectedIncome.Checked);
         }
 
+        /// <summary>
+        /// Set enable/disable search condition.
+        /// </summary>
+        /// <param name="enable"></param>
         private void EnableSearchCondition(bool enable)
         {
             dtpFromDate.Enabled = enable;

@@ -71,6 +71,7 @@
             this.cboCustomerName.Size = new System.Drawing.Size(200, 21);
             this.cboCustomerName.TabIndex = 149;
             this.cboCustomerName.SelectedIndexChanged += new System.EventHandler(this.cboCustomerName_SelectedIndexChanged);
+            this.cboCustomerName.TextChanged += new System.EventHandler(this.cboCustomerName_TextChanged);
             // 
             // label1
             // 
@@ -94,12 +95,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 60);
+            this.label2.Location = new System.Drawing.Point(37, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(48, 19);
             this.label2.TabIndex = 136;
             this.label2.Text = "วันที่มีผล";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // crvReport
             // 
