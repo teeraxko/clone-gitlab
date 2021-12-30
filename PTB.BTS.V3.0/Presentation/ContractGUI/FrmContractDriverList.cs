@@ -222,7 +222,7 @@ namespace Presentation.ContractGUI
                 {
                     case ContractListType.CONTRACT_DRIVER:
                         {
-                            //if (facadeListContract.DisplayContract())
+                            //if (facadeListContract.DisplayContract())                            
                             if (facadeListContract.DisplayContract(DOCUMENT_TYPE.CONTRACT_DRIVER))
                             {
                                 bindForm();

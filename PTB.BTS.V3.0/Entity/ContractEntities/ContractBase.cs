@@ -26,7 +26,8 @@ namespace Entity.ContractEntities
                 //D21018 set abbreviation from Document No
                 if (value != null && !String.IsNullOrEmpty(value.ToString()) && value.Recipient == "PTB")
                 {
-                    AContractTypeAbbreviation = value.ToString().Substring(4, 1);
+                    //support old format
+                    AContractTypeAbbreviation = value.ToString().Substring(4, 1);                   
                 }
             }
         }

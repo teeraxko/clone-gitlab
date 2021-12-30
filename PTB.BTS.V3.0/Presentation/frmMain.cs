@@ -601,6 +601,7 @@ namespace Presentation
             this.miContractDocumentCustomerSpecialCharge = new System.Windows.Forms.MenuItem();
             this.miContractDocumentChargeDiff = new System.Windows.Forms.MenuItem();
             this.miContractDocumentPenaltyCharge = new System.Windows.Forms.MenuItem();
+            this.miContractListExpectedIncomeReport = new System.Windows.Forms.MenuItem();
             this.menuItem22 = new System.Windows.Forms.MenuItem();
             this.miContractDocumentRenewalNotice = new System.Windows.Forms.MenuItem();
             this.miContractDocumentDriverAgreement = new System.Windows.Forms.MenuItem();
@@ -776,7 +777,6 @@ namespace Presentation
             this.tlbSep3 = new System.Windows.Forms.ToolBarButton();
             this.tlbExit = new System.Windows.Forms.ToolBarButton();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.miContractListExpectedIncomeReport = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stpFormID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stpCount)).BeginInit();
@@ -2203,6 +2203,12 @@ namespace Presentation
             this.miContractDocumentPenaltyCharge.Visible = false;
             this.miContractDocumentPenaltyCharge.Click += new System.EventHandler(this.miContractDocumentPenaltyCharge_Click);
             // 
+            // miContractListExpectedIncomeReport
+            // 
+            this.miContractListExpectedIncomeReport.Index = 22;
+            this.miContractListExpectedIncomeReport.Text = "รายงานรายการรถเช่า/รายได้คาดว่าจะได้รับ";
+            this.miContractListExpectedIncomeReport.Click += new System.EventHandler(this.miContractListExpectedIncomeReport_Click);
+            // 
             // menuItem22
             // 
             this.menuItem22.Index = 23;
@@ -3501,12 +3507,6 @@ namespace Presentation
             this.domainUpDown1.Size = new System.Drawing.Size(120, 20);
             this.domainUpDown1.TabIndex = 1;
             this.domainUpDown1.Text = "domainUpDown1";
-            // 
-            // miContractListExpectedIncomeReport
-            // 
-            this.miContractListExpectedIncomeReport.Index = 22;
-            this.miContractListExpectedIncomeReport.Text = "รายงานรายการรถเช่า/รายได้คาดว่าจะได้รับ";
-            this.miContractListExpectedIncomeReport.Click += new System.EventHandler(this.miContractListExpectedIncomeReport_Click);
             // 
             // frmMain
             // 

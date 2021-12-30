@@ -1297,6 +1297,11 @@ namespace PTB.BTS.Contract.Flow
         public bool FillContract(ref ContractList value, ContractBase condition, string yy, string mm, string xxx, DOCUMENT_TYPE documentType)
         {
             condition.ContractNo = GetContractNo(yy, mm, xxx, documentType);
+            //support contract format befor chaning
+            if (documentType == DOCUMENT_TYPE.CONTRACT_DRIVER)
+            {
+                condition.AContractTypeAbbreviation = "D,C";
+            }
             return dbContract.FillContractList(ref value, condition);
         }
 

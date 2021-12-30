@@ -1526,6 +1526,9 @@ namespace Presentation.ContractGUI
             isReadonly = UserProfile.IsReadOnly("miContract", "miContractDocumentCancel");
             this.title = UserProfile.GetFormName("miContract", "miContractDocumentCancel");
 
+            //D21018 set default contract type to สัญญาเช่ารถยนต์
+            this.cboContractType.SelectedIndex = 2;
+
         } 
         #endregion
 

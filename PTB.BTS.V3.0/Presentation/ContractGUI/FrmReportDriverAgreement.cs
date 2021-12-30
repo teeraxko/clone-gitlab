@@ -54,6 +54,9 @@ namespace Presentation.ContractGUI
 
             visibleForm(false);
             enableSearchDetail(true);
+
+            //D21018 set default prefix
+            SetContractPrefix(null);
         }
 
         private void visibleForm(bool visible)
@@ -135,6 +138,7 @@ namespace Presentation.ContractGUI
             txtContractsts.Text = contract.AContractStatus.AName.English;
             txtCustomerName.Text = contract.ACustomer.AName.English;
             driverContract = contract;
+            SetContractPrefix(contract.ContractNo);
         }
 
         private void setForm(ContractBase contract)
@@ -497,6 +501,22 @@ namespace Presentation.ContractGUI
             {
                 Message(MessageList.Error.E0006, "");
                 e.KeyChar = (Char)Keys.None; //char = '\0'
+            }
+        }
+
+        /// <summary>
+        /// D21018 Set contract prefix label to support old format.
+        /// </summary>
+        /// <param name="contractNo"></param>
+        private void SetContractPrefix(DocumentNo contractNo)
+        {
+            if (contractNo != null && contractNo.ToString().Substring(4, 1) == "C")
+            {
+                lblContractPrefix.Text = "Contract # PTB-C-";
+            }
+            else
+            {
+                lblContractPrefix.Text = "Contract # PTB-D-";
             }
         }
         #endregion          

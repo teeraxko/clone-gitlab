@@ -67,7 +67,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         #region Property
 
         //D21018-BTS Contract Modification
-        private DOCUMENT_TYPE documentType;
+        private DOCUMENT_TYPE documentType = DOCUMENT_TYPE.CONTRACT;
         public DOCUMENT_TYPE DocumentType
         {
             get { return documentType; }
@@ -267,6 +267,15 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
             txtRemark.Text = value.Remark;
             isTextChange = true;
+
+            //D21018 Set Prefix of contract driver according to contract no
+            if (documentType == DOCUMENT_TYPE.CONTRACT_DRIVER)
+            {
+                if (value.AContractTypeAbbreviation == "C")
+                {
+                    label25.Text = "PTB  - C -"; //Driver
+                }
+            }
         }
 
         protected void bindContractCharge(UCTContractCharge control, ContractCharge value)
@@ -725,6 +734,10 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             assignedDepartmentList = null;
 
             IsMustQuestion = false;
+
+            //D21018 set prefix
+            ContractType contractType = (ContractType)cboContractType.SelectedItem;
+            ControlPrefix(contractType);
         }
 
         private void clearLeasingPeriod()
@@ -744,6 +757,11 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private void ControlPrefix(ContractType contractType) 
         {
+            if (contractType == null)
+            {
+                return;
+            }
+
             if (contractType.Code == ContractType.CONTRACT_TYPE_VEHICLE)
             {
                 label25.Text = "PTB  - T -"; //Vehicle
@@ -781,7 +799,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         /// </summary>
         /// <param name="value"></param>
         protected void SetDocumentTypeFromAbbreviation(ContractBase value)
-        {
+        {            
             SetDocumentTypeFromAbbreviation(value.AContractTypeAbbreviation);
         }
 
@@ -803,6 +821,9 @@ namespace Presentation.ContractGUI.ContractVDOGUI
                     this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
                     break;
                 case "D":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
+                    break;
+                case "C,D":
                     this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
                     break;
                 default:
@@ -1219,6 +1240,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 			cboKindOfContract.DataSource = facadeContract.DataSourceKindOfContract;
 
             //D21018-BTS Contract Modification
+            //Datasource for type of vehicle contract/rental
             if (documentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY) 
             {
                 List<string> kindContract = new List<string>() { "C", "R", "T" };
@@ -1901,7 +1923,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             if (isReadonly)
             {
                 cmdCreateContract.Enabled = false;
-            }
+            }            
         }
 
         public void RefreshForm()

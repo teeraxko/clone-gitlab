@@ -640,7 +640,7 @@ namespace Presentation.ContractGUI
             this.cboContractType.Location = new System.Drawing.Point(488, 16);
             this.cboContractType.Name = "cboContractType";
             this.cboContractType.Size = new System.Drawing.Size(264, 21);
-            this.cboContractType.TabIndex = 2;
+            this.cboContractType.TabIndex = 2;            
             this.cboContractType.SelectedIndexChanged += new System.EventHandler(this.cboContractType_SelectedIndexChanged);
             // 
             // label3
@@ -1557,6 +1557,9 @@ namespace Presentation.ContractGUI
             hideGroupBox(false);
             isReadonly = UserProfile.IsReadOnly("miContract", "miContractDocumentApprove");
             this.title = UserProfile.GetFormName("miContract", "miContractDocumentApprove");
+
+            //D21018 set default contract type to สัญญาเช่ารถยนต์
+            this.cboContractType.SelectedIndex = 2;
 
         }
         public override string FormID()

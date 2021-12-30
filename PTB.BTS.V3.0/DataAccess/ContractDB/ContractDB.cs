@@ -347,8 +347,22 @@ namespace DataAccess.ContractDB
             //D21018
             if (value.AContractTypeAbbreviation != null && IsNotNULL(value.AContractTypeAbbreviation))
             {
-                stringBuilder.Append(" AND (SUBSTRING(Contract_No, 5, 1) = ");
-                stringBuilder.Append(GetDB(value.AContractTypeAbbreviation));
+                //stringBuilder.Append(" AND (SUBSTRING(Contract_No, 5, 1) = ");
+                //stringBuilder.Append(GetDB(value.AContractTypeAbbreviation));
+                //stringBuilder.Append(")");
+
+                string[] abbreviationList = value.AContractTypeAbbreviation.Split(new char[] {','},  StringSplitOptions.RemoveEmptyEntries);
+                stringBuilder.Append(" AND (");
+                for (int i = 0;i<abbreviationList.Length;i++)
+                {
+                    string baseCondition = " SUBSTRING(Contract_No, 5, 1) = ";
+                    if (i > 0)
+                    {
+                        baseCondition = " OR " + baseCondition;
+                    }
+                    stringBuilder.Append(baseCondition);
+                    stringBuilder.Append(GetDB(abbreviationList[i]));
+                }                
                 stringBuilder.Append(")");
             }
 
