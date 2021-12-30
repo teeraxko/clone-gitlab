@@ -185,6 +185,7 @@ namespace Entity.ContractEntities
         private const string VEHICLE_RENEWAL = "R";
         private const string VEHICLE_TEMPORARY = "T";
         private const string DRIVER = "D";
+        private const string ATTACHMENT = "N";
 
 		private DOCUMENT_TYPE GetDocumentType(string value)
 		{
@@ -215,6 +216,8 @@ namespace Entity.ContractEntities
                     return DOCUMENT_TYPE.CONTRACT_TEMPORARY;
                 case DRIVER:
                     return DOCUMENT_TYPE.CONTRACT_DRIVER;
+                case ATTACHMENT:
+                    return DOCUMENT_TYPE.CONTRACT_ATTACHMENT;
                 default:
                     return DOCUMENT_TYPE.NULL;
 
@@ -250,7 +253,8 @@ namespace Entity.ContractEntities
                     return VEHICLE_TEMPORARY;
                 case DOCUMENT_TYPE.CONTRACT_DRIVER:
                     return DRIVER;
-
+                case DOCUMENT_TYPE.CONTRACT_ATTACHMENT:
+                    return ATTACHMENT;
 				default : 
 					return NullConstant.STRING;
 			}

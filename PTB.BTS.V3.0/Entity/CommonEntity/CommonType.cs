@@ -112,8 +112,8 @@ namespace Entity.CommonEntity
         //Add new type for D21018
         CONTRACT_RENEWAL,
         CONTRACT_TEMPORARY,
-        CONTRACT_DRIVER
-
+        CONTRACT_DRIVER,
+        CONTRACT_ATTACHMENT
 	}
 
 	public enum EXPENSE_STATUS_TYPE

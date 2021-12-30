@@ -412,6 +412,7 @@ namespace Presentation
         private MenuItem miBPPreConnectOfficeCharge;
         private MenuItem miPIExportEmployeeData;
         private MenuItem menuItem26;
+        private MenuItem miContractAttachment;
         private System.ComponentModel.IContainer components;
         private void InitializeComponent()
         {
@@ -605,6 +606,7 @@ namespace Presentation
             this.miContractDocumentDriverAgreement = new System.Windows.Forms.MenuItem();
             this.miContractDocumentCarAgreement = new System.Windows.Forms.MenuItem();
             this.miContractDocumentCompanyAgreement = new System.Windows.Forms.MenuItem();
+            this.miContractAttachment = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistory = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistoryVehicelAssignment = new System.Windows.Forms.MenuItem();
             this.miContractAssignmentHistoryServiceStaffAssignment = new System.Windows.Forms.MenuItem();
@@ -2045,7 +2047,8 @@ namespace Presentation
             this.miContractDocumentRenewalNotice,
             this.miContractDocumentDriverAgreement,
             this.miContractDocumentCarAgreement,
-            this.miContractDocumentCompanyAgreement});
+            this.miContractDocumentCompanyAgreement,
+            this.miContractAttachment});
             this.miContractDocument.Text = "เอกสารสัญญา";
             // 
             // miContractVehicle
@@ -2232,6 +2235,13 @@ namespace Presentation
             this.miContractDocumentCompanyAgreement.Text = "ออกสัญญารถเช่า (บริษัท)";
             this.miContractDocumentCompanyAgreement.Visible = false;
             this.miContractDocumentCompanyAgreement.Click += new System.EventHandler(this.miContractDocumentCompanyAgreement_Click);
+            // 
+            // miContractAttachment
+            // 
+            this.miContractAttachment.Index = 27;
+            this.miContractAttachment.Text = "ออกเอกสารแนบสัญญารถเช่า";
+            this.miContractAttachment.Visible = false;
+            this.miContractAttachment.Click += new System.EventHandler(this.miContractAttachment_Click);
             // 
             // miContractAssignmentHistory
             // 
@@ -3710,6 +3720,7 @@ namespace Presentation
             miContractDocumentCarAgreement.Visible = visible;
             //D21018-BTS Modification
             miContractDocumentCompanyAgreement.Visible = visible;
+            miContractAttachment.Visible = visible;
         }
 
         private void visibleAttendance(bool visible)
@@ -4657,6 +4668,12 @@ namespace Presentation
                     case "miContractDocumentCompanyAgreement":
                         {
                             setPermission(value["miContractDocumentCompanyAgreement"], miContractDocumentCompanyAgreement);
+                            break;
+                        }
+
+                    case "miContractAttrachment":
+                        {
+                            setPermission(value["miContractAttrachment"], miContractAttachment);
                             break;
                         }
                 }
@@ -6538,6 +6555,14 @@ namespace Presentation
             objFrm.Show();
         }
 
+        private void miContractAttachment_Click(object sender, EventArgs e)
+        {
+            FrmReportContractAttachment objFrm = new FrmReportContractAttachment();
+            objFrm.MdiParent = this;
+            objFrm.Show();
+        }
+
+
         #endregion
 
         #region - miAttendance -
@@ -7486,8 +7511,7 @@ namespace Presentation
             objfrm.MdiParent = this;
             objfrm.Show();
         }
-        #endregion       
-
+        #endregion               
         
     }
 }

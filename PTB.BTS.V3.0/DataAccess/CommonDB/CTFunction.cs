@@ -689,6 +689,7 @@ namespace DataAccess.CommonDB
         private const string CONTRACT_RENEWAL = "R";
         private const string CONTRACT_TEMPORARY = "T";
         private const string CONTRACT_DRIVER = "D";
+        private const string CONTRACT_ATTACHMENT = "N";
 
         public static DOCUMENT_TYPE GetDocumentType(string value)
         {
@@ -717,7 +718,8 @@ namespace DataAccess.CommonDB
                     return DOCUMENT_TYPE.CONTRACT_TEMPORARY;
                 case CONTRACT_DRIVER:
                     return DOCUMENT_TYPE.CONTRACT_DRIVER;
-                    
+                case CONTRACT_ATTACHMENT:
+                    return DOCUMENT_TYPE.CONTRACT_ATTACHMENT;
                 default:
                     return DOCUMENT_TYPE.NULL;
             }
@@ -754,7 +756,8 @@ namespace DataAccess.CommonDB
                     return CONTRACT_TEMPORARY;
                 case DOCUMENT_TYPE.CONTRACT_DRIVER:
                     return CONTRACT_DRIVER;
-
+                case DOCUMENT_TYPE.CONTRACT_ATTACHMENT:
+                    return CONTRACT_ATTACHMENT;
                 default:
                     return NullConstant.STRING;
             }
