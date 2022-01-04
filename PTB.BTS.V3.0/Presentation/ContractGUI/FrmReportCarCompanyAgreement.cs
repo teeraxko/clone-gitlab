@@ -15,6 +15,7 @@ using SystemFramework.AppMessage;
 using Entity.CommonEntity;
 using Presentation.CommonGUI;
 using ictus.Common.Entity;
+using SystemFramework.AppConfig;
 
 namespace Presentation.ContractGUI
 {
@@ -33,19 +34,30 @@ namespace Presentation.ContractGUI
             : base()
         {
             InitializeComponent();
+            this.title = UserProfile.GetFormName("micontract","miContractDocumentCompanyAgreement");
         } 
         #endregion
 
         #region Private Method
+
+        /// <summary>
+        /// Show form ID
+        /// </summary>
+        /// <returns></returns>
+        public override string FormID()
+        {
+            return UserProfile.GetFormID("micontract", "miContractDocumentCompanyAgreement");
+        }
+
         /// <summary>
         /// Set Customer Name to Combo box
         /// </summary>
-        private void initComboCustomer()
+        private void InitComboCustomer()
         {            
             cboCustomerName.DataSource = facadeContract.DataSourceCustomerName;
         }
 
-        private void createReport(string customerCode, DateTime contractDate)
+        private void CreateReport(string customerCode, DateTime contractDate)
         {
             this.Cursor = Cursors.WaitCursor;            
             Company company = facadeContract.GetCompany();
@@ -60,9 +72,9 @@ namespace Presentation.ContractGUI
         /// <summary>
         /// Clear screen when retreive screen
         /// </summary>
-        private void clearscreen()
+        private void Clearscreen()
         {
-            initComboCustomer();
+            InitComboCustomer();
 
             btnContractPrint.Enabled = false;
             crvReport.Visible = false;
@@ -84,7 +96,7 @@ namespace Presentation.ContractGUI
             mdiParent.EnableRefreshCommand(false);
             mdiParent.EnablePrintCommand(false);
 
-            clearscreen();
+            Clearscreen();
         }
 
         public void RefreshForm()
@@ -104,11 +116,16 @@ namespace Presentation.ContractGUI
 
         #region - Event-      
         
+        /// <summary>
+        /// กดปุ่มพิมพ์
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnContractPrint_Click(object sender, EventArgs e)
         {
             Customer customer = (Customer)cboCustomerName.SelectedItem;
 
-            createReport(customer.Code, dtpContractDate.Value);
+            CreateReport(customer.Code, dtpContractDate.Value);
         }
 
         private void FrmReportCarCompanyAgreement_Load(object sender, EventArgs e)
@@ -117,14 +134,21 @@ namespace Presentation.ContractGUI
             InitForm();
         }
 
+        /// <summary>
+        /// เมื่อมีการเปลี่ยนชื่อลูกค้า
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cboCustomerName_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (!string.IsNullOrEmpty(cboCustomerName.Text))
             {
                 btnContractPrint.Enabled = true;
             }
             else
             {
+                //ไม่เลือกลูกค้า หรือชื่อเป็นค่าว่าง
                 btnContractPrint.Enabled = false;
             }
             crvReport.Visible = false;
@@ -134,10 +158,15 @@ namespace Presentation.ContractGUI
 
         #endregion
 
-
-       
-             
-
+        /// <summary>
+        /// พิมพ์ชื่อลูกค้าเอง
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cboCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            cboCustomerName_SelectedIndexChanged(sender, e);
+        }
         
     }
 }

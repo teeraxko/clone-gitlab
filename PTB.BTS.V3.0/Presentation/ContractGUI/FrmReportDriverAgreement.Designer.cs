@@ -63,7 +63,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblContractPrefix = new System.Windows.Forms.Label();
             this.crvReport = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.gpbTISDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numFamilyRate)).BeginInit();
@@ -372,7 +372,7 @@
             this.gpbSearch.Controls.Add(this.label14);
             this.gpbSearch.Controls.Add(this.btnPrint);
             this.gpbSearch.Controls.Add(this.btnSearch);
-            this.gpbSearch.Controls.Add(this.label10);
+            this.gpbSearch.Controls.Add(this.lblContractPrefix);
             this.gpbSearch.Location = new System.Drawing.Point(108, 8);
             this.gpbSearch.Name = "gpbSearch";
             this.gpbSearch.Size = new System.Drawing.Size(704, 47);
@@ -454,14 +454,14 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // label10
+            // lblContractPrefix
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(325, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 13);
-            this.label10.TabIndex = 136;
-            this.label10.Text = "Contract # PTB-D-";
+            this.lblContractPrefix.AutoSize = true;
+            this.lblContractPrefix.Location = new System.Drawing.Point(325, 20);
+            this.lblContractPrefix.Name = "lblContractPrefix";
+            this.lblContractPrefix.Size = new System.Drawing.Size(95, 13);
+            this.lblContractPrefix.TabIndex = 136;
+            this.lblContractPrefix.Text = "Contract # PTB-D-";
             // 
             // crvReport
             // 
@@ -538,7 +538,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblContractPrefix;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReport;
         private System.Windows.Forms.GroupBox gpbTISDetail;
         private System.Windows.Forms.ComboBox cboToDay;

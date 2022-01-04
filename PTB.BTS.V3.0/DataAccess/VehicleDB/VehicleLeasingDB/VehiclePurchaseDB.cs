@@ -112,9 +112,6 @@ namespace DataAccess.VehicleDB.VehicleLeasingDB
             entity.Remark = (string)dataReader["Remark"];
 
             //Todsporn Modified 25/2/2020 PO. Discount
-            entity.Discount_Amount = (decimal)dataReader["Discount_Amount"];
-            entity.Discount_Total = (decimal)dataReader["Discount_Total"];
-
             //D21018 Fix error casting
             entity.Discount_Amount = dataReader["Discount_Amount"] == DBNull.Value ? 0 : Convert.ToDecimal(dataReader["Discount_Amount"]);
             entity.Discount_Total = dataReader["Discount_Total"] == DBNull.Value ? 0 : Convert.ToDecimal(dataReader["Discount_Total"]);

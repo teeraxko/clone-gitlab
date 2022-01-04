@@ -1,9 +1,0 @@
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.DataAccess.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.DataAccess.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.AppConfig.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.Entity.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.AppConfig.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\bin\Debug\ictus.Framework.ASC.Entity.pdb
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\obj\Debug\ResolveAssemblyReference.cache
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\obj\Debug\ictus.Framework.ASC.DataAccess.dll
-D:\_Projects\BTS_Business_Transaction_Service\nonbaseline\40_source_code\ictus.Framework.ASC\ictus.Framework.ASC.DataAccess\obj\Debug\ictus.Framework.ASC.DataAccess.pdb

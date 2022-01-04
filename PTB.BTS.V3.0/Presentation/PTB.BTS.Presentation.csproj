@@ -55,7 +55,7 @@
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrl>
     <UpdateUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile\</UpdateUrl>
-    <ProductName>Business Transaction Service ver3.0</ProductName>
+    <ProductName>Business Transaction Service ver 4.0 TT</ProductName>
     <PublisherName>Ictus Co., Ltd.</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
@@ -484,6 +484,12 @@
     </Compile>
     <Compile Include="AttendanceGUI\frmrptPayrollBenefit.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptContractListExpectedIncomeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptContractListExpectedIncomeReport.Designer.cs">
+      <DependentUpon>FrmrptContractListExpectedIncomeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ContractGUI\FrmReportCarCompanyAgreement.cs">
       <SubType>Form</SubType>
@@ -2413,6 +2419,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AttendanceGUI\frmrptPayrollBenefit.resx">
       <DependentUpon>frmrptPayrollBenefit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmrptContractListExpectedIncomeReport.resx">
+      <DependentUpon>FrmrptContractListExpectedIncomeReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ContractGUI\FrmReportCarCompanyAgreement.resx">

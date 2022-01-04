@@ -67,28 +67,46 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         #region Property
 
         //D21018-BTS Contract Modification
-        private DOCUMENT_TYPE documentType;
+        private DOCUMENT_TYPE documentType = DOCUMENT_TYPE.CONTRACT;
         public DOCUMENT_TYPE DocumentType
         {
             get { return documentType; }
             set { documentType = value; }
         }
 
-        private DocumentNo getContractNo()
-        {
-            return getContractNo(DOCUMENT_TYPE.CONTRACT);           
-        }
 
+        /// <summary>
+        /// Get contract no
+        /// </summary>
+        /// <param name="documentType"></param>
+        /// <returns></returns>
         private DocumentNo getContractNo(DOCUMENT_TYPE documentType)
         {
             contractNo = new DocumentNo(documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
             return contractNo;
         }
 
+        /// <summary>
+        /// Get contract no
+        /// </summary>
+        /// <returns></returns>
+        private DocumentNo getContractNo()
+        {
+
+            //D21018 Support set contract type from dropdown
+            if (cboVehicleKindContract.Visible)
+            {
+                SetDocumentTypeFromAbbreviation(cboVehicleKindContract.Text);
+            }
+
+            contractNo = new DocumentNo(this.DocumentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            return contractNo;
+        }
+
         private DriverContract getDriverContract()
         {
             objDriverContract = new DriverContract(facadeContract.GetCompany());
-            objDriverContract.ContractNo = getContractNo(documentType);
+            objDriverContract.ContractNo = getContractNo();
             objDriverContract.AContractType = (ContractType)cboContractType.SelectedItem;
             objDriverContract.AContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
             objDriverContract.AKindOfContract = (KindOfContract)cboKindOfContract.SelectedItem;
@@ -122,7 +140,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private VehicleContract getNewVehicleContract()
         {
-            objVehicleContract.ContractNo = getContractNo(documentType);
+            objVehicleContract.ContractNo = getContractNo();
             objVehicleContract.AContractType = (ContractType)cboContractType.SelectedItem;
             objVehicleContract.AContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
             objVehicleContract.AKindOfContract = (KindOfContract)cboKindOfContract.SelectedItem;
@@ -165,8 +183,8 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private VehicleContract getVehicleContract()
         {
-            objVehicleContract = (VehicleContract)facadeContract.RetriveContract(getContractNo(documentType));
-            objVehicleContract.ContractNo = getContractNo(documentType);
+            objVehicleContract = (VehicleContract)facadeContract.RetriveContract(getContractNo());
+            objVehicleContract.ContractNo = getContractNo();
             objVehicleContract.AContractType = (ContractType)cboContractType.SelectedItem;
             objVehicleContract.AContractStatus = (ContractStatus)cboContractStatus.SelectedItem;
             objVehicleContract.AKindOfContract = (KindOfContract)cboKindOfContract.SelectedItem;
@@ -249,6 +267,15 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
             txtRemark.Text = value.Remark;
             isTextChange = true;
+
+            //D21018 Set Prefix of contract driver according to contract no
+            if (documentType == DOCUMENT_TYPE.CONTRACT_DRIVER)
+            {
+                if (value.AContractTypeAbbreviation == "C")
+                {
+                    label25.Text = "PTB  - C -"; //Driver
+                }
+            }
         }
 
         protected void bindContractCharge(UCTContractCharge control, ContractCharge value)
@@ -707,6 +734,10 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             assignedDepartmentList = null;
 
             IsMustQuestion = false;
+
+            //D21018 set prefix
+            ContractType contractType = (ContractType)cboContractType.SelectedItem;
+            ControlPrefix(contractType);
         }
 
         private void clearLeasingPeriod()
@@ -726,6 +757,11 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
         private void ControlPrefix(ContractType contractType) 
         {
+            if (contractType == null)
+            {
+                return;
+            }
+
             if (contractType.Code == ContractType.CONTRACT_TYPE_VEHICLE)
             {
                 label25.Text = "PTB  - T -"; //Vehicle
@@ -763,7 +799,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         /// </summary>
         /// <param name="value"></param>
         protected void SetDocumentTypeFromAbbreviation(ContractBase value)
-        {
+        {            
             SetDocumentTypeFromAbbreviation(value.AContractTypeAbbreviation);
         }
 
@@ -785,6 +821,9 @@ namespace Presentation.ContractGUI.ContractVDOGUI
                     this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
                     break;
                 case "D":
+                    this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
+                    break;
+                case "C,D":
                     this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
                     break;
                 default:
@@ -1201,6 +1240,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 			cboKindOfContract.DataSource = facadeContract.DataSourceKindOfContract;
 
             //D21018-BTS Contract Modification
+            //Datasource for type of vehicle contract/rental
             if (documentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY) 
             {
                 List<string> kindContract = new List<string>() { "C", "R", "T" };
@@ -1370,7 +1410,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         {
             bool result = true;            
             //D21018-BTS Contract Modification
-            this.objContractBase = facadeContract.RetriveContract(getContractNo(documentType));
+            this.objContractBase = facadeContract.RetriveContract(getContractNo());
             if (this.objContractBase == null)
             {
                 Message(MessageList.Error.E0004, "เลขที่สัญญา");
@@ -1883,7 +1923,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             if (isReadonly)
             {
                 cmdCreateContract.Enabled = false;
-            }
+            }            
         }
 
         public void RefreshForm()
@@ -1980,7 +2020,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
                     { 
                         if (validateInputContractNo(documentType))
                         {
-                            retriveContract(facadeContract.RetriveContract(getContractNo(documentType))); 
+                            retriveContract(facadeContract.RetriveContract(getContractNo())); 
                         }
                     }
                 }
@@ -1992,7 +2032,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 if (!addMode)
                     if (validateInputContractNo(documentType))
-                        retriveContract(facadeContract.RetriveContract(getContractNo(documentType)));
+                        retriveContract(facadeContract.RetriveContract(getContractNo()));
         }
 
         private void cmdCreateContract_Click(object sender, System.EventArgs e)
