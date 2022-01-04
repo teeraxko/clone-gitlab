@@ -142,6 +142,9 @@
     <Compile Include="Constants\EntryMode.cs" />
     <Compile Include="Constants\PositionCodeValue.cs" />
     <Compile Include="Constants\PositionTypeCodeValue.cs" />
+    <Compile Include="ContractEntities\AttachmentDetail.cs" />
+    <Compile Include="ContractEntities\AttachmentHead.cs" />
+    <Compile Include="ContractEntities\AttachmentList.cs" />
     <Compile Include="ContractEntities\Compensate.cs" />
     <Compile Include="ContractEntities\ContractAgreementBase.cs" />
     <Compile Include="ContractEntities\ContractDepartmentAssignment.cs" />

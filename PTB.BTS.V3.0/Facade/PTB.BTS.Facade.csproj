@@ -342,6 +342,8 @@
     <Compile Include="CommonFacade\SubDistrictFacade.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ContractFacade\AttachmentFacade.cs" />
+    <Compile Include="ContractFacade\AttachmentListFacade.cs" />
     <Compile Include="ContractFacade\CompensateRateFacade.cs" />
     <Compile Include="ContractFacade\ContractAgreementFacade.cs" />
     <Compile Include="ContractFacade\ContractApproveFacade.cs">

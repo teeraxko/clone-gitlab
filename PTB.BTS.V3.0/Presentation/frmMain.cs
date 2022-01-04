@@ -413,6 +413,7 @@ namespace Presentation
         private MenuItem miPIExportEmployeeData;
         private MenuItem menuItem26;
         private MenuItem miContractAttachment;
+        private MenuItem miContractListExpectedIncomeReport;
         private System.ComponentModel.IContainer components;
         private void InitializeComponent()
         {
@@ -777,6 +778,7 @@ namespace Presentation
             this.tlbSep3 = new System.Windows.Forms.ToolBarButton();
             this.tlbExit = new System.Windows.Forms.ToolBarButton();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.miContractListExpectedIncomeReport = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stpFormID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stpCount)).BeginInit();
@@ -2043,6 +2045,7 @@ namespace Presentation
             this.miContractDocumentCustomerSpecialCharge,
             this.miContractDocumentChargeDiff,
             this.miContractDocumentPenaltyCharge,
+            this.miContractListExpectedIncomeReport,
             this.menuItem22,
             this.miContractDocumentRenewalNotice,
             this.miContractDocumentDriverAgreement,
@@ -2205,40 +2208,40 @@ namespace Presentation
             // 
             // menuItem22
             // 
-            this.menuItem22.Index = 22;
+            this.menuItem22.Index = 23;
             this.menuItem22.Text = "-";
             // 
             // miContractDocumentRenewalNotice
             // 
-            this.miContractDocumentRenewalNotice.Index = 23;
+            this.miContractDocumentRenewalNotice.Index = 24;
             this.miContractDocumentRenewalNotice.Text = "ออกจดหมายเตือนต่อสัญญา";
             this.miContractDocumentRenewalNotice.Visible = false;
             this.miContractDocumentRenewalNotice.Click += new System.EventHandler(this.miContractDocumentRenewalNotice_Click);
             // 
             // miContractDocumentDriverAgreement
             // 
-            this.miContractDocumentDriverAgreement.Index = 24;
+            this.miContractDocumentDriverAgreement.Index = 25;
             this.miContractDocumentDriverAgreement.Text = "ออกสัญญาพนักงานขับรถ";
             this.miContractDocumentDriverAgreement.Visible = false;
             this.miContractDocumentDriverAgreement.Click += new System.EventHandler(this.miContractDocumentDriverAgreement_Click);
             // 
             // miContractDocumentCarAgreement
             // 
-            this.miContractDocumentCarAgreement.Index = 25;
+            this.miContractDocumentCarAgreement.Index = 26;
             this.miContractDocumentCarAgreement.Text = "ออกสัญญารถเช่า";
             this.miContractDocumentCarAgreement.Visible = false;
             this.miContractDocumentCarAgreement.Click += new System.EventHandler(this.miContractDocumentCarAgreement_Click);
             // 
             // miContractDocumentCompanyAgreement
             // 
-            this.miContractDocumentCompanyAgreement.Index = 26;
+            this.miContractDocumentCompanyAgreement.Index = 27;
             this.miContractDocumentCompanyAgreement.Text = "ออกสัญญารถเช่า (บริษัท)";
             this.miContractDocumentCompanyAgreement.Visible = false;
             this.miContractDocumentCompanyAgreement.Click += new System.EventHandler(this.miContractDocumentCompanyAgreement_Click);
             // 
             // miContractAttachment
             // 
-            this.miContractAttachment.Index = 27;
+            this.miContractAttachment.Index = 28;
             this.miContractAttachment.Text = "ออกเอกสารแนบสัญญารถเช่า";
             this.miContractAttachment.Visible = false;
             this.miContractAttachment.Click += new System.EventHandler(this.miContractAttachment_Click);
@@ -3508,6 +3511,12 @@ namespace Presentation
             this.domainUpDown1.Size = new System.Drawing.Size(120, 20);
             this.domainUpDown1.TabIndex = 1;
             this.domainUpDown1.Text = "domainUpDown1";
+            // 
+            // miContractListExpectedIncomeReport
+            // 
+            this.miContractListExpectedIncomeReport.Index = 22;
+            this.miContractListExpectedIncomeReport.Text = "รายงานรายการรถเช่า/รายได้คาดว่าจะได้รับ";
+            this.miContractListExpectedIncomeReport.Click += new System.EventHandler(this.miContractListExpectedIncomeReport_Click);
             // 
             // frmMain
             // 
@@ -6547,7 +6556,10 @@ namespace Presentation
             objfrm.Show();
         }
 
-        //D21018-BTS Modification
+        
+        #region D21018-BTS Modification
+
+        
         private void miContractDocumentCompanyAgreement_Click(object sender, EventArgs e)
         {
             FrmReportCarCompanyAgreement objFrm = new FrmReportCarCompanyAgreement();
@@ -6562,6 +6574,14 @@ namespace Presentation
             objFrm.Show();
         }
 
+        private void miContractListExpectedIncomeReport_Click(object sender, EventArgs e)
+        {
+            FrmrptContractListExpectedIncomeReport objFrm = new FrmrptContractListExpectedIncomeReport();
+            objFrm.MdiParent = this;
+            objFrm.Show();
+        }
+
+        #endregion
 
         #endregion
 
@@ -7511,7 +7531,7 @@ namespace Presentation
             objfrm.MdiParent = this;
             objfrm.Show();
         }
-        #endregion               
+        #endregion                      
         
     }
 }

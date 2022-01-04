@@ -315,6 +315,7 @@
     <Compile Include="CommonDB\PISDataAccessBase.cs" />
     <Compile Include="Constants\ContractDepartmentAssignmentTable.cs" />
     <Compile Include="Constants\CustomerDepartmentTable.cs" />
+    <Compile Include="ContractDB\AttachmentDB.cs" />
     <Compile Include="ContractDB\CompensateRateDB.cs" />
     <Compile Include="ContractDB\ContractChargeRateDB\ChargeRateByContractDB.cs" />
     <Compile Include="ContractDB\ContractChargeRateDB\ChargeRateByServiceStaffTypeDB.cs" />
