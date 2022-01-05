@@ -11,45 +11,47 @@ namespace Entity.ContractEntities
 {
     public class AttachmentDetail : EntityBase, IKey
     {
-        private Company companyCode;
-        public Company CompanyCode
-        {
-            get { return companyCode; }
-            set { companyCode = value; }
-        }
-
-        private DocumentNo attachmentNo;
-        public DocumentNo AttachmentNo
-        {
-            get { return attachmentNo; }
-            set { attachmentNo = value; }
-        } 
-
         private DocumentNo contractNo;
         public DocumentNo ContractNo
         {
-            get { return contractNo; }
-            set { contractNo = value; }
+            get { 
+                return contractNo; 
+            }
+            set { 
+                contractNo = value; 
+            }
         }
 
-        private DateTime processDate;
-        public DateTime ProcessDate
+        private VehicleContract vehicleContract;
+        public VehicleContract AVehicleContract
         {
-            get { return processDate; }
-            set { processDate = value; }
+            get
+            {
+                return vehicleContract;
+            }
+            set
+            {
+                vehicleContract = value;
+            }
         }
 
-        private string processUser;
-        public string ProcessUser
+        private ContractBase contract;
+        public ContractBase AContract
         {
-            get { return processUser; }
-            set { processUser = value; }
+            get
+            {
+                return contract;
+            }
+            set
+            {
+                contract = value;
+            }
         }
 
         //============================== Public method ==============================
         public override string EntityKey
         {
-            get { return this.attachmentNo.ToString(); }
+            get { return this.contractNo.ToString(); }
         }  
     }
 }

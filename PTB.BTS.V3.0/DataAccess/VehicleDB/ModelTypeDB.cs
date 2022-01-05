@@ -23,5 +23,6 @@ namespace DataAccess.VehicleDB
 		{
 			return new ModelType();
 		}
+        
 	}
 }

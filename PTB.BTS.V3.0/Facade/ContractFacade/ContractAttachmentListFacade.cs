@@ -5,11 +5,10 @@ using Flow.VehicleFlow.VehicleLeasingFlow;
 using PTB.BTS.Contract.Flow;
 using System.Collections.Generic;
 using Entity.VehicleEntities.VehicleLeasing;
-using Entity.VehicleEntities;
 
 namespace Facade.ContractFacade
 {
-	public class ContractListFacade : CommonPIFacadeBase
+	public class ContractAttachmentListFacade : CommonPIFacadeBase
 	{
 		#region - Private -
 			private ContractFlow flowContract;
@@ -49,7 +48,7 @@ namespace Facade.ContractFacade
             #endregion
 
         #region Constructor
-        public ContractListFacade()
+            public ContractAttachmentListFacade()
         {
             flowContract = new ContractFlow();
             conditionContract = new VehicleContract(GetCompany());
@@ -70,7 +69,7 @@ namespace Facade.ContractFacade
             return flowContract.FillContract(ref objContractList, conditionContract, yy, mm, xxx, documentType);
         }
         
-        public bool DisplayVehicleContractForAttachment()
+        public bool DisplayVehicleContract()
         {
             conditionContract.ContractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, yy, mm, xxx);
             objContractList = new ContractList(GetCompany());
@@ -82,17 +81,6 @@ namespace Facade.ContractFacade
             conditionContract.ContractNo = new DocumentNo(documentType, yy, mm, xxx);
             objContractList = new ContractList(GetCompany());
             return flowContract.FillVehicleContractList(ref objContractList, conditionContract);
-        }
-
-        /// <summary>
-        /// Get Vehicle contract to create attachment.
-        /// </summary>
-        /// <param name="documentType"></param>
-        /// <returns></returns>
-        public bool DisplayVehicleContract(Customer customer, ModelType modelType)
-        {
-            objContractList = new ContractList(GetCompany());
-            return flowContract.FillVehicleContractList(ref objContractList, conditionContract, customer,modelType);
         }
 
         public bool DisplayDriverOtherContract()

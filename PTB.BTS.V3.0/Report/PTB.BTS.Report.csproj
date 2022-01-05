@@ -397,6 +397,7 @@
     </Compile>
     <Compile Include="Reports\Attendance\ReportEmployeeOverNightTripBenefit.cs" />
     <Compile Include="Reports\Attendance\ReportGenWorkSchedule.cs" />
+    <Compile Include="Reports\Contract\ReportContractAttachment.cs" />
     <Compile Include="Reports\Contract\ReportExpectedIncome.cs" />
     <Compile Include="Reports\Contract\ReportContractList.cs" />
     <Compile Include="Reports\Contract\ReportCarAgreement.cs" />

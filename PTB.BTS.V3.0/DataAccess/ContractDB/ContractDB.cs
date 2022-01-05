@@ -836,10 +836,24 @@ namespace DataAccess.ContractDB
             return fillContractList(ref aContractList, stringBuilder.ToString());
         }
 
+        public bool FillVehicleContractListForAttachment(ref ContractList aContractList, ContractBase aContractBase, Customer customer)
+        {
+            aContractBase.ACustomerDepartment = new CustomerDepartment();
+            aContractBase.ACustomerDepartment.ACustomer = customer;
+
+            StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
+            stringBuilder.Append(getBaseCondition(aContractList.Company));
+            stringBuilder.Append(getKeyCondition(aContractBase));
+
+            return fillContractList(ref aContractList, stringBuilder.ToString());
+        }
+
+
         public bool FillExcludeVehicleContractList(ref ContractList aContractList, ContractBase aContractBase)
         {
             StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
             stringBuilder.Append(getBaseCondition(aContractList.Company));
+
             stringBuilder.Append(getExcludeVehicleContractCondition(aContractBase));
 
             return fillContractList(ref aContractList, stringBuilder.ToString());

@@ -485,11 +485,17 @@
     <Compile Include="AttendanceGUI\frmrptPayrollBenefit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContractGUI\FrmAttachmentList.cs">
+    <Compile Include="ContractGUI\FrmContractAttachmentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContractGUI\FrmAttachmentList.Designer.cs">
-      <DependentUpon>FrmAttachmentList.cs</DependentUpon>
+    <Compile Include="ContractGUI\FrmContractAttachmentList.Designer.cs">
+      <DependentUpon>FrmContractAttachmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmVehicleContractList.Designer.cs">
+      <DependentUpon>FrmVehicleContractList.cs</DependentUpon>
     </Compile>
     <Compile Include="ContractGUI\FrmReportContractAttachment.cs">
       <SubType>Form</SubType>
@@ -520,6 +526,12 @@
     </Compile>
     <Compile Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBaseNew.Designer.cs">
       <DependentUpon>FrmBizPacChargeConnectBaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptContractAttachmentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractGUI\FrmrptContractAttachmentReport.Designer.cs">
+      <DependentUpon>FrmrptContractAttachmentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="WelfareGUI\BizPacGUI\FrmContributionBizPacNew.cs">
       <SubType>Form</SubType>
@@ -2433,8 +2445,12 @@
       <DependentUpon>frmrptPayrollBenefit.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContractGUI\FrmAttachmentList.resx">
-      <DependentUpon>FrmAttachmentList.cs</DependentUpon>
+    <EmbeddedResource Include="ContractGUI\FrmContractAttachmentList.resx">
+      <DependentUpon>FrmContractAttachmentList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmVehicleContractList.resx">
+      <DependentUpon>FrmVehicleContractList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ContractGUI\FrmReportContractAttachment.resx">
@@ -2455,6 +2471,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PTB.BTS.BTS2BizPacPresentation\ConnectBizPac\ContractBPGUI\FrmBizPacChargeConnectBaseNew.resx">
       <DependentUpon>FrmBizPacChargeConnectBaseNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractGUI\FrmrptContractAttachmentReport.resx">
+      <DependentUpon>FrmrptContractAttachmentReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="WelfareGUI\BizPacGUI\FrmContributionBizPacNew.resx">

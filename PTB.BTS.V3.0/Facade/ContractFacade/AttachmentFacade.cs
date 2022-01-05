@@ -10,13 +10,16 @@ using Flow.ContractFlow;
 using Entity.CommonEntity;
 using ictus.Common.Entity;
 using PTB.BTS.PI.Flow;
+using PTB.BTS.Contract.Flow;
 
 namespace Facade.ContractFacade
 {
     public class AttachmentFacade : CommonPIFacadeBase
     {
         #region - Private -
-        CompanyFlow flowCompany;       
+
+        private ContractAttachmentFlow flowAttachment;
+
         #endregion
 
 //        ============================== Property ==============================
@@ -29,35 +32,30 @@ namespace Facade.ContractFacade
         public AttachmentFacade()
             : base()
 		{
-			aCompany = new Company("12");
-            aCompanyInfo = new CompanyInfo("12");
 
-            flowCompany = new CompanyFlow();			
+            flowAttachment = new ContractAttachmentFlow();
 		}
-
-        public ArrayList ModelTypeDataSourceName()
-        {
-            ArrayList result = new ArrayList();
-            AttachmentFlow flowAttachment = new AttachmentFlow();
-            result = flowAttachment.FillModelVehicleType();
-            return result;
-        }
 
         public DocumentNo RetriveRunningNo(DOCUMENT_TYPE docType)
         {
-            using (DocumentNoFlow flowContractRunningNo = new DocumentNoFlow())
+            using (DocumentNoFlow flowAttachmentRunningNo = new DocumentNoFlow())
             {
-                return flowContractRunningNo.GetContractRunningNo(docType, GetCompany());
+                return flowAttachmentRunningNo.GetContractRunningNo(docType, GetCompany());
             }
         }
 
-        public Company GetCompany()
+        public ContractAttachment RetriveContractAttachment(DocumentNo value)
         {
-            if (!fill)
-            {
-                fill = flowCompany.FillCompany(ref aCompany);
-            }
-            return aCompany;
+            return flowAttachment.RetriveContractAttachment(value, GetCompany());
         }
+
+        public bool ModeInsertAttachment(ContractAttachment value)
+        {            
+            if (flowAttachment.InsertAttachment(value, GetCompany()))
+            { return true; }
+            else
+            { return false; }
+        }
+       
     }
 }

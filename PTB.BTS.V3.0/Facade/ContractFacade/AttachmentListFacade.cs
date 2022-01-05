@@ -3,37 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Facade.PiFacade;
-using Flow.ContractFlow;
 using Entity.ContractEntities;
+using PTB.BTS.Contract.Flow;
+using Entity.VehicleEntities;
 
 namespace Facade.ContractFacade
 {
     public class AttachmentListFacade : CommonPIFacadeBase
     {
         #region - Private -
-        private AttachmentFlow flowAttachment;
+        private ContractAttachmentFlow flowAttachment;
         #endregion
 
         #region Property
-        private AttachmentList objAttachmentList;
-        public AttachmentList ObjAttachmentList
+        private List<ContractAttachment> objAttachmentList;
+        public List<ContractAttachment> ObjAttachmentList
         {
             get { return objAttachmentList; }
-        }
+        }        
 
         #endregion
 
         #region Constructor
         public AttachmentListFacade()
         {
-            flowAttachment = new AttachmentFlow();           
+            flowAttachment = new ContractAttachmentFlow();           
         } 
         #endregion
 
-        //public bool DisplayAttachment(string customerCode, string modelType)
-        //{
-        //    return flowAttachment.FillAttachment(ref objAttachmentList, customerCode, modelType);
-        //}
+        public List<ContractAttachment> SearchAttachment(DocumentNo attachmentNo, Customer customer, ModelType modelType)
+        {
+            objAttachmentList = flowAttachment.GetContractAttachmentList(attachmentNo, customer, modelType, GetCompany());
+            return objAttachmentList;
+        }
 
     }
 }

@@ -360,6 +360,7 @@
     <Compile Include="ContractFacade\ContractChargeRateFacade\CustomerChargeAdjustmentFacade.cs" />
     <Compile Include="ContractFacade\ContractChargeRateFacade\CustomerSpecialChargeConditionFacade.cs" />
     <Compile Include="ContractFacade\ContractDepartmentAssignmentFacade.cs" />
+    <Compile Include="ContractFacade\ContractAttachmentListFacade.cs" />
     <Compile Include="ContractFacade\RenewalNoticeFacade.cs" />
     <Compile Include="PiFacade\EmployeeSalaryFacade.cs" />
     <Compile Include="PiFacade\SSHospitalFacade.cs" />

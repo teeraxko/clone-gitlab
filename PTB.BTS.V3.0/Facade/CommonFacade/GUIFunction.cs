@@ -139,6 +139,14 @@ namespace Facade.CommonFacade
 		public static string GetString(ContractType value)
 		{return value.AName.Thai;}
 
+        /// <summary>
+        /// D21018 - Add support Model Type
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string GetString(ModelType value)
+		{return value.AName.Thai;}
+
 //------------------------------  ------------------------------
 		public static decimal ConverToDecimal(string hour, string minute)
 		{

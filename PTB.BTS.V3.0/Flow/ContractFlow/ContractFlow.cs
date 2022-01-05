@@ -1333,7 +1333,51 @@ namespace PTB.BTS.Contract.Flow
 
 			return result;
 		}
-		
+
+        /// <summary>
+        /// Get contract list to create attachment
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="condition"></param>
+        /// <param name="customer"></param>
+        /// <param name="modelType"></param>
+        /// <returns></returns>
+        public bool FillVehicleContractList(ref ContractList value, VehicleContract condition, Customer customer, ModelType modelType)
+        {
+            bool result;
+            ContractList tempContract = new ContractList(value.Company);
+            condition.ACustomerDepartment.ACustomer = customer;
+            condition.AContractType = new ContractType();
+            condition.AContractType.Code = "V";
+            ContractStatus contractStatus = null;
+            if (condition.AContractStatus == null || condition.AContractStatus.Code == "")
+            {
+                contractStatus = new ContractStatus();
+                contractStatus.Code = "2";
+                condition.AContractStatus = contractStatus;                
+            }
+
+            result = dbContract.FillContractList(ref tempContract, condition);
+
+            if (tempContract != null && tempContract.Count > 0)
+            {
+                for (int i = 0; i < tempContract.Count; i++)
+                {
+                    VehicleContract vc = (VehicleContract)tempContract[i];
+                    if (vc.AVehicleRoleList != null && vc.AVehicleRoleList.Count > 0 && vc.AVehicleRoleList[vc.AVehicleRoleList.Count-1].AVehicle.AModel.AModelType.EntityKey == modelType.EntityKey
+                        )
+                    {
+                        value.Add(tempContract[i]);
+                    }
+                }
+            }
+            
+            //dispost object.
+            contractStatus = null;
+
+            return result;
+        }
+
         //D21018 modify to support new contract format
         public bool FillAvailableContractList(ref ContractList value, ContractBase condition, string yy, string mm, string xxx)
         {

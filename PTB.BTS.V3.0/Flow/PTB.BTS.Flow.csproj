@@ -161,13 +161,13 @@
     <Compile Include="AttendanceFlow\CommonBenefitFlow\CommonAttendanceFlow.cs" />
     <Compile Include="AttendanceFlow\GenerateMealBenefitFlow.cs" />
     <Compile Include="Comparer\ContractDepartmentAssignmentComparer.cs" />
-    <Compile Include="ContractFlow\AttachmentFlow.cs" />
     <Compile Include="ContractFlow\CompensateRateFlow.cs" />
     <Compile Include="ContractFlow\ContractChargeDetailFlow.cs" />
     <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerChargeFlowBase.cs" />
     <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerSpecialChargeConditionFlow.cs" />
     <Compile Include="ContractFlow\ContractChargeRateFlow\CustomerSpecialChargeFlow.cs" />
     <Compile Include="ContractFlow\ContractDepartmentAssignmentFlow.cs" />
+    <Compile Include="ContractFlow\ContractAttachmentFlow.cs" />
     <Compile Include="ContractFlow\VehicleChargeDiffFlow.cs" />
     <Compile Include="ContractFlow\VehicleContractFlow.cs" />
     <Compile Include="PiFlow\EmployeeSalaryFlow.cs" />

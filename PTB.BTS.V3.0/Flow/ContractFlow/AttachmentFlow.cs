@@ -13,7 +13,7 @@ namespace Flow.ContractFlow
     {
         public ArrayList FillModelVehicleType()
         {
-            AttachmentDB dbAttachment = new AttachmentDB();
+            ContractAttachmentDB dbAttachment = new ContractAttachmentDB();
 
             return dbAttachment.GetModelVehicleType();
         }

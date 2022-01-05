@@ -233,6 +233,11 @@ namespace DataAccess.CommonDB
         protected string GetDB(DRIVER_DEDUCT_STATUS value)
         { return GetDB(CTFunction.GetString(value)); }
 
+        //D21018 get model type id
+        protected string GetDB(ModelType value)
+        { 
+            return GetDB(value.Model_Type); 
+        }
         #endregion
 
         #region - IsNotNULL -
