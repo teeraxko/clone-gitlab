@@ -16,37 +16,55 @@ namespace DataAccess.ContractDB
 {
     public class ContractAttachmentDB : DataAccessBase
     {
-        #region Constant
+        #region Constant & Private Variable
         private const int ATTACHMENT_NO = 0;
         private const int CUSTOMER_CODE = 1;
         private const int VEHICLEMODELTYPE = 2;
         private const int REMARK = 3;        
-        #endregion
+
 
         private AttachmentList objAttachmentList;
         private ContractAttachment objContractAttachment;
         private CustomerDB dbCustomer;
         private ModelTypeDB dbModelType;
         private ContractAttachmentDetailDB dbContractAttachmentDetail;
-//      ============================== Constructor ==============================
+        #endregion
+
+        #region Constructor 
         public ContractAttachmentDB()
             : base()
 		{
             dbCustomer = new CustomerDB();
             dbModelType = new ModelTypeDB();
             dbContractAttachmentDetail = new ContractAttachmentDetailDB();
-		}
+        }
 
+        #endregion
+
+        #region Private  Method
+        /// <summary>
+        /// SQL select statement
+        /// </summary>
+        /// <returns></returns>
         private string getSQLSelect()
         {
             return "SELECT Attachment_No, Customer_Code, VehicleModelType, Remark FROM Contract_Attachment_Head ";
         }
 
+        /// <summary>
+        /// SQL Order by statement
+        /// </summary>
+        /// <returns></returns>
         private string getOrderby()
         {
             return " ORDER BY Attachment_No ";
         }
 
+        /// <summary>
+        /// Generate SQL statement condition by Attachment No or a part of attachment no.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         private string getKeyCondition(DocumentNo value)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -85,6 +103,12 @@ namespace DataAccess.ContractDB
             return stringBuilder.ToString();
         }
 
+        /// <summary>
+        /// Generate SQL Insert Statement
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
         private string getSQLInsert(ContractAttachment value, Company aCompany)
         {
             StringBuilder stringBuilder = new StringBuilder(" INSERT INTO Contract_Attachment_Head (Company_Code,   Attachment_No, Customer_Code, VehicleModelType, Remark, Process_Date, Process_User) ");
@@ -121,31 +145,12 @@ namespace DataAccess.ContractDB
             return stringBuilder.ToString();
         }
 
-        public List<ContractAttachment> FillAttachmentList(DocumentNo attachmentNo, Customer customer, ModelType modelType, Company aCompany)
-        {
-            StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
-            stringBuilder.Append(getBaseCondition(aCompany));
-            stringBuilder.Append(getKeyCondition(attachmentNo));
-
-            if (customer != null)
-            {
-                stringBuilder.Append(" AND (Customer_Code = ");
-                stringBuilder.Append(GetDB(customer.EntityKey));
-                stringBuilder.Append(")");
-            }
-
-            if (modelType != null)
-            {
-                stringBuilder.Append(" AND (VehicleModelType = ");
-                stringBuilder.Append(GetDB(modelType.EntityKey));
-                stringBuilder.Append(")");
-            }
-
-            stringBuilder.Append(getOrderby());
-
-            return FillAttachmentList(aCompany,stringBuilder.ToString());
-        }
-
+        /// <summary>
+        /// Fill Contract Attachment 
+        /// </summary>
+        /// <param name="aCompany"></param>
+        /// <param name="sql"></param>
+        /// <returns></returns>
         private List<ContractAttachment> FillAttachmentList(Company aCompany, string sql)
         {
             List<ContractAttachment> value = new List<ContractAttachment>();
@@ -170,6 +175,13 @@ namespace DataAccess.ContractDB
             return value;
         }
 
+        /// <summary>
+        /// Fill Contract Attatchment
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="aCompany"></param>
+        /// <param name="sql"></param>
+        /// <returns></returns>
         private bool FillContractAttachment(ref ContractAttachment value, Company aCompany, string sql)
         {
             bool result = false;
@@ -190,6 +202,12 @@ namespace DataAccess.ContractDB
             return result;
         }
 
+        /// <summary>
+        /// Fill Contract Attachment and Attachment Detail
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="aCompany"></param>
+        /// <param name="dataReader"></param>
         private void FillContractAttachment(ref ContractAttachment value, Company aCompany, SqlDataReader dataReader)
         {
 
@@ -204,6 +222,48 @@ namespace DataAccess.ContractDB
             value.AAttachmentDetailList = attachmentDetailList;
         }
 
+        #endregion
+
+        #region Public Method
+        /// <summary>
+        /// Search Attachment 
+        /// </summary>
+        /// <param name="attachmentNo"></param>
+        /// <param name="customer"></param>
+        /// <param name="modelType"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
+        public List<ContractAttachment> FillAttachmentList(DocumentNo attachmentNo, Customer customer, ModelType modelType, Company aCompany)
+        {
+            StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
+            stringBuilder.Append(getBaseCondition(aCompany));
+            stringBuilder.Append(getKeyCondition(attachmentNo));
+
+            if (customer != null)
+            {
+                stringBuilder.Append(" AND (Customer_Code = ");
+                stringBuilder.Append(GetDB(customer.EntityKey));
+                stringBuilder.Append(")");
+            }
+
+            if (modelType != null)
+            {
+                stringBuilder.Append(" AND (VehicleModelType = ");
+                stringBuilder.Append(GetDB(modelType.EntityKey));
+                stringBuilder.Append(")");
+            }
+
+            stringBuilder.Append(getOrderby());
+
+            return FillAttachmentList(aCompany, stringBuilder.ToString());
+        }
+
+        /// <summary>
+        /// Get Contract Attachment By No
+        /// </summary>
+        /// <param name="attachmentNo"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
         public ContractAttachment GetContractAttachment(DocumentNo attachmentNo, Company aCompany)
         {
             if (IsNotNULL(attachmentNo.No.Trim()))
@@ -230,9 +290,16 @@ namespace DataAccess.ContractDB
             }
         }
 
+        /// <summary>
+        /// Insert Contract Attachment Head
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
         public bool InsertContractAttachment(ContractAttachment value, Company aCompany)
         {
             return (tableAccess.ExecuteSQL(getSQLInsert(value, aCompany)) > 0);
         }
+        #endregion
     }
 }

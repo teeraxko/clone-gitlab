@@ -26,7 +26,7 @@ namespace Presentation.ContractGUI
     {
         #region Private Variable
         private ContractFacadeBase facadeContract = new ContractFacadeBase();
-        private AttachmentFacade facadeAttachment;// = new AttachmentFacade();
+        private AttachmentFacade facadeAttachment;
 
         private ContractAttachment objContractAttachment;
 
@@ -63,6 +63,9 @@ namespace Presentation.ContractGUI
             cboModelType.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Clear data and set initial state of control
+        /// </summary>
         private void ClearScreen()
         {
             addMode = false;
@@ -79,6 +82,10 @@ namespace Presentation.ContractGUI
             dgvAttachmentDetailList.Rows.Clear();
         }
 
+        /// <summary>
+        /// Set control state in search group
+        /// </summary>
+        /// <param name="enable"></param>
         private void EnableSearchDetail(bool enable)
         {            
             cboCustomerTHName.Enabled = enable;
@@ -167,7 +174,7 @@ namespace Presentation.ContractGUI
         /// <param name="e"></param>
         private void btnCreateNew_Click(object sender, EventArgs e)
         {
-            if (validateCustomer() && validateModelType())
+            if (ValidateCustomer() && ValidateModelType())
             {
                 addCase();
                 RetriveRunningNo();
@@ -175,6 +182,9 @@ namespace Presentation.ContractGUI
             }
         }
 
+        /// <summary>
+        /// Set state for new document
+        /// </summary>
         protected virtual void addCase()
         {
 
@@ -194,7 +204,7 @@ namespace Presentation.ContractGUI
         }
 
         /// <summary>
-        /// View Attachment Info
+        /// Set control state after retrive contract
         /// </summary>
         private void SetControlViewCase()
         {
@@ -296,6 +306,9 @@ namespace Presentation.ContractGUI
             }
         }
 
+        /// <summary>
+        /// Retrive new running no.
+        /// </summary>
         private void RetriveRunningNo()
         {
             attachmentNo = facadeAttachment.RetriveRunningNo(DOCUMENT_TYPE.CONTRACT_ATTACHMENT);
@@ -305,7 +318,11 @@ namespace Presentation.ContractGUI
             txtAttachmentNoXXX.Text = attachmentNo.No;
         }
 
-        private bool validateCustomer()
+        /// <summary>
+        /// Validate Customer
+        /// </summary>
+        /// <returns></returns>
+        private bool ValidateCustomer()
         {
             if (cboCustomerTHName.Text == "")
             {
@@ -316,7 +333,11 @@ namespace Presentation.ContractGUI
             return true;
         }
 
-        private bool validateModelType()
+        /// <summary>
+        /// Validate ModelType
+        /// </summary>
+        /// <returns></returns>
+        private bool ValidateModelType()
         {
 
             if (string.IsNullOrEmpty(cboModelType.Text))
@@ -366,6 +387,10 @@ namespace Presentation.ContractGUI
         }
 
 
+        /// <summary>
+        /// Bind contract list/attachment detail to form
+        /// </summary>
+        /// <param name="vehicleContractList"></param>
         private void BindVehicleContractList(List<ContractBase> vehicleContractList)
         {
             if (vehicleContractList != null && vehicleContractList.Count > 0)
@@ -378,6 +403,10 @@ namespace Presentation.ContractGUI
             BindAttachmentDetail(objContractAttachment.AAttachmentDetailList);
         }
 
+        /// <summary>
+        /// Add contract to grid view but ignore if exist.
+        /// </summary>
+        /// <param name="contract"></param>
         private void AddVehicleContractListToGrid(ContractBase contract)
         {
             if (IsContractNotInGrid(contract))
@@ -423,6 +452,10 @@ namespace Presentation.ContractGUI
             return attachmentNo;
         }
 
+        /// <summary>
+        /// Show contract attachment info on form.
+        /// </summary>
+        /// <param name="value"></param>
         private void BindForm(ContractAttachment value)
         {
             txtAttachmentNoYY.Text = value.AttachmentNo.Year;
@@ -435,6 +468,10 @@ namespace Presentation.ContractGUI
 
         }
 
+        /// <summary>
+        /// Bind Contract Attachment Detail to gridview
+        /// </summary>
+        /// <param name="attachmentDetailList"></param>
         private void BindAttachmentDetail(AttachmentDetailList attachmentDetailList)
         {
             dgvAttachmentDetailList.Rows.Clear();
@@ -468,11 +505,6 @@ namespace Presentation.ContractGUI
             dgvAttachmentDetailList[6, row].Value = GUIFunction.GetString(attachmentDetail.AContract.AKindOfContract.AName.Thai);
             
         }
-
-        //private void RetriveVehicleContractList(List<Contract> contractList)
-        //{
-        //    //BindVehicleContract();
-        //}
 
         private void RetriveContractAttachment(ContractAttachment contractAttachment)
         {
@@ -592,6 +624,10 @@ namespace Presentation.ContractGUI
         }
 
 
+        /// <summary>
+        /// Add contract attachment
+        /// </summary>
+        /// <returns></returns>
         private bool ModeAddContractAttachment()
         {
             bool result = false;
@@ -621,6 +657,9 @@ namespace Presentation.ContractGUI
             return result;
         }
 
+        /// <summary>
+        /// Set Customer and model type to Attachment
+        /// </summary>
         private void PrepareNewContractAttachment()
         {
             objContractAttachment.ACustomer = (Customer)cboCustomerTHName.SelectedItem;

@@ -30,7 +30,7 @@ using SystemFramework.AppMessage;
 namespace PTB.BTS.Contract.Flow
 {
     /// <summary>
-    /// 
+    ///  Contract Attachment
     /// </summary>
 	public class ContractAttachmentFlow : FlowBase
 	{
@@ -48,10 +48,6 @@ namespace PTB.BTS.Contract.Flow
 			dbContract = new ContractDB();
             dbContractAttachment = new ContractAttachmentDB();
         }
-        #endregion
-
-        #region Validate Methods
-
         #endregion
 
         #region Other Private Methods
@@ -129,8 +125,10 @@ namespace PTB.BTS.Contract.Flow
             //        break;
             //}
         }
-    
-        #region ============================== Insert Method ==============================
+
+        #endregion
+
+        #region Insert Method
 
         public bool InsertAttachment(ContractAttachment value, Company aCompany)
 		{
@@ -185,10 +183,7 @@ namespace PTB.BTS.Contract.Flow
 		
         #endregion        
 
-        #endregion
-
-
-        #region Other Public Methods
+        #region Public Methods
 
         public DocumentNo GetContractAttachmentNo(string yy, string mm, string xxx)
 		{
@@ -208,56 +203,7 @@ namespace PTB.BTS.Contract.Flow
             return dbContractAttachment.GetContractAttachment(value, aCompany);
 		}
 
-        //public bool FillContract(ref ContractList value)
-        //{
-        //    return dbContract.FillContractList(ref value);
-        //}
        
-        //public bool FillContractList(ref ContractList value, ContractBase condition)
-        //{
-        //    return dbContract.FillContractList(ref value, condition);
-        //}
-
-        //public bool FillContract(ref ContractList value, ContractBase condition, string yy, string mm, string xxx)
-        //{
-        //    //condition.ContractNo = GetContractAttachmentNo(yy, mm, xxx);
-        //    //return dbContract.FillContractList(ref value, condition);
-        //    return true;
-        //}	
-        
-        //public bool InsertContract(ContractBase value, Company aCompany)
-        //{
-        //    ///TODO
-        //    return true;
-        //    //ContractChargeDetailList listCharge = new ContractChargeDetailList(aCompany);
-
-        //    //for (int i = 0; i < value.AContractChargeList.Count; i++)
-        //    //{
-        //    //    getContractChargeDetail(ref listCharge, value.AContractChargeList[i]);
-        //    //}
-
-        //    //listCharge.AContract = value;
-
-        //    //switch(value.AContractType.Code)
-        //    //{
-        //    //    case ContractType.CONTRACT_TYPE_DRIVER :
-        //    //    {
-        //    //        return insertContract((DriverContract)value, listCharge, aCompany);
-        //    //    }
-        //    //    case ContractType.CONTRACT_TYPE_OTHER :
-        //    //    {
-        //    //        return insertContract((ServiceStaffContract)value, listCharge, aCompany);
-        //    //    }
-        //    //    case ContractType.CONTRACT_TYPE_VEHICLE :
-        //    //    {
-        //    //        return insertContract((VehicleContract) value, listCharge, aCompany);
-        //    //    }
-        //    //    default :
-        //    //        return false;
-        //    //}
-        //}
-				
-		
         #endregion
     }
 }

@@ -14,28 +14,36 @@ using PTB.BTS.Contract.Flow;
 
 namespace Facade.ContractFacade
 {
+    /// <summary>
+    /// Contract Attachment Head
+    /// </summary>
     public class AttachmentFacade : CommonPIFacadeBase
     {
         #region - Private -
 
         private ContractAttachmentFlow flowAttachment;
+		private Company aCompany;
+        private CompanyInfo aCompanyInfo;
+		private bool fill = false;
 
         #endregion
 
-//        ============================== Property ==============================
-		private Company aCompany;
-        private CompanyInfo aCompanyInfo;
-
-		private bool fill = false;       
-
-//		============================== Constructor ==============================
+        #region Constructor 
         public AttachmentFacade()
             : base()
 		{
 
             flowAttachment = new ContractAttachmentFlow();
-		}
+        }
 
+        #endregion
+
+        #region Public Method
+        /// <summary>
+        /// Retrive new contract attachment number.
+        /// </summary>
+        /// <param name="docType"></param>
+        /// <returns></returns>
         public DocumentNo RetriveRunningNo(DOCUMENT_TYPE docType)
         {
             using (DocumentNoFlow flowAttachmentRunningNo = new DocumentNoFlow())
@@ -44,11 +52,21 @@ namespace Facade.ContractFacade
             }
         }
 
+        /// <summary>
+        /// Retrive contract attachment by no.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public ContractAttachment RetriveContractAttachment(DocumentNo value)
         {
             return flowAttachment.RetriveContractAttachment(value, GetCompany());
         }
 
+        /// <summary>
+        /// Insert new contract attachment
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool ModeInsertAttachment(ContractAttachment value)
         {            
             if (flowAttachment.InsertAttachment(value, GetCompany()))
@@ -56,6 +74,7 @@ namespace Facade.ContractFacade
             else
             { return false; }
         }
-       
+        #endregion
+
     }
 }

@@ -31,11 +31,20 @@ namespace Facade.ContractFacade
         } 
         #endregion
 
+        #region Public Method
+        /// <summary>
+        /// Search Contract Attachment
+        /// </summary>
+        /// <param name="attachmentNo"></param>
+        /// <param name="customer"></param>
+        /// <param name="modelType"></param>
+        /// <returns></returns>
         public List<ContractAttachment> SearchAttachment(DocumentNo attachmentNo, Customer customer, ModelType modelType)
         {
             objAttachmentList = flowAttachment.GetContractAttachmentList(attachmentNo, customer, modelType, GetCompany());
             return objAttachmentList;
         }
+        #endregion
 
     }
 }

@@ -52,6 +52,9 @@ namespace Presentation.ContractGUI
             this.Text = "Contract Attachment Report";
         }
              //============================== Private Method ==============================
+        /// <summary>
+        /// Show report
+        /// </summary>
         private void CreateReport()
         {
             try
@@ -78,6 +81,11 @@ namespace Presentation.ContractGUI
             }
 
         }
+        /// <summary>
+        /// Set  crystal report parameter
+        /// </summary>
+        /// <param name="paraValue"></param>
+        /// <returns></returns>
         private ParameterValues CrytalParameterValue(object paraValue)
         {
             ParameterValues paramValues = new ParameterValues();

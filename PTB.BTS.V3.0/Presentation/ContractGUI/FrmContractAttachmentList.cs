@@ -16,24 +16,34 @@ namespace Presentation.ContractGUI
 {
     public partial class FrmContractAttachmentList : ChildFormBase, IMDIChildForm
     {
+        #region Property
         private AttachmentListFacade facadeListAttachment;
         public AttachmentListFacade FacadeListAttachment
         {
             get { return facadeListAttachment; }
         }
 
+        /// <summary>
+        /// Document no to search
+        /// </summary>
         private DocumentNo conditionAttachmentNo;
         public DocumentNo ConditionAttachmentNo
         {
             set { conditionAttachmentNo = value; }
         }
 
+        /// <summary>
+        /// Customer to search
+        /// </summary>
         private Customer conditionCustomer;
         public Customer ConditionCustomer
         {
             set { conditionCustomer = value; }
         }
 
+        /// <summary>
+        /// Modeltype to search
+        /// </summary>
         private ModelType conditionModelType;
         public ModelType ConditionModelType
         {
@@ -41,11 +51,17 @@ namespace Presentation.ContractGUI
             set { conditionModelType = value; }
         }
 
+        /// <summary>
+        /// Selected Attachment
+        /// </summary>
         public ContractAttachment SelectedContractAttachment
         {
             get { return (ContractAttachment)facadeListAttachment.ObjAttachmentList[SelectedRow]; }
         }
 
+        /// <summary>
+        /// Selected row index in gridview
+        /// </summary>
         private int SelectedRow
         {
             get {
@@ -53,6 +69,9 @@ namespace Presentation.ContractGUI
             }
         }
 
+        /// <summary>
+        /// Attachment No
+        /// </summary>
         private string SelectedKey
         {
             get { return dgvAttachmentList[0, SelectedRow].Value.ToString(); }
@@ -63,6 +82,8 @@ namespace Presentation.ContractGUI
         {
             get { return selected; }
         }
+
+        #endregion
 
         #region Constructor
 
@@ -75,12 +96,19 @@ namespace Presentation.ContractGUI
         
         #endregion
 
+        /// <summary>
+        /// Search attachment list and show on the screen.
+        /// </summary>
         public void InitForm()
         {
             List<ContractAttachment> attachmentList = facadeListAttachment.SearchAttachment(conditionAttachmentNo, conditionCustomer, conditionModelType);
             bindData(attachmentList);                     
         }
 
+        /// <summary>
+        /// Bind attachment list to gridview
+        /// </summary>
+        /// <param name="attachmentList"></param>
         private void bindData(List<ContractAttachment> attachmentList)
         {
             dgvAttachmentList.Rows.Clear();
@@ -96,6 +124,11 @@ namespace Presentation.ContractGUI
             }
         }
 
+        /// <summary>
+        /// Bind attachment to gridview
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="attachment"></param>
         private void BindAttachment(int row, ContractAttachment attachment)
         {
             dgvAttachmentList[0, row].Value = GUIFunction.GetString(attachment.EntityKey);
@@ -120,6 +153,9 @@ namespace Presentation.ContractGUI
 
         #region Event
 
+        /// <summary>
+        /// Set selected status and hide form.
+        /// </summary>
         private void EditEvent()
         {
             selected = true;
@@ -132,23 +168,38 @@ namespace Presentation.ContractGUI
             this.WindowState = FormWindowState.Normal;
         }
 
+        /// <summary>
+        /// Hide form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
+        /// <summary>
+        /// Exit form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             selected = false;
             this.Hide();
         }
 
-        #endregion
-
+        /// <summary>
+        /// set selected status when row selection change
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvAttachmentList_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
             if (e.StateChanged != DataGridViewElementStates.Selected) return;
             selected = true;
         }
+
+        #endregion
     }
 }

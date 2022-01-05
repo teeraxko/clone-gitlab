@@ -96,6 +96,9 @@ namespace Presentation.ContractGUI
             this.WindowState = FormWindowState.Normal;
         }
 
+        /// <summary>
+        /// Bind contract to gridview
+        /// </summary>
         private void BindData()
         {
             dgvContractList.Rows.Clear();
@@ -187,6 +190,10 @@ namespace Presentation.ContractGUI
             DataGridChangeSelection(chkSelectAll.Checked);    
         }
 
+        /// <summary>
+        /// Set checkbox value
+        /// </summary>
+        /// <param name="isSelectedAll"></param>
         private void DataGridChangeSelection(bool isSelectedAll)
         {
             for (int i = 0; i < dgvContractList.Rows.Count; i++)
@@ -197,6 +204,9 @@ namespace Presentation.ContractGUI
             this.selected = isSelectedAll;
         }
 
+        /// <summary>
+        /// Get the selected row in gridview
+        /// </summary>
         private void DataGridGetSelectedRow()
         {
                 for (int i = 0; i < dgvContractList.Rows.Count; i++)

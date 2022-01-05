@@ -19,7 +19,7 @@ namespace DataAccess.ContractDB
 {
     public class ContractAttachmentDetailDB : DataAccessBase, DataAccess.CommonDB.ITableName
     {
-        #region - Constant -
+        #region - Constant 
         private const int ATTACHMENT_NO = 0;
         private const int CONTRACT_NO = 1;
         #endregion
@@ -33,7 +33,7 @@ namespace DataAccess.ContractDB
         private ContractDB dbContract;
         #endregion
 
-        //		============================== Constructor ==============================
+        #region Constructor 
         public ContractAttachmentDetailDB()
             : base()
         {
@@ -42,7 +42,9 @@ namespace DataAccess.ContractDB
             dbContract = new ContractDB();
         }
 
-        //		============================== Private Method ==============================
+        #endregion
+
+        
         #region - getSQL -
         /// <summary>
         /// SQL Select command
@@ -142,6 +144,11 @@ namespace DataAccess.ContractDB
         #endregion
 
         #region - Fill -
+        /// <summary>
+        /// Fill attachment detail
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="dataReader"></param>
         private void FillContractAttachmentDetail(ref AttachmentDetail value, SqlDataReader dataReader)
         {
             value.ContractNo = new DocumentNo((string)dataReader[CONTRACT_NO]);
@@ -152,6 +159,13 @@ namespace DataAccess.ContractDB
             return new AttachmentDetail();
         }
 
+        /// <summary>
+        /// Fill attachment detail
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="sql"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
         private bool FillAttachmentDetailList(ref AttachmentDetailList value, string sql, Company aCompany)
         {
             bool result = false;
@@ -181,6 +195,12 @@ namespace DataAccess.ContractDB
         #endregion
 
         //============================== Public Method ==============================
+        /// <summary>
+        /// Fill attachment detail
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="aCompany"></param>
+        /// <returns></returns>
         public bool FillAttachmentDetailList(ref AttachmentDetailList value, Company aCompany)
         {
             StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
@@ -193,7 +213,13 @@ namespace DataAccess.ContractDB
        
         //============================== Specific Method ==============================
 
-
+        /// <summary>
+        /// Insert Attachment Detail 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="contractAttachment"></param>
+        /// <param name="company"></param>
+        /// <returns></returns>
         public bool InsertAttachmentDetail(AttachmentDetailList value, ContractAttachment contractAttachment, Company company)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -203,11 +229,6 @@ namespace DataAccess.ContractDB
             }
 
             return (tableAccess.ExecuteSQL(stringBuilder.ToString()) > 0);
-        }
-
-        public bool ExecuteSpecific(string command)
-        {
-            return (tableAccess.ExecuteSQL(command) > 0);
         }
       
         #region IDisposable Members
