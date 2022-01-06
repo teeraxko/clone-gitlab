@@ -55,7 +55,7 @@
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrl>
     <UpdateUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile\</UpdateUrl>
-    <ProductName>Business Transaction Service ver 4.0 TT</ProductName>
+    <ProductName>Business Transaction Service ver 4.0 RC1</ProductName>
     <PublisherName>Ictus Co., Ltd.</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>

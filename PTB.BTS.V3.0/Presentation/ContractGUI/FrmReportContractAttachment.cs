@@ -42,7 +42,7 @@ namespace Presentation.ContractGUI
         public FrmReportContractAttachment()
             : base()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         public override string FormID()
@@ -69,9 +69,6 @@ namespace Presentation.ContractGUI
         private void ClearScreen()
         {
             addMode = false;
-
-            InitComboCustomer();
-            InitComboModelType();
 
             txtAttachmentNoYY.Focus();
             txtAttachmentNoYY.Text = string.Empty;
@@ -112,14 +109,15 @@ namespace Presentation.ContractGUI
             mdiParent.EnableDeleteCommand(false);
             mdiParent.EnableRefreshCommand(false);
             mdiParent.EnablePrintCommand(false);
-
-            ClearScreen();
+            
             EnableSearchDetail(true);
             btnPrint.Enabled = false;
 
             facadeAttachment = new AttachmentFacade();
             objContractAttachment = new ContractAttachment(facadeContract.GetCompany());
-            objContractAttachment.AAttachmentDetailList = new AttachmentDetailList(facadeContract.GetCompany());
+            objContractAttachment.AAttachmentDetailList = new AttachmentDetailList(facadeContract.GetCompany());            
+
+            ClearScreen();
         }               
 
         public void RefreshForm()
@@ -145,6 +143,8 @@ namespace Presentation.ContractGUI
         {
             mdiParent = (frmMain)this.MdiParent;
             InitForm();
+            InitComboCustomer();
+            InitComboModelType();
         }      
      
         /// <summary>
@@ -375,9 +375,7 @@ namespace Presentation.ContractGUI
                 dialogContractList.ConditionModelType = (ModelType)cboModelType.SelectedItem;
 
             dialogContractList.IsMultiSelection = true;
-            dialogContractList.WindowState = FormWindowState.Normal;
-            dialogContractList.StartPosition = FormStartPosition.CenterParent;
-            dialogContractList.ShowDialog(this);
+            dialogContractList.ShowDialog();
             if (dialogContractList.Selected)
             {
                 BindVehicleContractList(dialogContractList.SelectedContractList);

@@ -221,6 +221,7 @@
             // 
             // cboModelType
             // 
+            this.cboModelType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboModelType.FormattingEnabled = true;
             this.cboModelType.Location = new System.Drawing.Point(88, 50);
             this.cboModelType.Name = "cboModelType";
@@ -359,7 +360,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gpbContractAttachmentInfo);
             this.Name = "FrmReportContractAttachment";
-            this.Text = "เอกสารแนบสัญญา";
+            this.Text = "เอกสารแนบท้ายสัญญา";
             this.Load += new System.EventHandler(this.FrmReportContractAttachment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttachmentDetailList)).EndInit();
             this.gpbContractAttachmentInfo.ResumeLayout(false);

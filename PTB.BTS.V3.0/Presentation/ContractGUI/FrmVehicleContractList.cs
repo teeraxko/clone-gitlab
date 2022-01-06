@@ -17,7 +17,7 @@ namespace Presentation.ContractGUI
     /// <summary>
     /// D21018 - Create new form like a frmVDOList due to it is very dificult to modify it to support the attachment
     /// </summary>
-    public partial class FrmVehicleContractList : ChildFormBase, IMDIChildForm
+    public partial class FrmVehicleContractList : EntryFormBase
     {
         private List<ContractBase> contractList = new List<ContractBase>();
 
@@ -93,7 +93,6 @@ namespace Presentation.ContractGUI
                 selected = false;
                 ClearForm();
             }
-            this.WindowState = FormWindowState.Normal;
         }
 
         /// <summary>

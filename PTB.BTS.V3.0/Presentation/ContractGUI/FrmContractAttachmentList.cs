@@ -14,7 +14,7 @@ using Facade.CommonFacade;
 
 namespace Presentation.ContractGUI
 {
-    public partial class FrmContractAttachmentList : ChildFormBase, IMDIChildForm
+    public partial class FrmContractAttachmentList : EntryFormBase
     {
         #region Property
         private AttachmentListFacade facadeListAttachment;
@@ -165,7 +165,6 @@ namespace Presentation.ContractGUI
         private void FrmContractAttachmentList_Load(object sender, System.EventArgs e)
         {
             InitForm();
-            this.WindowState = FormWindowState.Normal;
         }
 
         /// <summary>
@@ -201,5 +200,13 @@ namespace Presentation.ContractGUI
         }
 
         #endregion
+
+        private void FrmContractAttachmentList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                selected = false;
+            }
+        }
     }
 }
