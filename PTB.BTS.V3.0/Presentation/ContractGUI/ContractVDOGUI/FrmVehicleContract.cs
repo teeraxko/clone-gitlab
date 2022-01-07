@@ -148,9 +148,11 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         #region - protected Method -
         protected override void addCase()
         {
+            this.DocumentType = DOCUMENT_TYPE.CONTRACT_TEMPORARY;
             base.addCase();
             grbServiceCharge.Visible = true;
             gpbLeaseTerm.Visible = true;
+            cboKindRental.SelectedIndex = 1;//Used car
         }
 
         protected override void setContractBase(ContractBase value)

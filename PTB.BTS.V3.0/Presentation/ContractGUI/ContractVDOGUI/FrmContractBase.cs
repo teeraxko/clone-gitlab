@@ -2036,7 +2036,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
         }
 
         private void cmdCreateContract_Click(object sender, System.EventArgs e)
-        {             
+        {
             addCase();            
             retriveRunningNo(DocumentType);
             fpiUnitHire.BackColor = System.Drawing.Color.White;

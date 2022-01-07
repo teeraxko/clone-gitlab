@@ -70,6 +70,7 @@
             this.dgvAttachmentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAttachmentList.Size = new System.Drawing.Size(533, 300);
             this.dgvAttachmentList.TabIndex = 4;
+            this.dgvAttachmentList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAttachmentList_CellMouseDoubleClick);
             this.dgvAttachmentList.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvAttachmentList_RowStateChanged);
             // 
             // colEntityKey
@@ -139,7 +140,6 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dgvAttachmentList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmContractAttachmentList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -1364,7 +1364,10 @@ namespace PTB.BTS.Contract.Flow
                 for (int i = 0; i < tempContract.Count; i++)
                 {
                     VehicleContract vc = (VehicleContract)tempContract[i];
-                    if (vc.AVehicleRoleList != null && vc.AVehicleRoleList.Count > 0 && vc.AVehicleRoleList[vc.AVehicleRoleList.Count-1].AVehicle.AModel.AModelType.EntityKey == modelType.EntityKey
+                    // กรองเอาเฉพาะสัญญาที่ประเภทรถ ตรงกับที่เลือกจากหน้าจอ และ ไม่ใช่ Temporary
+                    if (vc.AVehicleRoleList != null && vc.AVehicleRoleList.Count > 0 
+                        && vc.AVehicleRoleList[vc.AVehicleRoleList.Count-1].AVehicle.AModel.AModelType.EntityKey == modelType.EntityKey
+                        && vc.AKindOfContract.EntityKey != KindOfContract.KIND_OF_CONTRACT_TEMP
                         )
                     {
                         value.Add(tempContract[i]);

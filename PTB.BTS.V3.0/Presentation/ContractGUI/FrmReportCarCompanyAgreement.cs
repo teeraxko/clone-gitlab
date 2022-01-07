@@ -23,7 +23,7 @@ namespace Presentation.ContractGUI
     {
         #region Private Variable
 
-        ReportCarCompanyAgreement reportCarCompanyAgreement = new ReportCarCompanyAgreement();
+        ReportCarCompanyAgreement reportCarCompanyAgreement;
         private ContractFacadeBase facadeContract = new ContractFacadeBase();
         private frmMain mdiParent;
 
@@ -59,7 +59,9 @@ namespace Presentation.ContractGUI
 
         private void CreateReport(string customerCode, DateTime contractDate)
         {
-            this.Cursor = Cursors.WaitCursor;            
+            this.Cursor = Cursors.WaitCursor;
+            reportCarCompanyAgreement = new ReportCarCompanyAgreement();
+            facadeContract = new ContractFacadeBase();
             Company company = facadeContract.GetCompany();
             reportCarCompanyAgreement.SetCriteria(company.CompanyCode, customerCode, contractDate);
 

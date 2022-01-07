@@ -208,5 +208,10 @@ namespace Presentation.ContractGUI
                 selected = false;
             }
         }
+
+        private void dgvAttachmentList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            EditEvent();
+        }
     }
 }

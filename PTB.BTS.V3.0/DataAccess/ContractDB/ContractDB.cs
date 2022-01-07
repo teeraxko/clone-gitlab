@@ -255,6 +255,8 @@ namespace DataAccess.ContractDB
                     string no = (value.ToString()).Substring(6, 7);
                     if (type == "D")
                     {
+                        stringBuilder.Append(" AND (Contract_Type = 'D') ");
+
                         stringBuilder.Append(" AND (Contract_No = ");
                         stringBuilder.Append(GetDB(value.ToString()));
                         stringBuilder.Append(" OR Contract_No = ");
@@ -344,13 +346,9 @@ namespace DataAccess.ContractDB
                 stringBuilder.Append(")");
             }
 
-            //D21018
+            //D21018 support driver contract new format and old format
             if (value.AContractTypeAbbreviation != null && IsNotNULL(value.AContractTypeAbbreviation))
             {
-                //stringBuilder.Append(" AND (SUBSTRING(Contract_No, 5, 1) = ");
-                //stringBuilder.Append(GetDB(value.AContractTypeAbbreviation));
-                //stringBuilder.Append(")");
-
                 string[] abbreviationList = value.AContractTypeAbbreviation.Split(new char[] {','},  StringSplitOptions.RemoveEmptyEntries);
                 stringBuilder.Append(" AND (");
                 for (int i = 0;i<abbreviationList.Length;i++)
