@@ -1,11 +1,10 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>D:\Publish\BTS\</PublishUrlHistory>
-    <InstallUrlHistory>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrlHistory>
+    <PublishUrlHistory>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Test%29\|D:\Publish\BTS\</PublishUrlHistory>
+    <InstallUrlHistory>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Test%29\|\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrlHistory>
     <SupportUrlHistory>
     </SupportUrlHistory>
-    <UpdateUrlHistory>
-    </UpdateUrlHistory>
+    <UpdateUrlHistory>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile\</UpdateUrlHistory>
     <BootstrapperUrlHistory>
     </BootstrapperUrlHistory>
     <FallbackCulture>en-US</FallbackCulture>

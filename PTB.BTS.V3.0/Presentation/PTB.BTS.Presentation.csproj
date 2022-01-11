@@ -17,7 +17,7 @@
     <ApplicationIcon>The Internet.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>PTB.BTS.Presentation</AssemblyName>
+    <AssemblyName>PTB.BTS.Presentation.RC02</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
@@ -43,7 +43,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <NoWin32Manifest>true</NoWin32Manifest>
-    <PublishUrl>D:\Publish\BTS\</PublishUrl>
+    <PublishUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Test%29\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -53,13 +53,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <InstallUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Improvement%29\</InstallUrl>
-    <UpdateUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile\</UpdateUrl>
-    <ProductName>Business Transaction Service ver 4.0 RC1</ProductName>
+    <InstallUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Test%29\</InstallUrl>
+    <UpdateUrl>\\Ptbsvr01\bts\SetUp\Program Setup\PublishFile%28Test%29\</UpdateUrl>
+    <ProductName>Business Transaction Service ver 4.0 RC2</ProductName>
     <PublisherName>Ictus Co., Ltd.</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>168</ApplicationRevision>
+    <ApplicationRevision>170</ApplicationRevision>
     <ApplicationVersion>3.9.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>false</BootstrapperEnabled>
