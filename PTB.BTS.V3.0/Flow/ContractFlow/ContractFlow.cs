@@ -1395,6 +1395,7 @@ namespace PTB.BTS.Contract.Flow
         public bool FillAvailableContractList(ref ContractList value, ContractBase condition, string yy, string mm, string xxx, DOCUMENT_TYPE documentType)
         {
             condition.ContractNo = GetContractNo(yy, mm, xxx, DOCUMENT_TYPE.CONTRACT_DRIVER);
+            condition.AContractTypeAbbreviation = String.Join(",",new string[] { "D", "C" });
             return dbContract.FillAvailableContractList(ref value, condition);
         }
 

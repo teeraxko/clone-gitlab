@@ -83,65 +83,7 @@ namespace Facade.ContractFacade
             return flowContract.FillVehicleContractList(ref objContractList, conditionContract);
         }
 
-        public bool DisplayDriverOtherContract()
-        {
-            bool result;
-
-            objContractList = new ContractList(GetCompany());
-
-            if (conditionContract.AContractType == null)
-            {
-                ContractType contractType = new ContractType();
-                contractType.Code = "D";
-                conditionContract.AContractType = contractType;
-                result = flowContract.FillContractList(ref objContractList, conditionContract);
-
-                contractType.Code = "O";
-                conditionContract.AContractType = contractType;
-                result |= flowContract.FillContractList(ref objContractList, conditionContract);
-                contractType = null;
-
-                return result;
-            }
-            else
-            {
-                result = flowContract.FillContractList(ref objContractList, conditionContract);
-                return result;
-            }
-        }        
-
-        public bool DisplayAvailableContract()
-        {
-            objContractList = new ContractList(GetCompany());
-            //D21018 ส่ง Document Type เป็น Driver
-            return flowContract.FillAvailableContractList(ref objContractList, conditionContract, yy, mm, xxx, DOCUMENT_TYPE.CONTRACT_DRIVER);
-            //return flowContract.FillAvailableContractList(ref objContractList, conditionContract, yy, mm, xxx);
-        }
-
-        public bool DisplayContractVehiclePurchasing()
-        {
-            objContractList = new ContractList(GetCompany());
-            //D21018 ออกสัญญาพนักงานขับรถ + ออกสัญญารถเช่า -> ข้อมูลออกเฉพาะสัญญารถใหม่ และที่มีใบสั่งซื้อเท่านั้น กำหนด Abbreviation เป็น C เพื่อกรองอีกชั้น
-            conditionContract.AContractTypeAbbreviation = "C";
-            return flowContract.FillContractVehiclePurchasing(objContractList, conditionContract);
-        }
-
-        public string GetPurchaseNoByContract(DocumentNo contractNo)
-        {
-            using (VehiclePurchasingContractFlow flow = new VehiclePurchasingContractFlow())
-            {
-                List<VehiclePurchasingContract> list = flow.GetPurchasingContractListByContract(contractNo);
-
-                if (list.Count > 0)
-                {
-                    return list[0].Contract.ContractNo.ToString();
-                }
-                else
-                {
-                    return string.Empty;
-                }
-            }
-        } 
+        
         #endregion
 	}
 }

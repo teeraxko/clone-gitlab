@@ -748,7 +748,8 @@ namespace Presentation.ContractGUI
 			{dialogContractList.ConditionCustomer = (Customer)cboCustomerTHName.SelectedItem;}
 
 			contractType.Code = "V";
-			dialogContractList.ConditionCONTRACT_TYPE = contractType;
+			//dialogContractList.ConditionCONTRACT_TYPE = this._documentType;
+            dialogContractList.DocumentType = this.DocumentType;
 
 			if(cboContractStatus.Text != "")
 			{
