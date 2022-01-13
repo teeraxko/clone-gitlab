@@ -545,3 +545,104 @@ PTB.BTS.V3.0/Presentation/obj/Debug/PTB.BTS.Presentation.RC02.exe.manifest
 PTB.BTS.V3.0/Presentation/obj/Debug/PTB.BTS.Presentation.RC02.pdb
 PTB.BTS.V3.0/Presentation/obj/Debug/PTB.BTS.Presentation.RC02.TrustInfo.xml
 PTB.BTS.V3.0/PTB.BTS.Test/obj/Debug/build.force
+PTB.BTS.V3.0/Presentation/bin/Debug/ASC.Control.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/DataAccess.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.Common.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.Framework.ASC.VBFuntion.xml
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.Framework.ExceptionManagement.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.PI.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.PI.Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.PI.IntefaceFlow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.Welfare.DataAccess.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.Welfare.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/ictus.PIS.Welfare.Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Microsoft.Office.Interop.Excel.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Microsoft.ReportViewer.Common.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Microsoft.ReportViewer.ProcessingObjectModel.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Microsoft.ReportViewer.WinForms.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/Microsoft.ReportViewer.WinForms.xml
+PTB.BTS.V3.0/Presentation/bin/Debug/PTB.BTS.Presentation.RC02.vshost.exe.config
+PTB.BTS.V3.0/Presentation/bin/Debug/PTB.BTS.Presentation.vshost.exe
+PTB.BTS.V3.0/Presentation/bin/Debug/SystemFramework.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/PTB.BTS.Presentation.application
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ADODB.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ASC.Control.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/AxInterop.AcroPDFLib.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/BusinessObjects.Enterprise.Sdk.netmodule
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/BusinessObjects.Enterprise.Sdk.Ssl.netmodule
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/BusinessObjects.Enterprise.Sdk.ZipLib.netmodule
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.CrystalReports.Engine.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.Enterprise.Framework.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.Enterprise.InfoStore.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.ReportSource.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.Shared.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/CrystalDecisions.Windows.Forms.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/DataAccess.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.CalcEngine.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.Excel.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.PluginCalendar.WinForms.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.Win.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.Win.Input.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/FarPoint.Win.Spread.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.Common.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.Framework.ASC.AppConfig.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.Framework.ASC.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.Framework.ASC.VBFuntion.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.Framework.ExceptionManagement.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.PI.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.PI.Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.PI.IntefaceFlow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.Welfare.DataAccess.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.Welfare.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.PIS.Welfare.Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ictus.SystemConnection.BizPac.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Interop.AcroPDFLib.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Microsoft.Office.Interop.Excel.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Microsoft.ReportViewer.Common.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Microsoft.ReportViewer.ProcessingObjectModel.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Microsoft.ReportViewer.WinForms.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.BTS2SAP.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.DataAccess.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Entity.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Facade.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Flow.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Presentation.exe
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Presentation.exe.config
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Presentation.exe.manifest
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.PresentationBase.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.Report.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.BTS.SystemFramework.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.PIS.Welfare.BBL.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/PTB.PIS.Welfare.BizPac.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/SystemFramework.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/The Internet.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Add.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Add01.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Cancel01.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Copy.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Cut.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Delete.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Delete01.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Downicon.gif
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Edit01.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Exit.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Exit2.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/INDoc.gif
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/LeftMenuLogo.bmp
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Next.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Paste.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Previous.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Print.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Refresh.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Save01.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/search.ico
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/icons/Upicon.gif
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/ReferencesDLL/ASC.Control.dll
+PTB.BTS.V3.0/Presentation/bin/Debug/app.publish/Application Files/PTB.BTS.Presentation_4_0_1_172/Template/SAP_Interface_Template.xlsx
+PTB.BTS.V3.0/Presentation/bin/Debug/Template/SAP_Interface_Template.xlsx
+PTB.BTS.V3.0/Presentation/obj/Debug/ptb.bts.presentation.exe.licenses
+PTB.BTS.V3.0/Presentation/obj/Debug/PTB.BTS.Presentation.TrustInfo.xml

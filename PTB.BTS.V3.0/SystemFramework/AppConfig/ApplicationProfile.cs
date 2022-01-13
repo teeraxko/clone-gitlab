@@ -4,7 +4,7 @@ namespace SystemFramework.AppConfig
 {
 	public static class ApplicationProfile
 	{
-        public static string Version = "4.0 RC2";
+        public static string Version = "4.0";
         //TestEnvironment
         //public static string Version = "TEST";
 
