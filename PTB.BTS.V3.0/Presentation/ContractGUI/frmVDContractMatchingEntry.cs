@@ -462,7 +462,9 @@ namespace Presentation.ContractGUI
 				objDriverContract = value;
 				txtDriverYY.Text = value.ContractNo.Year.ToString();
 				txtDriverMM.Text = value.ContractNo.Month.ToString();
-				txtDriverXXX.Text = value.ContractNo.No.ToString(); 
+				txtDriverXXX.Text = value.ContractNo.No.ToString();
+                textBox1.Text = value.AContractTypeAbbreviation;
+                                
 				isEventTextChanged = true;
 			}
 		}

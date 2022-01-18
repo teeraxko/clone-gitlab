@@ -1528,6 +1528,11 @@ namespace Presentation.ContractGUI
             dtpContractEnd.Value = value.APeriod.To;
             fpiUnitHire.Value = value.UnitHire;
 
+            if (value.AContractTypeAbbreviation != null && value.AContractTypeAbbreviation.Length>0)
+            {
+                txtContractPrefix.Text = (value.AContractTypeAbbreviation.Split(new char[] { ',' }))[0];
+            }
+
             if (value.RateStatus == RATE_STATUS_TYPE.DAY)
             {
                 rdoDay.Checked = true;
@@ -2180,6 +2185,7 @@ namespace Presentation.ContractGUI
             objContractBase = new ContractBase();
             facadeContractApprove = new ContractApproveFacade();
             clearForm();
+            cboContractType_SelectedIndexChanged(null, null);
         }
 
         public void RefreshForm()

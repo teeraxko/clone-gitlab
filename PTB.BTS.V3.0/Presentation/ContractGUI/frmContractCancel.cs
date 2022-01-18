@@ -1723,6 +1723,11 @@ namespace Presentation.ContractGUI
             fpiUnitHire.Value = value.UnitHire;
             cboCancelReason.Text = GUIFunction.GetString(value.ACancelReason.Name);
 
+            if (value.AContractTypeAbbreviation != null && value.AContractTypeAbbreviation.Length > 0)
+            {
+                txtContractPrefix.Text = (value.AContractTypeAbbreviation.Split(new char[] { ',' }))[0];
+            }
+
             if (value.RateStatus == RATE_STATUS_TYPE.DAY)
             {
                 rdoDay.Checked = true;
@@ -2200,6 +2205,7 @@ namespace Presentation.ContractGUI
 			
 			newObject();
 			clearForm();
+            cboContractType_SelectedIndexChanged(null, null);
 		}
 
 		public void RefreshForm()

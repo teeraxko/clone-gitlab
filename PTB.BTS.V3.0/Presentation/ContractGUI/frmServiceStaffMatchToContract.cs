@@ -511,7 +511,12 @@ namespace Presentation.ContractGUI
 			txtContractNoXXX.Text = value.ContractNo.No.ToString();
             cboCustomerTHName.Text = value.ACustomerDepartment.ACustomer.ToString();
 			cboContractType.Text = GUIFunction.GetString(value.AContractType);
-			cboContractStatus.Text = GUIFunction.GetString(value.AContractStatus);	
+			cboContractStatus.Text = GUIFunction.GetString(value.AContractStatus);
+
+            if (value.AContractTypeAbbreviation != null && value.AContractTypeAbbreviation.Length > 0)
+            {
+                txtContractPrefix.Text = value.AContractTypeAbbreviation.Split(new char[] { ',' })[0];
+            }
 			isTextChange = true;
 		}
 
@@ -807,6 +812,7 @@ namespace Presentation.ContractGUI
 			facadeServiceStaffMatchToContract = new ServiceStaffMatchToContractFacade();
 			clearForm();
 			mdiParent.RefreshMasterCount();
+            cboContractType_SelectedIndexChanged(null, null);
 		}
 
 		public void RefreshForm()

@@ -580,6 +580,7 @@ namespace Presentation.ContractGUI
                         //break;
                         this.fpsContractList_Sheet1.ColumnHeader.Cells.Get(0, 4).Text = "ทะเบียนรถ";
                         //D21018 จับคู่สัญญารถยนต์กับสัญญาพนักงานขับรถ แก้ไขให้รองรับ Renewal & Temporary
+                        facadeListContract.ConditionContract.AContractType = CTFunction.GetContractType(ContractType.CONTRACT_TYPE_VEHICLE);
                         if (this.DocumentType == DOCUMENT_TYPE.CONTRACT_RENEWAL || this.DocumentType == DOCUMENT_TYPE.CONTRACT_TEMPORARY)
                         {
                             if (facadeListContract.DisplayContract(this.DocumentType))
