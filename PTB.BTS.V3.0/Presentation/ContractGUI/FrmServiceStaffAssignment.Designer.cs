@@ -100,6 +100,8 @@ namespace Presentation.ContractGUI
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblContractNoPrefix = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.grbServiceStaffInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctEmployee)).BeginInit();
             this.tabSSContract.SuspendLayout();
@@ -113,6 +115,8 @@ namespace Presentation.ContractGUI
             // grbServiceStaffInfo
             // 
             this.grbServiceStaffInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.grbServiceStaffInfo.Controls.Add(this.label11);
+            this.grbServiceStaffInfo.Controls.Add(this.lblContractNoPrefix);
             this.grbServiceStaffInfo.Controls.Add(this.label16);
             this.grbServiceStaffInfo.Controls.Add(this.txbDepartment);
             this.grbServiceStaffInfo.Controls.Add(this.label9);
@@ -154,9 +158,9 @@ namespace Presentation.ContractGUI
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label16.Location = new System.Drawing.Point(105, 88);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 17);
+            this.label16.Size = new System.Drawing.Size(48, 17);
             this.label16.TabIndex = 156;
-            this.label16.Text = "PTB - C -";
+            this.label16.Text = "PTB - ";
             // 
             // txbDepartment
             // 
@@ -200,7 +204,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoXXX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoXXX.Enabled = false;
-            this.txtContractNoXXX.Location = new System.Drawing.Point(235, 86);
+            this.txtContractNoXXX.Location = new System.Drawing.Point(242, 86);
             this.txtContractNoXXX.MaxLength = 3;
             this.txtContractNoXXX.Name = "txtContractNoXXX";
             this.txtContractNoXXX.Size = new System.Drawing.Size(32, 20);
@@ -211,7 +215,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoMM.Enabled = false;
-            this.txtContractNoMM.Location = new System.Drawing.Point(203, 86);
+            this.txtContractNoMM.Location = new System.Drawing.Point(210, 86);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -222,7 +226,7 @@ namespace Presentation.ContractGUI
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContractNoYY.Enabled = false;
-            this.txtContractNoYY.Location = new System.Drawing.Point(171, 86);
+            this.txtContractNoYY.Location = new System.Drawing.Point(178, 86);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -595,26 +599,26 @@ namespace Presentation.ContractGUI
             this.mniDelete});
             this.ctmMenu.Name = "ctmMenu";
             this.ctmMenu.ShowImageMargin = false;
-            this.ctmMenu.Size = new System.Drawing.Size(77, 70);
+            this.ctmMenu.Size = new System.Drawing.Size(75, 70);
             // 
             // mniAdd
             // 
             this.mniAdd.Name = "mniAdd";
-            this.mniAdd.Size = new System.Drawing.Size(76, 22);
+            this.mniAdd.Size = new System.Drawing.Size(74, 22);
             this.mniAdd.Text = "เพิ่ม";
             this.mniAdd.Click += new System.EventHandler(this.mniAdd_Click);
             // 
             // mniUpdate
             // 
             this.mniUpdate.Name = "mniUpdate";
-            this.mniUpdate.Size = new System.Drawing.Size(76, 22);
+            this.mniUpdate.Size = new System.Drawing.Size(74, 22);
             this.mniUpdate.Text = "แก้ไข";
             this.mniUpdate.Click += new System.EventHandler(this.mniUpdate_Click);
             // 
             // mniDelete
             // 
             this.mniDelete.Name = "mniDelete";
-            this.mniDelete.Size = new System.Drawing.Size(76, 22);
+            this.mniDelete.Size = new System.Drawing.Size(74, 22);
             this.mniDelete.Text = "ลบ";
             this.mniDelete.Click += new System.EventHandler(this.mniDelete_Click);
             // 
@@ -748,6 +752,28 @@ namespace Presentation.ContractGUI
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 150;
             // 
+            // lblContractNoPrefix
+            // 
+            this.lblContractNoPrefix.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContractNoPrefix.AutoSize = true;
+            this.lblContractNoPrefix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lblContractNoPrefix.Location = new System.Drawing.Point(147, 88);
+            this.lblContractNoPrefix.Name = "lblContractNoPrefix";
+            this.lblContractNoPrefix.Size = new System.Drawing.Size(17, 17);
+            this.lblContractNoPrefix.TabIndex = 156;
+            this.lblContractNoPrefix.Text = "C";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(159, 89);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 17);
+            this.label11.TabIndex = 156;
+            this.label11.Text = " -";
+            // 
             // FrmServiceStaffAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -833,5 +859,7 @@ namespace Presentation.ContractGUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblContractNoPrefix;
     }
 }

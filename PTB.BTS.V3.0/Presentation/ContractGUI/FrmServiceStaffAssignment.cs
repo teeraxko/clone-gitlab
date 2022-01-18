@@ -111,6 +111,7 @@ namespace Presentation.ContractGUI
             txbCustomer.Text = "";
             txbDepartment.Text = "";
             pctEmployee.Image = null;
+            lblContractNoPrefix.Text = "C";
         }
 
         private void bindServiceStaff(ServiceStaff value)
@@ -136,6 +137,7 @@ namespace Presentation.ContractGUI
                 txtContractNoXXX.Text = value.ACurrentContract.ContractNo.No;
                 txbCustomer.Text = value.ACurrentContract.ACustomer.ShortName;
                 txbDepartment.Text = value.ACurrentContract.ACustomerDepartment.ShortName;
+                lblContractNoPrefix.Text = value.ACurrentContract.AContractTypeAbbreviation.Split(new char[] { ',' })[0];
             }
 
             try

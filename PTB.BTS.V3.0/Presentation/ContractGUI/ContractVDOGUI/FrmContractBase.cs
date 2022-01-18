@@ -118,6 +118,11 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             objDriverContract.UnitHire = Convert.ToInt32(fpiUnitHire.Value);
             objDriverContract.ACancelReason.Name = "";
 
+            //D21018 - สัญญาพนักงานขับรถ กรณีเป็นการแก้ไข ให้ใช้เลขสัญญาเดิม
+            if (updateMode && objContractBase != null && objContractBase.AContractTypeAbbreviation.Contains("C"))
+            {
+                objDriverContract.ContractNo = objContractBase.ContractNo;
+            }
             if (rdoDay.Checked)
             {
                 objDriverContract.RateStatus = RATE_STATUS_TYPE.DAY;
@@ -2349,7 +2354,7 @@ namespace Presentation.ContractGUI.ContractVDOGUI
             if (this.updateMode)
             {
                 //D21018-BTS Contract Modification
-                this.objContractBase.ContractNo = this.getContractNo(this.documentType);
+                //this.objContractBase.ContractNo = this.getContractNo(this.documentType);
             }
         }
 
@@ -2466,6 +2471,11 @@ namespace Presentation.ContractGUI.ContractVDOGUI
 
             //contractBase.ContractNo = this.getContractNo();
             contractBase.ContractNo = this.getContractNo(documentType);
+            if (updateMode && objContractBase!=null)//case update use current contract no
+            {
+                contractBase.ContractNo = objContractBase.ContractNo;
+            }
+
             contractBase.AContractType = (ContractType)this.cboContractType.SelectedItem;
             contractBase.AContractStatus = (ContractStatus)this.cboContractStatus.SelectedItem;
             contractBase.ACustomer = (Customer)this.cboCustomerTHName.SelectedItem;

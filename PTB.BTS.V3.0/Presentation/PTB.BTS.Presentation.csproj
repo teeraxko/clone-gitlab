@@ -32,7 +32,7 @@
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <ManifestCertificateThumbprint>2BDD6DD9F8514E66F2989F4B91E253AE45A0F176</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>8AF2694E0178C048EF19F50FB8CDE1BFE37FF5C4</ManifestCertificateThumbprint>
     <ManifestKeyFile>PTB.BTS.Presentation_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
@@ -59,7 +59,7 @@
     <PublisherName>Ictus Co., Ltd.</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>177</ApplicationRevision>
+    <ApplicationRevision>179</ApplicationRevision>
     <ApplicationVersion>4.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>false</BootstrapperEnabled>
