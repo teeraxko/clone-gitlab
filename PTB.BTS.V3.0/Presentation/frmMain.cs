@@ -4680,9 +4680,9 @@ namespace Presentation
                             break;
                         }
 
-                    case "miContractAttrachment":
+                    case "miContractAttachment":
                         {
-                            setPermission(value["miContractAttrachment"], miContractAttachment);
+                            setPermission(value["miContractAttachment"], miContractAttachment);
                             break;
                         }
                 }

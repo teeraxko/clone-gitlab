@@ -33,7 +33,6 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.label4 = new System.Windows.Forms.Label();
             this.fpiMinLeave = new FarPoint.Win.Input.FpInteger();
             this.fpiTaxi = new FarPoint.Win.Input.FpInteger();
-            this.fpiOneDayNear = new FarPoint.Win.Input.FpInteger();
             this.fpiOneDayFar = new FarPoint.Win.Input.FpInteger();
             this.fpiOvernight = new FarPoint.Win.Input.FpInteger();
             this.fpiAbsence = new FarPoint.Win.Input.FpInteger();
@@ -43,13 +42,16 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.fpiOneDayNear = new FarPoint.Win.Input.FpInteger();
+            this.label7 = new System.Windows.Forms.Label();
             this.gpbContractDetail = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblContractPrefix = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtContractNoXXX = new System.Windows.Forms.TextBox();
             this.txtContractNoMM = new System.Windows.Forms.TextBox();
@@ -145,22 +147,6 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.fpiTaxi.TabIndex = 12;
             this.fpiTaxi.Text = "";
             this.fpiTaxi.UseSeparator = true;
-            // 
-            // fpiOneDayNear
-            // 
-            this.fpiOneDayNear.AlignHorz = FarPoint.Win.Input.HorizontalAlignment.Right;
-            this.fpiOneDayNear.AllowClipboardKeys = true;
-            this.fpiOneDayNear.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fpiOneDayNear.ButtonMarginColor = System.Drawing.SystemColors.Control;
-            this.fpiOneDayNear.Location = new System.Drawing.Point(455, 223);
-            this.fpiOneDayNear.MaxValue = 32000;
-            this.fpiOneDayNear.MinValue = 0;
-            this.fpiOneDayNear.Name = "fpiOneDayNear";
-            this.fpiOneDayNear.Size = new System.Drawing.Size(104, 20);
-            this.fpiOneDayNear.TabIndex = 10;
-            this.fpiOneDayNear.Text = "";
-            this.fpiOneDayNear.UseSeparator = true;
-            this.fpiOneDayNear.Visible = false;
             // 
             // fpiOneDayFar
             // 
@@ -291,17 +277,6 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.label9.TabIndex = 7;
             this.label9.Text = " ค่าเดินทางค้างคืน";
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(311, 227);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "ค่าเดินทางไป - กลับ (ใกล้)";
-            this.label7.Visible = false;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -352,8 +327,37 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.label1.TabIndex = 0;
             this.label1.Text = "OT rate A";
             // 
+            // fpiOneDayNear
+            // 
+            this.fpiOneDayNear.AlignHorz = FarPoint.Win.Input.HorizontalAlignment.Right;
+            this.fpiOneDayNear.AllowClipboardKeys = true;
+            this.fpiOneDayNear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fpiOneDayNear.ButtonMarginColor = System.Drawing.SystemColors.Control;
+            this.fpiOneDayNear.Location = new System.Drawing.Point(455, 223);
+            this.fpiOneDayNear.MaxValue = 32000;
+            this.fpiOneDayNear.MinValue = 0;
+            this.fpiOneDayNear.Name = "fpiOneDayNear";
+            this.fpiOneDayNear.Size = new System.Drawing.Size(104, 20);
+            this.fpiOneDayNear.TabIndex = 10;
+            this.fpiOneDayNear.Text = "";
+            this.fpiOneDayNear.UseSeparator = true;
+            this.fpiOneDayNear.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(311, 227);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "ค่าเดินทางไป - กลับ (ใกล้)";
+            this.label7.Visible = false;
+            // 
             // gpbContractDetail
             // 
+            this.gpbContractDetail.Controls.Add(this.label13);
+            this.gpbContractDetail.Controls.Add(this.lblContractPrefix);
             this.gpbContractDetail.Controls.Add(this.label16);
             this.gpbContractDetail.Controls.Add(this.txtContractNoXXX);
             this.gpbContractDetail.Controls.Add(this.txtContractNoMM);
@@ -366,16 +370,38 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             this.gpbContractDetail.TabStop = false;
             this.gpbContractDetail.Text = "รายละเอียดในสัญญา";
             // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label13.Location = new System.Drawing.Point(138, 23);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 17);
+            this.label13.TabIndex = 156;
+            this.label13.Text = " -";
+            // 
+            // lblContractPrefix
+            // 
+            this.lblContractPrefix.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContractPrefix.AutoSize = true;
+            this.lblContractPrefix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lblContractPrefix.Location = new System.Drawing.Point(123, 23);
+            this.lblContractPrefix.Name = "lblContractPrefix";
+            this.lblContractPrefix.Size = new System.Drawing.Size(18, 17);
+            this.lblContractPrefix.TabIndex = 156;
+            this.lblContractPrefix.Text = "D";
+            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label16.Location = new System.Drawing.Point(88, 24);
+            this.label16.Location = new System.Drawing.Point(80, 23);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 17);
+            this.label16.Size = new System.Drawing.Size(48, 17);
             this.label16.TabIndex = 155;
-            this.label16.Text = "PTB - C -";
+            this.label16.Text = "PTB - ";
             // 
             // txtContractNoXXX
             // 
@@ -393,7 +419,7 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             // txtContractNoMM
             // 
             this.txtContractNoMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoMM.Location = new System.Drawing.Point(194, 22);
+            this.txtContractNoMM.Location = new System.Drawing.Point(197, 22);
             this.txtContractNoMM.MaxLength = 2;
             this.txtContractNoMM.Name = "txtContractNoMM";
             this.txtContractNoMM.Size = new System.Drawing.Size(32, 20);
@@ -404,7 +430,7 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             // txtContractNoYY
             // 
             this.txtContractNoYY.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContractNoYY.Location = new System.Drawing.Point(157, 22);
+            this.txtContractNoYY.Location = new System.Drawing.Point(163, 22);
             this.txtContractNoYY.MaxLength = 2;
             this.txtContractNoYY.Name = "txtContractNoYY";
             this.txtContractNoYY.Size = new System.Drawing.Size(32, 20);
@@ -416,7 +442,7 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 24);
+            this.label8.Location = new System.Drawing.Point(9, 24);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 2;
@@ -499,5 +525,7 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label4;
         private FarPoint.Win.Input.FpDouble fpdMinHolidayAmount;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblContractPrefix;
     }
 }

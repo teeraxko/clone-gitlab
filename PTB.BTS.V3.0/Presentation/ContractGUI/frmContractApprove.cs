@@ -2149,12 +2149,12 @@ namespace Presentation.ContractGUI
             {
                 txtContractPrefix.Text = "C"; //Vehicle
                 txtContractPrefix.Visible = false;
-                label25.Visible = true;
-                cboVehicleKindContract.Text = "C";
+                label25.Visible = true;                
                 List<string> kindContract = new List<string>() { "C", "R", "T" };
-                cboVehicleKindContract.DataSource = kindContract;  
+                cboVehicleKindContract.DataSource = kindContract;
+                cboVehicleKindContract.Text = "T";
                 cboVehicleKindContract.Visible = true;
-                this.DocumentType = DOCUMENT_TYPE.CONTRACT;
+                this.DocumentType = DOCUMENT_TYPE.CONTRACT_TEMPORARY;
             }
             else if (contractType.Code == ContractType.CONTRACT_TYPE_DRIVER)
             {

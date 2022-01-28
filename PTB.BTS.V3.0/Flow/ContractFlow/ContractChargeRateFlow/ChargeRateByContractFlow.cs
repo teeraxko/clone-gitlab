@@ -5,6 +5,7 @@ using ictus.Common.Entity;
 
 using DataAccess.ContractDB.ContractChargeRateDB;
 using PTB.BTS.ContractEntities.ContractChargeRate;
+using Entity.ContractEntities;
 
 namespace Flow.ContractFlow.ContractChargeRateFlow
 {

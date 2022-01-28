@@ -59,7 +59,7 @@
     <PublisherName>Ictus Co., Ltd.</PublisherName>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>180</ApplicationRevision>
+    <ApplicationRevision>181</ApplicationRevision>
     <ApplicationVersion>4.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>false</BootstrapperEnabled>

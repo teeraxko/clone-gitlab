@@ -45,6 +45,12 @@ namespace Facade.ContractFacade.ContractChargeRateFacade
             return flowContract.RetriveContract(value, GetCompany());
         }
 
+        //D21018
+        public ContractBase RetriveDriverContract(DocumentNo value)
+        {
+            return flowContract.RetriveDriverContract(value, GetCompany());
+        }
+
         public ServiceStaffAssignment GetMainAssignmentInDate(ContractBase contract, DateTime date)
         {
             using (ServiceStaffAssignmentFlow flow = new ServiceStaffAssignmentFlow())

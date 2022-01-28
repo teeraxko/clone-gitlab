@@ -758,6 +758,31 @@ namespace DataAccess.ContractDB
             }
         }
 
+        //D21018
+        public ContractBase GetContract(DocumentNo contractNo, Company aCompany, DOCUMENT_TYPE documentType)
+        {
+            if (IsNotNULL(contractNo.No.Trim()))
+            {
+                StringBuilder stringBuilder = new StringBuilder(getSQLSelect());
+                stringBuilder.Append(getBaseCondition(aCompany));
+                stringBuilder.Append(getKeyCondition(contractNo));
+
+                if (fillContract(ref objContractBase, aCompany, stringBuilder.ToString()))
+                {
+                    return objContractBase;
+                }
+                else
+                {
+                    objContractBase = null;
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public ContractBase GetAllContract(DocumentNo contractNo, Company aCompany)
         {
             if (IsNotNULL(contractNo.No.Trim()))

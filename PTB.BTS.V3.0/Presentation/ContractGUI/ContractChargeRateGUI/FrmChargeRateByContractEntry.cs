@@ -74,22 +74,43 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
         }
 
         private void setContract(ContractBase value)
-        {
+        {           
             txtContractNoYY.Text = value.ContractNo.Year;
             txtContractNoMM.Text = value.ContractNo.Month;
             txtContractNoXXX.Text = value.ContractNo.No;
             txtContractNoXXX.Tag = value;
+            SetContractPrefix(value);
+        }
+
+        /// <summary>
+        /// Set contract prefix according to contract no.
+        /// </summary>
+        /// <param name="contract"></param>
+        private void SetContractPrefix(ContractBase contract)
+        {            
+            if (contract != null && contract.ContractNo != null)
+            {
+                lblContractPrefix.Text = contract.ContractNo.ToString().Substring(4, 1);
+            }
+
+            if (lblContractPrefix.Text.Trim().Length == 0)
+            {
+                lblContractPrefix.Text = "D";//default
+            }
+            
+            
         }
 
         private DocumentNo getContractNo()
         {
-            return new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
+            return new DocumentNo(DOCUMENT_TYPE.CONTRACT_DRIVER, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
         }
 
         private void formContractList()
         {
             frmContractVDOList dialogContractList = new frmContractVDOList();
             dialogContractList.IsDOContract = true;
+            //dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_DRIVER;
            
             if (txtContractNoYY.Text != "")
                 dialogContractList.ConditionYY = txtContractNoYY.Text;
@@ -219,7 +240,7 @@ namespace Presentation.ContractGUI.ContractChargeRateGUI
 
 		private bool validateContract()
 		{
-            txtContractNoXXX.Tag = parentForm.FacadeChargeRateByContract.RetriveContract(getContractNo());
+            txtContractNoXXX.Tag = parentForm.FacadeChargeRateByContract.RetriveDriverContract(getContractNo());
             if (txtContractNoXXX.Tag == null)
 			{
 				Message(MessageList.Error.E0004, "เลขที่สัญญา");

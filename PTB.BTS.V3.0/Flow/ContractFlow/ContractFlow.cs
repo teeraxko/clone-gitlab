@@ -1288,6 +1288,11 @@ namespace PTB.BTS.Contract.Flow
 			return dbContract.GetContract(value, aCompany);
 		}
 
+        public ContractBase RetriveDriverContract (DocumentNo value, Company aCompany)
+        {
+            return dbContract.GetContract(value, aCompany, DOCUMENT_TYPE.CONTRACT_DRIVER);
+        }
+
 		public bool FillContract(ref ContractList value)
 		{
 			return dbContract.FillContractList(ref value);
