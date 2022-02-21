@@ -1495,10 +1495,14 @@ namespace Presentation.ContractGUI
         private DOCUMENT_TYPE _documentType = DOCUMENT_TYPE.CONTRACT;
         private DOCUMENT_TYPE DocumentType
         {
+            get
+            {
+                return _documentType;
+            }
             set
             {
                 _documentType = value;
-            }
+            }            
         }
 
         # endregion - Private -
@@ -1508,6 +1512,7 @@ namespace Presentation.ContractGUI
             //DocumentNo contractNo = new DocumentNo(DOCUMENT_TYPE.CONTRACT, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
 
             //D21018 ส่ง document type ตาม dropdown ที่เลือก
+            SetVehicleContractDocumentType();
             DocumentNo contractNo = new DocumentNo(_documentType, txtContractNoYY.Text, txtContractNoMM.Text, txtContractNoXXX.Text);
             return contractNo;
         }
@@ -1531,6 +1536,7 @@ namespace Presentation.ContractGUI
             if (value.AContractTypeAbbreviation != null && value.AContractTypeAbbreviation.Length>0)
             {
                 txtContractPrefix.Text = (value.AContractTypeAbbreviation.Split(new char[] { ',' }))[0];
+                cboVehicleKindContract.Text = txtContractPrefix.Text;
             }
 
             if (value.RateStatus == RATE_STATUS_TYPE.DAY)
@@ -1770,24 +1776,27 @@ namespace Presentation.ContractGUI
                 this.DocumentType = dialogContractList.DocumentType;
             }
 
+            
             if (cboVehicleKindContract.Visible)
             {
-                switch (cboVehicleKindContract.Text)
-                {
-                    case "C":
-                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
-                        break;
-                    case "R":
-                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
-                        break;
-                    case "T":
-                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
-                        break;
-                    default:
-                        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
-                        break;
-                }
-                this.DocumentType = dialogContractList.DocumentType;
+                SetVehicleContractDocumentType();
+                dialogContractList.DocumentType = this.DocumentType;
+                //switch (cboVehicleKindContract.Text)
+                //{
+                //    case "C":
+                //        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                //        break;
+                //    case "R":
+                //        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                //        break;
+                //    case "T":
+                //        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                //        break;
+                //    default:
+                //        dialogContractList.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                //        break;
+                //}
+                //this.DocumentType = dialogContractList.DocumentType;
             }
 
 
@@ -2331,6 +2340,28 @@ namespace Presentation.ContractGUI
             {
                 ContractType contractType = (ContractType)cboContractType.SelectedItem;
                 ControlPrefix(contractType);
+            }
+        }
+
+        private void SetVehicleContractDocumentType()
+        {
+            if (cboVehicleKindContract.Visible)
+            {
+                switch (cboVehicleKindContract.Text)
+                {
+                    case "C":
+                        this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                        break;
+                    case "R":
+                        this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_RENEWAL;
+                        break;
+                    case "T":
+                        this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT_TEMPORARY;
+                        break;
+                    default:
+                        this.DocumentType = Entity.CommonEntity.DOCUMENT_TYPE.CONTRACT;
+                        break;
+                }
             }
         }
     }
