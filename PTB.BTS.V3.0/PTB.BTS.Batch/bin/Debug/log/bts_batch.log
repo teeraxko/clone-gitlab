@@ -1,0 +1,251 @@
+2022-02-23 23:40:04,819 [9] INFO PTB.BTS.Batch.Program - Batch B01 started.
+2022-02-23 23:40:07,872 [9] INFO PTB.BTS.Batch.Program - Batch B01 completed.
+2022-02-23 23:48:00,758 [8] INFO PTB.BTS.Batch.LogUtil - Batch B01 started.
+2022-02-23 23:48:00,825 [8] INFO PTB.BTS.Batch.LogUtil - Generating Report
+2022-02-23 23:48:01,843 [8] INFO PTB.BTS.Batch.LogUtil - Filling excel.
+2022-02-23 23:48:03,777 [8] INFO PTB.BTS.Batch.LogUtil - Batch B01 completed.
+2022-02-23 23:49:39,098 [9] INFO batchProcess - Batch B01 started.
+2022-02-23 23:49:39,284 [9] INFO GenerateReport - Generating Report
+2022-02-23 23:49:40,703 [9] INFO FillExcel - Filling excel.
+2022-02-23 23:49:41,712 [9] INFO FillExcel - Sending email
+2022-02-23 23:49:42,703 [9] INFO batchProcess - Batch B01 completed.
+2022-02-23 23:53:00,595 [9] INFO - Batch B01 started.
+2022-02-23 23:53:00,669 [9] INFO - Generating Report
+2022-02-23 23:53:01,589 [9] INFO - Filling excel.
+2022-02-23 23:53:02,552 [9] INFO - Sending email
+2022-02-23 23:53:03,516 [9] INFO - Batch B01 completed.
+2022-02-23 23:54:14,285 [9] INFO - Batch B01 started.
+2022-02-23 23:54:14,355 [9] INFO - Generating Report
+2022-02-23 23:54:15,344 [9] INFO - Filling excel.
+2022-02-23 23:54:16,305 [9] INFO - Sending email
+2022-02-23 23:54:17,262 [9] INFO - Batch B01 completed.
+2022-02-23 23:54:46,507 [9] INFO - Batch B01 started.
+2022-02-23 23:54:46,577 [9] INFO - Generating Report
+2022-02-23 23:54:47,534 [9] INFO - Filling excel.
+2022-02-23 23:54:48,511 [9] INFO - Sending email
+2022-02-23 23:54:49,231 [9] ERROR - System.NullReferenceException: Object reference not set to an instance of an object.
+   at PTB.BTS.Batch.EmailUtil.SendMail(String subject, String body, String[] toEmails, String[] ccEmails, String[] bccEmails, Attachment attachment) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\EmailUtil.cs:line 39
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 215
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 51
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 30
+2022-02-23 23:54:49,237 [9] INFO - Batch B01 completed.
+2022-02-24 00:24:15,299 [9] INFO - Batch B01 started.
+2022-02-24 00:24:15,373 [9] INFO - Generating Report
+2022-02-24 00:24:16,356 [9] INFO - Filling excel.
+2022-02-24 00:24:17,355 [9] INFO - Sending email
+2022-02-24 00:25:50,524 [9] INFO - Batch B01 started.
+2022-02-24 00:25:50,596 [9] INFO - Generating Report
+2022-02-24 00:25:51,539 [9] INFO - Filling excel.
+2022-02-24 00:25:52,601 [9] INFO - Sending email
+2022-02-24 00:26:02,098 [9] ERROR - System.Data.SqlClient.SqlException: Incorrect syntax near 'EmailCode'.
+   at DataAccess.CommonDB.TableAccess.internalExecuteDataReader(String strSQL, CommandType commandType) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\TableAccess.cs:line 75
+   at DataAccess.CommonDB.TableAccess.ExecuteDataReader(String strSQL) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\TableAccess.cs:line 310
+   at DataAccess.CommonDB.EmailFormatDB.FillEmailFormat(EmailFormat& value, String sql) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\EmailFormatDB.cs:line 76
+   at DataAccess.CommonDB.EmailFormatDB.FillEmailFormatByCode(EmailFormat& aEmailFormat, String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\EmailFormatDB.cs:line 70
+   at PTB.BTS.Common.Flow.EmailFormatFlow.GetEmailFormat(String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Flow\CommonFlow\EmailFormatFlow.cs:line 33
+   at Facade.CommonFacade.EmailFormatFacade.GetEmailFormat(String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Facade\CommonFacade\EmailFormatFacade.cs:line 29
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 217
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 55
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 34
+2022-02-24 00:26:02,118 [9] INFO - Batch B01 completed.
+2022-02-24 00:27:59,654 [9] INFO - Batch B01 started.
+2022-02-24 00:27:59,731 [9] INFO - Generating Report
+2022-02-24 00:28:01,044 [9] INFO - Filling excel.
+2022-02-24 00:28:02,014 [9] INFO - Sending email
+2022-02-24 00:28:58,601 [9] INFO - Batch B01 started.
+2022-02-24 00:28:58,687 [9] INFO - Generating Report
+2022-02-24 00:28:59,663 [9] INFO - Filling excel.
+2022-02-24 00:29:00,686 [9] INFO - Sending email
+2022-02-24 00:30:14,253 [9] INFO - Batch B01 started.
+2022-02-24 00:30:14,325 [9] INFO - Generating Report
+2022-02-24 00:30:15,305 [9] INFO - Filling excel.
+2022-02-24 00:30:16,271 [9] INFO - Sending email
+2022-02-24 00:30:34,523 [9] ERROR - System.InvalidCastException: Specified cast is not valid.
+   at System.Data.SqlClient.SqlBuffer.get_DateTime()
+   at System.Data.SqlClient.SqlDataReader.GetDateTime(Int32 i)
+   at DataAccess.CommonDB.EmailFormatDB.FillEmailFormat(EmailFormat& value, SqlDataReader dataReader) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\EmailFormatDB.cs:line 103
+   at DataAccess.CommonDB.EmailFormatDB.FillEmailFormat(EmailFormat& value, String sql) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\EmailFormatDB.cs:line 81
+   at DataAccess.CommonDB.EmailFormatDB.FillEmailFormatByCode(EmailFormat& aEmailFormat, String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\CommonDB\EmailFormatDB.cs:line 70
+   at PTB.BTS.Common.Flow.EmailFormatFlow.GetEmailFormat(String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Flow\CommonFlow\EmailFormatFlow.cs:line 33
+   at Facade.CommonFacade.EmailFormatFacade.GetEmailFormat(String emailCode) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Facade\CommonFacade\EmailFormatFacade.cs:line 29
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 217
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 55
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 34
+2022-02-24 00:30:34,545 [9] INFO - Batch B01 completed.
+2022-02-24 00:31:34,944 [9] INFO - Batch B01 started.
+2022-02-24 00:31:35,017 [9] INFO - Generating Report
+2022-02-24 00:31:35,956 [9] INFO - Filling excel.
+2022-02-24 00:31:36,926 [9] INFO - Sending email
+2022-02-24 00:31:56,211 [9] INFO - Batch B01 completed.
+2022-02-24 00:34:25,488 [9] INFO - Batch B01 started.
+2022-02-24 00:34:25,561 [9] INFO - Generating Report
+2022-02-24 00:34:26,489 [9] INFO - Filling excel.
+2022-02-24 00:34:27,475 [9] INFO - Sending email
+2022-02-24 00:34:30,802 [9] ERROR - System.ArgumentException: The specified string is not in the form required for a subject.
+   at System.Net.Mail.Message.set_Subject(String value)
+   at PTB.BTS.Batch.EmailUtil.SendMail(String subject, String body, String[] toEmails, String[] ccEmails, String[] bccEmails, Attachment attachment) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\EmailUtil.cs:line 48
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 232
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 55
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 34
+2022-02-24 00:34:30,840 [9] INFO - Batch B01 completed.
+2022-02-24 00:35:14,360 [9] INFO - Batch B01 started.
+2022-02-24 00:35:14,432 [9] INFO - Generating Report
+2022-02-24 00:35:15,425 [9] INFO - Filling excel.
+2022-02-24 00:35:16,421 [9] INFO - Sending email
+2022-02-24 00:35:17,419 [9] INFO - Batch B01 completed.
+2022-02-24 00:44:00,436 [8] INFO - Batch B01 started.
+2022-02-24 00:44:00,502 [8] INFO - Generating Report
+2022-02-24 00:44:01,582 [8] INFO - Filling excel.
+2022-02-24 00:44:02,549 [8] INFO - Sending email
+2022-02-24 00:44:03,552 [8] INFO - Batch B01 completed.
+2022-02-24 00:46:05,053 [9] INFO - Batch B01 started.
+2022-02-24 00:46:05,128 [9] INFO - Generating Report
+2022-02-24 00:46:06,125 [9] INFO - Filling excel.
+2022-02-24 00:46:07,092 [9] INFO - Sending email
+2022-02-24 00:46:08,092 [9] INFO - Batch B01 completed.
+2022-02-24 00:47:41,011 [9] INFO - Batch B01 started.
+2022-02-24 00:47:41,096 [9] INFO - Generating Report
+2022-02-24 00:47:42,135 [9] INFO - Filling excel.
+2022-02-24 00:47:43,238 [9] INFO - Sending email
+2022-02-24 00:47:44,343 [9] INFO - Batch B01 completed.
+2022-02-24 00:49:17,043 [9] INFO - Batch B01 started.
+2022-02-24 00:49:17,115 [9] INFO - Generating Report
+2022-02-24 00:49:18,807 [9] INFO - Filling excel.
+2022-02-24 00:49:19,779 [9] INFO - Sending email
+2022-02-24 00:50:09,356 [9] INFO - Batch B01 completed.
+2022-02-24 11:14:35,298 [9] INFO - Batch B01 started.
+2022-02-24 11:14:35,441 [9] INFO - Generating Report
+2022-02-24 11:14:37,191 [9] INFO - Filling excel.
+2022-02-24 11:14:38,923 [9] INFO - Sending email
+2022-02-24 11:14:40,062 [9] INFO - Batch B01 completed.
+2022-02-24 11:18:08,777 [9] INFO - Batch B01 started.
+2022-02-24 11:18:08,862 [9] INFO - Generating Report
+2022-02-24 11:18:09,897 [9] INFO - Filling excel.
+2022-02-24 11:18:10,945 [9] INFO - Sending email
+2022-02-24 11:18:15,487 [9] INFO - Batch B01 completed.
+2022-02-24 11:21:07,758 [9] INFO - Batch B01 started.
+2022-02-24 11:21:07,839 [9] INFO - Generating Report
+2022-02-24 11:21:08,893 [9] INFO - Filling excel.
+2022-02-24 11:21:09,961 [9] INFO - Sending email
+2022-02-24 11:21:11,623 [9] INFO - Batch B01 completed.
+2022-02-24 11:23:31,455 [9] INFO - Batch B01 started.
+2022-02-24 11:23:31,539 [9] INFO - Generating Report
+2022-02-24 11:23:32,587 [9] INFO - Filling excel.
+2022-02-24 11:23:33,584 [9] INFO - Sending email
+2022-02-24 11:23:34,540 [9] INFO - Batch B01 completed.
+2022-02-24 11:24:42,412 [9] INFO - Batch B01 started.
+2022-02-24 11:24:42,501 [9] INFO - Generating Report
+2022-02-24 11:24:43,544 [9] INFO - Filling excel.
+2022-02-24 11:24:44,579 [9] INFO - Sending email
+2022-02-24 11:24:45,550 [9] INFO - Batch B01 completed.
+2022-02-24 11:25:55,568 [9] INFO - Batch B01 started.
+2022-02-24 11:25:55,650 [9] INFO - Generating Report
+2022-02-24 11:25:56,657 [9] INFO - Filling excel.
+2022-02-24 11:25:57,698 [9] INFO - Sending email
+2022-02-24 11:25:58,730 [9] INFO - Batch B01 completed.
+2022-02-24 11:29:59,239 [9] INFO - Batch B01 started.
+2022-02-24 11:29:59,373 [9] INFO - Generating Report
+2022-02-24 11:30:00,918 [9] INFO - Filling excel.
+2022-02-24 11:30:02,057 [9] INFO - Sending email
+2022-02-24 11:30:02,779 [9] ERROR - System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.set_Position(Int64 value)
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 216
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 55
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 34
+2022-02-24 11:30:02,839 [9] INFO - Batch B01 completed.
+2022-02-24 11:35:41,192 [8] INFO - Batch B01 started.
+2022-02-24 11:35:41,269 [8] INFO - Generating Report
+2022-02-24 11:35:42,506 [8] INFO - Filling excel.
+2022-02-24 11:35:43,486 [8] INFO - Sending email
+2022-02-24 11:36:30,463 [8] ERROR - System.IO.IOException: The process cannot access the file 'D:\TempFile\Expected_Income_Report_20220224.xlsx' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.DeleteAttachemtnFile(String file) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 310
+2022-02-24 11:36:31,619 [8] INFO - Batch B01 completed.
+2022-02-24 11:39:28,062 [9] INFO - Batch B01 started.
+2022-02-24 11:39:28,149 [9] INFO - Generating Report
+2022-02-24 11:39:29,108 [9] INFO - Filling excel.
+2022-02-24 11:39:30,159 [9] INFO - Sending email
+2022-02-24 11:39:31,253 [9] ERROR - System.IO.IOException: The process cannot access the file 'D:\TempFile\Expected_Income_Report_20220224.xlsx' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.DeleteAttachemtnFile(String file) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 312
+2022-02-24 11:39:31,264 [9] INFO - Batch B01 completed.
+2022-02-24 11:40:07,741 [9] INFO - Batch B01 started.
+2022-02-24 11:40:07,820 [9] INFO - Generating Report
+2022-02-24 11:40:08,814 [9] INFO - Filling excel.
+2022-02-24 11:40:09,790 [9] INFO - Sending email
+2022-02-24 11:40:12,917 [9] ERROR - System.IO.IOException: The process cannot access the file 'D:\TempFile\Expected_Income_Report_20220224.xlsx' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.Delete(String path)
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.DeleteAttachemtnFile(String file) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 312
+2022-02-24 11:40:12,925 [9] INFO - Batch B01 completed.
+2022-02-24 11:43:18,687 [9] INFO - Batch B01 started.
+2022-02-24 11:43:18,761 [9] INFO - Generating Report
+2022-02-24 11:43:19,771 [9] INFO - Filling excel.
+2022-02-24 11:43:20,738 [9] INFO - Sending email
+2022-02-24 11:43:21,815 [9] INFO - Batch B01 completed.
+2022-02-24 11:44:01,097 [9] INFO - Batch B01 started.
+2022-02-24 11:44:01,177 [9] INFO - Generating Report
+2022-02-24 11:44:02,120 [9] INFO - Filling excel.
+2022-02-24 11:44:03,089 [9] INFO - Sending email
+2022-02-24 11:44:04,174 [9] INFO - Batch B01 completed.
+2022-02-24 11:47:13,230 [9] INFO - Batch B01 started.
+2022-02-24 11:47:13,303 [9] INFO - Generating Report
+2022-02-24 11:47:14,214 [9] INFO - Filling excel.
+2022-02-24 11:47:15,220 [9] INFO - Sending email
+2022-02-24 11:47:16,279 [9] INFO - Batch B01 completed.
+2022-02-24 11:48:52,958 [9] INFO - Batch B01 started.
+2022-02-24 11:48:53,040 [9] INFO - Generating Report
+2022-02-24 11:48:54,066 [9] INFO - Filling excel.
+2022-02-24 11:48:55,042 [9] INFO - Sending email
+2022-02-24 11:48:56,104 [9] INFO - Batch B01 completed.
+2022-02-24 11:50:02,599 [9] INFO - Batch B01 started.
+2022-02-24 11:50:02,677 [9] INFO - Generating Report
+2022-02-24 11:50:03,612 [9] INFO - Filling excel.
+2022-02-24 11:50:04,727 [9] ERROR - System.NullReferenceException: Object reference not set to an instance of an object.
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.FillExcel(DataTable dt) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 205
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.GenerateReport() in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 55
+   at PTB.BTS.Batch.GenerateExpectedIncomeReport.Execute(Object[] args) in D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\GenerateExpectedIncomeReport.cs:line 34
+2022-02-24 11:50:04,732 [9] INFO - Batch B01 completed.
+2022-02-24 11:50:43,820 [9] INFO - Batch B01 started.
+2022-02-24 11:50:43,897 [9] INFO - Generating Report
+2022-02-24 11:50:44,848 [9] INFO - Filling excel.
+2022-02-24 11:50:45,818 [9] INFO - Sending email
+2022-02-24 11:50:46,864 [9] INFO - Batch B01 completed.
+2022-02-24 11:54:33,516 [9] INFO - Batch B01 started.
+2022-02-24 11:54:33,595 [9] INFO - Generating Report
+2022-02-24 11:54:34,557 [9] INFO - Filling excel.
+2022-02-24 11:54:35,531 [9] INFO - Sending email
+2022-02-24 11:54:36,582 [9] INFO - Batch B01 completed.
+2022-02-24 12:03:11,718 [8] INFO - Batch B01 started.
+2022-02-24 12:03:11,798 [8] INFO - Generating Report
+2022-02-24 12:03:12,768 [8] INFO - Filling excel.
+2022-02-24 12:03:13,788 [8] INFO - Sending email
+2022-02-24 12:03:14,911 [8] INFO - Batch B01 completed.
+2022-03-02 09:02:08,155 [8] INFO - Batch B01 started.
+2022-03-02 09:02:08,269 [8] INFO - Generating Report
+2022-03-02 09:02:09,560 [8] INFO - Filling excel.
+2022-03-02 09:02:10,695 [8] INFO - Sending email
+2022-03-02 09:03:59,235 [9] INFO - Batch B01 started.
+2022-03-02 09:03:59,300 [9] INFO - Generating Report
+2022-03-02 09:04:00,595 [9] INFO - Filling excel.
+2022-03-02 09:04:01,591 [9] INFO - Sending email
+2022-03-02 09:04:22,971 [9] INFO - Batch B01 started.
+2022-03-02 09:04:23,036 [9] INFO - Generating Report
+2022-03-02 09:04:23,959 [9] INFO - Filling excel.
+2022-03-02 09:04:24,980 [9] INFO - Sending email
+2022-03-02 09:04:48,852 [9] INFO - Deleting file : D:\TempFolder\Expected_Income_Report_20220302.xlsx
+2022-03-02 09:04:48,856 [9] INFO - Batch B01 completed.
+2022-03-30 09:39:44,052 [9] INFO - Batch B01 started.
+2022-03-30 09:39:44,094 [9] INFO - Generating Report
+2022-03-30 09:39:45,044 [9] INFO - Filling excel.
+2022-03-30 09:39:47,305 [9] INFO - Sending email
+2022-03-30 09:40:07,378 [9] INFO - Deleting file : D:\TempFolder\Expected_Income_Report_20220330.xlsx
+2022-03-30 09:40:07,381 [9] INFO - Batch B01 completed.
+2022-03-30 09:47:03,804 [8] INFO - Batch B01 started.
+2022-03-30 09:47:03,828 [8] INFO - Generating Report
+2022-03-30 09:47:04,408 [8] INFO - Filling excel.
+2022-03-30 09:47:06,356 [8] INFO - Sending email
+2022-03-30 09:47:06,609 [8] INFO - Deleting file : D:\TempFolder\Expected_Income_Report_20220330.xlsx
+2022-03-30 09:47:06,612 [8] INFO - Batch B01 completed.

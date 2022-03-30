@@ -300,6 +300,8 @@
     <Compile Include="CommonFacade\CommonFacade.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CommonFacade\ApplicationConfigurationFacade.cs" />
+    <Compile Include="CommonFacade\EmailFormatFacade.cs" />
     <Compile Include="CommonFacade\CTFunction.cs">
       <SubType>Code</SubType>
     </Compile>

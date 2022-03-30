@@ -1,0 +1,9 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\bin\Release\ictus.Framework.ASC.VBFuntion.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\bin\Release\ictus.Framework.ASC.VBFuntion.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\bin\Release\ictus.Framework.ASC.VBFuntion.xml
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ictus.Framework.ASC.VBFuntion.Resources.resources
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ictus.Framework.ASC.VBFuntion.vbproj.GenerateResource.Cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ictus.Framework.ASC.VBFuntion.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ictus.Framework.ASC.VBFuntion.xml
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.VBFuntion\obj\Release\ictus.Framework.ASC.VBFuntion.pdb

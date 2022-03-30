@@ -160,6 +160,8 @@
     <Compile Include="AttendanceFlow\BenefitChargeFlow\ImplementCharge\SpecialChargeSummaryFlow.cs" />
     <Compile Include="AttendanceFlow\CommonBenefitFlow\CommonAttendanceFlow.cs" />
     <Compile Include="AttendanceFlow\GenerateMealBenefitFlow.cs" />
+    <Compile Include="CommonFlow\ApplicationConfigurationFlow.cs" />
+    <Compile Include="CommonFlow\EmailFormatFlow.cs" />
     <Compile Include="Comparer\ContractDepartmentAssignmentComparer.cs" />
     <Compile Include="ContractFlow\CompensateRateFlow.cs" />
     <Compile Include="ContractFlow\ContractChargeDetailFlow.cs" />

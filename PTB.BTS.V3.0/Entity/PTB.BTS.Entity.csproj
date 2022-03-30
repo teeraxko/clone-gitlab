@@ -136,6 +136,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttendanceEntities\EmployeeMealAllowance.cs" />
+    <Compile Include="CommonEntity\ApplicationConfiguration.cs" />
+    <Compile Include="CommonEntity\ApplicationConfigurationList.cs" />
+    <Compile Include="CommonEntity\Emailformat.cs" />
     <Compile Include="Constants\CustomerCodeValue.cs" />
     <Compile Include="Constants\CustomerDepartmentCodeValue.cs" />
     <Compile Include="Constants\EntityState.cs" />

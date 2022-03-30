@@ -1,0 +1,13 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\PTB.BTS.DataAccess.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.Common.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.Framework.ASC.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.PIS.PI.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.SystemConnection.BizPac.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\PTB.BTS.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\PTB.BTS.SystemFramework.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.SystemConnection.BizPac.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.Framework.ASC.AppConfig.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\bin\Release\ictus.Framework.ASC.Entity.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\DataAccess\obj\Release\PTB.BTS.DataAccess.dll

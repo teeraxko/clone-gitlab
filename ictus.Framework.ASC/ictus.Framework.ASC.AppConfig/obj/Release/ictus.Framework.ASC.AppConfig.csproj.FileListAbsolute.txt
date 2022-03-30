@@ -1,0 +1,5 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\bin\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\bin\Release\ictus.Framework.ASC.AppConfig.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\obj\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.Framework.ASC\ictus.Framework.ASC.AppConfig\obj\Release\ictus.Framework.ASC.AppConfig.pdb

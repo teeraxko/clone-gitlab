@@ -1,0 +1,16 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\PTB.BTS.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Common.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.VBFuntion.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.PIS.PI.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.SystemConnection.BizPac.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.SystemConnection.BizPac.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.VBFuntion.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.VBFuntion.xml
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.AppConfig.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\bin\Release\ictus.Framework.ASC.Entity.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\obj\Release\Entity.AttendanceEntities.ExtraAGTBenefitDeduction.resources
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\obj\Release\PTB.BTS.Entity.csproj.GenerateResource.Cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\Entity\obj\Release\PTB.BTS.Entity.dll

@@ -1,0 +1,7 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\bin\Release\PTB.BTS.SystemFramework.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\bin\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\bin\Release\ictus.Framework.ASC.AppConfig.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\obj\Release\SystemFramework.AppMessage.MessageResource.resources
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\obj\Release\PTB.BTS.SystemFramework.csproj.GenerateResource.Cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\SystemFramework\obj\Release\PTB.BTS.SystemFramework.dll

@@ -1,0 +1,10 @@
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.SystemConnection.BizPac.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.SystemConnection.BizPac.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.Common.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.Framework.ASC.AppConfig.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.Framework.ASC.Entity.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.Framework.ASC.AppConfig.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\bin\Release\ictus.Framework.ASC.Entity.pdb
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\obj\Release\ResolveAssemblyReference.cache
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\obj\Release\ictus.SystemConnection.BizPac.dll
+D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\ictus.SystemConnection\ictus.SystemConnection.BizPac\obj\Release\ictus.SystemConnection.BizPac.pdb

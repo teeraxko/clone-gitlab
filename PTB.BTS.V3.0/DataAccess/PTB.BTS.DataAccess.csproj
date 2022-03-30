@@ -311,6 +311,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AttendanceDB\WorkScheduleConfigDB.cs" />
+    <Compile Include="CommonDB\ApplicationConfigurationDB.cs" />
+    <Compile Include="CommonDB\EmailFormatDB.cs" />
     <Compile Include="CommonDB\FisCalYearDB.cs" />
     <Compile Include="CommonDB\PISDataAccessBase.cs" />
     <Compile Include="Constants\ContractDepartmentAssignmentTable.cs" />
