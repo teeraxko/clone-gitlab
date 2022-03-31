@@ -42,7 +42,3 @@ D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch
 D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\bin\Debug\App.config
 D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\bin\Debug\log4net.config
 D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\bin\Debug\log4net.dll
-D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\bin\Debug\PTB.BTS.Batch.exe.manifest
-D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\bin\Debug\PTB.BTS.Batch.application
-D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\obj\Debug\PTB.BTS.Batch.exe.manifest
-D:\_Projects\ptb_bts\SS01_ReportCarAgreement(Company)\PTB.BTS.V3.0\PTB.BTS.Batch\obj\Debug\PTB.BTS.Batch.application
