@@ -149,7 +149,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9BiVb4q9Gdr+tLnhK4j3Ui6jLeI=</dsig:DigestValue>
+        <dsig:DigestValue>SSmClwyngoKXhuVcxlzPXfNvuro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -161,7 +161,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pmz//xtlGoBeWWNDfdoH4MR8Q0Y=</dsig:DigestValue>
+        <dsig:DigestValue>nlQIqEiPwM4utZlOjZ9iu4kmC2w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,7 +173,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Vi6rmYw74VpmDqPO/2CsaC/YYjg=</dsig:DigestValue>
+        <dsig:DigestValue>m6rEKc7tueRUehmOVNqHGe4AEEs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -257,7 +257,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6RRHHL9roRZyAv1YbOPumAvy/iE=</dsig:DigestValue>
+        <dsig:DigestValue>EQlq1y3jhkWZygN9nt/y/ZWKwCM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -293,7 +293,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Wh76aNrQULqvrAaQjex0I/1vF94=</dsig:DigestValue>
+        <dsig:DigestValue>RlbzTKTFI4heHV1xutIjrshbHOg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -305,67 +305,67 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>u6XISyc0VVovBDqkmBAv7HvZNHQ=</dsig:DigestValue>
+        <dsig:DigestValue>7O8L+QE5DM0T1Z8Mp5iye2/GNhk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PTB.BTS.DataAccess.dll" size="847872">
-      <assemblyIdentity name="PTB.BTS.DataAccess" version="1.0.8124.19221" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PTB.BTS.DataAccess" version="1.0.8124.28595" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0FNeQ6BLk8mkp9Zy3I5HUdfh73o=</dsig:DigestValue>
+        <dsig:DigestValue>zBQLKQvuhEKdoaEZ7FCYH1//AZY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PTB.BTS.Entity.dll" size="299008">
-      <assemblyIdentity name="PTB.BTS.Entity" version="1.0.8124.19220" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PTB.BTS.Entity" version="1.0.8124.28594" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>JcPl7Oqgqxo9ITsWNlpQuwSjZdM=</dsig:DigestValue>
+        <dsig:DigestValue>lFUR9poJuTNSlKyHUEbc4Hm2kIM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PTB.BTS.Facade.dll" size="225280">
-      <assemblyIdentity name="PTB.BTS.Facade" version="1.0.8124.19223" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PTB.BTS.Facade" version="1.0.8124.28598" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5qTWs+e6JASdF8ISlSBC3PjJ8ag=</dsig:DigestValue>
+        <dsig:DigestValue>vBj2H3MhkGXPCkHr7+6C5HTOAeA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PTB.BTS.Flow.dll" size="360448">
-      <assemblyIdentity name="PTB.BTS.Flow" version="1.0.8124.19223" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PTB.BTS.Flow" version="1.0.8124.28596" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5+lS6iPD2joO5Tz9r8NjQNxpmWM=</dsig:DigestValue>
+        <dsig:DigestValue>rR4dogyn6tIdehN/auqgD2sjU9M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PTB.BTS.SystemFramework.dll" size="49152">
-      <assemblyIdentity name="PTB.BTS.SystemFramework" version="1.0.8124.19220" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PTB.BTS.SystemFramework" version="1.0.8124.28593" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3mO/PcWcHudGFTuPrhHolkT0v6A=</dsig:DigestValue>
+        <dsig:DigestValue>/sJ00id9Dpo6vZH85IgnPCNf2H4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
