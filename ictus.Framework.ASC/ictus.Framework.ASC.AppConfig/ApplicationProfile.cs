@@ -30,7 +30,7 @@ namespace ictus.Framework.ASC.AppConfig
 
         /************* Dev Config ***************/
         //public static string SERVER_NAME = "172.30.2.207"; //PDBAPP01-TEST
-        //public static string DB_NAME = "BTSDB_DEV_D21018";
+        //public static string DB_NAME = "BTSDB_DEV";
         //public static string DB_USER_NAME = "sa";
         //public static string DB_USER_PASSWORD = "pdbdevadmin";
         //public static string REPORT_PATH = @"\\172.30.2.207\BTS\BTSReport\";

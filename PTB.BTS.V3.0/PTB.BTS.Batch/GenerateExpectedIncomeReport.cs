@@ -14,6 +14,8 @@ using ClosedXML.Excel;
 using System.IO;
 using Entity.CommonEntity;
 using Facade.CommonFacade;
+using PTB.BTS.Common.Flow;
+using ictus.Common.Entity.Time;
 
 namespace PTB.BTS.Batch
 {
@@ -56,6 +58,7 @@ namespace PTB.BTS.Batch
                 DataTable dt = new DataTable("Expected Income Report");
                 adapter.Fill(dt);
                 FillExcel(dt);
+                SendEmail();
             }
         }
 
@@ -98,17 +101,18 @@ namespace PTB.BTS.Batch
 
                 colIndex++;
                 cell = ws.Cell(rowIndex, colIndex);
-                cell.Value = Convert.ToDateTime(dt.Rows[i]["Contract_Start_Date"]).ToString("dd/MM/yyyy");
+                cell.Value = Convert.ToDateTime(dt.Rows[i]["Contract_Start_Date"]).ToString("yyyy-MM-dd");
                 SetBorderAround(cell);
 
                 colIndex++;
                 cell = ws.Cell(rowIndex, colIndex);
-                cell.Value = Convert.ToDateTime(dt.Rows[i]["Contract_End_Date"]).ToString("dd/MM/yyyy");
+                cell.Value = Convert.ToDateTime(dt.Rows[i]["Contract_End_Date"]).ToString("yyyy-MM-dd");
                 SetBorderAround(cell);
 
+                DayMonthYearStructure leasingPeriod = CalculateLeasingPeriod(Convert.ToDateTime(dt.Rows[i]["Contract_Start_Date"]), Convert.ToDateTime(dt.Rows[i]["Contract_End_Date"]).AddDays(1));
                 colIndex++;
                 cell = ws.Cell(rowIndex, colIndex);
-                cell.Value = dt.Rows[i]["LeadPeriod"];
+                cell.Value = String.Format("{0} ปี {1} เดือน {2} วัน",leasingPeriod.Years,leasingPeriod.Months,leasingPeriod.Days);// dt.Rows[i]["LeadPeriod"];
                 SetBorderAround(cell);
 
                 colIndex++;
@@ -210,8 +214,6 @@ namespace PTB.BTS.Batch
             //wbook.SaveAs(ms);  cannot use memory due to the it has an error "Excel completed file level validation and repair" while opening.
             wbook.SaveAs(outputFile);
             wbook.Dispose();
-
-            SendEmail();
         }
 
         private void SendEmail()
@@ -286,9 +288,9 @@ namespace PTB.BTS.Batch
         private String[] GenerateFYHeader(int numberOfFY)
         {
             String[] fy = new string[numberOfFY];
-            DateTime curDate = DateTime.Now;
+            DateTime curDate = new DateTime(2022, 03, 31);
             int firstYear = curDate.Year;
-            if(curDate.Month<3){ // Jan, Feb, Mar
+            if(curDate.Month<=3){ // Jan, Feb, Mar
                 firstYear = firstYear-1;
             }
 
@@ -333,6 +335,13 @@ namespace PTB.BTS.Batch
         {
             return String.Concat(CommonConfiguration.TPITAdmin).Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
         }
+
+        private DayMonthYearStructure CalculateLeasingPeriod(DateTime startDate, DateTime endDate)
+        {
+            AgeFlow flowAge = new AgeFlow();
+            DayMonthYearStructure dayDiff = flowAge.DaysDiff(startDate, endDate);
+            return dayDiff;
+        }        
       
     }
 }

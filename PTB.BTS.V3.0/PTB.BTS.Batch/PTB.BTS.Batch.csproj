@@ -117,6 +117,10 @@
       <Project>{F6EF3579-74BA-4A46-A846-90EF3F23B5AA}</Project>
       <Name>PTB.BTS.Facade</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Flow\PTB.BTS.Flow.csproj">
+      <Project>{BD3D2B8D-9EEE-4381-B942-6FAD96F41F23}</Project>
+      <Name>PTB.BTS.Flow</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
